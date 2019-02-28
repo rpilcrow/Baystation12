@@ -1,5 +1,5 @@
 /obj/item/ammo_magazine/speedloader
-	name = "speed loader"
+	name = "10mm speedloader"
 	desc = "A speed loader for revolvers."
 	icon_state = "spdloader"
 	caliber = CALIBER_PISTOL
@@ -9,10 +9,12 @@
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/speedloader/rubber
+	name = "10mmNL speed loader"
 	labels = list("rubber")
 	ammo_type = /obj/item/ammo_casing/pistol/rubber
 
 /obj/item/ammo_magazine/speedloader/magnum
+	name = "15mm speedloader"
 	icon_state = "spdloader_magnum"
 	caliber = CALIBER_PISTOL_MAGNUM
 	ammo_type = /obj/item/ammo_casing/pistol/magnum
@@ -21,7 +23,7 @@
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/speedloader/small
-	name = "speed loader"
+	name = "7mm speedloader"
 	icon_state = "spdloader_small"
 	caliber = CALIBER_PISTOL_SMALL
 	ammo_type = /obj/item/ammo_casing/pistol/small
@@ -30,7 +32,7 @@
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/shotholder
-	name = "shotgun slug holder"
+	name = "12g slug holder"
 	desc = "A convenient pouch that holds 12 gauge shells."
 	icon_state = "shotholder"
 	caliber = CALIBER_SHOTGUN
@@ -47,37 +49,37 @@
 		var/image/I = image(icon, "shotholder-marking")
 		I.color = marking_color
 		overlays += I
-	
+
 /obj/item/ammo_magazine/shotholder/shell
-	name = "shotgun shell holder"
+	name = "12g buck holder"
 	ammo_type = /obj/item/ammo_casing/shotgun/pellet
 	marking_color = COLOR_RED_GRAY
 
 /obj/item/ammo_magazine/shotholder/beanbag
-	name = "beanbag shell holder"
+	name = "12g beanbag holder"
 	ammo_type = /obj/item/ammo_casing/shotgun/beanbag
 	matter = list(MATERIAL_STEEL = 720)
 	marking_color = COLOR_PAKISTAN_GREEN
 
 /obj/item/ammo_magazine/shotholder/flash
-	name = "illumination shell holder"
+	name = "12g flash holder"
 	ammo_type = /obj/item/ammo_casing/shotgun/flash
 	matter = list(MATERIAL_STEEL = 360, MATERIAL_GLASS = 360)
 	marking_color = COLOR_PALE_YELLOW
 
 /obj/item/ammo_magazine/shotholder/stun
-	name = "stun shell holder"
+	name = "12g stun holder"
 	ammo_type = /obj/item/ammo_casing/shotgun/stunshell
 	matter = list(MATERIAL_STEEL = 1440, MATERIAL_GLASS = 2880)
 	marking_color = COLOR_MUZZLE_FLASH
 
 /obj/item/ammo_magazine/shotholder/empty
-	name = "shotgun ammunition holder"
+	name = "12g shell holder"
 	matter = list(MATERIAL_STEEL = 250)
 	initial_ammo = 0
 
 /obj/item/ammo_magazine/machine_pistol
-	name = "stick magazine"
+	name = "10mm stick magazine"
 	icon_state = "machine_pistol"
 	mag_type = MAGAZINE
 	ammo_type = /obj/item/ammo_casing/pistol
@@ -90,7 +92,7 @@
 	initial_ammo = 0
 
 /obj/item/ammo_magazine/smg_top
-	name = "top mounted magazine"
+	name = "7mm topmounted magazine"
 	icon_state = "smg_top"
 	mag_type = MAGAZINE
 	ammo_type = /obj/item/ammo_casing/pistol/small
@@ -103,15 +105,17 @@
 	initial_ammo = 0
 
 /obj/item/ammo_magazine/smg_top/rubber
+	name = "7mmNL topmounted magazine"
 	labels = list("rubber")
 	ammo_type = /obj/item/ammo_casing/pistol/small/rubber
 
 /obj/item/ammo_magazine/smg_top/practice
+	name = "7mm-Practice topmounted magazine"
 	labels = list("practice")
 	ammo_type = /obj/item/ammo_casing/pistol/small/practice
 
 /obj/item/ammo_magazine/smg
-	name = "submachine gun magazine"
+	name = "10mm SMG magazine"
 	icon_state = "smg"
 	origin_tech = list(TECH_COMBAT = 2)
 	mag_type = MAGAZINE
@@ -125,7 +129,7 @@
 	initial_ammo = 0
 
 /obj/item/ammo_magazine/pistol
-	name = "pistol magazine"
+	name = "10mm pistol magazine"
 	icon_state = "pistol"
 	origin_tech = list(TECH_COMBAT = 2)
 	mag_type = MAGAZINE
@@ -139,24 +143,28 @@
 	initial_ammo = 0
 
 /obj/item/ammo_magazine/pistol/rubber
+	name = "10mmNL pistol magazine"
 	labels = list("rubber")
 	ammo_type = /obj/item/ammo_casing/pistol/rubber
 
 /obj/item/ammo_magazine/pistol/double
-	name = "doublestack pistol magazine"
+	name = "doublestack 10mm pistol magazine"
 	icon_state = "pistol"
 	matter = list(MATERIAL_STEEL = 1050)
 	max_ammo = 15
 
 /obj/item/ammo_magazine/pistol/double/rubber
+	name = "doublestack 10mmNL pistol magazine"
 	labels = list("rubber")
 	ammo_type = /obj/item/ammo_casing/pistol/rubber
 
 /obj/item/ammo_magazine/pistol/double/practice
+	name = "doublestack 10mmPRAC pistol magazine"
 	labels = list("practice")
 	ammo_type = /obj/item/ammo_casing/pistol/practice
 
 /obj/item/ammo_magazine/pistol/small
+	name = "7mm pistol magazine"
 	icon_state = "holdout"
 	matter = list(MATERIAL_STEEL = 480)
 	caliber = CALIBER_PISTOL_SMALL
@@ -167,7 +175,7 @@
 	initial_ammo = 0
 
 /obj/item/ammo_magazine/magnum
-	name = "magazine"
+	name = "15mm magazine"
 	icon_state = "magnum"
 	origin_tech = list(TECH_COMBAT = 2)
 	mag_type = MAGAZINE
@@ -181,7 +189,7 @@
 	initial_ammo = 0
 
 /obj/item/ammo_magazine/box/smallpistol
-	name = "ammunition box"
+	name = "7mm ammunition box"
 	icon_state = "smallpistol"
 	origin_tech = list(TECH_COMBAT = 2)
 	matter = list(MATERIAL_STEEL = 1800)
@@ -190,7 +198,7 @@
 	max_ammo = 30
 
 /obj/item/ammo_magazine/box/pistol
-	name = "ammunition box"
+	name = "10mm ammunition box"
 	icon_state = "smallpistol"
 	origin_tech = list(TECH_COMBAT = 2)
 	caliber = CALIBER_PISTOL
@@ -202,22 +210,24 @@
 	initial_ammo = 0
 
 /obj/item/ammo_magazine/pistol/throwback
-	name = "pistol magazine"
+	name = "10mm antique pistol magazine"
 	caliber = CALIBER_PISTOL_ANTIQUE
 	ammo_type = /obj/item/ammo_casing/pistol/throwback
 
 /obj/item/ammo_magazine/box/emp/pistol
+	name = "10mm EMP box"
 	labels = list("haywire")
 	ammo_type = /obj/item/ammo_casing/pistol/emp
 	caliber = CALIBER_PISTOL
 
 /obj/item/ammo_magazine/box/emp/smallpistol
+	name = "7mm EMP box"
 	labels = list("haywire")
 	ammo_type = /obj/item/ammo_casing/pistol/emp
 	caliber = CALIBER_PISTOL_SMALL
 
 /obj/item/ammo_magazine/proto_smg
-	name = "submachine gun magazine"
+	name = "4mmF SMG magazine"
 	icon_state = CALIBER_PISTOL_FLECHETTE
 	origin_tech = list(TECH_COMBAT = 4)
 	mag_type = MAGAZINE
@@ -228,7 +238,7 @@
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/gyrojet
-	name = "microrocket magazine"
+	name = "20mmG microrocket magazine"
 	icon_state = "gyrojet"
 	mag_type = MAGAZINE
 	caliber = CALIBER_GYROJET
@@ -240,7 +250,7 @@
 	initial_ammo = 0
 
 /obj/item/ammo_magazine/box/machinegun
-	name = "magazine box"
+	name = "7mmR box magazine"
 	icon_state = "machinegun"
 	origin_tech = list(TECH_COMBAT = 2)
 	mag_type = MAGAZINE
@@ -254,7 +264,7 @@
 	initial_ammo = 0
 
 /obj/item/ammo_magazine/rifle
-	name = "assault rifle magazine"
+	name = "7mmR AR magazine"
 	icon_state = "assault_rifle"
 	mag_type = MAGAZINE
 	caliber = CALIBER_RIFLE
@@ -264,7 +274,7 @@
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/mil_rifle
-	name = "assault rifle magazine"
+	name = "5mmR AR magazine"
 	icon_state = "bullup"
 	origin_tech = list(TECH_COMBAT = 2)
 	mag_type = MAGAZINE
@@ -278,11 +288,12 @@
 	initial_ammo = 0
 
 /obj/item/ammo_magazine/mil_rifle/practice
+	name = "5mmR-Practice AR magazine"
 	labels = list("practice")
 	ammo_type = /obj/item/ammo_casing/rifle/military/practice
 
 /obj/item/ammo_magazine/caps
-	name = "speed loader"
+	name = "cap loader"
 	desc = "A cheap plastic speed loader for some kind of revolver."
 	icon_state = "T38"
 	caliber = CALIBER_CAPS

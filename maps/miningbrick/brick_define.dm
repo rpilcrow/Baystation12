@@ -1,12 +1,12 @@
-/datum/map/bearcat
-	name = "Bearcat"
-	full_name = "Bearcat"
+/datum/map/miningbrick
+	name = "Brick"
+	full_name = "Brick"
 	path = "overmap_example"
 
-	station_name  = "FTV Bearcat"
-	station_short = "Bearcat"
+	station_name  = "FTV Raven"
+	station_short = "Raven"
 
-	dock_name     = "FTS Capitalist's Rest"
+	dock_name     = "FTS Tough Customer"
 	boss_name     = "FTU Merchant Navy"
 	boss_short    = "Merchant Admiral"
 	company_name  = "Legit Cargo Ltd."
@@ -16,10 +16,8 @@
 	default_law_type = /datum/ai_laws/corporate
 
 	evac_controller_type = /datum/evacuation_controller/lifepods
-//	lobby_icon = 'maps/bearcat/bearcat_lobby.dmi'
-//	lobby_screens = list("aesthetic") //PIL_EDIT: removed 'spess'
 	lobby_icon = 'maps/miningbrick/brick_lobby.dmi'
-	lobby_screens = list("industrial-mrrainbowwj")
+	lobby_screens = list("industrial-mrrainbowwj") //PIL_EDIT: removed 'spess'
 
 	allowed_spawns = list("Cryogenic Storage")
 	default_spawn = "Cryogenic Storage"
@@ -38,10 +36,10 @@
 	department_money = 0
 	salary_modifier = 0.2
 
-/datum/map/bearcat/map_info(victim)
+/datum/map/miningbrick/map_info(victim)
 	to_chat(victim, "You're aboard the <b>[station_name],</b> an independent vessel affiliated with Free Trade Union, on a SPACE FRONTIER. No major corporation or government has laid claim on the planets in this sector, so their exploitation is entirely up to you - mine, poach and deforest all you want.")
 
-/datum/map/bearcat/setup_map()
+/datum/map/miningbrick/setup_map()
 	..()
 	SStrade.traders += new /datum/trader/xeno_shop
 	SStrade.traders += new /datum/trader/medical

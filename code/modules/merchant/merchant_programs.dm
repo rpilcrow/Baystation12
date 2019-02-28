@@ -80,6 +80,13 @@
 		return
 	last_comms = "PAD NOT CONNECTED"
 
+/datum/computer_file/program/merchant/proc/get_item_desc(var/datum/trader/T, var/num)
+	var/response = T.get_item_desc(num)
+	if(istext(response))
+		last_comms = response
+	else
+		last_comms = "ERROR: NO DESCRIPTION FOUND"
+
 /datum/computer_file/program/merchant/proc/bribe(var/datum/trader/T, var/amt)
 	if(bank < amt)
 		last_comms = "ERROR: NOT ENOUGH FUNDS."
@@ -214,6 +221,9 @@
 			if(href_list["PRG_offer_money_for_item"])
 				. = 1
 				offer_money(T, text2num(href_list["PRG_offer_money_for_item"])+1, user.get_skill_value(SKILL_FINANCE))
+			if(href_list["PRG_what_is_this"])
+				. = 1
+				get_item_desc(T, text2num(href_list["PRG_what_is_this"]) + 1)
 			if(href_list["PRG_what_do_you_want"])
 				. = 1
 				last_comms = T.what_do_you_want()

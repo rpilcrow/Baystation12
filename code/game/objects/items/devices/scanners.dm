@@ -378,15 +378,16 @@ proc/get_wound_severity(var/damage_ratio, var/can_heal_overkill = 0)
 	analyze_gases(user.loc, user,advanced_mode)
 	return 1
 
-/obj/item/device/analyzer/afterattack(obj/O, mob/user, proximity)
-	if(!proximity)
-		return
+/obj/item/device/analyzer/afterattack(atom/target, mob/user, proximity)
+//	if(!proximity)
+//		return
+//	to_chat(user, "PROXIMITY: [proximity]")
 	if (user.incapacitated())
 		return
 	if (!user.IsAdvancedToolUser())
 		return
-	if(istype(O) && O.simulated)
-		analyze_gases(O, user, advanced_mode)
+	if(istype(target) && target.simulated)
+		analyze_gases(target, user, advanced_mode)
 
 /obj/item/device/mass_spectrometer
 	name = "mass spectrometer"

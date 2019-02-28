@@ -280,3 +280,9 @@
 
 /datum/trader/proc/bribe_to_stay_longer(var/amt)
 	return get_response("bribe_refusal", "How about... no?")
+
+/datum/trader/proc/get_item_desc(var/num)
+	var/atom/movable/M = trading_items[num]
+	if(M)
+		return "[uppertext(initial(M.name))]: [initial(M.desc)]"
+	else return 0

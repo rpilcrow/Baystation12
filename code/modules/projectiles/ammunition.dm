@@ -89,7 +89,7 @@
 
 //An item that holds casings and can be used to put them inside guns
 /obj/item/ammo_magazine
-	name = "magazine"
+	name = ".375 magazine"
 	desc = "A magazine for some kind of gun."
 	icon_state = "357"
 	icon = 'icons/obj/ammo.dmi'
@@ -130,8 +130,8 @@
 	if(initial_ammo)
 		for(var/i in 1 to initial_ammo)
 			stored_ammo += new ammo_type(src)
-	if(caliber)
-		LAZYINSERT(labels, caliber, 1)
+//	if(caliber)
+//		LAZYINSERT(labels, caliber, 1)
 	if(LAZYLEN(labels))
 		SetName("[name] ([english_list(labels, and_text = ", ")])")
 	update_icon()

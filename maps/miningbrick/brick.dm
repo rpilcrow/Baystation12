@@ -1,24 +1,24 @@
 #if !defined(using_map_DATUM)
-	#include "bearcat_unit_testing.dm"
+	#include "brick_unit_testing.dm"
 
-	#include "../../code/datums/music_tracks/businessend.dm"
+//	#include "../../code/datums/music_tracks/businessend.dm"
 //	#include "../../code/datums/music_tracks/salutjohn.dm"
 
-	#include "bearcat_areas.dm"
-	#include "bearcat_jobs.dm"
-	#include "bearcat_lobby.dm"
-	#include "bearcat_shuttles.dm"
-	#include "bearcat_overmap.dm"
-	#include "bearcat_overrides.dm"
-	#include "bearcat_loadouts.dm"
-	#include "bearcat-1.dmm"
-	#include "bearcat-2.dmm"
+	#include "brick_areas.dm"
+	#include "brick_jobs.dm"
+	#include "brick_lobby.dm"
+	#include "brick_shuttles.dm"
+	#include "brick_overmap.dm"
+	#include "brick_overrides.dm"
+	#include "brick_loadouts.dm"
+	#include "brick-1.dmm"
+	#include "brick-2.dmm"
 
-	#define using_map_DATUM /datum/map/bearcat
+	#define using_map_DATUM /datum/map/miningbrick
 
 #elif !defined(MAP_OVERRIDE)
 
-	#warn A map has already been included, ignoring Bearcat
+	#warn A map has already been included, ignoring Brick
 
 #endif
 

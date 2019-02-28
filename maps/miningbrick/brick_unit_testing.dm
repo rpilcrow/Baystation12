@@ -1,0 +1,47 @@
+/datum/unit_test/station_wires_shall_be_connected
+	exceptions = list(list(48, 54, 2, EAST))
+
+/datum/map/miningbrick
+	// Unit test exemptions
+
+	apc_test_exempt_areas = list(
+		/area/space = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/exoplanet          = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/exoplanet/desert   = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/exoplanet/grass    = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/exoplanet/snow     = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/exoplanet/garbage  = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/exoplanet/shrouded = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/exoplanet/chlorine = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/map_template/hydrobase = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/map_template/hydrobase/station = NO_SCRUBBER,
+		/area/map_template/marooned = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/map_template/datacapsule = NO_SCRUBBER|NO_VENT|NO_APC
+		)
+		/*
+
+		/area/ship/brick/maintenance/engine/port = NO_SCRUBBER|NO_VENT,
+		/area/ship/brick/maintenance/engine/starboard = NO_SCRUBBER|NO_VENT,
+		/area/ship/brick/crew/hallway/port = NO_SCRUBBER|NO_VENT,
+		/area/ship/brick/crew/hallway/starboard = NO_SCRUBBER|NO_VENT,
+		/area/ship/brick/maintenance/hallway = NO_SCRUBBER|NO_VENT,
+		/area/ship/brick/maintenance/lower = NO_SCRUBBER|NO_VENT,
+		/area/exoplanet          = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/exoplanet/desert   = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/exoplanet/grass    = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/exoplanet/snow     = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/exoplanet/garbage  = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/exoplanet/shrouded = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/exoplanet/chlorine = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/ship/brick/shuttle/lift = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/ship/brick/command/hallway = NO_SCRUBBER|NO_VENT,
+		/area/ship/brick/escape_port = NO_SCRUBBER|NO_VENT,
+		/area/ship/brick/escape_star = NO_SCRUBBER|NO_VENT,
+		/area/ship/brick/shuttle/outgoing = NO_SCRUBBER,
+		/area/ship/brick/maintenance/atmos = NO_SCRUBBER,
+		/area/map_template/hydrobase = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/map_template/hydrobase/station = NO_SCRUBBER,
+		/area/map_template/marooned = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/map_template/datacapsule = NO_SCRUBBER|NO_VENT|NO_APC
+
+		*/
