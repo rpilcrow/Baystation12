@@ -33,18 +33,40 @@
 		ores_stored[orename] = 0
 	. = ..()
 
+/obj/machinery/mineral/processing_unit/emag_act(var/remaining_charges, var/mob/user)
+	if(!emagged)
+		emagged = TRUE
+		remaining_charges--
+		to_chat(user, "<span class='notice'>You short out the organic safeties.</span>")
+		return TRUE
+	return FALSE
+
 /obj/machinery/mineral/processing_unit/Process()
 
 	//Grab some more ore to process this tick.
 	if(input_turf)
-		for(var/obj/item/I in recursive_content_check(input_turf, sight_check = FALSE, include_mobs = FALSE))
-			if(QDELETED(I) || !I.simulated || I.anchored)
-				continue
-			if(LAZYLEN(I.matter))
-				for(var/o_material in I.matter)
-					if(!isnull(ores_stored[o_material]))
-						ores_stored[o_material] += I.matter[o_material]
-			qdel(I)
+		if(!emagged && locate(/mob/living) in input_turf) //BUT DON'T GRAB PEOPLE'S ORGANS, JESUS
+			playsound(src.loc, 'sound/machines/buzz-sigh.ogg', 100, 1)
+			visible_message("<span class='warning'>\The [src] buzzes as it rejects the organic matter.</span>", "You hear a low buzz.")
+		else
+			for(var/obj/item/I in recursive_content_check(input_turf, sight_check = FALSE, include_mobs = FALSE))
+				if(QDELETED(I) || !I.simulated || I.anchored)
+					continue
+				if(LAZYLEN(I.matter))
+					for(var/o_material in I.matter)
+						if(!isnull(ores_stored[o_material]))
+							ores_stored[o_material] += I.matter[o_material]
+					qdel(I)
+				else
+					if(output_turf && istype(I.loc,/turf))
+						I.loc = output_turf
+			if(emagged)
+				var/mob/living/ML = locate(/mob/living) in input_turf
+				if(ML)
+					playsound(src.loc, 'sound/effects/splat.ogg', 50, 1)
+					visible_message("<span class='warning'><b>\The [src] tries to process [ML], ripping them apart!</b></span>","<span class='warning'>You hear grinding and then a sickening crunch!</span>")
+					ML.loc = output_turf
+					ML.gib()
 
 	if(!active)
 		return

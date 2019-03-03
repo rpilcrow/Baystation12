@@ -45,3 +45,19 @@
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm   = "stomps"
+
+/mob/living/simple_animal/crab/stowaway
+	name = "Crab Stowaway"
+	real_name = "Crab Stowaway"
+	desc = "Time for crab!"
+	icon_state = "royalcrab"
+	icon_living = "royalcrab"
+	icon_dead = "royalcrab_dead"
+	maxHealth = 30
+	health = 30
+	speak_chance = 10
+	emote_see = list("skitters","oozes liquid from its mouth", "scratches at the ground", "clicks its claws")
+
+/mob/living/simple_animal/crab/stowaway/New()
+	..()
+	name = pick("Crabulon","Mr. Krabs","Crabtastic","Cancer","Snips","Snipper","Crab Fab","Based Crab","Karkat","Crabmeat","Pinch")

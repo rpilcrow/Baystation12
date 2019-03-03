@@ -70,6 +70,7 @@
 
 /obj/structure/adherent_bath/proc/eject_occupant()
 	if(occupant)
+		occupant.UpdateDamageIcon()
 		occupant.dropInto(loc)
 		playsound(loc, 'sound/effects/slosh.ogg', 50, 1)
 		if(occupant.loc != src)

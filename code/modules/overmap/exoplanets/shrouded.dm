@@ -15,6 +15,7 @@
 							/datum/map_template/ruin/exoplanet/deserted_lab,
 							/datum/map_template/ruin/exoplanet/playablecolony,
 							/datum/map_template/ruin/exoplanet/datacapsule)
+	exo_hab_chance = 33
 
 /obj/effect/overmap/sector/exoplanet/shrouded/generate_map()
 	..()

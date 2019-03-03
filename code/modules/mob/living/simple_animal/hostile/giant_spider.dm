@@ -22,8 +22,8 @@
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm   = "pokes"
-	maxHealth = 125
-	health = 125
+	maxHealth = 50
+	health = 50
 	melee_damage_lower = 8
 	melee_damage_upper = 15
 	heat_damage_per_tick = 20
@@ -47,16 +47,16 @@
 
 //guards - less venomous, tanky, slower, prioritises protecting nurses
 /mob/living/simple_animal/hostile/giant_spider/guard
-	desc = "A monstrously huge brown spider with shimmering eyes."
+	desc = "A monstrously huge brown spider with shimmering eyes and a thick exoskeleton."
 	icon_state = "brown"
 	icon_living = "brown"
 	icon_dead = "brown_dead"
 	meat_amount = 4
-	maxHealth = 200
-	health = 200
+	maxHealth = 80
+	health = 80
 	melee_damage_lower = 10
 	melee_damage_upper = 15
-	poison_per_bite = 5
+	poison_per_bite = 1
 	speed = 2
 	move_to_delay = 4
 	break_stuff_probability = 15
@@ -68,12 +68,12 @@
 
 //nursemaids - these create webs and eggs - the weakest and least threatening
 /mob/living/simple_animal/hostile/giant_spider/nurse
-	desc = "A monstrously huge beige spider with shimmering eyes."
+	desc = "A monstrously huge beige spider with shimmering eyes and a thin, frail body."
 	icon_state = "beige"
 	icon_living = "beige"
 	icon_dead = "beige_dead"
-	maxHealth = 80
-	health = 80
+	maxHealth = 25
+	health = 25
 	melee_damage_lower = 8
 	melee_damage_upper = 12
 	harm_intent_damage = 6 //soft
@@ -95,12 +95,12 @@
 
 //hunters - the most damage, fast, average health and the only caste tenacious enough to break out of nets
 /mob/living/simple_animal/hostile/giant_spider/hunter
-	desc = "A monstrously huge black spider with shimmering eyes."
+	desc = "A monstrously huge black spider with shimmering eyes, which twitches rapidly."
 	icon_state = "black"
 	icon_living = "black"
 	icon_dead = "black_dead"
-	maxHealth = 150
-	health = 150
+	maxHealth = 50
+	health = 50
 	melee_damage_lower = 15
 	melee_damage_upper = 15
 	poison_per_bite = 10
@@ -119,12 +119,12 @@
 
 //spitters - fast, comparatively weak, very venomous; projectile attacks but will resort to melee once out of ammo
 /mob/living/simple_animal/hostile/giant_spider/spitter
-	desc = "A monstrously huge iridescent spider with shimmering eyes."
+	desc = "A monstrously huge iridescent spider with shimmering eyes, with venom dripping from its maw."
 	icon_state = "purple"
 	icon_living = "purple"
 	icon_dead = "purple_dead"
-	maxHealth = 90
-	health = 90
+	maxHealth = 40
+	health = 40
 	melee_damage_lower = 8
 	melee_damage_upper = 12
 	poison_per_bite = 15
@@ -182,10 +182,10 @@
 		if(health < maxHealth)
 			health += (0.2 * rand(melee_damage_lower, melee_damage_upper)) //heal a bit on hit
 		var/mob/living/L = .
-		if(L.reagents)
+		if(L.reagents && prob(poison_per_bite*6)) //PIL_EDIT: added prob, 15ppb = 90%, 5ppb = 30%
 			L.reagents.add_reagent(poison_type, rand(0.5 * poison_per_bite, poison_per_bite))
-			if(prob(poison_per_bite))
-				to_chat(L, "<span class='warning'>You feel a tiny prick.</span>")
+			//if(prob(poison_per_bite))
+			to_chat(L, "<span class='warning'>You feel a tiny prick.</span>")
 
 /mob/living/simple_animal/hostile/giant_spider/Life()
 	. = ..()
@@ -357,7 +357,7 @@ Nurse caste procs
 
 						if(O.anchored)
 							continue
-						
+
 						if(is_type_in_list(O, cocoon_blacklist))
 							continue
 

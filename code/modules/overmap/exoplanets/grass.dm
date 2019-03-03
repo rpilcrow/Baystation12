@@ -16,6 +16,7 @@
 							 /datum/map_template/ruin/exoplanet/hut,
 							 /datum/map_template/ruin/exoplanet/playablecolony,
 							 /datum/map_template/ruin/exoplanet/datacapsule)
+	exo_hab_chance = 90
 
 /obj/effect/overmap/sector/exoplanet/grass/generate_map()
 	..()

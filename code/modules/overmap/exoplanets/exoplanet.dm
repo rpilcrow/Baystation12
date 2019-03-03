@@ -10,6 +10,8 @@
 	var/list/breathgas = list()	//list of gases animals/plants require to survive
 	var/badgas					//id of gas that is toxic to life here
 
+	var/exo_hab_chance = 33 //chance of this planet being perfectly habitable
+
 	var/lightlevel = 0 //This default makes turfs not generate light. Adjust to have exoplanents be lit.
 	var/night = TRUE
 	var/daycycle //How often do we change day and night
@@ -259,7 +261,7 @@
 
 /obj/effect/overmap/sector/exoplanet/proc/generate_atmosphere()
 	atmosphere = new
-	if(prob(10))	//small chance of getting a perfectly habitable planet
+	if(prob(exo_hab_chance))	//small chance of getting a perfectly habitable planet //PIL_EDIT; changed to 33%
 		atmosphere.adjust_gas("oxygen", MOLES_O2STANDARD, 0)
 		atmosphere.adjust_gas("nitrogen", MOLES_N2STANDARD)
 	else //let the fuckery commence

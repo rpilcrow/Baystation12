@@ -116,7 +116,7 @@
 
 /mob/living/simple_animal/crow/examine(var/mob/user)
 	. = ..()
-	if(Adjacent(src))
+	if(Adjacent(user))
 		if(messenger_bag)
 			if(messenger_bag.contents.len)
 				to_chat(user, "It's wearing a little messenger bag with a Corvid Couriers logo on it. There's something stuffed inside.")
@@ -149,3 +149,20 @@
 	else
 		overlays |= "cyber_dead"
 
+/mob/living/simple_animal/crow/pilcrow
+	name = "Pilcrow"
+	desc = "He's mad as hell, and he's not going to take it anymore!"
+	speak_emote = list("swears","curses","caws","complains")
+	speak = list("Caw.", "Caw?", "Caw!", "CAW.","FUCK!","SHIT!","Why doesn't it WORK?","Why won't it compile?","What the fuck is this?","What's broken now?","But why?","Who made this?","But how?")
+	speak_chance = 25 //1/8th of the time
+	stop_automated_movement = 0
+
+/mob/living/simple_animal/crow/pilcrow/New()
+	..()
+	messenger_bag = null //sorry
+	access_card = new/obj/item/weapon/card/id/captains_spare(src)
+	access_card.name = "Pilcrow's ID"
+	access_card.desc = "The golden ticket! It's a little beat up, and has been pecked at."
+	access_card.registered_name = "Pilcrow"
+	access_card.assignment = "Crow"
+	update_icon()

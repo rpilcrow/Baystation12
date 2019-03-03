@@ -17,6 +17,7 @@
 							 /datum/map_template/ruin/exoplanet/radshrine,
 							 /datum/map_template/ruin/exoplanet/playablecolony,
 							 /datum/map_template/ruin/exoplanet/datacapsule)
+	exo_hab_chance = 66
 
 /obj/effect/overmap/sector/exoplanet/desert/generate_map()
 	..()

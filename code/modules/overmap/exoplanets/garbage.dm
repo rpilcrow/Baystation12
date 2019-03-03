@@ -3,6 +3,7 @@
 	desc = "An arid exoplanet with unnatural formations covering the surface. Hotspots of radiation detected."
 	color = "#a5a18b"
 	planetary_area = /area/exoplanet/garbage
+	exo_hab_chance = 33
 
 /obj/effect/overmap/sector/exoplanet/garbage/generate_map()
 	..()
@@ -16,7 +17,7 @@
 /obj/effect/overmap/sector/exoplanet/garbage/generate_atmosphere()
 	..()
 	if(atmosphere)
-		atmosphere.temperature = T20C + rand(20, 100)
+		atmosphere.temperature = T20C + rand(-5, 100)
 		atmosphere.update_values()
 
 /obj/effect/overmap/sector/exoplanet/garbage/update_biome()

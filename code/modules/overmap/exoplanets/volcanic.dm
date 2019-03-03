@@ -5,6 +5,7 @@
 	planetary_area = /area/exoplanet/volcanic
 	rock_colors = list(COLOR_DARK_GRAY)
 	possible_themes = list()
+	exo_hab_chance = 10
 
 /obj/effect/overmap/sector/exoplanet/volcanic/generate_map()
 	..()

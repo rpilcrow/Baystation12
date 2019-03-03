@@ -33,12 +33,12 @@
 "aG" = (/obj/item/device/radio/intercom{pixel_y = 22},/obj/machinery/sleeper{icon_state = "sleeper_0"; dir = 1},/turf/simulated/floor/tiled/white,/area/ship/scrap/crew/medbay)
 "aH" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/structure/closet/walllocker/emerglocker/north,/obj/machinery/sleeper,/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
 "aI" = (/obj/item/weapon/bedsheet/captain,/obj/machinery/atmospherics/unary/vent_scrubber/on,/obj/item/weapon/gun/projectile/pistol/holdout,/obj/structure/bed/padded,/turf/simulated/floor/wood,/area/ship/scrap/command/captain)
-"aJ" = (/obj/item/weapon/paper_bin,/obj/item/weapon/pen,/obj/structure/table/woodentable,/obj/machinery/alarm{dir = 8; icon_state = "alarm0"; pixel_x = 24},/obj/machinery/light_switch{pixel_y = 25},/obj/random_multi/single_item/captains_spare_id,/obj/random/action_figure,/obj/random_multi/single_item/captains_spare_id,/turf/simulated/floor/wood,/area/ship/scrap/command/captain)
+"aJ" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 10; icon_state = "intact"},/obj/structure/table/standard,/obj/random_multi/single_item/captains_spare_id,/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
 "aK" = (/obj/structure/shuttle/engine/propulsion/burst/left{dir = 1},/turf/simulated/floor/airless,/area/ship/scrap/shuttle/outgoing)
 "aL" = (/turf/simulated/wall/titanium,/area/ship/scrap/shuttle/outgoing)
-"aM" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 10; icon_state = "intact"},/obj/structure/table/standard,/obj/machinery/cell_charger,/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
-"aN" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 6},/obj/effect/floor_decal/corner/beige{icon_state = "corner_white"; dir = 9},/obj/item/device/radio/intercom{dir = 4; pixel_x = -22},/obj/structure/handrai{tag = "icon-handrail (EAST)"; icon_state = "handrail"; dir = 4},/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
-"aO" = (/obj/machinery/computer/shuttle_control/explore/bearcat,/obj/effect/shuttle_landmark/docking_arm_port/shuttle,/obj/machinery/light{icon_state = "tube1"; dir = 1},/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
+"aM" = (/obj/item/weapon/paper_bin,/obj/item/weapon/pen,/obj/structure/table/woodentable,/obj/machinery/alarm{dir = 8; icon_state = "alarm0"; pixel_x = 24},/obj/machinery/light_switch{pixel_y = 25},/obj/random/action_figure,/obj/random_multi/single_item/captains_spare_id,/turf/simulated/floor/wood,/area/ship/scrap/command/captain)
+"aN" = (/obj/machinery/computer/shuttle_control/explore/bearcat,/obj/machinery/light{icon_state = "tube1"; dir = 1},/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
+"aO" = (/obj/structure/table/standard,/obj/item/weapon/deck/tarot,/obj/machinery/atmospherics/pipe/simple/hidden{icon_state = "intact"; dir = 6},/obj/machinery/cell_charger,/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
 "aP" = (/obj/machinery/message_server,/turf/simulated/floor/bluegrid,/area/ship/scrap/comms)
 "aQ" = (/obj/machinery/door/window/westleft,/obj/structure/cable{d1 = 1; d2 = 4; icon_state = "1-4"},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 5},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 6},/turf/simulated/floor/tiled/techfloor/grid,/area/ship/scrap/comms)
 "aR" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 2; layer = 2.4; level = 2},/obj/effect/floor_decal/corner/beige{icon_state = "corner_white"; dir = 10},/obj/structure/bed/chair/comfy/brown{icon_state = "comfychair_preview"; dir = 1},/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
@@ -49,33 +49,33 @@
 "aW" = (/obj/structure/bed/chair/comfy/brown,/turf/simulated/floor/carpet/blue,/area/ship/scrap/command/captain)
 "aX" = (/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
 "aY" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/door/firedoor,/obj/effect/wallframe_spawn/reinforced/titanium,/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
-"aZ" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/floodlight,/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
+"aZ" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/atmospherics/pipe/simple/hidden{icon_state = "intact"; dir = 5},/obj/machinery/floodlight,/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
 "ba" = (/obj/machinery/alarm{dir = 1; icon_state = "alarm0"; pixel_x = 0; pixel_y = -32},/obj/machinery/computer/message_monitor{dir = 4},/turf/simulated/floor/bluegrid,/area/ship/scrap/comms)
 "bb" = (/obj/machinery/light,/obj/item/device/radio/intercom{dir = 4; pixel_x = -22},/obj/machinery/alarm{dir = 1; icon_state = "alarm0"; pixel_x = 0; pixel_y = -24},/obj/item/modular_computer/console/preset/engineering{dir = 1},/obj/machinery/newscaster{pixel_y = -32},/turf/simulated/floor/tiled/dark,/area/ship/scrap/command/bridge)
 "bc" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled/dark,/area/ship/scrap/command/hallway)
 "bd" = (/obj/machinery/atmospherics/pipe/simple/visible/universal,/obj/machinery/firealarm{dir = 4; pixel_x = 24; pixel_y = 0},/turf/simulated/floor/tiled/techfloor,/area/ship/scrap/maintenance/atmos)
 "be" = (/obj/structure/cable{icon_state = "4-9"},/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1; layer = 2.4; level = 2},/turf/simulated/floor/carpet/blue,/area/ship/scrap/command/captain)
 "bf" = (/obj/structure/shuttle/engine/propulsion/burst/left,/turf/simulated/floor/airless,/area/ship/scrap/shuttle/outgoing)
-"bg" = (/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
-"bh" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
-"bi" = (/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
-"bj" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
+"bg" = (/obj/effect/floor_decal/corner/beige{icon_state = "corner_white"; dir = 9},/obj/item/device/radio/intercom{dir = 4; pixel_x = -22},/obj/structure/handrai{tag = "icon-handrail (EAST)"; icon_state = "handrail"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 6},/obj/machinery/atmospherics/pipe/simple/hidden{icon_state = "intact"; dir = 6},/obj/item/roller,/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
+"bh" = (/obj/machinery/atmospherics/pipe/simple/hidden{icon_state = "intact"; dir = 9},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
+"bi" = (/obj/machinery/door/airlock/external/bolted/cycling{frequency = 1383; id_tag = "bearcat_shuttle_out"},/obj/machinery/access_button/airlock_exterior{frequency = 1383; master_tag = "bearcat_shuttle"; pixel_x = 18; pixel_y = -20},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_y = 0},/obj/machinery/atmos_protector,/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
+"bj" = (/obj/effect/floor_decal/corner/beige{icon_state = "corner_white"; dir = 9},/obj/machinery/atmospherics/pipe/simple/hidden,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/body_scanconsole,/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
 "bk" = (/obj/machinery/alarm{dir = 4; icon_state = "alarm0"; pixel_x = -24},/obj/machinery/atmospherics/pipe/simple/hidden,/obj/effect/floor_decal/corner/beige{icon_state = "corner_white"; dir = 10},/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
-"bl" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/effect/floor_decal/corner/beige{icon_state = "corner_white"; dir = 9},/obj/structure/handrai{tag = "icon-handrail (EAST)"; icon_state = "handrail"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden{icon_state = "intact"; dir = 6},/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
+"bl" = (/obj/effect/shuttle_landmark/docking_arm_port/shuttle,/turf/simulated/wall/titanium,/area/ship/scrap/shuttle/outgoing)
 "bm" = (/turf/simulated/wall/r_wall,/area/ship/scrap/dock)
-"bn" = (/obj/structure/cable{icon_state = "4-10"},/obj/machinery/atmospherics/pipe/simple/hidden{icon_state = "intact"; dir = 9},/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
+"bn" = (/obj/structure/handrai{tag = "icon-handrail (EAST)"; icon_state = "handrail"; dir = 4},/obj/effect/floor_decal/corner/beige{icon_state = "corner_white"; dir = 9},/obj/machinery/atmospherics/pipe/simple/hidden,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/bodyscanner,/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
 "bo" = (/obj/machinery/door/airlock/external/bolted/cycling{frequency = 1383; id_tag = "bearcat_shuttle_in"},/obj/machinery/access_button/airlock_interior{frequency = 1383; master_tag = "bearcat_shuttle"; pixel_x = -12; pixel_y = 20},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_y = 0},/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
 "bp" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/obj/machinery/light,/obj/structure/bed/chair{icon_state = "chair_preview"; dir = 1},/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
 "bq" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 8; layer = 2.4; level = 2},/obj/structure/bed/chair{icon_state = "chair_preview"; dir = 1},/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
-"br" = (/obj/machinery/power/apc{dir = 8},/obj/structure/cable{icon_state = "0-4"; d2 = 4},/obj/structure/cable,/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 5},/obj/structure/handrai{tag = "icon-handrail (EAST)"; icon_state = "handrail"; dir = 4},/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
+"br" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/wall/titanium,/area/ship/scrap/shuttle/outgoing)
 "bs" = (/obj/machinery/atmospherics/portables_connector{dir = 1},/obj/machinery/portable_atmospherics/canister/air/airlock{start_pressure = 1500},/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
-"bt" = (/obj/machinery/door/airlock/hatch,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/cable{icon_state = "2-5"},/obj/structure/sign{icon_state = "radiation"; pixel_x = 32},/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
+"bt" = (/obj/machinery/door/airlock/hatch,/obj/structure/cable{icon_state = "2-5"},/obj/structure/sign{icon_state = "radiation"; pixel_x = 32},/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
 "bu" = (/obj/structure/closet/crate/uranium,/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1; layer = 2.4; level = 2},/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
 "bv" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 8},/turf/simulated/floor/tiled/monotile,/area/ship/scrap/dock)
 "bw" = (/obj/machinery/light{icon_state = "tube1"; dir = 1},/obj/structure/cable{d2 = 8; icon_state = "0-8"},/obj/machinery/power/apc{dir = 1; name = "Docking Area APC"},/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 8},/turf/simulated/floor/tiled/monotile,/area/ship/scrap/dock)
 "bx" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_y = 0},/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
-"by" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; pixel_y = 0},/obj/structure/handrai{tag = "icon-handrail (EAST)"; icon_state = "handrail"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden{icon_state = "intact"; dir = 5},/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
-"bz" = (/obj/structure/table/standard,/obj/item/weapon/deck/tarot,/obj/machinery/atmospherics/pipe/simple/hidden{icon_state = "intact"; dir = 6},/obj/machinery/recharger,/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
+"by" = (/obj/structure/cable{icon_state = "0-4"; d2 = 4},/obj/structure/cable,/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 5},/obj/structure/handrai{tag = "icon-handrail (EAST)"; icon_state = "handrail"; dir = 4},/obj/machinery/power/apc/high{dir = 8},/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
+"bz" = (/obj/structure/cable{icon_state = "4-10"},/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
 "bA" = (/obj/machinery/door/firedoor,/obj/machinery/door/blast/regular{density = 0; icon_state = "pdoor0"; id = "scraplock"; name = "External Blast Doors"; opacity = 0},/obj/effect/wallframe_spawn/reinforced,/turf/simulated/floor/plating,/area/ship/scrap/dock)
 "bB" = (/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 4},/obj/structure/sign/warning/vacuum{pixel_x = -35},/obj/machinery/computer/shuttle_control/explore/bearcat{dir = 4},/turf/simulated/floor/tiled/monotile,/area/ship/scrap/dock)
 "bC" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 6},/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"},/turf/simulated/floor/tiled/monotile,/area/ship/scrap/dock)
@@ -84,7 +84,7 @@
 "bF" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/effect/floor_decal/plaque,/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,/obj/structure/cable{d1 = 1; d2 = 4; icon_state = "1-4"},/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"},/turf/simulated/floor/tiled/monotile,/area/ship/scrap/dock)
 "bG" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 10},/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/simulated/floor/tiled/monotile,/area/ship/scrap/dock)
 "bH" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 8},/obj/structure/sign/warning/vacuum{pixel_x = 35},/obj/effect/floor_decal/steeldecal/steel_decals6,/turf/simulated/floor/tiled/monotile,/area/ship/scrap/dock)
-"bI" = (/obj/machinery/atmospherics/portables_connector{dir = 8},/obj/machinery/portable_atmospherics/powered/scrubber,/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
+"bI" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"},/obj/machinery/atmospherics/portables_connector{dir = 1},/obj/machinery/portable_atmospherics/powered/scrubber,/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
 "bJ" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 6},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 5},/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"},/turf/simulated/floor/tiled/freezer,/area/ship/scrap/crew/toilets)
 "bK" = (/obj/machinery/light_switch{pixel_y = -25},/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 1},/obj/machinery/power/apc{dir = 4; name = "Bathrooms APC"},/obj/structure/cable,/turf/simulated/floor/tiled/freezer,/area/ship/scrap/crew/toilets)
 "bL" = (/obj/machinery/light,/obj/machinery/firealarm{dir = 4; pixel_x = 24; pixel_y = 0},/obj/item/modular_computer/console/preset/command{dir = 1},/turf/simulated/floor/tiled/dark,/area/ship/scrap/command/bridge)
@@ -105,7 +105,7 @@
 "ca" = (/obj/machinery/access_button/airlock_exterior{master_tag = "bearcat_starboard_dock"; pixel_x = 18; pixel_y = 20},/obj/machinery/door/airlock/external/bolted/cycling{id_tag = "dock_star_out"},/obj/machinery/shield_diffuser,/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_y = 0},/turf/simulated/floor/tiled/steel_ridged,/area/ship/scrap/dock)
 "cb" = (/obj/effect/shuttle_landmark/docking_arm_starboard/pod,/turf/space,/area/space)
 "cc" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 9},/obj/structure/cable{d2 = 8; icon_state = "0-8"},/obj/machinery/power/apc{name = "Dorms APC"},/turf/simulated/floor/tiled/white,/area/ship/scrap/crew/cryo)
-"cd" = (/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/wall/titanium,/area/ship/scrap/shuttle/outgoing)
+"cd" = (/obj/machinery/atmospherics/pipe/simple/hidden{icon_state = "intact"; dir = 6},/turf/simulated/wall/titanium,/area/ship/scrap/shuttle/outgoing)
 "ce" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 9; pixel_y = 0},/obj/effect/landmark{name = "JoinLateCryo"},/turf/simulated/floor/tiled/white,/area/ship/scrap/crew/cryo)
 "cf" = (/obj/effect/wallframe_spawn/reinforced,/obj/machinery/door/blast/regular{density = 0; icon_state = "pdoor0"; id = "scraplock"; name = "External Blast Doors"; opacity = 0},/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/ship/scrap/dock)
 "cg" = (/obj/machinery/atmospherics/portables_connector{icon_state = "map_connector"; dir = 4},/obj/machinery/portable_atmospherics/canister/air/airlock,/obj/machinery/door/blast/regular{density = 0; icon_state = "pdoor0"; id = "scraplock"; name = "External Blast Doors"; opacity = 0},/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/plating,/area/ship/scrap/dock)
@@ -136,7 +136,7 @@
 "cF" = (/obj/structure/closet/crate,/obj/random/coin,/turf/simulated/floor/plating,/area/ship/scrap/hidden)
 "cG" = (/turf/simulated/floor/tiled/techmaint,/area/ship/scrap/crew/hallway/starboard)
 "cH" = (/obj/structure/table/reinforced,/obj/item/device/flashlight/lamp,/obj/random_multi/single_item/captains_spare_id,/obj/item/weapon/storage/bible/booze,/turf/simulated/floor/plating,/area/ship/scrap/hidden)
-"cI" = (/obj/machinery/recharge_station,/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
+"cI" = (/obj/effect/landmark{name = "carpspawn"},/turf/space,/area/space)
 "cJ" = (/obj/effect/paint/brown,/turf/simulated/wall/r_wall,/area/ship/scrap/crew/saloon)
 "cK" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/door/airlock/hatch/autoname/general,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled/steel_ridged,/area/ship/scrap/crew/saloon)
 "cL" = (/obj/random/maintenance,/turf/simulated/floor/tiled/techmaint,/area/ship/scrap/crew/hallway/starboard)
@@ -187,13 +187,13 @@
 "dE" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_y = 0},/obj/effect/floor_decal/corner/beige{icon_state = "corner_white"; dir = 6},/turf/simulated/floor/tiled,/area/ship/scrap/crew/saloon)
 "dF" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_y = 0},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 6},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 6},/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/simulated/floor/tiled/techmaint,/area/ship/scrap/crew/hallway/starboard)
 "dG" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_y = 0},/obj/machinery/door/airlock/hatch{name = "Cryo Storage"; normalspeed = 0; stripe_color = "#b7f27d"},/obj/machinery/door/firedoor,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor/tiled/steel_ridged,/area/ship/scrap/crew/cryo)
-"dH" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/effect/floor_decal/corner/beige{icon_state = "corner_white"; dir = 9},/obj/structure/handrai{tag = "icon-handrail (EAST)"; icon_state = "handrail"; dir = 4},/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
+"dH" = (/obj/structure/table/standard,/obj/item/device/multitool{pixel_x = 5},/obj/item/device/pipe_painter,/obj/item/clamp,/mob/living/simple_animal/crow/pilcrow,/turf/simulated/floor/tiled/techfloor,/area/ship/scrap/maintenance/atmos)
 "dI" = (/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
 "dJ" = (/obj/machinery/cryopod,/turf/simulated/floor/tiled/white,/area/ship/scrap/crew/cryo)
 "dK" = (/obj/effect/wallframe_spawn/reinforced,/obj/machinery/door/blast/regular{density = 0; dir = 4; icon_state = "pdoor0"; id = "scraplock"; name = "External Blast Doors"; opacity = 0},/turf/simulated/floor/plating,/area/ship/scrap/crew/cryo)
 "dL" = (/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
 "dM" = (/obj/item/modular_computer/console/preset/command,/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
-"dN" = (/obj/machinery/door/firedoor,/obj/machinery/atmospherics/pipe/simple/hidden,/obj/effect/wallframe_spawn/reinforced/titanium,/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
+"dN" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/structure/closet/crate,/obj/item/device/radio,/obj/item/device/spaceflare,/obj/machinery/atmospherics/pipe/simple/hidden{dir = 10; icon_state = "intact"},/obj/structure/handrai{tag = "icon-handrail (WEST)"; icon_state = "handrail"; dir = 8},/obj/machinery/firealarm{pixel_y = 24},/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
 "dO" = (/obj/machinery/door/airlock/hatch,/obj/machinery/door/firedoor,/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
 "dP" = (/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/wall,/area/ship/scrap/crew/saloon)
 "dQ" = (/obj/effect/decal/cleanable/dirt,/obj/structure/disposalpipe/segment{dir = 4},/obj/machinery/vending/cigarette,/obj/effect/floor_decal/corner/beige{icon_state = "corner_white"; dir = 9},/turf/simulated/floor/tiled,/area/ship/scrap/crew/saloon)
@@ -203,10 +203,10 @@
 "dU" = (/obj/machinery/disposal,/obj/structure/disposalpipe/trunk{dir = 8},/obj/machinery/light_switch{pixel_x = 28},/obj/effect/floor_decal/corner/beige{icon_state = "corner_white"; dir = 6},/turf/simulated/floor/tiled,/area/ship/scrap/crew/saloon)
 "dV" = (/obj/machinery/light/small{icon_state = "bulb1"; dir = 4},/obj/effect/decal/cleanable/dirt,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; pixel_y = 0},/turf/simulated/floor/tiled/techmaint,/area/ship/scrap/crew/hallway/starboard)
 "dW" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/effect/floor_decal/corner/beige{icon_state = "corner_white"; dir = 5},/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
-"dX" = (/obj/structure/handrai{tag = "icon-handrail (WEST)"; icon_state = "handrail"; dir = 8},/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
+"dX" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"},/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
 "dY" = (/obj/effect/paint/brown,/turf/simulated/wall/r_wall,/area/ship/scrap/crew/kitchen)
 "dZ" = (/turf/simulated/wall,/area/ship/scrap/crew/kitchen)
-"ea" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_y = 0},/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
+"ea" = (/obj/structure/handrai,/turf/simulated/floor/airless,/area/ship/scrap/shuttle/outgoing)
 "eb" = (/turf/simulated/wall,/area/ship/scrap/cargo)
 "ec" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/door/airlock/hatch/autoname/general,/obj/machinery/door/firedoor,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled,/area/ship/scrap/cargo)
 "ed" = (/obj/machinery/light_switch{pixel_x = -25},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/sign/deck/first{pixel_x = 32},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; pixel_y = 0},/turf/simulated/floor/tiled/techmaint,/area/ship/scrap/crew/hallway/starboard)
@@ -215,11 +215,13 @@
 "eg" = (/obj/structure/cable,/obj/machinery/power/port_gen/pacman/super,/obj/machinery/light/small{icon_state = "bulb1"; dir = 4},/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
 "eh" = (/turf/simulated/mineral,/area/space)
 "ei" = (/obj/machinery/light/small{dir = 8},/obj/machinery/portable_atmospherics/canister/air/airlock{start_pressure = 1500},/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
-"ej" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/effect/floor_decal/corner/beige{icon_state = "corner_white"; dir = 9},/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
+"ej" = (/obj/random_multi/single_item/captains_spare_id,/turf/simulated/floor/bluegrid,/area/ship/scrap/comms)
 "eo" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled/techfloor,/area/ship/scrap/cargo)
+"ep" = (/obj/machinery/sleeper{icon_state = "sleeper_0"; dir = 1},/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
 "eq" = (/obj/machinery/door/firedoor,/obj/machinery/door/blast/regular{density = 0; icon_state = "pdoor0"; id = "scraplock"; name = "External Blast Doors"; opacity = 0},/obj/effect/wallframe_spawn/reinforced,/turf/simulated/floor/plating,/area/ship/scrap/command/captain)
 "er" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; pixel_y = 0},/turf/simulated/floor/plating,/area/ship/scrap/crew/hallway/starboard)
 "et" = (/obj/item/roller,/turf/simulated/floor/tiled/white,/area/ship/scrap/crew/medbay)
+"ev" = (/obj/effect/floor_decal/corner/beige{icon_state = "corner_white"; dir = 9},/obj/machinery/atmospherics/pipe/simple/hidden,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled,/area/ship/scrap/shuttle/outgoing)
 "ew" = (/turf/simulated/mineral/random/high_chance,/area/space)
 "ex" = (/obj/effect/paint/brown,/turf/simulated/wall/r_wall,/area/ship/scrap/maintenance/engine/port)
 "ey" = (/obj/effect/wallframe_spawn/reinforced,/obj/machinery/door/blast/regular{density = 0; dir = 4; icon_state = "pdoor0"; id = "scraplock"; name = "External Blast Doors"; opacity = 0},/turf/simulated/floor/plating,/area/ship/scrap/crew/kitchen)
@@ -227,6 +229,7 @@
 "eA" = (/obj/item/weapon/stool/padded,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/effect/floor_decal/corner/red/diagonal,/obj/effect/landmark/start{name = "Cook"},/turf/simulated/floor/tiled,/area/ship/scrap/crew/kitchen)
 "eB" = (/obj/structure/cable{icon_state = "0-2"; pixel_y = 1; d2 = 2},/obj/machinery/power/apc{dir = 4; name = "Galley APC"},/obj/effect/floor_decal/corner/red/diagonal,/obj/structure/hygiene/sink{dir = 4; icon_state = "sink"; pixel_x = 11; pixel_y = 0},/turf/simulated/floor/tiled,/area/ship/scrap/crew/kitchen)
 "eC" = (/obj/structure/disposalpipe/segment,/obj/machinery/light/small{icon_state = "bulb1"; dir = 8},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; pixel_y = 0},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/sign/directions/engineering{pixel_x = -32},/turf/simulated/floor/tiled/techmaint,/area/ship/scrap/crew/hallway/port)
+"eD" = (/obj/machinery/atmospherics/pipe/simple/hidden{icon_state = "intact"; dir = 9},/turf/simulated/wall/titanium,/area/ship/scrap/shuttle/outgoing)
 "eF" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 9; pixel_y = 0},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 5},/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"},/turf/simulated/floor/tiled/techfloor,/area/ship/scrap/cargo)
 "eH" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light/small{icon_state = "bulb1"; dir = 4},/obj/effect/floor_decal/industrial/outline/yellow,/obj/structure/handrai{tag = "icon-handrail (WEST)"; icon_state = "handrail"; dir = 8},/turf/simulated/floor/tiled/techfloor,/area/ship/scrap/cargo)
 "eI" = (/obj/machinery/light/small{icon_state = "bulb1"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/sign/directions/engineering{pixel_x = -32},/obj/structure/ladder,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; pixel_y = 0},/turf/simulated/floor/plating,/area/ship/scrap/crew/hallway/starboard)
@@ -369,7 +372,6 @@
 "iZ" = (/obj/structure/window/reinforced{dir = 8},/obj/effect/floor_decal/corner/white/diagonal{icon_state = "corner_white_diagonal"; dir = 4},/obj/effect/floor_decal/corner/white/diagonal,/obj/machinery/meter/turf,/turf/simulated/floor/reinforced/airmix,/area/ship/scrap/maintenance/atmos)
 "ja" = (/obj/structure/window/reinforced{dir = 4},/obj/machinery/atmospherics/unary/outlet_injector{dir = 4; frequency = 1441; icon_state = "map_injector"; id = "n2_in"; use_power = 1},/obj/effect/floor_decal/corner/white/diagonal,/obj/effect/floor_decal/corner/white/diagonal{icon_state = "corner_white_diagonal"; dir = 4},/turf/simulated/floor/reinforced/airmix,/area/ship/scrap/maintenance/atmos)
 "jb" = (/obj/structure/disposalpipe/segment{dir = 4},/obj/structure/bed/chair/comfy/brown{icon_state = "comfychair_preview"; dir = 1},/turf/simulated/floor/tiled,/area/ship/scrap/crew/saloon)
-"jc" = (/obj/machinery/door/airlock/external/bolted/cycling{frequency = 1383; id_tag = "bearcat_shuttle_out"},/obj/machinery/access_button/airlock_exterior{frequency = 1383; master_tag = "bearcat_shuttle"; pixel_x = 18; pixel_y = -20},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_y = 0},/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
 "jd" = (/obj/structure/closet/walllocker/emerglocker/west,/obj/machinery/atmospherics/pipe/simple/hidden/fuel,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; pixel_y = 0},/turf/simulated/floor/plating,/area/ship/scrap/maintenance/engine/aft)
 "je" = (/obj/structure/sign/warning/fire{pixel_y = 32},/obj/machinery/atmospherics/portables_connector,/turf/simulated/floor/plating,/area/ship/scrap/maintenance/engine/aft)
 "jf" = (/obj/machinery/light_switch{pixel_y = 25},/obj/machinery/atmospherics/pipe/tank/carbon_dioxide,/turf/simulated/floor/plating,/area/ship/scrap/maintenance/engine/aft)
@@ -518,7 +520,6 @@
 "Bc" = (/obj/structure/table/standard,/obj/machinery/reagentgrinder,/obj/effect/floor_decal/corner/red/diagonal,/obj/structure/sign/monkey_painting{pixel_y = 32},/obj/machinery/firealarm{dir = 8; pixel_x = -24; pixel_y = 0},/turf/simulated/floor/tiled,/area/ship/scrap/crew/kitchen)
 "Bg" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/door/airlock/hatch/autoname/command,/turf/simulated/floor/tiled/dark,/area/ship/scrap/dock)
 "Bx" = (/obj/effect/paint/brown,/turf/simulated/wall/r_wall/hull,/area/ship/scrap/maintenance/power)
-"BD" = (/obj/structure/table/standard,/obj/item/device/multitool{pixel_x = 5},/obj/item/device/pipe_painter,/obj/item/clamp,/turf/simulated/floor/tiled/techfloor,/area/ship/scrap/maintenance/atmos)
 "Cb" = (/obj/machinery/atmospherics/pipe/simple/visible/green{dir = 6},/obj/machinery/light/small{icon_state = "bulb1"; dir = 1},/obj/structure/closet/firecloset,/turf/simulated/floor/tiled/techfloor,/area/ship/scrap/maintenance/atmos)
 "Cc" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 2; layer = 2.4; level = 2},/obj/effect/floor_decal/corner/red/diagonal,/obj/machinery/vending/dinnerware,/obj/item/device/radio/intercom{pixel_y = 22},/turf/simulated/floor/tiled,/area/ship/scrap/crew/kitchen)
 "Ce" = (/obj/structure/lattice,/obj/effect/paint/brown,/obj/effect/paint/brown,/turf/simulated/wall/r_wall/hull,/area/ship/scrap/crew/cryo)
@@ -592,16 +593,13 @@
 "Rc" = (/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 1},/obj/item/weapon/stool/padded,/obj/machinery/firealarm{dir = 8; pixel_x = -24; pixel_y = 0},/turf/simulated/floor/plating,/area/ship/scrap/unused)
 "RL" = (/obj/structure/closet/walllocker/emerglocker/north,/obj/structure/bed/chair/wood,/obj/item/weapon/deck/tarot,/obj/structure/handrai,/turf/simulated/floor/tiled,/area/ship/scrap/crew/saloon)
 "RW" = (/obj/machinery/atmospherics/unary/engine{icon_state = "nozzle"; dir = 1},/turf/simulated/floor/airless,/area/ship/scrap/maintenance/engine/port)
-"Sb" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/atmospherics/pipe/simple/hidden{icon_state = "intact"; dir = 5},/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
 "Sc" = (/obj/effect/decal/cleanable/cobweb,/obj/effect/floor_decal/corner/blue{dir = 1},/obj/effect/floor_decal/corner/yellow{dir = 8},/obj/machinery/portable_atmospherics/hydroponics,/obj/machinery/light/small{icon_state = "bulb1"; dir = 1},/turf/simulated/floor/tiled,/area/ship/scrap/garden)
 "Si" = (/obj/machinery/door/blast/regular{density = 0; dir = 4; icon_state = "pdoor0"; id = "scraplock"; name = "External Blast Doors"; opacity = 0},/turf/simulated/floor/airless,/area/ship/scrap/crew/toilets)
 "SB" = (/obj/structure/sign/warning/hot_exhaust{pixel_y = 32},/obj/machinery/door/blast/regular{density = 0; dir = 4; icon_state = "pdoor0"; id = "scraplock"; name = "External Blast Doors"; opacity = 0},/turf/simulated/floor/airless,/area/ship/scrap/maintenance/engine/aft)
 "SC" = (/obj/effect/paint/brown,/turf/simulated/wall/r_wall,/area/ship/scrap/command/captain)
-"Tb" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/structure/closet/crate,/obj/item/device/radio,/obj/item/device/spaceflare,/obj/machinery/firealarm{dir = 4; pixel_x = 24; pixel_y = 0},/obj/machinery/atmospherics/pipe/simple/hidden{dir = 10; icon_state = "intact"},/obj/structure/handrai{tag = "icon-handrail (WEST)"; icon_state = "handrail"; dir = 8},/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
 "Tc" = (/obj/structure/closet/crate,/obj/random/loot,/obj/random/loot,/obj/item/weapon/disk/tech_disk,/obj/item/weapon/disk/tech_disk,/obj/item/weapon/disk/design_disk,/obj/machinery/alarm{dir = 4; icon_state = "alarm0"; pixel_x = -24},/obj/machinery/firealarm{pixel_y = 24},/turf/simulated/floor/plating,/area/ship/scrap/hidden)
 "Tl" = (/obj/machinery/light_switch{pixel_x = 28},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/door/airlock/hatch/autoname/command,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/dark,/area/ship/scrap/command/bridge)
 "Tt" = (/obj/effect/paint/brown,/turf/simulated/wall,/area/ship/scrap/crew/saloon)
-"Ub" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/item/weapon/storage/backpack/dufflebag,/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/floor/plating,/area/ship/scrap/shuttle/outgoing)
 "Uc" = (/obj/effect/floor_decal/corner/blue{dir = 1},/obj/effect/floor_decal/corner/yellow{dir = 8},/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 1},/obj/machinery/portable_atmospherics/hydroponics,/obj/machinery/firealarm{dir = 8; pixel_x = -24; pixel_y = 0},/obj/machinery/light/small{dir = 2; icon_state = "bulb1"},/turf/simulated/floor/tiled,/area/ship/scrap/garden)
 "Ue" = (/obj/effect/wallframe_spawn/reinforced,/obj/machinery/door/blast/regular{density = 0; dir = 4; icon_state = "pdoor0"; id = "scraplock"; name = "External Blast Doors"; opacity = 0},/obj/structure/cable{icon_state = "4-10"},/turf/simulated/floor/plating,/area/ship/scrap/crew/kitchen)
 "Ui" = (/obj/effect/paint/brown,/turf/simulated/wall,/area/ship/scrap/crew/toilets)
@@ -629,38 +627,38 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacIaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaararQrQrQraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacIaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacIaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaararQrQrQraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaKPIgygQbKPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLnCGOqCqLnaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLxLsLsHOLnxZXuvuLnHOwPwPIsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajakaaLsoKqTDODLYENNDOnLwPwPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaatatatatatataaaaaaaaLsawzsDObbPAbLDOarSCwPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabxbaMdMaObzxbdwaaaaLsoKawFDawawTlasasWpasSCwPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaKaLbkdyaRaTaLnuaaaaLsawaDaEEbawOgasvPaIaJaswPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLaLdNdOaYNbaLaLaaaatWrpaPaEaQEQaSBbaUaVaWzOPUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLaHdRdTdWSbTbaLaaaaLsawbaaAObawbcasPbbeRbaswPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaataZbgaXbhbiUbataaaaLsoKoKFDoKawbcasSCeqSCSCwPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLaNbjefbpbqWbaLaaaaaacyaaaaMwbmBgbmMwaaaacyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLdHbgdXaLatNbaLaanZnZMwbAbAMwXlbvbwMwbAbAMwnZnZaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaatejbgdXaLdIdLNbbAMwbmbmbBbCbDbEbFbEbDbGbHbmbmMwbAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLblbneaboZbacjclcncocpcbQqcbmrcbTscbmtcbWbXbYbZcaaacbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLbtaLaLaLcdaLaLbAbAcfcgchucMwMwcjMwMwvcclcmcfbAbAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLbybIdIcqbscsaLaaLxctMwcuMwMwFScwFSMwMwcuMwctZvaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLbrbxbxcAcBcCaLaaaaOIqScEqSaaFScwFSaaYNcGYNOIaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLaLeicIbuegaLaLaaaacyqScEqSaaFScwFSaaYNcGYNcyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLsawzsDObbPAbLDOarSCwPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaatatatatatataaaaaaLsoKawFDawawTlasasWpasSCwPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabxbaJdMaNaOxbdwaaaaLsawaDaEEbawOgasvPaIaMaswPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaKaLbkdyaRaTaLnuaaaatWrpaPejaQEQaSBbaUaVaWzOPUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLaLaYdOaYNbaLaLaaaaLsawbaaAObawbcasPbbeRbaswPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaataHdRdTdWaZdNataaaaLsoKoKFDoKawbcasSCeqSCSCwPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLbgbhefbpbqWbaLaaaaaacyaaaaMwbmBgbmMwaaaacyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLevaXaXblatNbaLaanZnZMwbAbAMwXlbvbwMwbAbAMwnZnZaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaatbjaXaXaLdIdLNbbAMwbmbmbBbCbDbEbFbEbDbGbHbmbmMwbAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLbnaXbzboZbacbilcncocpcbQqcbmrcbTscbmtcbWbXbYbZcaaacbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLbrbtaLcdeDaLaLbAbAcfcgchucMwMwcjMwMwvcclcmcfbAbAaaaaaaaaaaaaaaaaaaaaaacIaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaatbIdXcqbscsaLeaaaLxctMwcuMwMwFScwFSMwMwcuMwctZvaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLbybxcAcBcCaLepaaaaOIqScEqSaaFScwFSaaYNcGYNOIaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLaLeibuegaLaLaLaaaacyqScEqSaaFScwFSaaYNcGYNcyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabfaLaLaLaLaLaLlxaaaacyqScEqSaaFScwFSaaYNcGYNcyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacyqScEcJcJcJcKcJcJcJcLYNcyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaavjvjSiYSYScETtcOxccQRLcSTtcGMoCeulomomaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaYSUicUcVcUcUcWcNJRcYcZdadbcNdcdddedfdgnjomaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLxvjcTbRbSbUcTdkcNdldmvWdmJncNdpdebMdrdsddomIsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaacIaaaaaaaaaaaaaaaaaaaaaaaaLxvjcTbRbSbUcTdkcNdldmvWdmJncNdpdebMdrdsddomIsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaSidtcickbJdxagdzdAdBdCdDdEdzdFdGcccedJdKulaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaavjcUcvcxbKcTahdPdQjbdSAcdUcNdVeeeeeeeecXomaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaavjdYdZdZdZdZaiebebebecaBebebedeecncPaGKRomaaaaehaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -679,27 +677,27 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaamXUcybVcnbhrWchthuhv
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaGFHRHRhDMphFhFhFhGhHaFPEaFhGhGhJhJhJhKhLsIaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLxGFGFhDAbXchOhPhQhFYchSpThUhVhWhXhJZcJbKbhLBxIsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaGFhDhDibicidieifWEihiiijikililimKOioipiqhLBxaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaGFhDCbisitiuivadhDixiyiziAiBiCiDhJiEiFZaJIPHaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaGFhDCbisitiuivadhDixiyiziAiBiCiDhJiEiFZaJIPHaaaaaaaaaaaaaaaaaaaaaaaacIaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaGFiIiJiKiLiMDbbdhDABiQiQiRiQiQiQhLhdiTbVhLBxaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiViWGbiYiZjaqEHbhDjdjejfjgjhjijjhJjkjljmhLBxaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacIaaaaaaaaaaaaaaaaaaiViWGbiYiZjaqEHbhDjdjejfjgjhjijjhJjkjljmhLBxaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLxGFiIiJjojpjqjrjshDldjujvjwjxjyjzhLhLjAhLhLBxIsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajBrxhDIbjDjEjFjGjHhDjIjJjKjLjMjNjOhLhLjPhLhLBxaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajBGFhDhDjQjRjSjTjUhDjVjWjXjYjZkakbhLhLkchLhLBxaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajBrxGFhDkdkekfkgjUhDkhkikjkkklkmknkokphLJrJraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakqaaGFhDhDhDBDkskthDkukvkwkxkykzkAjZkBBxBxaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakqaaGFhDhDhDdHkskthDkukvkwkxkykzkAjZkBBxBxaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaGFGFGFhDhDhDhDiQmdkDkEkFkFkGkHjZoraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajBkqGFGFGFGFCDFwiQkIkIkIkIkIiQFwIAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajBkqjBCDIASBwBwBwBwBwBSBIAIAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaavLwBwBwBwBwBvLaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacIaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacIaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacIaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
