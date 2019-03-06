@@ -1,0 +1,44 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"b" = (/turf/simulated/wall,/area/template_noop)
+"c" = (/obj/effect/wallframe_spawn/reinforced,/turf/simulated/floor/plating,/area/template_noop)
+"d" = (/obj/structure/closet/cabinet,/obj/effect/landmark/costume/marisawizard/fake,/obj/effect/landmark/costume/cutewitch,/turf/simulated/floor/carpet/blue2,/area/template_noop)
+"e" = (/turf/simulated/floor/carpet/blue2,/area/template_noop)
+"f" = (/obj/structure/table/rack,/obj/random/loot,/turf/simulated/floor/carpet/blue2,/area/template_noop)
+"g" = (/obj/structure/hygiene/toilet,/turf/simulated/floor/tiled/freezer,/area/template_noop)
+"h" = (/obj/structure/hygiene/shower,/obj/structure/curtain/open/shower,/turf/simulated/floor/tiled/freezer,/area/template_noop)
+"i" = (/obj/structure/bed,/obj/item/weapon/bedsheet/purple,/turf/simulated/floor/carpet/blue2,/area/template_noop)
+"j" = (/obj/structure/table/standard{name = "plastic table frame"},/obj/machinery/microwave,/turf/simulated/floor/lino,/area/template_noop)
+"k" = (/obj/structure/table/standard{name = "plastic table frame"},/obj/machinery/reagentgrinder,/turf/simulated/floor/lino,/area/template_noop)
+"l" = (/obj/structure/closet/secure_closet/freezer/fridge,/turf/simulated/floor/lino,/area/template_noop)
+"m" = (/obj/structure/hygiene/sink{icon_state = "sink"; dir = 8; pixel_x = -12; pixel_y = 2},/obj/item/weapon/storage/mirror{pixel_x = -25},/turf/simulated/floor/tiled/freezer,/area/template_noop)
+"n" = (/turf/simulated/floor/tiled/freezer,/area/template_noop)
+"o" = (/obj/structure/table/standard{name = "plastic table frame"},/turf/simulated/floor/carpet/blue2,/area/template_noop)
+"p" = (/obj/structure/closet/crate,/obj/random/loot,/turf/simulated/floor/carpet/blue2,/area/template_noop)
+"q" = (/obj/effect/floor_decal/spline/plain/black,/turf/simulated/floor/lino,/area/template_noop)
+"r" = (/obj/machinery/door/unpowered/simple/wood,/turf/simulated/floor/tiled,/area/template_noop)
+"s" = (/turf/simulated/floor/wood/walnut,/area/template_noop)
+"t" = (/obj/effect/floor_decal/spline/plain/black{icon_state = "spline_plain"; dir = 8},/turf/simulated/floor/tiled,/area/template_noop)
+"u" = (/turf/simulated/floor/tiled,/area/template_noop)
+"v" = (/obj/structure/bookcase,/turf/simulated/floor/tiled,/area/template_noop)
+"w" = (/obj/structure/bed/chair/wood{icon_state = "wooden_chair_preview"; dir = 4},/turf/simulated/floor/wood/walnut,/area/template_noop)
+"x" = (/obj/structure/table/glass,/turf/simulated/floor/wood/walnut,/area/template_noop)
+"y" = (/obj/structure/bed/chair/wood{icon_state = "wooden_chair_preview"; dir = 8},/turf/simulated/floor/wood/walnut,/area/template_noop)
+"z" = (/obj/structure/table/rack,/obj/random/voidhelmet,/obj/random/voidsuit,/turf/simulated/floor/tiled,/area/template_noop)
+"A" = (/obj/machinery/door/airlock,/turf/simulated/floor/tiled,/area/template_noop)
+"B" = (/turf/simulated/floor/plating,/area/template_noop)
+"C" = (/obj/structure/closet/crate/freezer/rations,/turf/simulated/floor/plating,/area/template_noop)
+"D" = (/obj/effect/catwalk_plated,/turf/template_noop,/area/template_noop)
+
+(1,1,1) = {"
+aaaaaaabcccb
+aaaabbbbdefc
+bbbbbghbieec
+bjklbmnboepc
+bqqqbbrbbrbb
+bssstuuvvuuc
+cwxytuuuuuzc
+cwxytbbbbAbb
+bssstrBCbuca
+bbccbbBCbAba
+aaaaabbbbDaa
+"}

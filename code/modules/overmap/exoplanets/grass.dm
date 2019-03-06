@@ -15,7 +15,17 @@
 							 /datum/map_template/ruin/exoplanet/crashed_pod,
 							 /datum/map_template/ruin/exoplanet/hut,
 							 /datum/map_template/ruin/exoplanet/playablecolony,
-							 /datum/map_template/ruin/exoplanet/datacapsule)
+							 /datum/map_template/ruin/exoplanet/datacapsule,
+							 /datum/map_template/ruin/exoplanet/pilruins/spidershuttle,
+							 /datum/map_template/ruin/exoplanet/pilruins/witchhouse,
+							 /datum/map_template/ruin/exoplanet/pilruins/cannibal,
+							 /datum/map_template/ruin/exoplanet/pilruins/aquarium,
+							 /datum/map_template/ruin/exoplanet/pilruins/aquarium/deadly,
+							 /datum/map_template/ruin/exoplanet/pilruins/broken,
+							 /datum/map_template/ruin/exoplanet/pilruins/broken/semi,
+							 /datum/map_template/ruin/exoplanet/pilruins/broken/some,
+							 /datum/map_template/ruin/exoplanet/pilruins/broken/kinda,
+							 /datum/map_template/ruin/exoplanet/pilruins/tribalgun)
 	exo_hab_chance = 90
 
 /obj/effect/overmap/sector/exoplanet/grass/generate_map()

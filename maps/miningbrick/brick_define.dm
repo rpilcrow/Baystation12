@@ -12,6 +12,7 @@
 	company_name  = "Legit Cargo Ltd."
 	company_short = "LC"
 	overmap_event_areas = 11
+	planet_size = list(129,129)
 
 	default_law_type = /datum/ai_laws/corporate
 
@@ -22,7 +23,7 @@
 	allowed_spawns = list("Cryogenic Storage")
 	default_spawn = "Cryogenic Storage"
 	use_overmap = 1
-	num_exoplanets = 4
+	num_exoplanets = 1
 	welcome_sound = 'sound/effects/cowboysting.ogg'
 
 	emergency_shuttle_leaving_dock = "Attention all hands: the escape pods have been launched, maintaining burn for %ETA%."

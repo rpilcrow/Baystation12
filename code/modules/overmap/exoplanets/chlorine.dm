@@ -13,7 +13,16 @@
 							/datum/map_template/ruin/exoplanet/radshrine,
 							/datum/map_template/ruin/exoplanet/deserted_lab,
 							/datum/map_template/ruin/exoplanet/playablecolony,
-							/datum/map_template/ruin/exoplanet/datacapsule)
+							/datum/map_template/ruin/exoplanet/datacapsule,
+							/datum/map_template/ruin/exoplanet/pilruins/aquarium,
+							/datum/map_template/ruin/exoplanet/pilruins/aquarium/deadly,
+							/datum/map_template/ruin/exoplanet/pilruins/broken,
+							/datum/map_template/ruin/exoplanet/pilruins/broken/semi,
+							/datum/map_template/ruin/exoplanet/pilruins/broken/some,
+							/datum/map_template/ruin/exoplanet/pilruins/broken/kinda,
+							/datum/map_template/ruin/exoplanet/pilruins/mercship,
+							/datum/map_template/ruin/exoplanet/pilruins/spidershuttle,
+							/datum/map_template/ruin/exoplanet/pilruins/sarcophagus)
 	exo_hab_chance = 10
 
 /obj/effect/overmap/sector/exoplanet/chlorine/generate_map()

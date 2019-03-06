@@ -1,0 +1,93 @@
+"aa" = (/turf/template_noop,/area/template_noop)
+"ab" = (/obj/effect/paint/black,/turf/simulated/wall/r_wall,/area/template_noop)
+"ac" = (/obj/effect/wallframe_spawn/reinforced,/obj/machinery/door/blast/shutters,/turf/simulated/floor/plating,/area/template_noop)
+"ad" = (/obj/structure/shuttle/engine/propulsion{icon_state = "propulsion"; dir = 1},/turf/simulated/floor/plating,/area/template_noop)
+"ae" = (/obj/effect/wallframe_spawn/reinforced,/obj/machinery/door/blast/shutters{icon_state = "shutter1"; dir = 8},/turf/simulated/floor/plating,/area/template_noop)
+"af" = (/obj/structure/table/steel_reinforced,/obj/random/energy,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
+"ag" = (/obj/machinery/computer,/obj/structure/pilruin/light{icon_state = "small-r"},/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
+"ah" = (/turf/simulated/floor/plating,/area/template_noop)
+"ai" = (/turf/simulated/floor/reinforced,/area/template_noop)
+"aj" = (/mob/living/simple_animal/hostile/syndicate/ranged,/turf/simulated/floor/reinforced,/area/template_noop)
+"ak" = (/obj/effect/scorcher,/turf/template_noop,/area/template_noop)
+"al" = (/obj/structure/table/steel_reinforced,/obj/item/stack/medical/advanced/ointment,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
+"am" = (/obj/structure/table/steel_reinforced,/obj/machinery/recharger,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
+"an" = (/obj/structure/table/steel_reinforced,/obj/random/projectile,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
+"ao" = (/obj/item/stack/medical/splint,/obj/structure/pilruin/light{icon_state = "red"},/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
+"ap" = (/obj/structure/table/steel_reinforced,/obj/random/documents,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
+"aq" = (/obj/structure/shuttle/engine/propulsion{icon_state = "propulsion"; dir = 8},/turf/simulated/floor/plating,/area/template_noop)
+"ar" = (/obj/structure/table/steel_reinforced,/obj/item/stack/medical/advanced/bruise_pack,/obj/item/stack/medical/advanced/bruise_pack,/obj/item/stack/medical/advanced/bruise_pack,/obj/item/stack/medical/advanced/bruise_pack,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
+"as" = (/mob/living/simple_animal/hostile/syndicate/melee/space,/turf/simulated/floor/reinforced,/area/template_noop)
+"at" = (/mob/living/simple_animal/hostile/syndicate/ranged/space,/turf/simulated/floor/reinforced,/area/template_noop)
+"au" = (/obj/effect/scorcher,/turf/simulated/floor/plating,/area/template_noop)
+"av" = (/obj/structure/pilruin/light{icon_state = "red"},/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
+"aw" = (/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
+"ax" = (/obj/effect/paint/black,/turf/simulated/wall,/area/template_noop)
+"ay" = (/obj/machinery/door/airlock/centcom,/turf/simulated/floor/reinforced,/area/template_noop)
+"az" = (/obj/structure/closet/crate,/obj/random/contraband,/turf/simulated/floor/plating,/area/template_noop)
+"aA" = (/obj/item/stack/material/steel,/obj/effect/scorcher,/turf/template_noop,/area/template_noop)
+"aB" = (/obj/structure/closet/crate/freezer,/obj/item/trash/liquidfood,/turf/simulated/floor/plating,/area/template_noop)
+"aC" = (/obj/item/trash/liquidfood,/turf/simulated/floor/plating,/area/template_noop)
+"aD" = (/obj/item/trash/liquidfood,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
+"aE" = (/obj/item/stack/material/uranium,/turf/simulated/floor/plating,/area/template_noop)
+"aF" = (/obj/structure/girder,/obj/item/stack/material/rods,/turf/template_noop,/area/template_noop)
+"aG" = (/obj/item/stack/material/uranium,/obj/effect/scorcher,/turf/template_noop,/area/template_noop)
+"aH" = (/obj/structure/closet/crate/freezer,/obj/item/trash/liquidfood,/obj/random/loot,/turf/simulated/floor/plating,/area/template_noop)
+"aI" = (/obj/machinery/door/blast/shutters,/turf/simulated/floor/plating,/area/template_noop)
+"aJ" = (/obj/random/trash,/obj/structure/pilruin/light{icon_state = "red"},/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
+"aK" = (/obj/machinery/door/blast/shutters,/obj/structure/girder,/turf/simulated/floor/plating,/area/template_noop)
+"aL" = (/obj/structure/girder,/turf/simulated/floor/plating,/area/template_noop)
+"aM" = (/obj/structure/closet/crate,/obj/random/contraband,/obj/random/contraband,/obj/effect/scorcher,/turf/template_noop,/area/template_noop)
+"aN" = (/obj/structure/closet/crate/freezer,/obj/random/smokes,/turf/simulated/floor/plating,/area/template_noop)
+"aO" = (/obj/item/stack/material/rods,/obj/effect/scorcher,/turf/template_noop,/area/template_noop)
+"aP" = (/obj/structure/closet/crate/freezer/rations,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
+"aQ" = (/obj/item/stack/material/uranium/ten,/turf/simulated/floor/plating,/area/template_noop)
+"aR" = (/obj/structure/closet/crate/freezer,/obj/random/contraband,/turf/simulated/floor/plating,/area/template_noop)
+"aS" = (/obj/machinery/door/blast/shutters,/turf/simulated/floor/reinforced,/area/template_noop)
+"aT" = (/obj/structure/closet/crate,/obj/random/contraband,/obj/random/contraband,/obj/random/loot,/turf/simulated/floor/plating,/area/template_noop)
+"aU" = (/obj/effect/floor_decal/steeldecal/steel_decals_central6,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
+"aV" = (/obj/machinery/recharge_station,/turf/simulated/floor/plating,/area/template_noop)
+"aW" = (/obj/machinery/suit_storage_unit/merc{islocked = 0},/turf/simulated/floor/plating,/area/template_noop)
+"aX" = (/obj/machinery/computer,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
+"aY" = (/obj/structure/shuttle/engine/propulsion,/turf/simulated/floor/plating,/area/template_noop)
+"aZ" = (/obj/random/drinkbottle,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
+"ba" = (/obj/item/stack/material/rods,/turf/template_noop,/area/template_noop)
+"bb" = (/obj/structure/girder,/turf/template_noop,/area/template_noop)
+"bc" = (/obj/structure/girder,/obj/effect/scorcher,/turf/template_noop,/area/template_noop)
+"bd" = (/obj/item/stack/material/steel,/turf/template_noop,/area/template_noop)
+"be" = (/obj/structure/closet/crate,/obj/random/contraband,/obj/random/loot,/turf/simulated/floor/reinforced,/area/template_noop)
+"bf" = (/obj/effect/paint/red,/turf/simulated/wall/r_wall,/area/template_noop)
+"bg" = (/obj/effect/paint/red,/turf/simulated/wall,/area/template_noop)
+
+(1,1,1) = {"
+aaaaaaaaaaabacacacabaaaaaaaaaaaaaaaa
+aaaaaaaaadaeafagaXaeahaaaaaaaaaaaaaa
+aaaaaaaaababaiajaiababaaaaaaakaaaaaa
+aaaaaaaabfalaiaiaiambfaaaaakakaaaaaa
+aaaaaabfbfanaiaiaiapbfbfakakaaaaaaaa
+aaaaaaaqabarasaiatanabauakakakaaakaa
+aaababababaoaiaiaiavababababakakakaa
+aabfahahaxaxaxayaxaxaxazahaAakakakaa
+aabfaBaCaxawaiaiaiaDaxaEaFaGakakakaa
+aaabaHahaIaJasaiatavaKaLaMakakakakaa
+aaabaNahaxaDaiaiaiawaxaLakaOakakakaa
+aaabahahaxawaiaiaiaPaxahaQakakakakaa
+aaabaRaxaxaxaSaSaSaxaxaxaTabakakakaa
+aaabaxaxaUaiaiaiaiaiaUaxaxabakakakaa
+aaabaVahawaiaiatbeaiawahaWabakakaaaa
+aaabaVahawaiaiaiaiaiawahaWabakakaaaa
+aabfbgbgavaibeaiaiaiavbgbgbfakakaaaa
+aabfbgbfawaiaiaiaiaiawbfbgakakakaaaa
+aaabaYabawaiaiaiaiaiaZabakakakaaaaaa
+aaaaaaabababaSaSaSabababakakakakaaaa
+aaaaaaaaakakaaaaaOakaaaaakakaaaaaaaa
+aaaaakaaakakakakakaaaAaaaaaaaaaaaaaa
+aaakakakbaaaakakakakakaaaaaaaaaaaaaa
+aaakakakakbbbcakakbcaaabaaaaaaaaaaaa
+aaaaakaabfabaaakaaakaaababaaaaaaaaaa
+aaaaakakabakakakaOakaaabaYaaaaaaaaaa
+aaaaaaakakaaakakakakakaaaaaaaaaaaaaa
+aaaaaaakakakakakakaaakaaaaaaaaaaaaaa
+aaaabbaaaaaabdakakaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaakaaababaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}

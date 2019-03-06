@@ -32,14 +32,21 @@
 	var/list/possible_themes = list(/datum/exoplanet_theme/mountains,/datum/exoplanet_theme)
 	var/list/themes = list()
 
-	var/features_budget = 2
+	var/features_budget = 3
 	//pre-defined list of features templates to pick from
 	var/list/possible_features = list(
 									/datum/map_template/ruin/exoplanet/monolith,
 									/datum/map_template/ruin/exoplanet/hydrobase,
 									/datum/map_template/ruin/exoplanet/crashed_pod,
 									/datum/map_template/ruin/exoplanet/hut,
-									/datum/map_template/ruin/exoplanet/playablecolony)
+									/datum/map_template/ruin/exoplanet/playablecolony,
+									/datum/map_template/ruin/exoplanet/pilruins/aquarium,
+									/datum/map_template/ruin/exoplanet/pilruins/aquarium/deadly,
+									/datum/map_template/ruin/exoplanet/pilruins/broken,
+									/datum/map_template/ruin/exoplanet/pilruins/broken/semi,
+									/datum/map_template/ruin/exoplanet/pilruins/broken/some,
+									/datum/map_template/ruin/exoplanet/pilruins/broken/kinda,
+									/datum/map_template/ruin/exoplanet/pilruins/tribalgun)
 
 /obj/effect/overmap/sector/exoplanet/New(nloc, max_x, max_y)
 	if(!GLOB.using_map.use_overmap)

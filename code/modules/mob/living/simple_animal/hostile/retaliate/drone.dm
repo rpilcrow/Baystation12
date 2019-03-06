@@ -31,6 +31,7 @@
 	var/hostile_drone = 0
 	//0 - retaliate, only attack enemies that attack it
 	//1 - hostile, attack everything that comes near
+	//-1 - always hostile
 
 	var/turf/patrol_target
 	var/explode_chance = 1
@@ -58,7 +59,7 @@
 	return 1
 
 /mob/living/simple_animal/hostile/retaliate/malf_drone/proc/Haywire()
-	if(prob(disabled ? 0 : 1) && malfunctioning)
+	if(prob(disabled ? 0 : 1) && malfunctioning && hostile_drone >= 0)
 		if(hostile_drone)
 			src.visible_message("<span class='notice'>\icon[src] [src] retracts several targetting vanes, and dulls it's running lights.</span>")
 			hostile_drone = 0

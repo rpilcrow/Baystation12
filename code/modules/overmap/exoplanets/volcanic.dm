@@ -6,6 +6,21 @@
 	rock_colors = list(COLOR_DARK_GRAY)
 	possible_themes = list()
 	exo_hab_chance = 10
+	possible_features = list(/datum/map_template/ruin/exoplanet/monolith,
+							/datum/map_template/ruin/exoplanet/hydrobase,
+							/datum/map_template/ruin/exoplanet/crashed_pod,
+							/datum/map_template/ruin/exoplanet/hut,
+							/datum/map_template/ruin/exoplanet/playablecolony,
+							/datum/map_template/ruin/exoplanet/pilruins/aquarium,
+							/datum/map_template/ruin/exoplanet/pilruins/aquarium/deadly,
+							/datum/map_template/ruin/exoplanet/pilruins/broken,
+							/datum/map_template/ruin/exoplanet/pilruins/broken/semi,
+							/datum/map_template/ruin/exoplanet/pilruins/broken/some,
+							/datum/map_template/ruin/exoplanet/pilruins/broken/kinda,
+							/datum/map_template/ruin/exoplanet/pilruins/tribalgun,
+							/datum/map_template/ruin/exoplanet/pilruins/mercship,
+							/datum/map_template/ruin/exoplanet/pilruins/spidershuttle,
+							/datum/map_template/ruin/exoplanet/pilruins/sarcophagus)
 
 /obj/effect/overmap/sector/exoplanet/volcanic/generate_map()
 	..()

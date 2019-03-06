@@ -81,6 +81,11 @@
 	name = "Medbay"
 	icon_state = "medbay"
 
+/area/ship/brick/lower/security
+	name = "\improper Brig"
+	icon_state = "brig"
+	req_access = list(access_security)
+
 /area/ship/brick/lower/mining
 	name = "Minerals Processing"
 	icon_state = "mining"
@@ -137,6 +142,11 @@
 	name = "\improper Lower Starboard Maintenance"
 	icon_state = "smaint"
 
+
+/area/ship/scrap/shuttle/outgoing
+	name = "\improper Exploration Shuttle"
+	icon_state = "tcomsatcham"
+	base_turf = /turf/simulated/floor/plating
 
 /area/ship/brick/shuttle/outgoing
 	name = "\improper FTV Quoth"

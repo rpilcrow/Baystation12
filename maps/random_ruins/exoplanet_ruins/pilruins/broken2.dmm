@@ -1,0 +1,25 @@
+"a" = (/turf/simulated/wall,/area/template_noop)
+"b" = (/obj/structure/girder,/turf/template_noop,/area/template_noop)
+"c" = (/turf/template_noop,/area/template_noop)
+"d" = (/obj/structure/girder,/turf/simulated/floor/plating,/area/template_noop)
+"e" = (/obj/random/trash,/turf/simulated/floor/plating,/area/template_noop)
+"f" = (/obj/effect/decal/cleanable/dirt,/obj/random/junk,/turf/simulated/floor/plating,/area/template_noop)
+"g" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/plating,/area/template_noop)
+"h" = (/turf/simulated/floor/plating,/area/template_noop)
+"i" = (/obj/structure/table/rack,/obj/random/loot,/turf/simulated/floor/plating,/area/template_noop)
+"j" = (/obj/effect/decal/cleanable/dirt,/obj/random/trash,/turf/simulated/floor/plating,/area/template_noop)
+"k" = (/obj/machinery/door/airlock,/turf/simulated/floor/plating,/area/template_noop)
+"l" = (/obj/effect/decal/cleanable/blood,/turf/simulated/floor/plating,/area/template_noop)
+"m" = (/obj/structure/table/rack,/obj/random/loot,/obj/random/loot,/turf/simulated/floor/plating,/area/template_noop)
+"n" = (/obj/random/junk,/turf/simulated/floor/plating,/area/template_noop)
+
+(1,1,1) = {"
+aaddcaac
+aehfehdc
+ahggghdc
+bhjgaaaa
+hhhgahia
+dhnjklma
+hhghahia
+chddaaaa
+"}

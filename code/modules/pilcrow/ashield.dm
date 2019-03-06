@@ -12,7 +12,7 @@
 	idle_power_usage = 10
 	active_power_usage = 0
 	use_power = 1
-//	layer = 2.1?
+	layer = 2.1
 
 /obj/machinery/atmos_protector/CanPass(var/atom/movable/mover, var/turf/target, var/height=0, var/air_group=0)
 //	if(use_power)

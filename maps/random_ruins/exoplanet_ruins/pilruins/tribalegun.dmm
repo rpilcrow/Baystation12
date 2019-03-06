@@ -1,0 +1,13 @@
+"a" = (/turf/simulated/wall/silver,/area/template_noop)
+"b" = (/turf/simulated/floor/tiled/techfloor,/area/template_noop)
+"c" = (/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced{icon_state = "rwindow"; dir = 4},/obj/structure/window/reinforced{dir = 1},/obj/random/energy,/turf/simulated/floor/crystal,/area/template_noop)
+"d" = (/obj/effect/catwalk_plated,/turf/template_noop,/area/template_noop)
+"e" = (/obj/random/cash,/obj/random/cash,/obj/structure/table/marble,/obj/structure/pilruin/light,/turf/simulated/floor/tiled/techfloor,/area/template_noop)
+
+(1,1,1) = {"
+aaaaa
+abcba
+dbebd
+addda
+aadaa
+"}

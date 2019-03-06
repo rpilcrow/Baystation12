@@ -380,6 +380,7 @@ var/list/worths = list(
 					/obj/item/clothing/shoes/magboots = 350,
 					/obj/item/clothing/shoes/swat = 100,
 					/obj/item/clothing/shoes/combat = 200,
+					/obj/item/clothing/mask/chewable = 1,
 //SUITS,
 					/obj/item/clothing/suit/space/skrell = 1500,
 					/obj/item/clothing/suit/space/void/merc = 3000,
@@ -767,5 +768,11 @@ var/list/worths = list(
 					/obj/machinery/libraryscanner = -1000,
 					/obj/machinery/bookbinder = -1200,
 					/obj/machinery = -1000,
+//RANDOM
+					/obj/random/mre/main = 10,
+					/obj/random/mre/dessert = 10,
+					/obj/random/mre/spread = 5,
+					/obj/random/mre/sauce = 5,
+					/obj/random/mre = 30,
 					) //Must be in descending order. Child before parents, otherwise it doesn't work.,
 

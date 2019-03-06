@@ -11,7 +11,7 @@
 //	initial_generic_waypoints = list("nav_brick_port_dock", "nav_brick_starboard_dock", "nav_brick_nearby")
 	initial_generic_waypoints = list("nav_brick_nearby")
 	initial_restricted_waypoints = list(
-		"FTV Quoth" = list("nav_hangar_quoth"),
+		"FTV Quoth" = list("brick_dock_port"),
 	)
 
 /obj/effect/overmap/ship/landable/quoth

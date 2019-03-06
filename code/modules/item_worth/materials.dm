@@ -65,7 +65,7 @@
 	value = 0
 
 /material/cardboard
-	value = 0
+	value = 1
 
 /material/leather
 	value = 3
