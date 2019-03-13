@@ -64,8 +64,8 @@
 //	name_language = TRADER_DEFAULT_NAME
 	origin = "FTV Crow"
 	disposition = 5
-	possible_origins = list("FTV Crow","FTV Corvid")
-	speech = list("hail_generic"    = "Oh, uh, hey. You've contacted the ORIGIN, medical hauler. Did you need anything?",
+	possible_origins = list("Unknown Destination","Mysterious Signal","Unregistered Signal")
+	speech = list("hail_generic"    = "Oh, uh, hey. You've contacted Tilde. Did you need anything?",
 				"hail_deny"         = "I don't really feel like dealing with you. Sorry.",
 
 				"trade_complete"    = "Good doing business with you!",
@@ -113,7 +113,7 @@
 
 	mob_transfer_message = "You are transported to the ORIGIN. By the time you awaken, you find that you have been left in the care of a medical station in Sol, and the trader is nowhere to be found."
 
-//datum/trader/ship/pilcrow/New()
+///datum/trader/ship/pilcrow/New()
 //	name = pick("Rebecca","Beck","Tilde","Ozwyn")
 
 /datum/trader/ship/tonk
@@ -143,7 +143,47 @@
 								/obj/item/stack/material/cardboard/ten = TRADER_THIS_TYPE,
 								/obj/item/weapon/gun/energy/retro    = TRADER_THIS_TYPE,
 								/obj/item/weapon/melee/energy/sword    = TRADER_THIS_TYPE,
-								/obj/item/weapon/gun/energy/laser    = TRADER_THIS_TYPE,
 								/obj/item/weapon/gun/energy/laser    = TRADER_THIS_TYPE) //laser weapons, beam swords, maybe something else
 
 	mob_transfer_message = "You are transported to the ORIGIN and find yourself in a warehouse surrounded by thousands of cardboard cutouts of various people. You are scared and confused."
+
+
+/datum/trader/ship/gunnery
+	name = "Gun"
+//	name_language = TRADER_DEFAULT_NAME
+	origin = "FTV Gunboat Diplomacy"
+//	disposition = 0
+	possible_origins = list("FTV Gunboat Diplomacy","FTV Gunderstruck","FTS Rusty Blade","FTS Cargo Cult","FTV What Are The Civilian Applications?","FTV Irredeemable Mess","FTV The Flagship","FTV The Ship Your Ship Could Fly Like","FTV FGSFDS")
+	speech = list("hail_generic"    = "Hey, fellow gun-lover! This is the ORIGIN! We sell guns here, BIG ones!",
+				"hail_deny"         = "Y'all don't nearly like guns enough. Get gone.",
+
+				"trade_complete"    = "Yee-haw! You have fun with that one!",
+				"trade_blacklist"   = "Aw hell, we really don't take those.",
+				"trade_found_unwanted" = "We don't take those.",
+				"trade_not_enough"   = "That ain' enough! Why don't y'all gather a bit more up?",
+				"how_much"          = "How about VALUE thalers?",
+				"what_want"         = "Guns! I buy my big guns for cheap elsewhere, so I only want",
+
+				"compliment_deny"   = "My only love is guns, y'all, I ain't got space in my heart for you!",
+				"compliment_accept" = "Aw, shucks. Your gun's big, too!",
+				"insult_good"       = "Gunderstandable.",
+				"insult_bad"        = "Y'all best clear out of my vision quick.")
+	want_multiplier = 0.75
+	typical_duration = 20
+
+	possible_wanted_items = list(/obj/item/weapon/gun/projectile = TRADER_SUBTYPES_ONLY,
+								/obj/item/weapon/gun/energy = TRADER_SUBTYPES_ONLY,
+								/obj/item/gunnery/ballistic = TRADER_ALL)
+
+	possible_trading_items = list(/obj/machinery/gunnery/core = TRADER_SUBTYPES_ONLY,
+								  /obj/machinery/gunnery/magazine = TRADER_SUBTYPES_ONLY,
+								  /obj/machinery/gunnery/barrel = TRADER_SUBTYPES_ONLY,
+								  /obj/item/gunnery/ballistic = TRADER_ALL,
+								  /obj/item/gunnery/signal = TRADER_THIS_TYPE) //G U N N E R Y
+
+	blacklisted_trade_items = list(/mob/living/carbon/human)
+
+	mob_transfer_message = "You are transported to the ORIGIN. NAME stares at you for a while, before asking if you are a gun."
+
+/datum/trader/ship/gunnery/New()
+	name += pick("ther","ny","ri","ner Wells","da","t","n","na",null)

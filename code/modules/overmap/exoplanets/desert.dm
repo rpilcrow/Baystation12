@@ -26,8 +26,10 @@
 							 /datum/map_template/ruin/exoplanet/pilruins/broken/some,
 							 /datum/map_template/ruin/exoplanet/pilruins/broken/kinda,
 							 /datum/map_template/ruin/exoplanet/pilruins/spidershuttle,
-							 /datum/map_template/ruin/exoplanet/pilruins/tribalgun)
-	exo_hab_chance = 66
+							 /datum/map_template/ruin/exoplanet/pilruins/tribalgun,
+							 /datum/map_template/ruin/exoplanet/pilruins/kovelai,
+							 /datum/map_template/ruin/exoplanet/pilruins/oubliette)
+	exo_hab_chance = 80
 
 /obj/effect/overmap/sector/exoplanet/desert/generate_map()
 	..()
@@ -41,7 +43,7 @@
 /obj/effect/overmap/sector/exoplanet/desert/generate_atmosphere()
 	..()
 	if(atmosphere)
-		atmosphere.temperature = T20C + rand(20, 100)
+		atmosphere.temperature = T20C + min(rand(0, 100),rand(0, 100))
 		atmosphere.update_values()
 
 /obj/effect/overmap/sector/exoplanet/desert/adapt_seed(var/datum/seed/S)
@@ -69,7 +71,7 @@
 	..()
 	var/v = noise2value(value)
 	if(v > 6)
-		T.icon_state = "desert[v-1]"
+		T.icon_state = "desert6"//[v-1]"
 		if(prob(10))
 			new/obj/structure/quicksand(T)
 
@@ -106,43 +108,44 @@
 	var/busy
 
 /obj/structure/quicksand/New()
-	icon_state = "intact[rand(0,2)]"
+	icon_state = "intact2[rand(0,3)]"
 	..()
 
 /obj/structure/quicksand/user_unbuckle_mob(mob/user)
 	if(buckled_mob && !user.stat && !user.restrained())
 		if(busy)
-			to_chat(user, "<span class='wanoticerning'>[buckled_mob] is already getting out, be patient.</span>")
+			to_chat(user, "<span class='wanoticerning'>[buckled_mob] is already getting out.</span>")
 			return
-		var/delay = 60
+		var/delay = 20
 		if(user == buckled_mob)
 			delay *=2
 			user.visible_message(
 				"<span class='notice'>\The [user] tries to climb out of \the [src].</span>",
 				"<span class='notice'>You begin to pull yourself out of \the [src].</span>",
-				"<span class='notice'>You hear water sloushing.</span>"
+				"<span class='notice'>You hear water sloshing.</span>"
 				)
 		else
 			user.visible_message(
 				"<span class='notice'>\The [user] begins pulling \the [buckled_mob] out of \the [src].</span>",
 				"<span class='notice'>You begin to pull \the [buckled_mob] out of \the [src].</span>",
-				"<span class='notice'>You hear water sloushing.</span>"
+				"<span class='notice'>You hear water sloshing.</span>"
 				)
 		busy = 1
-		if(do_after(user, delay, src))
-			busy = 0
-			if(user == buckled_mob)
-				if(prob(80))
-					to_chat(user, "<span class='warning'>You slip and fail to get out!</span>")
-					return
-				user.visible_message("<span class='notice'>\The [buckled_mob] pulls himself out of \the [src].</span>")
+		spawn()
+			if(do_after(user, delay, src))
+				busy = 0
+				if(user == buckled_mob)
+				/*	if(prob(25))
+						to_chat(user, "<span class='warning'>You slip and fail to get out!</span>")
+						return*/
+					user.visible_message("<span class='notice'>\The [buckled_mob] climbs out of \the [src].</span>")
+				else
+					user.visible_message("<span class='notice'>\The [buckled_mob] has been freed from \the [src] by \the [user].</span>")
+				unbuckle_mob()
 			else
-				user.visible_message("<span class='notice'>\The [buckled_mob] has been freed from \the [src] by \the [user].</span>")
-			unbuckle_mob()
-		else
-			busy = 0
-			to_chat(user, "<span class='warning'>You slip and fail to get out!</span>")
-			return
+				busy = 0
+				to_chat(user, "<span class='warning'>You slip and fail to get out!</span>")
+				return
 
 /obj/structure/quicksand/unbuckle_mob()
 	..()

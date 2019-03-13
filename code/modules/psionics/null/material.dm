@@ -14,7 +14,7 @@
 	stack_type = /obj/item/stack/material/nullglass
 	flags = MATERIAL_BRITTLE
 	opacity = 0.5
-	integrity = 30
+	integrity = 50
 	shard_type = SHARD_SHARD
 	tableslam_noise = 'sound/effects/Glasshit.ogg'
 	hardness = 80

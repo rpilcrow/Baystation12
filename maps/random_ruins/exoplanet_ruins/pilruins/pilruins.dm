@@ -31,6 +31,11 @@
 	id = "pruins-ao2"
 	suffixes = list("pilruins/daquarium.dmm")
 
+/datum/map_template/ruin/exoplanet/pilruins/kovelai
+	name = "kovelai building"
+	id = "pruins-kv"
+	suffixes = list("pilruins/foundation.dmm")
+	cost = 2
 
 
 //BROKEN RUINS////////////////////////
@@ -90,6 +95,11 @@
 	suffixes = list("pilruins/sarcophagus.dmm")
 	cost = 1
 
+/datum/map_template/ruin/exoplanet/pilruins/oubliette
+	name = "oubliette"
+	id = "pruins-ou"
+	suffixes = list("pilruins/oubliette.dmm")
+	cost = 0.5
 
 
 //AREAS///////////////////////////////
@@ -102,6 +112,17 @@
 	name = "\improper Aquarium Outpost"
 	icon_state = "blue"
 
+/area/map_template/kovelai/outer
+	name = "\improper Foundation Outer Outpost"
+	icon_state = "blue2"
+
+/area/map_template/kovelai/inner
+	name = "\improper Foundation Inner Outpost"
+	icon_state = "red2"
+
+/area/map_template/sealedcamp
+	name = "\improper Encampment"
+	icon_state = "red2"
 
 
 //OBJECTS/////////////////////////////
@@ -113,7 +134,7 @@
 	anchored = 1
 	icon = 'maps/random_ruins/exoplanet_ruins/pilruins/pil.dmi'
 	icon_state = "blue"
-	layer = 2.1
+	layer = 0.9
 
 /obj/structure/pilruin/light/New()
 	..()
@@ -141,8 +162,8 @@
 /obj/random/pilruinhorrible
 	name = "horrible creature"
 	desc = "Spawns something nasty."
-	icon = 'icons/mob/critter.dmi'
-	icon_state = "otherthing-dead"
+	icon = 'icons/mob/pilcrow.dmi'
+	icon_state = "randomcreature"
 
 /obj/random/pilruinhorrible/spawn_choices()
 	return list(/mob/living/simple_animal/hostile/creature = 15,
@@ -159,8 +180,8 @@
 /obj/random/pilruinspider
 	name = "random spider"
 	desc = "creepy crawlie!"
-	icon = 'icons/mob/spider.dmi'
-	icon_state = "green"
+	icon = 'icons/mob/pilcrow.dmi'
+	icon_state = "randomspider"
 
 /obj/random/pilruinspider/spawn_choices()
 	return list(/mob/living/simple_animal/hostile/giant_spider = 15,
@@ -168,3 +189,64 @@
 				/mob/living/simple_animal/hostile/giant_spider/hunter = 10,
 				/mob/living/simple_animal/hostile/giant_spider/nurse = 5,
 				/mob/living/simple_animal/hostile/giant_spider/spitter = 10)
+
+
+/obj/random/pilruinsurgery
+	name = "random advanced medical tech"
+	desc = "doctors hate him!"
+	icon = 'icons/obj/surgery.dmi'
+	icon_state = "scalpel_manager_on"
+
+/obj/random/pilruinsurgery/spawn_choices()
+	return list(/obj/item/weapon/scalpel/manager = 2,
+				/obj/item/weapon/scalpel/laser1 = 1,
+				/obj/item/weapon/scalpel/laser2 = 4,
+				/obj/item/weapon/scalpel/laser3 = 2)
+
+/obj/random/pilruinpariah
+	name = "random pariah"
+	desc = "your head asplode"
+	icon = 'icons/mob/pilcrow.dmi'
+	icon_state = "randompariah2"
+
+/obj/random/pilruinpariah/spawn_choices()
+	return list(/mob/living/simple_animal/hostile/psipariah = 4,
+				/mob/living/simple_animal/hostile/psipariah/ranged = 2,
+				/obj/effect/gibspawner/human = 2,
+				/obj/effect/decal/cleanable/blood = 2)
+
+/obj/random/pilruinpariah/guaranteed
+	icon_state = "randompariah"
+
+/obj/random/pilruinpariah/spawn_choices()
+	return list(/mob/living/simple_animal/hostile/psipariah = 2,
+				/mob/living/simple_animal/hostile/psipariah/ranged = 1)
+
+
+//ITEMS///////////////////////////////
+
+/obj/item/documents/pilruin/experiments
+	name = "foundation documents"
+	desc = "Classified documents detailing a number of unethical experiments performed upon small groups of people taken from various points in the galaxy. The majority of the experiments seem to be marked 'FAILURE'."
+	description_antag = "Some of the experiments listed are pretty brutal. Notably, the few marked 'SUCCESS' have no procedure described beyond 'Kovelai Machine'."
+//	icon_state = "docs_verified"
+	icon_state = "docs_red"
+//	icon_state = "docs_blue"
+
+/obj/item/documents/pilruin/machine
+	name = "foundation documents"
+	desc = "Heavily redacted documents detailing the function of a 'Kovelai Machine' and its purpose."
+	description_antag = "From what little you can gather, the machine is designed to activate 'previously locked' mental functions through excessive trauma to both body and mind."
+	icon_state = "docs_generic"
+
+/obj/item/documents/pilruin/research
+	name = "foundation documents"
+	desc = "Medical documents detailing the results of what appear to be an autopsy, featuring many diagrams and some photographs of a brain."
+	description_antag = "It goes into quite some detail on several alterations that have been somehow made to the brain, as well as damage incurred by an unknown source."
+	icon_state = "docs_generic"
+
+/obj/item/documents/pilruin/containment
+	name = "foundation documents"
+	desc = "This document appears to describe containment procedures for subjects that have been exposed to the 'Kovelai Machine' including confinement to an isolated cell."
+	description_antag = "'Nullglass' is a material used almost to excess in the document, and special attention is paid to containing 'Paramount' subjects."
+	icon_state = "docs_blue"

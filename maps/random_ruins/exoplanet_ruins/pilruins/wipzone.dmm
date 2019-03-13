@@ -69,35 +69,12 @@
 "bq" = (/obj/machinery/door/blast/shutters,/turf/simulated/floor/reinforced,/area/template_noop)
 "br" = (/turf/simulated/floor/plating,/area/template_noop)
 "bs" = (/obj/structure/closet/crate/freezer/rations,/turf/simulated/floor/plating,/area/template_noop)
-"bt" = (/obj/item/stack/material/ocp,/turf/template_noop,/area/template_noop)
-"bu" = (/obj/structure/lattice,/obj/item/stack/material/ocp,/obj/effect/scorcher,/turf/template_noop,/area/template_noop)
-"bv" = (/turf/simulated/wall/ocp_wall,/area/template_noop)
-"bw" = (/obj/effect/paint/black,/turf/simulated/wall/ocp_wall,/area/template_noop)
 "bx" = (/obj/effect/scorcher,/turf/template_noop,/area/template_noop)
-"by" = (/obj/item/stack/material/ocp,/obj/effect/scorcher,/turf/template_noop,/area/template_noop)
-"bz" = (/obj/machinery/computer,/obj/effect/floor_decal/corner/red/full,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
-"bA" = (/obj/effect/floor_decal/corner/red{icon_state = "corner_white"; dir = 9},/obj/machinery/atmospherics/binary/oxyregenerator,/turf/simulated/floor/tiled/techfloor,/area/template_noop)
-"bB" = (/obj/effect/landmark/corpse/marooned_officer,/obj/structure/bed/chair{dir = 1},/obj/effect/decal/cleanable/blood,/obj/item/weapon/gun/projectile/revolver/medium,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
-"bC" = (/obj/item/clothing/accessory/medal/silver/marooned_medal{desc = "A heart-shaped bronze medal. Has Magnitka flag at top part and engraved name - H. Warda."; name = "\improper Magnitka medal"},/obj/structure/table/steel_reinforced,/obj/effect/floor_decal/corner/red{icon_state = "corner_white"; dir = 6},/obj/item/weapon/paper/marooned/note09,/turf/simulated/floor/tiled/techfloor,/area/template_noop)
 "bD" = (/obj/effect/decal/cleanable/dirt,/obj/random/trash,/turf/template_noop,/area/template_noop)
-"bE" = (/obj/structure/lattice,/obj/effect/scorcher,/turf/template_noop,/area/template_noop)
-"bF" = (/obj/item/weapon/paper/marooned/note02{pixel_x = -3; pixel_y = -5},/obj/item/weapon/paper/marooned/note01{pixel_x = 2; pixel_y = -1},/obj/structure/table/steel_reinforced,/obj/effect/floor_decal/corner/red{icon_state = "corner_white"; dir = 9},/turf/simulated/floor/tiled/techfloor,/area/template_noop)
-"bG" = (/obj/machinery/space_heater,/obj/effect/decal/cleanable/blood/drip,/obj/effect/floor_decal/steeldecal/steel_decals_central7,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
-"bH" = (/obj/item/weapon/paper/marooned/note03{pixel_x = 2; pixel_y = 2},/obj/structure/table/steel_reinforced,/obj/effect/floor_decal/corner/red{icon_state = "corner_white"; dir = 6},/turf/simulated/floor/tiled/techfloor,/area/template_noop)
 "bI" = (/obj/structure/shuttle/engine/propulsion,/turf/simulated/floor/plating,/area/template_noop)
-"bJ" = (/obj/machinery/door/airlock/centcom,/turf/simulated/floor/tiled/steel_ridged,/area/template_noop)
 "bK" = (/turf/space,/area/template_noop)
-"bL" = (/obj/structure/closet/crate/freezer,/obj/structure/handrai{icon_state = "handrail"; dir = 4},/obj/effect/floor_decal/industrial/outline,/turf/simulated/floor/tiled/techfloor,/area/template_noop)
-"bM" = (/obj/structure/closet/crate/freezer,/obj/structure/handrai,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
-"bN" = (/obj/item/weapon/paper/marooned/note06,/obj/random/trash,/obj/item/weapon/paper/marooned/note08,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
-"bO" = (/obj/machinery/space_heater,/obj/structure/handrai,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
-"bP" = (/obj/machinery/suit_storage_unit/standard_unit,/obj/effect/floor_decal/industrial/outline,/turf/simulated/floor/tiled/techfloor,/area/template_noop)
-"bQ" = (/obj/structure/closet/crate/freezer,/obj/item/weapon/paper/marooned/note04,/obj/item/weapon/paper/marooned/note05{pixel_x = -3; pixel_y = 1},/obj/structure/handrai{icon_state = "handrail"; dir = 4},/obj/effect/floor_decal/industrial/outline,/turf/simulated/floor/tiled/techfloor,/area/template_noop)
-"bR" = (/obj/item/trash/liquidfood,/obj/item/trash/liquidfood,/obj/effect/decal/cleanable/blood/drip,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
 "bS" = (/obj/random/junk,/turf/template_noop,/area/template_noop)
 "bT" = (/obj/machinery/door/airlock,/turf/simulated/floor/plating,/area/template_noop)
-"bU" = (/obj/random/trash,/obj/effect/floor_decal/steeldecal/steel_decals_central7,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
-"bV" = (/obj/item/weapon/paper/marooned/note07{pixel_x = 6},/obj/random/trash,/obj/effect/decal/cleanable/blood/drip,/obj/structure/bed,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
 "bW" = (/obj/structure/mattress/dirty,/obj/effect/landmark/corpse/chef,/obj/effect/decal/cleanable/blood,/turf/simulated/floor/plating,/area/template_noop)
 "bX" = (/obj/structure/closet/crate/freezer{name = "emergency rations"},/obj/item/stack/animalhide/human,/obj/random/loot,/turf/simulated/floor/plating,/area/template_noop)
 "bY" = (/obj/effect/decal/cleanable/blood/drip,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/plating,/area/template_noop)
@@ -112,7 +89,6 @@
 "ch" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/spiderling_remains,/turf/simulated/floor/plating,/area/template_noop)
 "ci" = (/obj/structure/closet/crate/freezer{name = "emergency rations"},/obj/item/organ/internal/appendix,/obj/item/weapon/reagent_containers/food/snacks/meat/human,/obj/item/weapon/reagent_containers/food/snacks/meat/human,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/plating,/area/template_noop)
 "cj" = (/turf/simulated/wall/wood,/area/template_noop)
-"ck" = (/obj/structure/shuttle/engine/propulsion,/obj/effect/scorcher,/turf/template_noop,/area/template_noop)
 "cl" = (/obj/effect/decal/cleanable/blood/gibs/body,/turf/simulated/floor/tiled/freezer,/area/template_noop)
 "cm" = (/obj/effect/landmark/corpse/engineer,/obj/effect/decal/cleanable/blood/gibs,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/freezer,/area/template_noop)
 "cn" = (/obj/item/weapon/reagent_containers/food/snacks/meat/human,/obj/effect/decal/cleanable/blood/gibs,/turf/simulated/floor/tiled/freezer,/area/template_noop)
@@ -120,29 +96,16 @@
 "cp" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/molten_item,/turf/simulated/floor/tiled,/area/template_noop)
 "cq" = (/obj/effect/decal/cleanable/blood/drip,/obj/effect/decal/cleanable/dirt,/obj/random/junk,/turf/simulated/floor/plating,/area/template_noop)
 "cr" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/plating,/area/template_noop)
-"cs" = (/obj/structure/handrai{icon_state = "handrail"; dir = 4},/obj/structure/bed/chair{icon_state = "chair_preview"; dir = 4},/obj/item/trash/liquidfood,/obj/item/trash/liquidfood,/obj/effect/floor_decal/industrial/outline,/turf/simulated/floor/tiled/techfloor,/area/template_noop)
-"ct" = (/obj/item/trash/liquidfood,/obj/item/trash/liquidfood,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
 "cu" = (/obj/effect/floor_decal/steeldecal/steel_decals_central6,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
-"cv" = (/obj/structure/handrai{icon_state = "handrail"; dir = 4},/obj/structure/bed/chair{icon_state = "chair_preview"; dir = 4},/obj/effect/floor_decal/industrial/outline,/turf/simulated/floor/tiled/techfloor,/area/template_noop)
-"cw" = (/obj/item/weapon/wirecutters,/obj/item/stack/cable_coil,/obj/machinery/power/port_gen/pacman/super,/obj/structure/cable{icon_state = "0-5"; dir = 8},/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
-"cx" = (/obj/effect/decal/cleanable/blood/drip,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
-"cy" = (/obj/structure/inflatable/wall,/obj/structure/handrai{icon_state = "handrail"; dir = 4},/obj/effect/floor_decal/industrial/warning,/turf/simulated/floor/tiled/dark,/area/template_noop)
 "cz" = (/obj/structure/closet/crate/freezer{name = "emergency rations"},/obj/random/loot,/obj/effect/decal/cleanable/blood/gibs/limb,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/freezer,/area/template_noop)
 "cA" = (/obj/effect/decal/cleanable/blood/gibs,/obj/effect/decal/cleanable/blood,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/freezer,/area/template_noop)
 "cB" = (/obj/effect/decal/cleanable/blood/gibs/core,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/remains,/turf/simulated/floor/tiled/freezer,/area/template_noop)
 "cC" = (/obj/structure/closet/crate/freezer{name = "emergency rations"},/obj/item/organ/internal/heart,/obj/item/weapon/reagent_containers/food/snacks/meat/human,/turf/simulated/floor/tiled,/area/template_noop)
 "cD" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled,/area/template_noop)
 "cE" = (/obj/machinery/floodlight,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled,/area/template_noop)
-"cF" = (/obj/structure/inflatable/door,/obj/structure/cable{icon_state = "1-6"; dir = 1},/obj/effect/floor_decal/industrial/warning,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
-"cG" = (/obj/structure/inflatable/wall,/obj/structure/handrai{icon_state = "handrail"; dir = 8},/obj/effect/floor_decal/industrial/warning,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
-"cH" = (/obj/structure/inflatable/door,/obj/structure/cable{icon_state = "2-5"; dir = 1},/obj/effect/floor_decal/industrial/warning,/obj/machinery/door/airlock/centcom,/turf/simulated/floor/tiled/steel_ridged,/area/template_noop)
 "cI" = (/obj/item/weapon/reagent_containers/food/snacks/meat/human,/obj/effect/decal/cleanable/blood/gibs/robot,/obj/effect/decal/cleanable/blood/gibs,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/freezer,/area/template_noop)
 "cJ" = (/obj/effect/decal/cleanable/blood/gibs/down,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/remains,/turf/simulated/floor/tiled/freezer,/area/template_noop)
 "cK" = (/obj/structure/closet/crate/freezer{name = "emergency rations"},/obj/effect/decal/cleanable/blood/gibs,/obj/random/trash,/obj/random/trash,/turf/simulated/floor/tiled/freezer,/area/template_noop)
-"cL" = (/obj/structure/fuel_port,/obj/effect/paint/black,/turf/simulated/wall/ocp_wall,/area/template_noop)
-"cM" = (/obj/structure/inflatable/wall,/obj/structure/cable{icon_state = "2-5"; dir = 2},/obj/effect/scorcher,/turf/template_noop,/area/template_noop)
-"cN" = (/obj/structure/inflatable/door,/obj/effect/scorcher,/turf/template_noop,/area/template_noop)
-"cO" = (/obj/structure/inflatable/wall,/obj/effect/scorcher,/turf/template_noop,/area/template_noop)
 "cP" = (/obj/structure/closet/secure_closet/freezer/fridge,/obj/effect/landmark/corpse/doctor,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/freezer,/area/template_noop)
 "cQ" = (/obj/effect/decal/cleanable/blood/gibs/limb,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/freezer,/area/template_noop)
 "cR" = (/obj/effect/decal/cleanable/blood/gibs,/obj/effect/decal/cleanable/blood,/turf/simulated/floor/tiled/freezer,/area/template_noop)
@@ -265,19 +228,19 @@ aaabbcdCbrbpdldudadvaJdUdVdWbxbxbxbxabaaaaaaaaaaaaaaaaaaaaaaaeaeabacacacacaaaccb
 aaabbcdJbrdwdhblblblaJdwdVbxdXbxbxbxabaaaaaaaaaaaaaaaaaaaaaaaaababaeacacacaaacclcmcnacbrcocpaccqcrac
 aaabbcbrbrdwaJblblbldndwbrdZbxbxbxbxabaaaaaaaaaaaaaaaaaaaaaaaaaeaiajakabacaaacczcAcBaccCcDcEaccrchac
 aaabbcdKdwdwdwbqbqbqdwdwdwdLbcbxbxbxabaaaaaaaaaaaaaaaaaaaaaaaaaeabaoaiajacaaaccIcJcKacacbkacacbTacac
-aaabbcdwdwcublblblblblcudwdwbcbxbxbxabababababababababaaaaaaaaacajaxayajaeaaaccPcQcRcScDcTcrcrcDcUac
-aaabbcdqbraJblbldvblblaJbrdrbcbxbxabababbtbubvbwbwbvbxaaaaaaaaacaHajajajaIaaacacacacacdccDdddecVdfac
-aaabbcdqbraJblblblblblaJbrdrbcbxbxabababbybvbwbzbwbwbxaaaaaaaaacacaUacaeabaaabdidjabacacacacacacdkac
-aaabbcdwdwdtblblblblbldtdwdwbcbxbxabababbvbwbAbBbCbwbEaaaaaaaaaaaaaaaaaaaaaaabababdodpabdoababacbYac
-aaabbcdwbcaJblblblblblaJbcdwbxbxbxababbxbwbwbFbGbHbwbwaaaaaaaaaaaaaaaaaaaaaadiabdoababababdpdiacbTac
-aaabbcbIbcaJblblblblbldMbcbxbxbxabababbxbwbwbwbJbwbwbwaaaaaaaaaaaaaaaaaaaaaabKbKbKbKaaaaaaaaaaaaaaaa
-aaabababbcbcbcbqbqbqbcbcbcbxbxbxbxababbwbwbLbMbNbObPbwaaaaaaaaaaaaaaaaaaaaaaabababababababacadadadac
-aaababababbxbxababdXbxababbxbxababababbwbwbQbRbUbVbPbwaaaaaaaaaaaaaaaaaaaaaaababababacacacacafagahad
-aaababbxabbxbxbxbxbxabdQabababababababckbwcsctcuaJbPbwaaaaaaaaaaaaaaaaaaaaaaacacacacacalamacanagagad
-aaabbxbxbxeaabbxbxbxbxbxabababababababbxbwcvcwcxaJbPbwaaaaaaaaaaaaaaaaaaaaaaacaqarasacatauacavagawad
-aaabbxbxbxbxaeebbxbxebabbcababababababbxbwbwcycFcGbwbwaaaaaaaaaaaaaaaaaaaaaaacaFaFaFacacaGacacaGacac
-aaababbxabbcbcabbxabbxabbcbcabababababbxbxbwbwcHbwcLbxaaaaaaaaaaaaaaaaaaaaaaacaQaQaQaRaSaSaTaTaSaSad
-aaababbxbxbcbxbxbxdXbxabbcbIabababababbxbxbxcMcNcObxbxaaaaaaaaaaaaaaaaaaaaaaadaYaZbaaRaSaSaSaSaSbbad
+aaabbcdwdwcublblblblblcudwdwbcbxbxbxabaaaaaaaaaaaaaaaaaaaaaaaaacajaxayajaeaaaccPcQcRcScDcTcrcrcDcUac
+aaabbcdqbraJblbldvblblaJbrdrbcbxbxababaaaaaaaaaaaaaaaaaaaaaaaaacaHajajajaIaaacacacacacdccDdddecVdfac
+aaabbcdqbraJblblblblblaJbrdrbcbxbxababaaaaaaaaaaaaaaaaaaaaaaaaacacaUacaeabaaabdidjabacacacacacacdkac
+aaabbcdwdwdtblblblblbldtdwdwbcbxbxababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabababdodpabdoababacbYac
+aaabbcdwbcaJblblblblblaJbcdwbxbxbxababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadiabdoababababdpdiacbTac
+aaabbcbIbcaJblblblblbldMbcbxbxbxabababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabKbKbKbKaaaaaaaaaaaaaaaa
+aaabababbcbcbcbqbqbqbcbcbcbxbxbxbxababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabababababababacadadadac
+aaababababbxbxababdXbxababbxbxababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababababacacacacafagahad
+aaababbxabbxbxbxbxbxabdQabababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacacacacacalamacanagagad
+aaabbxbxbxeaabbxbxbxbxbxabababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacaqarasacatauacavagawad
+aaabbxbxbxbxaeebbxbxebabbcababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacaFaFaFacacaGacacaGacac
+aaababbxabbcbcabbxabbxabbcbcabababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacaQaQaQaRaSaSaTaTaSaSad
+aaababbxbxbcbxbxbxdXbxabbcbIabababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaYaZbaaRaSaSaSaSaSbbad
 aaabababbxbxabbxbxbxbxbxabababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaYaZbaaRacacacacbkacac
 aaabababbxbxbxbxbxbxabbxabababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacaQaQaQaRaGbrbsacaSadab
 aaababaeabababecbxbxabababababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacacadadacacbrbsacbkacab

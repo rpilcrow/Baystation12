@@ -153,7 +153,7 @@
 	name = "Pilcrow"
 	desc = "He's mad as hell, and he's not going to take it anymore!"
 	speak_emote = list("swears","curses","caws","complains")
-	speak = list("Caw.", "Caw?", "Caw!", "CAW.","FUCK!","SHIT!","Why doesn't it WORK?","Why won't it compile?","What the fuck is this?","What's broken now?","But why?","Who made this?","But how?")
+	speak = list("Caw.", "Caw?", "Caw!", "CAW.","FUCK!","SHIT!","Why doesn't it WORK?","Why won't it compile?","What the fuck is this?","What's broken now?","But why?","Who made this?","But how?","FUCK tabbing!")
 	speak_chance = 25 //1/8th of the time
 	stop_automated_movement = 0
 

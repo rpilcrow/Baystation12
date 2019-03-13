@@ -17,7 +17,7 @@
 /obj/effect/paint
 	name = "coat of paint"
 	icon = 'icons/effects/effects.dmi'
-	icon_state = "wall_paint_effect"
+	icon_state = "wallpaint"
 	plane = TURF_PLANE
 	layer = TURF_DETAIL_LAYER
 	blend_mode = BLEND_MULTIPLY
@@ -49,11 +49,14 @@
 /obj/effect/paint/black
 	color = COLOR_DARK_GRAY
 
+/obj/effect/paint/white
+	color = COLOR_WHITE
+
 //Stripes the wall it spawns on, then dies
 /obj/effect/paint_stripe
 	name = "stripe of paint"
 	icon = 'icons/effects/effects.dmi'
-	icon_state = "white"
+	icon_state = "wallstripe"
 	plane = TURF_PLANE
 	layer = TURF_DETAIL_LAYER
 	blend_mode = BLEND_MULTIPLY
@@ -92,6 +95,12 @@
 
 /obj/effect/paint_stripe/white
 	color = COLOR_SILVER
+
+/obj/effect/paint_stripe/nglass
+	color = COLOR_NULLGLASS
+
+/obj/effect/paint_stripe/purple
+	color = COLOR_PURPLE
 
 /obj/effect/paint/brown
 	color = COLOR_DARK_BROWN

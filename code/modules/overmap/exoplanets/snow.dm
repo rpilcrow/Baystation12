@@ -25,8 +25,10 @@
 							 /datum/map_template/ruin/exoplanet/pilruins/broken/semi,
 							 /datum/map_template/ruin/exoplanet/pilruins/broken/some,
 							 /datum/map_template/ruin/exoplanet/pilruins/broken/kinda,
-							 /datum/map_template/ruin/exoplanet/pilruins/tribalgun)
-	exo_hab_chance = 66
+							 /datum/map_template/ruin/exoplanet/pilruins/tribalgun,
+							 /datum/map_template/ruin/exoplanet/pilruins/kovelai,
+							 /datum/map_template/ruin/exoplanet/pilruins/oubliette)
+	exo_hab_chance = 80
 
 /obj/effect/overmap/sector/exoplanet/snow/generate_map()
 	..()
@@ -38,7 +40,7 @@
 /obj/effect/overmap/sector/exoplanet/snow/generate_atmosphere()
 	..()
 	if(atmosphere)
-		atmosphere.temperature = T0C - rand(10, 100)
+		atmosphere.temperature = T0C - min(rand(1, 100),rand(1, 100))
 		atmosphere.update_values()
 
 /datum/random_map/noise/exoplanet/snow

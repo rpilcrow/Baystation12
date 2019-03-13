@@ -268,9 +268,13 @@
 
 /obj/effect/overmap/sector/exoplanet/proc/generate_atmosphere()
 	atmosphere = new
-	if(prob(exo_hab_chance))	//small chance of getting a perfectly habitable planet //PIL_EDIT; changed to 33%
-		atmosphere.adjust_gas("oxygen", MOLES_O2STANDARD, 0)
-		atmosphere.adjust_gas("nitrogen", MOLES_N2STANDARD)
+	if(prob(exo_hab_chance))	//small chance of getting a perfectly habitable planet //PIL_EDIT; changed to variable
+		if(prob(33))
+			atmosphere.adjust_gas("oxygen", MOLES_O2STANDARD*(rand(90,120)/100), 0)
+			atmosphere.adjust_gas("nitrogen", MOLES_N2STANDARD*(rand(80,120)/100))
+		else
+			atmosphere.adjust_gas("oxygen", MOLES_O2STANDARD, 0)
+			atmosphere.adjust_gas("nitrogen", MOLES_N2STANDARD)
 	else //let the fuckery commence
 		var/list/newgases = gas_data.gases.Copy()
 		if(prob(90)) //all phoron planet should be rare
@@ -282,7 +286,7 @@
 		var/sanity = prob(99.9)
 
 		var/total_moles = MOLES_CELLSTANDARD * rand(80,120)/100
-		var/gasnum = rand(1,4)
+		var/gasnum = min(rand(1,4),rand(1,4))
 		var/i = 1
 		while(i <= gasnum && total_moles && newgases.len)
 			var/ng = pick_n_take(newgases)	//pick a gas

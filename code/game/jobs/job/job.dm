@@ -39,7 +39,7 @@
 
 	var/min_skill = list()				  //Minimum skills allowed for the job. List should contain skill (as in /decl/hierarchy/skill path), with values which are numbers.
 	var/max_skill = list()				  //Maximum skills allowed for the job.
-	var/skill_points = 30				  //The number of unassigned skill points the job comes with (on top of the minimum skills). //PIL_EDIT: Originally 16, raised to 30.
+	var/skill_points = 35				  //The number of unassigned skill points the job comes with (on top of the minimum skills). //PIL_EDIT: Originally 16, raised to 35.
 	var/no_skill_buffs = FALSE			  //Whether skills can be buffed by age/species modifiers.
 	var/available_by_default = TRUE
 
@@ -75,7 +75,7 @@
 			H.set_psi_rank(psi, psi_faculties[psi], take_larger = TRUE, defer_update = TRUE)
 	if(H.psi)
 		H.psi.update()
-		H.give_psi_implant()
+		//H.give_psi_implant() //PIL_EDIT: eheh.
 
 	var/decl/hierarchy/outfit/outfit = get_outfit(H, alt_title, branch, grade)
 	if(outfit) . = outfit.equip(H, title, alt_title)

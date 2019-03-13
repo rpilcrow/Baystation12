@@ -139,10 +139,14 @@
 			visible_message("<span class='notice'>\The [src] misses its attack on \the [target_mob]!</span>")
 			return
 		var/mob/living/L = target_mob
+//		if(attack_sound)
+//			playsound(loc, attack_sound, 75, 1)
 		L.attack_generic(src,rand(melee_damage_lower,melee_damage_upper),attacktext,environment_smash,damtype,defense)
 		return L
 	if(istype(target_mob,/obj/mecha))
 		var/obj/mecha/M = target_mob
+//		if(attack_sound)
+//			playsound(loc, attack_sound, 75, 1)
 		M.attack_generic(src,rand(melee_damage_lower,melee_damage_upper),attacktext)
 		return M
 

@@ -32,14 +32,14 @@
 
 /datum/event/minispasm/proc/do_spasm(var/mob/living/victim, var/obj/item/device/radio/source)
 	set waitfor = 0
-
+/*
 	if(iscarbon(victim))
 		var/list/disabilities = list(NEARSIGHTED, EPILEPSY, TOURETTES, NERVOUS)
 		for(var/disability in disabilities)
 			if(victim.disabilities & disability)
 				disabilities -= disability
 		if(disabilities.len)
-			victim.disabilities |= pick(disabilities)
+			victim.disabilities |= pick(disabilities)*/
 
 	if(victim.psi)
 		to_chat(victim, SPAN_DANGER("A hauntingly familiar sound hisses from \icon[source] \the [source], and your vision flickers!"))
@@ -53,7 +53,7 @@
 		var/list/faculties = list(PSI_COERCION, PSI_REDACTION, PSI_ENERGISTICS, PSI_PSYCHOKINESIS)
 		for(var/i = 1 to new_latencies)
 			to_chat(victim, SPAN_DANGER("<font size = 3>[pick(psi_operancy_messages)]</font>"))
-			victim.adjustBrainLoss(rand(10,20))
+			victim.adjustBrainLoss(rand(1,20))
 			victim.set_psi_rank(pick_n_take(faculties), 1)
 			sleep(30)
 		victim.psi.update()

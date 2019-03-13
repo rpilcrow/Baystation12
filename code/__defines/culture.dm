@@ -167,3 +167,17 @@
 #define CULTURE_NABBER_AMINUS "Grade A-"
 #define CULTURE_NABBER_A      "Grade A"
 #define CULTURE_NABBER_APLUS  "Grade A+"
+
+// Trolls
+#define CULTURE_TROLL_RUST     "Rustblood"
+#define CULTURE_TROLL_ORANGE   "Orangeblood"
+#define CULTURE_TROLL_GOLD     "Goldblood"
+#define CULTURE_TROLL_LIME     "Limeblood"
+#define CULTURE_TROLL_OLIVE    "Oliveblood"
+#define CULTURE_TROLL_JADE     "Jadeblood"
+#define CULTURE_TROLL_TEAL     "Tealblood"
+#define CULTURE_TROLL_CERULEAN "Ceruleanblood"
+#define CULTURE_TROLL_INDIGO   "Blueblood"
+#define CULTURE_TROLL_PURPLE   "Purpleblood"
+#define CULTURE_TROLL_VIOLET   "Violetblood"
+#define CULTURE_TROLL_FUCHSIA  "Royalblood"

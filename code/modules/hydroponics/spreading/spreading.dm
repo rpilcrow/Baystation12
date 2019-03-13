@@ -148,15 +148,15 @@
 
 	if(growth > 2 && growth == max_growth)
 		layer = (seed && seed.force_layer) ? seed.force_layer : ABOVE_OBJ_LAYER
-		if(growth_type in list(GROWTH_VINES,GROWTH_BIOMASS))
-			set_opacity(1)
+		//if(growth_type in list(GROWTH_VINES,GROWTH_BIOMASS))
+		//	set_opacity(1)
 		if(islist(seed.chems) && !isnull(seed.chems[/datum/reagent/woodpulp]))
 			set_density(1)
-			set_opacity(1)
+			//set_opacity(1)
 
 	if((!density || !opacity) && seed.get_trait(TRAIT_LARGE))
 		set_density(1)
-		set_opacity(1)
+		//set_opacity(1)
 	else
 		layer = (seed && seed.force_layer) ? seed.force_layer : ABOVE_OBJ_LAYER
 		set_density(0)

@@ -19,7 +19,7 @@
 
 	UNSETEMPTY(latencies)
 
-	if(force || last_rating != ceil(combined_rank/ranks.len))
+	if(force || (ranks.len && last_rating != ceil(combined_rank/ranks.len)))
 		rebuild_power_cache = TRUE
 		if(combined_rank > 0)
 			sound_to(owner, 'sound/effects/psi/power_unlock.ogg')

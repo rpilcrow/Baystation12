@@ -15,15 +15,15 @@
 	var/dat = "<a href='byond://?src=\ref[src];close=1'>Close</a>"
 	dat += "<center><h4>Gunnery Console v0.02</h4></center>"
 	if(target)
-		dat += "<br><b>TARGETING MODE:</b> TARGET <a href='byond://?src=\ref[src];cleartarget=1'>(Clear)</a>"
-		dat += "<br><b>CURRENT TARGET</b>: [target.name] at [target.x] [target.y] [target.z]."
+		dat += "<br><b>MODE:</b> TARGET <a href='byond://?src=\ref[src];cleartarget=1'>(Clear)</a>"
+		dat += "<br><b>TARGET</b>: [target.name] at [target.x], [target.y], [target.z]."
 	else
-		dat += "<br><b>TARGETING MODE:</b> COORDS"
-		dat += "<br><b>CURRENT COORDINATES</b>: [coords["x"]], [coords["y"]], [coords["z"]] (Change <a href='byond://?src=\ref[src];setcoord=setx'>X</a> <a href='byond://?src=\ref[src];setcoord=sety'>Y</a> <a href='byond://?src=\ref[src];setcoord=setz'>Z</a>)"
+		dat += "<br><b>MODE:</b> COORDS"
+		dat += "<br><b>TARGET</b>: [coords["x"]], [coords["y"]], [coords["z"]] (Change <a href='byond://?src=\ref[src];setcoord=setx'>X</a> <a href='byond://?src=\ref[src];setcoord=sety'>Y</a> <a href='byond://?src=\ref[src];setcoord=setz'>Z</a>)"
 	if(gCore)
-		dat += "<br><b>CURRENT WEAPON</b>: [gCore.name] at [gCore.x] [gCore.y] [gCore.z]."
+		dat += "<br><b>WEAPON</b>: [gCore.name] at [gCore.x] [gCore.y] [gCore.z]."
 		if(gCore.gMag)
-			dat += "<br><b>AMMUNITION</b>: [gCore.gMag.ammunition]"
+			dat += "<br><b>AMMUNITION</b>: [gCore.gMag.gunneryGetAmmo(0)]"
 		dat += "<br><b>RANGE</b>: [gCore.gunneryGetRangeMod()]"
 		dat += "<br><b><a href='byond://?src=\ref[src];firegun=1'>(FIRE)</a></b>"
 	else
@@ -38,7 +38,20 @@
 
 	if(gCore)
 		dat += "<br><br><b>TARGETS DETECTED:</b>" //using shuttle waypoints for now. this will include BS beacons.
+
+		for(var/obj/item/gunnery/signal/S in gunnerypieces)
+			if(!S.on)
+				continue
+			if(map_sectors["[S.z]"] in range(map_sectors["[gCore.z]"],gCore.gunneryGetRangeMod()))
+				if(map_sectors["[S.z]"] == map_sectors["[gCore.z]"])
+					//world << "skipping [S]"
+					continue
+				dat += "<br><b>[S.name] - [map_sectors["[S.z]"]]</b> at [S.x], [S.y], [S.z] <a href='byond://?src=\ref[src];target=\ref[S]'>(Select)</a>"
+
 		for(var/obj/effect/overmap/S in range(map_sectors["[gCore.z]"], gCore.gunneryGetRangeMod()))
+			if(S == map_sectors["[gCore.z]"])
+				//world << "skipping [S]"
+				continue
 			for(var/obj/effect/shuttle_landmark/LZ in S.get_waypoints(gCore.name))
 				dat += "<br><b>[S.name] - [LZ.name]</b> at [LZ.x], [LZ.y], [LZ.z] <a href='byond://?src=\ref[src];target=\ref[LZ]'>(Select)</a>"
 
@@ -72,6 +85,9 @@
 				if("setz")
 					var/list/potential_planet = list()
 					for(var/obj/effect/overmap/S in range(map_sectors["[gCore.z]"], gCore.gunneryGetRangeMod()))
+						if(S == map_sectors["[gCore.z]"])
+							//world << "skipping [S]"
+							continue
 						if(S.map_z.len)
 							potential_planet |= S.name
 							potential_planet[S.name] = S
@@ -96,12 +112,16 @@
 		. = TOPIC_REFRESH
 
 	else if(href_list["setgun"])
-		visible_message("setgun was: [href_list["chooseweapon"]]")
+		//visible_message("setgun was: [href_list["chooseweapon"]]")
 		var/sss = locate(href_list["setgun"])
-		visible_message("sss was [sss]")
+		//visible_message("sss was [sss]")
 		if(istype(sss, /obj/machinery/gunnery/core))
 			gCore = sss
-			coords = initial(coords)
+			if(coords["z"])
+				if(!(map_sectors["[coords["z"]]"] in range(map_sectors["[gCore.z]"], gCore.gunneryGetRangeMod())))
+					coords["z"] = 0
+			target = null
+			//coords = list("x" = 0, "y" = 0, "z" = 0)
 //		RIP IN PEACE THIS CODE, IT NEVER SCORED
 //		if(isnum(href_list["chooseweapon"]) && istype(gunnerypieces[href_list["chooseweapon"]],/obj/machinery/gunnery/core))
 //			gCore = gunnerypieces[href_list["chooseweapon"]] //AAAAAAAAAAAAAAAAAAAAAAAA
@@ -111,12 +131,12 @@
 		if(gCore)
 			if(target)
 				if(gCore.gunneryTarget(target))
-					to_chat(user,"<span class='warning'>Firing gun at chosen target.</span>")
+					to_chat(user,"<span class='notice'>Fired gun at chosen target.</span>")
 				else
 					to_chat(user,"<span class='warning'>Failed to fire gun at chosen target.</span>")
 			else if(coords["x"] && coords["y"] && coords["z"])
 				if(gCore.gunneryTarget(null, coords["x"], coords["y"], coords["z"]))
-					to_chat(user,"<span class='warning'>Firing gun at chosen coordinates.</span>")
+					to_chat(user,"<span class='notice'>Fired gun at chosen coordinates.</span>")
 				else
 					to_chat(user,"<span class='warning'>Failed to fire gun at chosen coordinates.</span>")
 			else

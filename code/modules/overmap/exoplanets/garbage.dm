@@ -3,7 +3,7 @@
 	desc = "An arid exoplanet with unnatural formations covering the surface. Hotspots of radiation detected."
 	color = "#a5a18b"
 	planetary_area = /area/exoplanet/garbage
-	exo_hab_chance = 33
+	exo_hab_chance = 66
 	possible_features = list(/datum/map_template/ruin/exoplanet/monolith,
 							/datum/map_template/ruin/exoplanet/hydrobase,
 							/datum/map_template/ruin/exoplanet/crashed_pod,
@@ -15,7 +15,9 @@
 							/datum/map_template/ruin/exoplanet/pilruins/broken,
 							/datum/map_template/ruin/exoplanet/pilruins/broken/semi,
 							/datum/map_template/ruin/exoplanet/pilruins/broken/some,
-							/datum/map_template/ruin/exoplanet/pilruins/broken/kinda)
+							/datum/map_template/ruin/exoplanet/pilruins/broken/kinda,
+							/datum/map_template/ruin/exoplanet/pilruins/kovelai,
+							/datum/map_template/ruin/exoplanet/pilruins/oubliette)
 
 /obj/effect/overmap/sector/exoplanet/garbage/generate_map()
 	..()
@@ -29,7 +31,7 @@
 /obj/effect/overmap/sector/exoplanet/garbage/generate_atmosphere()
 	..()
 	if(atmosphere)
-		atmosphere.temperature = T20C + rand(-5, 100)
+		atmosphere.temperature = T0C + rand(-10, 40)
 		atmosphere.update_values()
 
 /obj/effect/overmap/sector/exoplanet/garbage/update_biome()

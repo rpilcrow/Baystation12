@@ -20,7 +20,9 @@
 							/datum/map_template/ruin/exoplanet/pilruins/tribalgun,
 							/datum/map_template/ruin/exoplanet/pilruins/mercship,
 							/datum/map_template/ruin/exoplanet/pilruins/spidershuttle,
-							/datum/map_template/ruin/exoplanet/pilruins/sarcophagus)
+							/datum/map_template/ruin/exoplanet/pilruins/sarcophagus,
+							/datum/map_template/ruin/exoplanet/pilruins/kovelai,
+							/datum/map_template/ruin/exoplanet/pilruins/oubliette)
 
 /obj/effect/overmap/sector/exoplanet/volcanic/generate_map()
 	..()

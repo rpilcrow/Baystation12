@@ -21,7 +21,9 @@
 							/datum/map_template/ruin/exoplanet/pilruins/broken,
 							/datum/map_template/ruin/exoplanet/pilruins/broken/semi,
 							/datum/map_template/ruin/exoplanet/pilruins/broken/some,
-							/datum/map_template/ruin/exoplanet/pilruins/broken/kinda)
+							/datum/map_template/ruin/exoplanet/pilruins/broken/kinda,
+							/datum/map_template/ruin/exoplanet/pilruins/kovelai,
+							/datum/map_template/ruin/exoplanet/pilruins/oubliette)
 	exo_hab_chance = 33
 
 /obj/effect/overmap/sector/exoplanet/shrouded/generate_map()

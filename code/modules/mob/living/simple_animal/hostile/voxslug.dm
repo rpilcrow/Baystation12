@@ -4,7 +4,7 @@ Small, little HP, poisonous.
 
 /mob/living/simple_animal/hostile/voxslug
 	name = "slug"
-	desc = "A viscious little creature, it has a mouth of too many teeth and a penchant for blood."
+	desc = "A vicious little creature, it has a mouth brimming with teeth and a penchant for blood."
 	icon_state = "voxslug"
 	icon_living = "voxslug"
 	item_state = "voxslug"
@@ -26,6 +26,7 @@ Small, little HP, poisonous.
 	melee_damage_upper = 10
 	holder_type = /obj/item/weapon/holder/voxslug
 	faction = SPECIES_VOX
+	var/latch_bp = BP_CHEST
 
 /mob/living/simple_animal/hostile/voxslug/ListTargets(var/dist = 7)
 	var/list/L = list()
@@ -53,16 +54,19 @@ Small, little HP, poisonous.
 	else return ..()
 
 /mob/living/simple_animal/hostile/voxslug/proc/attach(var/mob/living/carbon/human/H)
-	var/obj/item/clothing/suit/space/S = H.get_covering_equipped_item_by_zone(BP_CHEST)
+	var/obj/item/clothing/suit/space/S = H.get_covering_equipped_item_by_zone(latch_bp) //TODO: checks for helmets
 	if(istype(S) && !length(S.breaches))
 		S.create_breaches(BRUTE, 20)
 		if(!length(S.breaches)) //unable to make a hole
-			return
-	var/obj/item/organ/external/chest = H.organs_by_name[BP_CHEST]
+			return 0
+	var/obj/item/organ/external/chest = H.organs_by_name[latch_bp]
+	if(!chest) //they ain't got none
+		return 0
 	var/obj/item/weapon/holder/voxslug/holder = new(get_turf(src))
 	src.forceMove(holder)
-	chest.embed(holder,0,"\The [src] latches itself onto \the [H]!")
+	chest.embed(holder,0,"\The [src] latches itself onto \the [H]'s [latch_bp]!")
 	holder.sync(src)
+	return 1
 
 /mob/living/simple_animal/hostile/voxslug/AttackingTarget()
 	. = ..()
@@ -76,10 +80,15 @@ Small, little HP, poisonous.
 	if(. && istype(src.loc, /obj/item/weapon/holder) && isliving(src.loc.loc)) //We in somebody
 		var/mob/living/L = src.loc.loc
 		if(src.loc in L.get_visible_implants(0))
-			if(prob(1))
-				to_chat(L, "<span class='warning'>You feel strange as \the [src] pulses...</span>")
-			var/datum/reagents/R = L.reagents
-			R.add_reagent(/datum/reagent/cryptobiolin, 0.5)
+			implant_effect(L)
+
+
+/mob/living/simple_animal/hostile/voxslug/proc/implant_effect(var/mob/living/L)
+	if(istype(L))
+		if(prob(1))
+			to_chat(L, "<span class='warning'>You feel strange as \the [src] pulses...</span>")
+		var/datum/reagents/R = L.reagents
+		R.add_reagent(/datum/reagent/cryptobiolin, 0.5)
 
 /obj/item/weapon/holder/voxslug/attack(var/mob/target, var/mob/user)
 	var/mob/living/simple_animal/hostile/voxslug/V = contents[1]

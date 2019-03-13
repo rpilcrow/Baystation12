@@ -25,8 +25,10 @@
 							 /datum/map_template/ruin/exoplanet/pilruins/broken/semi,
 							 /datum/map_template/ruin/exoplanet/pilruins/broken/some,
 							 /datum/map_template/ruin/exoplanet/pilruins/broken/kinda,
-							 /datum/map_template/ruin/exoplanet/pilruins/tribalgun)
-	exo_hab_chance = 90
+							 /datum/map_template/ruin/exoplanet/pilruins/tribalgun,
+							 /datum/map_template/ruin/exoplanet/pilruins/kovelai,
+							 /datum/map_template/ruin/exoplanet/pilruins/oubliette)
+	exo_hab_chance = 99
 
 /obj/effect/overmap/sector/exoplanet/grass/generate_map()
 	..()
@@ -39,7 +41,7 @@
 /obj/effect/overmap/sector/exoplanet/grass/generate_atmosphere()
 	..()
 	if(atmosphere)
-		atmosphere.temperature = T20C + rand(10, 30)
+		atmosphere.temperature = T0C + min(rand(20, 40),rand(20, 40))
 		atmosphere.update_values()
 
 /obj/effect/overmap/sector/exoplanet/grass/adapt_seed(var/datum/seed/S)

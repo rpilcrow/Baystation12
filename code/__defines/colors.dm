@@ -114,6 +114,19 @@
 
 #define COLOR_BLOOD_HUMAN      "#a10808"
 
+#define COLOR_BLOOD_RUST       "#a10808"
+#define COLOR_BLOOD_ORANGE     "#a25203"
+#define COLOR_BLOOD_GOLD       "#a1a100"
+#define COLOR_BLOOD_OLIVE      "#416600"
+#define COLOR_BLOOD_JADE       "#078446"
+#define COLOR_BLOOD_TEAL       "#008282"
+#define COLOR_BLOOD_CERULEAN   "#004182"
+#define COLOR_BLOOD_INDIGO     "#001583"
+#define COLOR_BLOOD_PURPLE     "#440a7f"
+#define COLOR_BLOOD_VIOLET     "#6a006a"
+#define COLOR_BLOOD_FUCHSIA    "#99004d"
+#define COLOR_BLOOD_LIME       "#859100"
+
 //Color defines used by the assembly detailer.
 #define COLOR_ASSEMBLY_BLACK   "#545454"
 #define COLOR_ASSEMBLY_BGRAY   "#9497ab"

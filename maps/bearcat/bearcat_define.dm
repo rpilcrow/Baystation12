@@ -17,15 +17,16 @@
 	default_law_type = /datum/ai_laws/corporate
 
 	evac_controller_type = /datum/evacuation_controller/lifepods
-//	lobby_icon = 'maps/bearcat/bearcat_lobby.dmi'
-//	lobby_screens = list("aesthetic") //PIL_EDIT: removed 'spess'
-	lobby_icon = 'maps/miningbrick/brick_lobby.dmi'
-	lobby_screens = list("industrial-mrrainbowwj")
+	lobby_icon = 'maps/bearcat/bearcat_lobby.dmi'
+	lobby_screens = list("aesthetic") //PIL_EDIT: removed 'spess'
+//	lobby_icon = 'maps/miningbrick/brick_lobby.dmi'
+//	lobby_screens = list("industrial-mrrainbowwj")
 
 	allowed_spawns = list("Cryogenic Storage")
 	default_spawn = "Cryogenic Storage"
 	use_overmap = 1
-	num_exoplanets = 3
+//	num_exoplanets = 1
+	num_exoplanets = 1
 	welcome_sound = 'sound/effects/cowboysting.ogg'
 
 	emergency_shuttle_leaving_dock = "Attention all hands: the escape pods have been launched, maintaining burn for %ETA%."

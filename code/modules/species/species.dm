@@ -215,7 +215,7 @@
 	// The basic skin colours this species uses
 	var/list/base_skin_colours
 
-	var/list/genders = list(MALE, FEMALE, PLURAL)
+	var/list/genders = list(MALE, FEMALE)//list(MALE, FEMALE, PLURAL)
 
 	// Bump vars
 	var/bump_flag = HUMAN	// What are we considered to be when bumped?
@@ -651,14 +651,14 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 		return 80
 	return 220
 
-/datum/species/proc/get_hair_styles()
+/datum/species/proc/get_hair_styles(var/mob/living/carbon/human/H)
 	var/list/L = LAZYACCESS(hair_styles, type)
 	if(!L)
 		L = list()
 		LAZYSET(hair_styles, type, L)
 		for(var/hairstyle in GLOB.hair_styles_list)
 			var/datum/sprite_accessory/S = GLOB.hair_styles_list[hairstyle]
-			if(!(get_bodytype() in S.species_allowed))
+			if(!(get_bodytype(H) in S.species_allowed))
 				continue
 			ADD_SORTED(L, hairstyle, /proc/cmp_text_asc)
 			L[hairstyle] = S
