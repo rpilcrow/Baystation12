@@ -1,0 +1,71 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"b" = (/obj/effect/paint_stripe/green,/turf/simulated/wall,/area/map_template/gasstation)
+"c" = (/obj/machinery/vending/snack,/obj/effect/floor_decal/corner/grey{icon_state = "corner_white"; dir = 5},/obj/effect/floor_decal/corner/grey{icon_state = "corner_white"; dir = 9},/turf/simulated/floor/tiled,/area/map_template/gasstation)
+"d" = (/obj/machinery/vending/cola,/obj/effect/floor_decal/corner/grey{icon_state = "corner_white"; dir = 5},/turf/simulated/floor/tiled,/area/map_template/gasstation)
+"e" = (/obj/machinery/vending/coffee,/obj/effect/floor_decal/corner/grey{icon_state = "corner_white"; dir = 5},/turf/simulated/floor/tiled,/area/map_template/gasstation)
+"f" = (/obj/effect/floor_decal/corner/grey{icon_state = "corner_white"; dir = 5},/turf/simulated/floor/tiled,/area/map_template/gasstation)
+"g" = (/obj/effect/floor_decal/corner/grey{icon_state = "corner_white"; dir = 5},/obj/effect/floor_decal/corner/grey{icon_state = "corner_white"; dir = 6},/turf/simulated/floor/tiled,/area/map_template/gasstation)
+"h" = (/obj/machinery/door/airlock,/obj/effect/floor_decal/corner_techfloor_grid{icon_state = "corner_techfloor_grid"; dir = 9},/turf/simulated/floor/tiled/steel_grid,/area/map_template/gasstation)
+"i" = (/turf/simulated/floor/tiled/steel_grid,/area/map_template/gasstation)
+"j" = (/obj/structure/closet/crate/uranium,/turf/simulated/floor/tiled/steel_grid,/area/map_template/gasstation)
+"k" = (/obj/machinery/power/port_gen/pacman/super,/obj/structure/cable{icon_state = "0-4"; d2 = 4},/obj/item/weapon/storage/secure/safe{pixel_y = 28},/turf/simulated/floor/plating,/area/map_template/gasstation)
+"l" = (/obj/machinery/power/apc/high{dir = 1},/obj/structure/cable{d2 = 8; icon_state = "0-8"},/turf/simulated/floor/plating,/area/map_template/gasstation)
+"m" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/effect/floor_decal/corner/grey{icon_state = "corner_white"; dir = 9},/turf/simulated/floor/tiled,/area/map_template/gasstation)
+"n" = (/turf/simulated/floor/tiled,/area/map_template/gasstation)
+"o" = (/obj/machinery/light{dir = 4; icon_state = "tube1"},/obj/effect/floor_decal/corner/grey{icon_state = "corner_white"; dir = 6},/turf/simulated/floor/tiled,/area/map_template/gasstation)
+"p" = (/obj/machinery/door/airlock,/obj/effect/floor_decal/industrial/warning/corner{icon_state = "warningcorner"; dir = 4},/turf/simulated/floor/tiled/steel_grid,/area/map_template/gasstation)
+"q" = (/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 1},/turf/simulated/floor/tiled/steel_grid,/area/map_template/gasstation)
+"r" = (/obj/structure/table/rack,/obj/random/contraband,/obj/random/contraband,/obj/effect/floor_decal/corner/grey{icon_state = "corner_white"; dir = 9},/turf/simulated/floor/tiled,/area/map_template/gasstation)
+"s" = (/obj/structure/table/rack,/obj/random/contraband,/turf/simulated/floor/tiled,/area/map_template/gasstation)
+"t" = (/obj/effect/floor_decal/corner/grey{icon_state = "corner_white"; dir = 6},/turf/simulated/floor/tiled,/area/map_template/gasstation)
+"u" = (/obj/structure/table/reinforced,/obj/effect/floor_decal/corner_techfloor_grid{icon_state = "corner_techfloor_grid"; dir = 9},/turf/simulated/floor/tiled/steel_grid,/area/map_template/gasstation)
+"v" = (/obj/structure/table/reinforced,/obj/machinery/chemical_dispenser/bar_soft/full{icon_state = "soda_dispenser"; dir = 8},/obj/machinery/light{dir = 4; icon_state = "tube1"},/turf/simulated/floor/tiled/steel_grid,/area/map_template/gasstation)
+"w" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/turf/simulated/floor/tiled/steel_grid,/area/map_template/gasstation)
+"x" = (/obj/structure/table/rack,/obj/random/loot,/obj/random/loot,/obj/effect/floor_decal/corner/grey{icon_state = "corner_white"; dir = 9},/turf/simulated/floor/tiled,/area/map_template/gasstation)
+"y" = (/obj/structure/table/rack,/obj/random/contraband,/turf/simulated/floor/tiled/steel_grid,/area/map_template/gasstation)
+"z" = (/obj/machinery/food_replicator,/turf/simulated/floor/tiled/steel_grid,/area/map_template/gasstation)
+"A" = (/obj/structure/table/rack,/obj/random/glasses,/obj/random/glasses,/obj/random/glasses,/obj/effect/floor_decal/corner/grey{icon_state = "corner_white"; dir = 9},/turf/simulated/floor/tiled,/area/map_template/gasstation)
+"B" = (/obj/structure/table/rack,/obj/random/toy,/obj/random/toy,/obj/random/toy,/turf/simulated/floor/tiled,/area/map_template/gasstation)
+"C" = (/obj/structure/table/rack,/obj/random/snack,/obj/random/snack,/obj/item/weapon/storage/box/cups,/turf/simulated/floor/tiled/steel_grid,/area/map_template/gasstation)
+"D" = (/obj/structure/bed,/obj/item/weapon/bedsheet,/turf/simulated/floor/tiled/steel_grid,/area/map_template/gasstation)
+"E" = (/obj/structure/table/rack,/obj/random/toy,/obj/random/toy,/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/effect/floor_decal/corner/grey{icon_state = "corner_white"; dir = 9},/turf/simulated/floor/tiled,/area/map_template/gasstation)
+"F" = (/obj/structure/table/rack,/obj/random/toy,/obj/random/contraband,/turf/simulated/floor/tiled,/area/map_template/gasstation)
+"G" = (/obj/effect/wallframe_spawn/reinforced,/turf/simulated/floor/plating,/area/map_template/gasstation)
+"H" = (/obj/machinery/vending/games,/obj/effect/floor_decal/corner/grey{icon_state = "corner_white"; dir = 9},/obj/effect/floor_decal/corner/grey{icon_state = "corner_white"; dir = 10},/turf/simulated/floor/tiled,/area/map_template/gasstation)
+"I" = (/obj/effect/floor_decal/corner/grey{icon_state = "corner_white"; dir = 10},/turf/simulated/floor/tiled,/area/map_template/gasstation)
+"J" = (/obj/effect/floor_decal/corner/grey{icon_state = "corner_white"; dir = 6},/obj/effect/floor_decal/corner/grey{icon_state = "corner_white"; dir = 10},/turf/simulated/floor/tiled,/area/map_template/gasstation)
+"K" = (/obj/machinery/computer/arcade/orion_trail,/turf/simulated/floor/tiled/steel_grid,/area/map_template/gasstation)
+"L" = (/obj/machinery/computer/arcade/battle,/turf/simulated/floor/tiled/steel_grid,/area/map_template/gasstation)
+"M" = (/obj/effect/floor_decal/corner_techfloor_grid{icon_state = "corner_techfloor_grid"; dir = 6},/turf/simulated/floor/tiled/steel_grid,/area/map_template/gasstation)
+"N" = (/obj/machinery/atmos_protector,/obj/machinery/door/airlock/glass/civilian,/turf/simulated/floor/tiled/techfloor/grid,/area/map_template/gasstation)
+"O" = (/obj/effect/floor_decal/corner_techfloor_grid{icon_state = "corner_techfloor_grid"; dir = 9},/turf/simulated/floor/tiled/steel_grid,/area/map_template/gasstation)
+"P" = (/obj/machinery/atm{pixel_y = 30},/turf/simulated/floor/tiled/steel_grid,/area/map_template/gasstation)
+"Q" = (/obj/effect/floor_decal/corner_techfloor_grid{icon_state = "corner_techfloor_grid"; dir = 10},/obj/effect/floor_decal/corner_techfloor_grid{icon_state = "corner_techfloor_grid"; dir = 9},/turf/simulated/floor/tiled/steel_grid,/area/map_template/gasstation)
+"R" = (/obj/effect/floor_decal/corner_techfloor_grid{icon_state = "corner_techfloor_grid"; dir = 10},/turf/simulated/floor/tiled/steel_grid,/area/map_template/gasstation)
+"S" = (/obj/effect/floor_decal/corner_techfloor_grid{icon_state = "corner_techfloor_grid"; dir = 10},/obj/effect/floor_decal/corner_techfloor_grid{icon_state = "corner_techfloor_grid"; dir = 6},/turf/simulated/floor/tiled/steel_grid,/area/map_template/gasstation)
+"T" = (/turf/simulated/floor/plating,/area/map_template/gasstation)
+"U" = (/obj/machinery/light{dir = 1},/turf/simulated/floor/plating,/area/map_template/gasstation)
+"V" = (/obj/machinery/light,/turf/simulated/floor/plating,/area/map_template/gasstation)
+"W" = (/obj/random/cash,/turf/simulated/floor/plating,/area/map_template/gasstation)
+
+(1,1,1) = {"
+abbbbbbbbbbbbb
+abcdefghijbklb
+abmnnnobiipqqb
+abrnsntuivbwib
+abxnsntuiybzib
+abAnBntuiCbjDb
+abEnFnobGGbbbb
+abHIIIJbKLMaaa
+abGNGGGbiiMaaa
+aOiiiiiPiiMaaa
+aQRRRRRRRRSaaa
+bTbTTTTTTTbTba
+TTUTTTTTTTUTTa
+TTTTTTTTTTTTTa
+TTTTTTTTTTTTTa
+TTTTTTTTTTTTTa
+TTTTTTTTTTTTTa
+TTVWTTTTTTVTTa
+bTbTTTTTTTbTba
+"}

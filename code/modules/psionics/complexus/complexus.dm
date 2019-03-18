@@ -36,13 +36,14 @@
 
 /datum/psi_complexus/New(var/mob/_owner)
 	owner = _owner
-	aura_image = image(loc = owner, icon = 'icons/effects/psi_aura_small.dmi', icon_state = "aura")
+//	aura_image = image(loc = owner, icon = 'icons/effects/psi_aura_small.dmi', icon_state = "aura")
+	aura_image = image(loc = owner, icon = 'icons/effects/psi_aura_32.dmi', icon_state = "aura") //PIL_EDIT: fucking shit sure this has mouse opacity 0 but the mob it's attached to doesn't
 	aura_image.blend_mode = BLEND_MULTIPLY
 	aura_image.appearance_flags = NO_CLIENT_COLOR | RESET_COLOR | RESET_ALPHA | RESET_TRANSFORM
 	aura_image.layer = TURF_LAYER + 0.5
 	aura_image.alpha = 0
-	aura_image.pixel_x = -64
-	aura_image.pixel_y = -64
+//	aura_image.pixel_x = -64
+//	aura_image.pixel_y = -64
 	aura_image.mouse_opacity = 0
 	aura_image.appearance_flags = 0
 	var/matrix/M = matrix()

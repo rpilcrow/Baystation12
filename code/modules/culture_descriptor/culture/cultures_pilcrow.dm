@@ -35,10 +35,12 @@
 	your blood makes you more receptive to psionic powers; in particular, receiving them."
 	var/bloodcaste = COLOR_BLOOD_RUST
 	var/psichance = 66
-	var/psipower = 2
+	var/psipower = 3
 	var/list/psitypes = list(PSI_COERCION,PSI_PSYCHOKINESIS)
 	economic_power = 0.5
 	hidden_from_codex = TRUE
+	language = LANGUAGE_TROLL
+	secondary_langs = list(LANGUAGE_GALCOM)
 
 
 /decl/cultural_info/culture/troll/orange
@@ -57,10 +59,10 @@
 	rounded up and used as a 'helmsman' for one of the empire's ships, a living battery who would psionically propel the starship through \
 	the cosmos. Fortunately for you, with the empire's collapse, that is no longer quite such a danger."
 	bloodcaste = COLOR_BLOOD_GOLD
-	economic_power = 0.7
+	economic_power = 0.3
 	psichance = 88
-	psipower = 2
-	psitypes = list(PSI_ENERGISTICS)
+	psipower = 3
+	psitypes = list(PSI_ENERGISTICS,PSI_PSYCHOKINESIS)
 
 /decl/cultural_info/culture/troll/lime
 	name = CULTURE_TROLL_LIME
@@ -78,7 +80,7 @@
 	bloodcaste = COLOR_BLOOD_OLIVE
 	economic_power = 0.8
 	psichance = 22
-	psipower = 1
+	psipower = 2
 
 
 /decl/cultural_info/culture/troll/jade
@@ -89,7 +91,7 @@
 	bloodcaste = COLOR_BLOOD_JADE
 	economic_power = 1
 	psichance = 15
-	psipower = 1
+	psipower = 2
 	psitypes = list(PSI_REDACTION)
 
 /decl/cultural_info/culture/troll/teal
@@ -101,7 +103,7 @@
 	bloodcaste = COLOR_BLOOD_TEAL
 	economic_power = 1
 	psichance = 5
-	psipower = 1
+	psipower = 2
 	psitypes = list(PSI_COERCION)
 
 /decl/cultural_info/culture/troll/cerulean
@@ -112,7 +114,7 @@
 	bloodcaste = COLOR_BLOOD_CERULEAN
 	economic_power = 1.3
 	psichance = 3
-	psipower = 1
+	psipower = 2
 	psitypes = list(PSI_COERCION)
 
 /decl/cultural_info/culture/troll/indigo
@@ -161,6 +163,71 @@
 	psichance = 0
 	psipower = 0
 	psitypes = list(PSI_COERCION)
+
+
+/decl/cultural_info/culture/troll/get_random_name()
+	var/dat = ""
+	. = ""
+	var/pkx = 0
+
+
+	for(var/i = 1 to 4)
+		pkx = rand(1,5)
+		switch(pkx)
+			if(1)
+				dat += "[pick(GLOB.full_consonant)][pick(GLOB.full_vowel)][pick(GLOB.full_consonant)]"
+			if(2)
+				dat += "[pick(GLOB.full_vowel)][pick(GLOB.full_consonant)][pick(GLOB.full_vowel)]"
+			if(3)
+				dat += "[pick(GLOB.full_vowel)][pick(GLOB.full_vowel)][pick(GLOB.full_consonant)]"
+			if(4)
+				dat += "[pick(GLOB.full_consonant)][pick(GLOB.full_vowel)][pick(GLOB.full_vowel)]"
+			if(5)
+				dat += "[pick(GLOB.full_vowel)][pick(GLOB.full_consonant)][pick(GLOB.full_consonant)]"
+		if(i == 2)
+			. += capitalize(dat)
+			dat = ""
+		if(i == 4)
+			. += " [capitalize(dat)]"
+			dat = ""
+
+	/*
+	if(prob(50))
+		dat += "[uppertext(pick(GLOB.full_consonant))][pick(GLOB.full_vowel)][pick(GLOB.full_consonant)]"
+	else
+		dat += "[uppertext(pick(GLOB.full_vowel))][pick(GLOB.full_consonant)][pick(GLOB.full_vowel)]"
+
+	if(prob(50))
+		dat += "[pick(GLOB.full_consonant)][pick(GLOB.full_vowel)][pick(GLOB.full_consonant)]"
+	else
+		dat += "[pick(GLOB.full_vowel)][pick(GLOB.full_consonant)][pick(GLOB.full_vowel)]"
+
+	dat += " "
+
+	if(prob(50))
+		dat += "[uppertext(pick(GLOB.full_consonant))][pick(GLOB.full_vowel)][pick(GLOB.full_consonant)]"
+	else
+		dat += "[uppertext(pick(GLOB.full_vowel))][pick(GLOB.full_consonant)][pick(GLOB.full_vowel)]"
+
+	if(prob(50))
+		dat += "[pick(GLOB.full_consonant)][pick(GLOB.full_vowel)][pick(GLOB.full_consonant)]"
+	else
+		dat += "[pick(GLOB.full_vowel)][pick(GLOB.full_consonant)][pick(GLOB.full_vowel)]"
+*/
+
+
+
+
+
+
+/decl/cultural_info/culture/wook
+	name = CULTURE_WOOKIEE
+	description = "You are a wookiee!."
+	economic_power = 0.33
+	hidden_from_codex = FALSE
+	language = LANGUAGE_WOOKIEE
+	default_language = LANGUAGE_WOOKIEE
+	secondary_langs = list(LANGUAGE_GALCOM)
 
 
 //	language = LANGUAGE_GALCOM

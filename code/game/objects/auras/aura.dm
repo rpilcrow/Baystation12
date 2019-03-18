@@ -11,14 +11,16 @@ They should also be used for when you want to effect the ENTIRE mob, like having
 	if(target)
 		user = target
 		user.add_aura(src)
+		added_to(target)
 
 /obj/aura/Destroy()
 	if(user)
 		user.remove_aura(src)
+		removed()
 	return ..()
 
 /obj/aura/proc/added_to(var/mob/living/target)
-	user = target
+	return
 
 /obj/aura/proc/removed()
 	user = null

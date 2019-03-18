@@ -181,3 +181,6 @@
 #define CULTURE_TROLL_PURPLE   "Purpleblood"
 #define CULTURE_TROLL_VIOLET   "Violetblood"
 #define CULTURE_TROLL_FUCHSIA  "Royalblood"
+
+//wook
+#define CULTURE_WOOKIEE			"Wookiee"

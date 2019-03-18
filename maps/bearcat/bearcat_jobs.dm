@@ -7,7 +7,7 @@
 /datum/job/captain
 	supervisors = "the Merchant Code and your conscience"
 	outfit_type = /decl/hierarchy/outfit/job/bearcat/captain
-	psi_latency_chance = 10
+	psi_latency_chance = 5
 
 /datum/job/captain/equip(var/mob/living/carbon/human/H)
 	. = ..()
@@ -56,7 +56,7 @@
 	supervisors = "the Captain"
 	department_flag = ENG
 	outfit_type = /decl/hierarchy/outfit/job/bearcat/chief_engineer
-	psi_latency_chance = 10
+	psi_latency_chance = 5
 
 /datum/job/doctor
 	title = "Doc"
@@ -67,14 +67,14 @@
 	total_positions = 1
 	spawn_positions = 1
 	hud_icon = "hudmedicaldoctor"
-	psi_latency_chance = 20
+	psi_latency_chance = 10
 
 /datum/job/hop
 	title = "First Mate"
 	supervisors = "the Captain and the Merchant Code"
 	outfit_type = /decl/hierarchy/outfit/job/bearcat/mate
 	hud_icon = "hudheadofpersonnel"
-	psi_latency_chance = 10
+	psi_latency_chance = 5
 
 /datum/job/assistant
 	title = "Deck Hand"
@@ -85,7 +85,7 @@
 		"Cargo Hand",
 		"Passenger")
 	hud_icon = "hudcargotechnician"
-	psi_latency_chance = 10
+	psi_latency_chance = 5
 
 /datum/job/engineer
 	title = "Junior Engineer"
@@ -93,7 +93,7 @@
 	total_positions = 2
 	spawn_positions = 2
 	hud_icon = "hudengineer"
-	psi_latency_chance = 10
+	psi_latency_chance = 5
 
 /datum/job/cyborg
 	supervisors = "your laws and the Captain"
@@ -105,7 +105,7 @@
 	supervisors = "the Captain and your questionable code of ethics"
 	total_positions = 1
 	spawn_positions = 1
-	psi_latency_chance = 20
+	psi_latency_chance = 10
 
 /datum/job/officer
 	title = "Guard"
@@ -115,14 +115,14 @@
 	supervisors = "the Captain and their rules"
 	selection_color = "#601c1c"
 	outfit_type = /decl/hierarchy/outfit/job/bearcat/security
-	psi_latency_chance = 10
+	psi_latency_chance = 7
 
 
 /datum/job/psi
 	title = "Psion"
 	department = "Science"
 	department_flag = SCI
-	hud_icon = "hudscience"
+	hud_icon = "hudscientist"
 	supervisors = "the Captain and your morals"
 	psi_faculties = list(PSI_COERCION = PSI_RANK_OPERANT,PSI_PSYCHOKINESIS = PSI_RANK_OPERANT,PSI_REDACTION = PSI_RANK_OPERANT,PSI_ENERGISTICS = PSI_RANK_OPERANT)
 	total_positions = 1
@@ -131,14 +131,39 @@
 	economic_power = 1
 	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_xenoarch)
 	minimal_access = list(access_tox, access_tox_storage, access_research, access_xenoarch)
-	minimal_player_age = 3
+	minimal_player_age = 12
 	outfit_type = /decl/hierarchy/outfit/job/bearcat/psionic
-
+/*
 /datum/job/psi/equip()
 	if(psi_faculties.len)
 		var/toboost = pick(psi_faculties)
 		psi_faculties[toboost] = PSI_RANK_MASTER
-	return ..()
+	return ..()*/
+
+/datum/job/psi/equip(var/mob/living/carbon/human/H)
+	. = ..()
+	if(H.client)
+		H.verbs += /mob/living/carbon/human/proc/psiPowerPicker
+
+/mob/living/carbon/human/proc/psiPowerPicker()
+
+	set name = "Select Psionic Powers"
+	set category = "Abilities"
+
+	if(stat || world.time < last_special)
+		return
+
+	last_special = world.time + 10
+
+	if(client)
+		verbs -= /mob/living/carbon/human/proc/psiPowerPicker
+		var/to_get = input("Select a Power to be set to Rank 3 to 4 (or click Cancel to have a random one at Rank 3-5) You only get to choose once.","Psionic Power") as null|anything in list(PSI_COERCION,PSI_PSYCHOKINESIS,PSI_REDACTION,PSI_ENERGISTICS)
+		if(to_get)
+			set_psi_rank(to_get, rand(3,4),take_larger = TRUE)
+		else
+			to_chat(src,"No power selected; choosing at random.")
+			to_get = pick(PSI_COERCION,PSI_PSYCHOKINESIS,PSI_REDACTION,PSI_ENERGISTICS)
+			set_psi_rank(to_get, rand(3,5),take_larger = TRUE)
 
 // OUTFITS
 #define BEARCAT_OUTFIT_JOB_NAME(job_name) ("Bearcat - Job - " + job_name)

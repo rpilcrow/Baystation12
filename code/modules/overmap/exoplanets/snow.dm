@@ -4,6 +4,7 @@
 	color = "#e8faff"
 	planetary_area = /area/exoplanet/snow
 	rock_colors = list(COLOR_DARK_BLUE_GRAY, COLOR_GUNMETAL, COLOR_GRAY80, COLOR_DARK_GRAY)
+
 	possible_features = list(/datum/map_template/ruin/exoplanet/monolith,
 							 /datum/map_template/ruin/exoplanet/oasis,
 							 /datum/map_template/ruin/exoplanet/oasis/oasis2,
@@ -27,7 +28,9 @@
 							 /datum/map_template/ruin/exoplanet/pilruins/broken/kinda,
 							 /datum/map_template/ruin/exoplanet/pilruins/tribalgun,
 							 /datum/map_template/ruin/exoplanet/pilruins/kovelai,
-							 /datum/map_template/ruin/exoplanet/pilruins/oubliette)
+							 /datum/map_template/ruin/exoplanet/pilruins/oubliette,
+							 /datum/map_template/ruin/exoplanet/pilruins/pmccamp)
+
 	exo_hab_chance = 80
 
 /obj/effect/overmap/sector/exoplanet/snow/generate_map()

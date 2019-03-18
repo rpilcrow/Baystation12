@@ -1,0 +1,86 @@
+"aa" = (/turf/template_noop,/area/template_noop)
+"ab" = (/obj/structure/pilruin/light,/turf/simulated/floor/plating,/area/template_noop)
+"ac" = (/obj/effect/catwalk_plated,/turf/simulated/floor/plating,/area/template_noop)
+"ad" = (/turf/simulated/floor/tiled,/area/template_noop)
+"ae" = (/obj/effect/catwalk_plated,/obj/random/obstruction,/turf/simulated/floor/plating,/area/template_noop)
+"af" = (/obj/random/obstruction,/turf/template_noop,/area/template_noop)
+"ag" = (/turf/simulated/floor/plating,/area/template_noop)
+"ah" = (/obj/structure/pilruin/light,/turf/simulated/wall,/area/template_noop)
+"ai" = (/obj/effect/wallframe_spawn/reinforced,/turf/simulated/floor/plating,/area/template_noop)
+"aj" = (/turf/simulated/wall,/area/template_noop)
+"ak" = (/mob/living/simple_animal/hostile/pmc/ranged/laser,/turf/simulated/floor/plating,/area/template_noop)
+"al" = (/turf/simulated/wall/r_wall,/area/template_noop)
+"am" = (/obj/machinery/door/blast/shutters,/turf/simulated/floor/plating,/area/template_noop)
+"an" = (/obj/machinery/door/blast/shutters,/turf/simulated/floor/tiled,/area/template_noop)
+"ao" = (/obj/machinery/door/airlock,/turf/simulated/floor/plating,/area/template_noop)
+"ap" = (/obj/structure/table/standard,/obj/effect/floor_decal/corner/red/diagonal,/obj/item/weapon/reagent_containers/food/condiment/enzyme{layer = 5},/turf/simulated/floor/tiled,/area/template_noop)
+"aq" = (/obj/effect/floor_decal/corner/red/diagonal,/obj/structure/closet/secure_closet/freezer/meat,/turf/simulated/floor/tiled,/area/template_noop)
+"ar" = (/obj/effect/floor_decal/spline/plain/black{icon_state = "spline_plain"; dir = 8},/obj/machinery/vending/dinnerware,/turf/simulated/floor/wood/walnut,/area/template_noop)
+"as" = (/obj/structure/hygiene/sink{dir = 4; icon_state = "sink"; pixel_x = 11; pixel_y = 0},/turf/simulated/floor/wood/walnut,/area/template_noop)
+"at" = (/obj/effect/catwalk_plated,/obj/random/trash,/turf/simulated/floor/plating,/area/template_noop)
+"au" = (/obj/structure/pilruin/light,/turf/simulated/floor/tiled,/area/template_noop)
+"av" = (/obj/structure/table/standard,/obj/random/smokes,/turf/simulated/floor/tiled/dark,/area/template_noop)
+"aw" = (/turf/simulated/floor/tiled/dark,/area/template_noop)
+"ax" = (/obj/structure/table/standard,/obj/random/ammo,/turf/simulated/floor/tiled/dark,/area/template_noop)
+"ay" = (/obj/structure/table/standard,/turf/simulated/floor/tiled/dark,/area/template_noop)
+"az" = (/obj/structure/table/standard,/obj/effect/floor_decal/corner/red/diagonal,/obj/random/snack,/turf/simulated/floor/tiled,/area/template_noop)
+"aA" = (/obj/effect/floor_decal/corner/red/diagonal,/obj/structure/pilruin/light,/turf/simulated/floor/tiled,/area/template_noop)
+"aB" = (/obj/effect/floor_decal/spline/plain/black{icon_state = "spline_plain"; dir = 8},/mob/living/simple_animal/hostile/pmc,/turf/simulated/floor/wood/walnut,/area/template_noop)
+"aC" = (/turf/simulated/floor/wood/walnut,/area/template_noop)
+"aD" = (/obj/structure/table/reinforced,/turf/simulated/floor/plating,/area/template_noop)
+"aE" = (/obj/structure/pilruin/light,/turf/simulated/floor/tiled/dark,/area/template_noop)
+"aF" = (/obj/structure/table/standard,/obj/random/ammo,/obj/random/ammo,/turf/simulated/floor/tiled/dark,/area/template_noop)
+"aG" = (/obj/structure/table/standard,/obj/item/weapon/storage/box/donkpockets,/obj/effect/floor_decal/corner/red/diagonal,/turf/simulated/floor/tiled,/area/template_noop)
+"aH" = (/obj/effect/floor_decal/corner/red/diagonal,/turf/simulated/floor/tiled,/area/template_noop)
+"aI" = (/obj/item/weapon/stool/padded,/obj/effect/floor_decal/spline/plain/black{icon_state = "spline_plain"; dir = 8},/turf/simulated/floor/wood/walnut,/area/template_noop)
+"aJ" = (/obj/structure/table/standard,/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{pixel_x = 3},/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{pixel_x = -3; pixel_y = 0},/obj/random/cash,/turf/simulated/floor/wood/walnut,/area/template_noop)
+"aK" = (/obj/structure/table/reinforced,/obj/random/drinkbottle,/turf/simulated/floor/plating,/area/template_noop)
+"aL" = (/mob/living/simple_animal/hostile/pmc/ranged/laser,/turf/simulated/floor/tiled/dark,/area/template_noop)
+"aM" = (/obj/structure/table/standard,/obj/machinery/microwave,/obj/effect/floor_decal/corner/red/diagonal,/turf/simulated/floor/tiled,/area/template_noop)
+"aN" = (/obj/effect/floor_decal/spline/plain/black{icon_state = "spline_plain"; dir = 8},/obj/machinery/light,/turf/simulated/floor/wood/walnut,/area/template_noop)
+"aO" = (/obj/item/weapon/stool/padded,/turf/simulated/floor/wood/walnut,/area/template_noop)
+"aP" = (/obj/effect/catwalk_plated,/obj/random/junk,/turf/simulated/floor/plating,/area/template_noop)
+"aQ" = (/obj/random/trash,/turf/simulated/floor/tiled,/area/template_noop)
+"aR" = (/obj/effect/catwalk_plated,/obj/structure/table/standard,/turf/simulated/floor/plating,/area/template_noop)
+"aS" = (/obj/random/obstruction,/turf/simulated/floor/tiled,/area/template_noop)
+"aT" = (/obj/effect/catwalk_plated,/mob/living/simple_animal/hostile/pmc/ranged/laser,/turf/simulated/floor/plating,/area/template_noop)
+"aU" = (/obj/effect/catwalk_plated,/obj/structure/table/standard,/obj/random/junk,/turf/simulated/floor/plating,/area/template_noop)
+"aV" = (/obj/effect/catwalk_plated,/obj/random/pilruinpmc,/turf/simulated/floor/plating,/area/template_noop)
+"aW" = (/obj/structure/bed,/obj/random/snack,/turf/simulated/floor/tiled/dark,/area/template_noop)
+"aX" = (/obj/structure/bed,/turf/simulated/floor/tiled/dark,/area/template_noop)
+"aY" = (/mob/living/simple_animal/hostile/pmc,/turf/simulated/floor/tiled/dark,/area/template_noop)
+"aZ" = (/obj/structure/table/standard,/obj/item/documents/pilruin/security,/turf/simulated/floor/tiled/dark,/area/template_noop)
+"ba" = (/obj/structure/table/standard,/obj/item/device/chameleon,/turf/simulated/floor/tiled/dark,/area/template_noop)
+"bb" = (/obj/structure/pilruin/light,/obj/structure/table/standard,/obj/random/projectile,/turf/simulated/floor/tiled/dark,/area/template_noop)
+"bc" = (/obj/structure/closet,/obj/random/loot,/obj/random/loot,/obj/random/toy,/obj/random/cash,/turf/simulated/floor/tiled/dark,/area/template_noop)
+"bd" = (/obj/structure/closet,/obj/random/loot,/obj/random/contraband,/obj/random/cash,/turf/simulated/floor/tiled/dark,/area/template_noop)
+"be" = (/obj/structure/closet,/obj/random/loot,/obj/random/contraband,/obj/random/smokes,/turf/simulated/floor/tiled/dark,/area/template_noop)
+"bf" = (/obj/random/pilruinpmcranged,/turf/simulated/floor/tiled/dark,/area/template_noop)
+"bg" = (/obj/effect/catwalk_plated,/obj/item/weapon/crowbar/red,/turf/simulated/floor/plating,/area/template_noop)
+"bh" = (/obj/structure/table/standard,/turf/simulated/floor/plating,/area/template_noop)
+
+(1,1,1) = {"
+aaaaaaaaaaaaabacadaeabaaaaaaaaaaaa
+aaaaaaaaafaaacbgadacacaaaaaaaaaaaa
+aaaaaaaaaaaaacacadacacagagagagagaa
+aaaaaaaaaaaaacacadacacahaiaiaiajaa
+aaafaaaaaaaaacacadacacaiagagbhajaa
+aaaaaaaaaaafacacadacacaiagakbhajaa
+alalalalalajajamanamajajajaoajajal
+alapaqarasajacatauacacajavawaxayal
+alazaAaBaCajacacadacacaDawawaEaFal
+alaGaHaIaJajacacadatacaKawaLawayal
+alaMaHaNaOajatacauacacajawawawawal
+alajaoajajajajamanamajajajajaoajal
+aaajagajacaPacacadacacacaPajagajaa
+aaajagajacacaeadadaQaeacacajagajaa
+aaajagadadauadadadadadauadadagajaa
+aaajagajacacaRaSadadacacacajagajaa
+aaajagajacacacaTadaeaUacacajagajaa
+alajaoajajajacacauaVacajajajaoajal
+alaWawawaXajacaPadacacajawawawawal
+alaXaYawaXajajajadajajajawayaZawal
+alaXaEawawaoagagagagagaoawbabbawal
+alaybcbdbeajajajajajajajawawawbfal
+alalalalalalaaaaaaaaaaalalalalalal
+"}

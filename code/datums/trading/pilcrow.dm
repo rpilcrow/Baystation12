@@ -24,12 +24,12 @@
 				"trade_blacklist"= "I don't take those.",
 				"trade_no_goods"    = "I only take cash.",
 				"trade_not_enough"="That's not quite enough.",
-				"how_much"       = "That'll go for VALUE.",
+				"how_much"       = "One ITEM will go for VALUE thalers.",
 
 				"compliment_deny"= "I'm flattered, but no.",
 				"compliment_accept"= "Nice.",
-				"insult_good"    = "Hey, hey, chill out buddy, what'd I do?",
-				"insult_bad"     = ".",
+				"insult_good"    = "Chill out buddy, what'd I do?",
+				"insult_bad"     = "...",
 
 				"bribe_refusal"  = "Sorry, got places to be.",
 				"bribe_accept"   = "Sure, I can hang around a while.")//Structure is (id = talk)
@@ -64,7 +64,8 @@
 //	name_language = TRADER_DEFAULT_NAME
 	origin = "FTV Crow"
 	disposition = 5
-	possible_origins = list("Unknown Destination","Mysterious Signal","Unregistered Signal")
+	trade_flags = TRADER_GOODS|TRADER_MONEY|TRADER_WANTED_ALL
+	possible_origins = list("Unknown Destination","Mysterious Signal","Unregistered Signal","???","null")
 	speech = list("hail_generic"    = "Oh, uh, hey. You've contacted Tilde. Did you need anything?",
 				"hail_deny"         = "I don't really feel like dealing with you. Sorry.",
 
@@ -72,7 +73,7 @@
 				"trade_blacklist"   = "Uh. I REALLY don't want that.",
 				"trade_found_unwanted" = "I don't need that.",
 				"trade_not_enough"   = "I, uh.. I think that's worth a liiiittle more.",
-				"how_much"          = "I can sell you that for, uh, probably VALUE thalers.",
+				"how_much"          = "I can sell you that ITEM for, uh, probably VALUE thalers.",
 				"what_want"         = "Anything sweet and tasty! In particular..",
 
 				"compliment_deny"   = "That's very flattering! But, uh, no.",
@@ -121,6 +122,7 @@
 //	name_language = TRADER_DEFAULT_NAME
 	origin = "HWS Tonk"
 	possible_origins = list("HWS Tonk")
+	trade_flags = TRADER_MONEY
 	speech = list("hail_generic"    = "RRRRRRRLRLRLRLRL",
 				"hail_deny"         = "RLRLLLL..",
 
@@ -128,7 +130,7 @@
 				"trade_blacklist"   = "RLRLRLLLL.",
 				"trade_no_goods"    = "HRRRRLRLRLL.",
 				"trade_not_enough"  = "HRRRRLRLRLRLRLLLLLL.",
-				"how_much"          = "*beep* PRICE SET AT: VALUE!",
+				"how_much"          = "*beep* ITEM ... PRICE SET AT ... VALUE THALERS! *beep*",
 
 				"compliment_deny"   = "HRRRRRK.",
 				"compliment_accept" = "RRRRRR",
@@ -153,6 +155,7 @@
 //	name_language = TRADER_DEFAULT_NAME
 	origin = "FTV Gunboat Diplomacy"
 //	disposition = 0
+	trade_flags = TRADER_GOODS|TRADER_MONEY|TRADER_WANTED_ALL
 	possible_origins = list("FTV Gunboat Diplomacy","FTV Gunderstruck","FTS Rusty Blade","FTS Cargo Cult","FTV What Are The Civilian Applications?","FTV Irredeemable Mess","FTV The Flagship","FTV The Ship Your Ship Could Fly Like","FTV FGSFDS")
 	speech = list("hail_generic"    = "Hey, fellow gun-lover! This is the ORIGIN! We sell guns here, BIG ones!",
 				"hail_deny"         = "Y'all don't nearly like guns enough. Get gone.",
@@ -186,4 +189,113 @@
 	mob_transfer_message = "You are transported to the ORIGIN. NAME stares at you for a while, before asking if you are a gun."
 
 /datum/trader/ship/gunnery/New()
+	..()
 	name += pick("ther","ny","ri","ner Wells","da","t","n","na",null)
+
+
+
+/datum/trader/ship/wildcard
+	name = "Wildcard"
+//	name_language = TRADER_DEFAULT_NAME
+	origin = "FTV Bizniz"
+	disposition = 5
+	trade_flags = TRADER_GOODS|TRADER_MONEY|TRADER_WANTED_ALL
+	possible_origins = list("FTV Bizniz","FTV Harry","FTV Buck The Trend","FTV Hooligan","FTV It's Ours, Now","FTV The Revolution Will Not Be Commercialized","FTV Culture Reference","FTV Bring My Brown Pants")
+	speech = list("hail_generic"    = "You've contacted ORIGIN, source of all your headaches since 2289!",
+				"hail_deny"         = "Wildcard, bitches! We're out!",
+
+				"trade_complete"    = "Have fun with that!",
+				"trade_blacklist"   = "We don't take those! Surprising, right?",
+				"trade_found_unwanted" = "Nah, try literally anything else!",
+				"trade_not_enough"   = "You're gonna need a bit more!",
+				"how_much"          = "VALUE thalers for one ITEM. How's that?",
+				"what_want"         = "Anything you can pick up! For instance..",
+
+				"compliment_deny"   = "I've heard that a few times before.",
+				"compliment_accept" = "Hah, really? Nice!",
+				"insult_good"       = "Hah! I like the cut of your jib!",
+				"insult_bad"        = "I'm sure you can!")
+	want_multiplier = 2
+	typical_duration = 15
+
+	possible_wanted_items = list(/obj/item = TRADER_ALL,
+								/mob/living = TRADER_ALL,
+								/mob/living/carbon/human = TRADER_BLACKLIST_ALL)
+
+	possible_trading_items = list(/obj/item = TRADER_SUBTYPES_ONLY,
+								  /mob/living = TRADER_SUBTYPES_ONLY,
+								  /mob/living/carbon/human = TRADER_BLACKLIST_ALL)
+
+	mob_transfer_message = "You find yoursef on the ORIGIN. Uh oh."
+
+/datum/trader/ship/wildcard/New()
+	..()
+	name += pick(" Harry"," Jim"," Roger"," Ginger"," 69")
+
+
+
+/datum/trader/ship/alternianrebel
+	name = "Unknown Troll"
+	name_language = LANGUAGE_TROLL
+	origin = "AEB Barkbeast"
+	//disposition = 5
+	trade_flags = TRADER_GOODS|TRADER_MONEY|TRADER_WANTED_ALL
+	possible_origins = list()
+	speech = list("hail_generic"    = "<i>*crackle*</i> This is ORIGIN. What is it?",
+				"hail_deny"         = "<i>The transmission closes.</i>",
+
+				"trade_complete"    = "Good doing business. Now go.",
+				"trade_blacklist"   = "No.",
+				"trade_found_unwanted" = "I don't want that.",
+				"trade_not_enough"   = "More. There's not enough.",
+				"how_much"          = "VALUE thalers for that ITEM, and that's final.",
+				"what_want"         = "I want medical supplies and reagents, such as",
+
+				"compliment_deny"   = "No.",
+				"compliment_accept" = "No.",
+				"insult_good"       = "Stop wasting my time.",
+				"insult_bad"        = "You're really trying my patience.")
+	want_multiplier = 2
+	compliment_increase = 0
+
+	//will sell: weapons, armor?
+	//will buy: food, materials?
+	possible_wanted_items = list(/obj/item/weapon/storage/pill_bottle = TRADER_SUBTYPES_ONLY,
+								  /obj/item/weapon/storage/pill_bottle/dice = TRADER_BLACKLIST,
+								  /obj/item/weapon/storage/pill_bottle/dice_nerd = TRADER_BLACKLIST,
+								  /obj/item/weapon/storage/firstaid/fire  = TRADER_THIS_TYPE,
+								  /obj/item/weapon/storage/firstaid/toxin  = TRADER_THIS_TYPE,
+								  /obj/item/weapon/storage/firstaid/adv  = TRADER_THIS_TYPE,
+								  /obj/item/weapon/storage/box/bloodpacks  = TRADER_THIS_TYPE,
+								  /obj/item/weapon/reagent_containers/ivbag  = TRADER_SUBTYPES_ONLY,
+								  /obj/item/weapon/reagent_containers/glass/bottle/inaprovaline = TRADER_THIS_TYPE,
+								  /obj/item/weapon/reagent_containers/glass/bottle/antitoxin = TRADER_THIS_TYPE,
+								  /obj/item/bodybag/cryobag = TRADER_THIS_TYPE,
+								  /obj/item/weapon/reagent_containers/chem_disp_cartridge/dexalin/small = TRADER_THIS_TYPE,
+								  /obj/item/weapon/reagent_containers/hypospray/autoinjector = TRADER_ALL,
+								  /obj/item/weapon/reagent_containers/hypospray/vial = TRADER_THIS_TYPE)
+
+	possible_trading_items = list(/obj/random/mre = TRADER_THIS_TYPE,
+								  /obj/item/gunnery/ballistic = TRADER_ALL,
+								  /obj/item/weapon/gun/projectile/shotgun/pump = TRADER_ALL,
+								  /obj/item/weapon/material/sword/replica/officersword/pilcustom = TRADER_THIS_TYPE,
+								  /obj/item/weapon/material/sword/longsword = TRADER_ALL,
+								  /obj/item/weapon/cane/concealed/sword = TRADER_THIS_TYPE,
+								  /obj/item/weapon/material/hatchet/machete = TRADER_ALL,
+								  /obj/item/weapon/gun/energy/pilcrow = TRADER_THIS_TYPE,
+								  /obj/item/device/personal_shield = TRADER_THIS_TYPE,
+								  /obj/item/device/chameleon = TRADER_THIS_TYPE,
+								  /obj/item/device/taunter = TRADER_THIS_TYPE,
+								  /obj/item/device/shuffler = TRADER_THIS_TYPE)
+
+	mob_transfer_message = "You find yoursef aboard the ORIGIN. It's kind of dark."
+
+/datum/trader/ship/alternianrebel/New()
+	..()
+	origin = pick("IND ","IDV ","AEV ","The ","PLV ","AEB ","Battleship ","Scoutship ","Rebel Ship ")
+	if(prob(33))
+		origin += pick("Bark","Caw","Screech","Hop","Meow","Muscle","Star","Space")
+		origin += pick("beast","thing","creature","critter")
+	else
+		origin += pick("Thinkpan","Bulge","Cheekblade","Windhole","Crisprange","Dross Coffer","Pail","Frond","Grub","Grubsauce","Hatefriend","Hear Duct","Lawnring","Load Gaper","Lusus","Matesprit","Kismesis","Moirail","Nugbone","Slurry","Sponge","Wader","Handle")
+		origin += pick(" Blowout"," Blast"," Diver"," Blaster"," Breaker"," Smasher"," Cleaner"," Pirouette"," Splatter"," Jammer"," Sauce")

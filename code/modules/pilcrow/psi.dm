@@ -112,7 +112,7 @@
 			for(var/i = 1 to new_latencies)
 				to_chat(victim, SPAN_DANGER("<font size = 3>[pick(psi_operancy_messages)]</font>"))
 				victim.adjustBrainLoss(rand(1,20))
-				victim.set_psi_rank(pick_n_take(faculties), 1)
+				victim.set_psi_rank(pick_n_take(faculties), 1, take_larger = TRUE, defer_update = TRUE)
 				sleep(30)
 			victim.psi.update()
 		sleep(45)

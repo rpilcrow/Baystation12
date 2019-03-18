@@ -22,7 +22,7 @@
 	audible_message(SPAN_WARNING("\The [src] emits a long, harsh tone!"))
 	playsound(loc, 'sound/weapons/bombwhine.ogg', 100, 0, -3)
 	addtimer(CALLBACK(src, .proc/harpoon_detonate), 4 SECONDS) //for suspense
-	
+
 /obj/item/weapon/material/harpoon/bomb/proc/harpoon_detonate()
 	audible_message(SPAN_DANGER("\The [src] detonates!")) //an actual sound will be handled by explosion()
 	var/turf/T = get_turf(src)
@@ -73,6 +73,7 @@
 	default_material = MATERIAL_TITANIUM
 	base_parry_chance = 50
 	attack_cooldown_modifier = 1
+	hitsound = 'sound/weapons/rapidslice.ogg'
 
 /obj/item/weapon/material/hatchet/machete/Initialize()
 	icon_state = "machete[pick("","_red","_blue", "_black", "_olive")]"

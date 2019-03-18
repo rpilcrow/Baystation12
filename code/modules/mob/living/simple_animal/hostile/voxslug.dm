@@ -16,7 +16,7 @@ Small, little HP, poisonous.
 	health = 15
 	maxHealth = 15
 	speed = 0
-	move_to_delay = 0
+	move_to_delay = 3
 	density = 1
 	min_gas = null
 	mob_size = MOB_MINISCULE

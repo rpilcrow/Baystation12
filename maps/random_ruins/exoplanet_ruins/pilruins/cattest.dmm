@@ -1,0 +1,30 @@
+"a" = (/obj/structure/catwalk,/turf/template_noop,/area/template_noop)
+"b" = (/turf/simulated/floor/plating,/area/template_noop)
+"c" = (/obj/effect/catwalk_plated,/turf/template_noop,/area/template_noop)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaabccccccccccccccccc
+aaaaaaaaaaaaaaaabccccccccccccccccc
+aaaaaaaaaaaaaaaabccccccccccccccccc
+aaaaaaaaaaaaaaaabccccccccccccccccc
+aaaaaaaaaaaaaaaabccccccccccccccccc
+aaaaaaaaaaaaaaaabccccccccccccccccc
+aaaaaaaaaaaaaaaabccccccccccccccccc
+aaaaaaaaaaaaaaaabccccccccccccccccc
+aaaaaaaaaaaaaaaabccccccccccccccccc
+aaaaaaaaaaaaaaaabccccccccccccccccc
+aaaaaaaaaaaaaaaabccccccccccccccccc
+aaaaaaaaaaaaaaaabccccccccccccccccc
+aaaaaaaaaaaaaaaabccccccccccccccccc
+aaaaaaaaaaaaaaaabccccccccccccccccc
+aaaaaaaaaaaaaaaabccccccccccccccccc
+aaaaaaaaaaaaaaaabccccccccccccccccc
+aaaaaaaaaaaaaaaabccccccccccccccccc
+aaaaaaaaaaaaaaaabccccccccccccccccc
+aaaaaaaaaaaaaaaabccccccccccccccccc
+aaaaaaaaaaaaaaaabccccccccccccccccc
+aaaaaaaaaaaaaaaabccccccccccccccccc
+aaaaaaaaaaaaaaaabccccccccccccccccc
+aaaaaaaaaaaaaaaabccccccccccccccccc
+aaaaaaaaaaaaaaaabccccccccccccccccc
+"}

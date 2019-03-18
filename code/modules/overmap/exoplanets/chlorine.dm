@@ -4,6 +4,7 @@
 	color = "#efff7c"
 	planetary_area = /area/exoplanet/chlorine
 	rock_colors = list(COLOR_GRAY80, COLOR_PALE_GREEN_GRAY, COLOR_PALE_BTL_GREEN)
+
 	possible_features = list(/datum/map_template/ruin/exoplanet/monolith,
 							/datum/map_template/ruin/exoplanet/hydrobase,
 							/datum/map_template/ruin/exoplanet/hut,
@@ -23,6 +24,7 @@
 							/datum/map_template/ruin/exoplanet/pilruins/mercship,
 							/datum/map_template/ruin/exoplanet/pilruins/spidershuttle,
 							/datum/map_template/ruin/exoplanet/pilruins/sarcophagus)
+
 	exo_hab_chance = 10
 
 /obj/effect/overmap/sector/exoplanet/chlorine/generate_map()

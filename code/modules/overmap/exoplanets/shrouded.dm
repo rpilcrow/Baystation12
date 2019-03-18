@@ -4,6 +4,7 @@
 	color = "#3e3960"
 	planetary_area = /area/exoplanet/shrouded
 	rock_colors = list(COLOR_INDIGO, COLOR_DARK_BLUE_GRAY, COLOR_NAVY_BLUE)
+
 	possible_features = list(/datum/map_template/ruin/exoplanet/monolith,
 							/datum/map_template/ruin/exoplanet/hydrobase,
 							/datum/map_template/ruin/exoplanet/tar_anomaly,
@@ -24,6 +25,7 @@
 							/datum/map_template/ruin/exoplanet/pilruins/broken/kinda,
 							/datum/map_template/ruin/exoplanet/pilruins/kovelai,
 							/datum/map_template/ruin/exoplanet/pilruins/oubliette)
+
 	exo_hab_chance = 33
 
 /obj/effect/overmap/sector/exoplanet/shrouded/generate_map()

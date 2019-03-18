@@ -12,7 +12,7 @@
 	speed = 5
 	speak_chance = 0
 	turns_per_move = 3
-	move_to_delay = 3
+	move_to_delay = 4
 	response_help = "pets the"
 	response_disarm = "gently pushes aside the"
 	response_harm = "hits the"

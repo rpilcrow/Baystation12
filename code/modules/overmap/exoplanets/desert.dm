@@ -28,7 +28,9 @@
 							 /datum/map_template/ruin/exoplanet/pilruins/spidershuttle,
 							 /datum/map_template/ruin/exoplanet/pilruins/tribalgun,
 							 /datum/map_template/ruin/exoplanet/pilruins/kovelai,
-							 /datum/map_template/ruin/exoplanet/pilruins/oubliette)
+							 /datum/map_template/ruin/exoplanet/pilruins/oubliette,
+							 /datum/map_template/ruin/exoplanet/pilruins/pmccamp)
+
 	exo_hab_chance = 80
 
 /obj/effect/overmap/sector/exoplanet/desert/generate_map()

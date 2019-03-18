@@ -15,7 +15,7 @@
 	var/activation_sound = 'sound/effects/flashlight.ogg'
 	var/flashlight_max_bright = 0.5 //brightness of light when on, must be no greater than 1.
 	var/flashlight_inner_range = 1 //inner range of light when on, can be negative
-	var/flashlight_outer_range = 3 //outer range of light when on, can be negative
+	var/flashlight_outer_range = 4 //outer range of light when on, can be negative
 
 /obj/item/device/flashlight/Initialize()
 	. = ..()
@@ -115,7 +115,7 @@
 	icon_state = "biglight"
 	item_state = "biglight"
 	flashlight_max_bright = 0.75
-	flashlight_outer_range = 4
+	flashlight_outer_range = 5
 
 /obj/item/device/flashlight/flashdark
 	name = "flashdark"

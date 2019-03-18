@@ -4,6 +4,7 @@
 	color = "#a5a18b"
 	planetary_area = /area/exoplanet/garbage
 	exo_hab_chance = 66
+
 	possible_features = list(/datum/map_template/ruin/exoplanet/monolith,
 							/datum/map_template/ruin/exoplanet/hydrobase,
 							/datum/map_template/ruin/exoplanet/crashed_pod,
@@ -17,7 +18,8 @@
 							/datum/map_template/ruin/exoplanet/pilruins/broken/some,
 							/datum/map_template/ruin/exoplanet/pilruins/broken/kinda,
 							/datum/map_template/ruin/exoplanet/pilruins/kovelai,
-							/datum/map_template/ruin/exoplanet/pilruins/oubliette)
+							/datum/map_template/ruin/exoplanet/pilruins/oubliette,
+							/datum/map_template/ruin/exoplanet/pilruins/pmccamp)
 
 /obj/effect/overmap/sector/exoplanet/garbage/generate_map()
 	..()

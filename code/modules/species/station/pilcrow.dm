@@ -285,17 +285,19 @@
 
 	if(client)
 		verbs -= /mob/living/carbon/human/proc/troll_choose_psionics
-		if(psi)
-			to_chat(src,"You already have psychic powers!")
-			return
+		//if(psi)
+		//	to_chat(src,"You already have psychic powers!")
+		//	return
 		var/decl/cultural_info/culture/troll/CASTE = SSculture.get_culture(client.prefs.cultural_info[TAG_CULTURE])
 		if(istype(CASTE))
 			if(CASTE.psipower && CASTE.psitypes.len)
-				var/to_get = input("Select a Power (or click Cancel to have none at all); you have a [CASTE.psichance]% chance to gain it, at up to rank [CASTE.psipower]. You only get to choose once.","Psionic Power") as null|anything in CASTE.psitypes
+				var/to_get = input("Select a Power (or click Cancel to gain none at all); you have a [CASTE.psichance]% chance to gain it, at up to rank [CASTE.psipower]. You only get to choose once.","Psionic Power") as null|anything in CASTE.psitypes
 				if(to_get && prob(CASTE.psichance))
-					set_psi_rank(to_get, rand(1,CASTE.psipower))
+					set_psi_rank(to_get, rand(1,CASTE.psipower),take_larger = TRUE)
 				else
 					to_chat(src,"Unfortunately, you didn't get any psychic powers!")
+			else
+				to_chat(src,"Unfortunately, you can't gain any psychic powers from your blood!")
 
 
 /*
@@ -319,58 +321,107 @@
 /////////////////////////////////////////
 //WOOKIEE////////////////////////////////
 
-/*
+
 
 /datum/species/wookiee
 	name = "Wookiee"
-	description = "."
+	description = "Averaging at nearly 7', Wookiees are one of the biggest and strongest in the galaxy, and are \
+	almost unstoppable in combat thanks to their great strength and resilient hide. They are resistant to both heat \
+	and cold. Due to the structure of their vocal cords, they are limited to speaking only their \
+	own language, Shyriiwook, which is somewhat difficult for other species to speak. Fortunately, there is no such \
+	limitation on understanding the language."
 
-	icobase =     'icons/mob/human_races/species/troll/body.dmi'
-	preview_icon= 'icons/mob/human_races/species/troll/preview.dmi'
-	deform = 'icons/mob/human_races/species/troll/deformed_body.dmi'
+	icobase =     'icons/mob/human_races/species/wookiee/body.dmi' //ehhhh. kinda hacky sprites for now.
+	preview_icon= 'icons/mob/human_races/species/wookiee/preview.dmi'
+	deform =      'icons/mob/human_races/species/wookiee/body.dmi'
 
-	oxy_mod =   1.2
-	toxins_mod =   1.1
-	flash_mod = 1.0
-	brute_mod = 0.8
-	burn_mod =  0.8
+	natural_armour_values = list(melee = 30, bullet = 0, laser = 0, energy = 0, bomb = 30, bio = 65, rad = 30)
+
+	//STRONG VS: BRUTE, STUNS
+	//WEAK VS: OXY, BURN
+	//AVG VS: TOX
+	oxy_mod =       1.20
+	brute_mod =     0.75
+	burn_mod =      1.50 //fwoosh
+	toxins_mod =    1.00
+	stun_mod =      0.75
+	paralysis_mod = 0.50
+	weaken_mod =    0.75
+
+	heat_discomfort_level = 340
+	cold_discomfort_level = 250
+	cold_level_1 = 223 //-50C
+	cold_level_2 = 180
+	cold_level_3 = 120
+	heat_level_1 = 380
+	heat_level_2 = 420
+
+	strength = STR_VHIGH
+	slowdown = 0.7
+
 	darksight_range = 3
 	darksight_tint = DARKTINT_GOOD
-	rarity_value = 8
+	rarity_value = 12
 
-	blood_volume = 700 //almost unathi-tier. trolls bleed a LOT before they actually die.
+	blood_volume = 800
 
 	blood_color = COLOR_BLOOD_RUST
-	flesh_color = "#a3a3a3"
-	taste_sensitivity = TASTE_SENSITIVE //licc
+	flesh_color = "#513725"
 
-//	descriptors = list(
-//		/datum/mob_descriptor/height,
-//		/datum/mob_descriptor/build,
-//		)
+	descriptors = list(
+		/datum/mob_descriptor/height = 1,
+		/datum/mob_descriptor/build = 2
+		)
 
-	appearance_flags = HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR | HAS_HAIR_COLOR
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
+	max_pressure_diff = 70
 
-	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite/sharp)
-	assisted_langs = list(LANGUAGE_NABBER)
+	appearance_flags = HAS_HAIR_COLOR | HAS_EYE_COLOR | HAS_SKIN_TONE_GRAV
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN
+
+	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/claws/strong, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite/strong)
+
+	assisted_langs = list(	LANGUAGE_NABBER,
+							LANGUAGE_GALCOM,
+							LANGUAGE_SOL_COMMON,
+							LANGUAGE_UNATHI,
+							LANGUAGE_SKRELLIAN,
+							LANGUAGE_ROOTLOCAL,
+							LANGUAGE_LUNAR,
+							LANGUAGE_GUTTER,
+							LANGUAGE_CULT,
+							LANGUAGE_INDEPENDENT,
+							LANGUAGE_SPACER,
+							LANGUAGE_ADHERENT,
+							LANGUAGE_VOX,
+							LANGUAGE_YEOSA,
+							LANGUAGE_LEGALESE,
+							LANGUAGE_TROLL) //EVERYTHING
+
 	min_age = 17
-	max_age = 100
-	hidden_from_codex = TRUE
+	max_age = 300
+	hidden_from_codex = FALSE
 	bandages_icon = 'icons/mob/bandage.dmi'
 
 	gluttonous = GLUT_TINY
 
 	sexybits_location = BP_GROIN
 
-	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
+	has_organ = list(
+		BP_HEART =    /obj/item/organ/internal/heart,
+		BP_STOMACH =  /obj/item/organ/internal/stomach,
+		BP_LUNGS =    /obj/item/organ/internal/lungs,
+		BP_LIVER =    /obj/item/organ/internal/liver,
+		BP_KIDNEYS =  /obj/item/organ/internal/kidneys,
+		BP_BRAIN =    /obj/item/organ/internal/brain,
+		BP_EYES =     /obj/item/organ/internal/eyes
+		)
+
+	hud_type = /datum/hud_data/wookiee
+
 
 	available_cultural_info = list(
 		TAG_CULTURE = list(
-			CULTURE_TROLL_RUST,
-			CULTURE_TROLL_ORANGE,
-			CULTURE_TROLL_GOLD,
-			CULTURE_TROLL_OLIVE
+			CULTURE_WOOKIEE
 		),
 		TAG_HOMEWORLD = list(
 			HOME_SYSTEM_OTHER
@@ -383,23 +434,42 @@
 			FACTION_OTHER
 		)
 	)
-
 	default_cultural_info = list(
-		TAG_CULTURE = CULTURE_TROLL_RUST,
+		TAG_CULTURE = CULTURE_WOOKIEE,
 		TAG_HOMEWORLD = HOME_SYSTEM_OTHER,
 		TAG_FACTION = FACTION_OTHER
 	)
 
-	has_organ = list(
-		BP_HEART =    /obj/item/organ/internal/heart,
-		BP_STOMACH =  /obj/item/organ/internal/stomach,
-		BP_LUNGS =    /obj/item/organ/internal/lungs,
-		BP_LIVER =    /obj/item/organ/internal/liver,
-		BP_KIDNEYS =  /obj/item/organ/internal/kidneys,
-		BP_BRAIN =    /obj/item/organ/internal/brain,
-		BP_EYES =     /obj/item/organ/internal/eyes
+
+/datum/species/wookiee/handle_post_spawn(var/mob/living/carbon/human/H)
+	..()
+	H.default_language = LANGUAGE_WOOKIEE
+
+/datum/species/wookiee/get_hair_styles(var/mob/living/carbon/human/H)
+	return list()
+
+/datum/species/wookiee/get_bodytype(var/mob/living/carbon/human/H)
+	return SPECIES_HUMAN
+
+/datum/hud_data/wookiee
+	has_pressure = 1  // Draw the pressure indicator.
+	has_bodytemp = 1  // Draw the bodytemp indicator.
+
+	//equip_slots = list() // Checked by mob_can_equip().
+
+	// Contains information on the position and tag for all inventory slots
+	// to be drawn for the mob. This is fairly delicate, try to avoid messing with it
+	// unless you know exactly what it does.
+	gear = list(
+		"o_clothing" =   list("loc" = ui_iclothing, "name" = "Suit",         "slot" = slot_wear_suit, "state" = "suit",   "toggle" = 1),
+		"mask" =         list("loc" = ui_glasses,   "name" = "Mask",         "slot" = slot_wear_mask, "state" = "mask",   "toggle" = 1),
+		"r_ear" =        list("loc" = ui_oclothing, "name" = "Headset",      "slot" = slot_r_ear,     "state" = "ears",   "toggle" = 1),
+		"head" =         list("loc" = ui_mask,      "name" = "Hat",          "slot" = slot_head,      "state" = "hair",   "toggle" = 1),
+		"suit storage" = list("loc" = ui_sstore1,   "name" = "Suit Storage", "slot" = slot_s_store,   "state" = "suitstore"),
+		"back" =         list("loc" = ui_back,      "name" = "Back",         "slot" = slot_back,      "state" = "back"),
+		"id" =           list("loc" = ui_id,        "name" = "ID",           "slot" = slot_wear_id,   "state" = "id"),
+		"belt" =         list("loc" = ui_belt,      "name" = "Belt",         "slot" = slot_belt,      "state" = "belt")
 		)
 
-*/
-
-
+//		"storage1" =     list("loc" = ui_storage1,  "name" = "Left Pocket",  "slot" = slot_l_store,   "state" = "pocket"),
+//		"storage2" =     list("loc" = ui_storage2,  "name" = "Right Pocket", "slot" = slot_r_store,   "state" = "pocket"),

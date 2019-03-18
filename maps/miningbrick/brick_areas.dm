@@ -90,6 +90,14 @@
 	name = "Minerals Processing"
 	icon_state = "mining"
 
+/area/ship/brick/lower/disposals
+	name = "Garbage Disposals"
+	icon_state = "disposal"
+
+/area/ship/brick/lower/gunnery
+	name = "Gunnery"
+	icon_state = "nuke_storage"
+
 /area/ship/brick/lower/unused
 	name = "\improper Unused Compartment"
 	icon_state = "green"
@@ -113,12 +121,6 @@
 /area/ship/brick/thrusters/upperright
 	name = "\improper Upper Starboard Thruster"
 
-/area/ship/brick/thrusters/lowerleft
-	name = "\improper Lower Port Thruster"
-
-/area/ship/brick/thrusters/lowerright
-	name = "\improper Lower Starboard Thruster"
-
 /area/ship/brick/lower/hangar
 	name = "\improper Docking Hangar"
 	icon_state = "hangar"
@@ -131,7 +133,11 @@
 	area_flags = AREA_FLAG_RAD_SHIELDED
 
 /area/ship/brick/maintenance/upperleft
-	name = "\improper Upper Maintenance"
+	name = "\improper Upper Port Maintenance"
+	icon_state = "pmaint"
+
+/area/ship/brick/maintenance/upperright
+	name = "\improper Upper Starboard Maintenance"
 	icon_state = "pmaint"
 
 /area/ship/brick/maintenance/lowerleft

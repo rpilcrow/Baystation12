@@ -94,7 +94,7 @@
 	icon_state = "diyaab"
 	icon_living = "diyaab"
 	icon_dead = "diyaab_dead"
-	move_to_delay = 1
+	move_to_delay = 4
 	maxHealth = 25
 	health = 25
 	speed = 1
@@ -115,7 +115,7 @@
 	icon_state = "shantak"
 	icon_living = "shantak"
 	icon_dead = "shantak_dead"
-	move_to_delay = 1
+	move_to_delay = 4
 	maxHealth = 75
 	health = 75
 	speed = 1
@@ -167,7 +167,7 @@
 	icon_state = "jelly"
 	icon_living = "jelly"
 	icon_dead = "jelly_dead"
-	move_to_delay = 1
+	move_to_delay = 5
 	maxHealth = 75
 	health = 75
 	speed = 1
@@ -190,7 +190,7 @@ mob/living/simple_animal/hostile/retaliate/royalcrab
 	icon_state = "royalcrab"
 	icon_living = "royalcrab"
 	icon_dead = "royalcrab_dead"
-	move_to_delay = 3
+	move_to_delay = 6
 	maxHealth = 150
 	health = 150
 	speed = 1

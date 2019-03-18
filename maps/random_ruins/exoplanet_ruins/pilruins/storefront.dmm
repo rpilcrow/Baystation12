@@ -1,0 +1,64 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"b" = (/turf/simulated/wall/r_wall,/area/map_template/storefront)
+"c" = (/obj/machinery/autolathe,/turf/simulated/floor/tiled/techfloor,/area/map_template/storefront)
+"d" = (/obj/item/weapon/storage/secure/safe{pixel_y = 28},/turf/simulated/floor/tiled/techfloor,/area/map_template/storefront)
+"e" = (/obj/structure/table/rack,/obj/machinery/light{icon_state = "tube1"; dir = 1},/turf/simulated/floor/tiled/techfloor,/area/map_template/storefront)
+"f" = (/turf/simulated/floor/tiled/techfloor,/area/map_template/storefront)
+"g" = (/obj/machinery/food_replicator,/turf/simulated/floor/tiled/techfloor,/area/map_template/storefront)
+"h" = (/obj/structure/table/rack,/turf/simulated/floor/tiled/techfloor,/area/map_template/storefront)
+"i" = (/turf/simulated/wall,/area/map_template/storefront)
+"j" = (/obj/machinery/door/airlock,/turf/simulated/floor/tiled/techfloor/grid,/area/map_template/storefront)
+"k" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/turf/simulated/floor/tiled/techfloor,/area/map_template/storefront)
+"l" = (/obj/machinery/light{dir = 4; icon_state = "tube1"},/turf/simulated/floor/tiled/techfloor,/area/map_template/storefront)
+"m" = (/obj/structure/cable{icon_state = "0-2"; pixel_y = 1; d2 = 2},/obj/machinery/power/apc/high{dir = 1},/turf/simulated/floor/plating,/area/map_template/storefront)
+"n" = (/turf/simulated/floor/plating,/area/map_template/storefront)
+"o" = (/obj/machinery/power/port_gen/pacman/super,/obj/structure/cable,/turf/simulated/floor/plating,/area/map_template/storefront)
+"p" = (/obj/machinery/light/small/red{icon_state = "bulb1"; dir = 4},/turf/simulated/floor/plating,/area/map_template/storefront)
+"q" = (/obj/structure/table/reinforced,/turf/simulated/floor/tiled/techfloor/grid,/area/map_template/storefront)
+"r" = (/obj/effect/floor_decal/spline/plain/black{icon_state = "spline_plain"; dir = 9},/turf/simulated/floor/tiled,/area/map_template/storefront)
+"s" = (/obj/machinery/atm{pixel_y = 30},/obj/effect/floor_decal/spline/plain/black{icon_state = "spline_plain"; dir = 1},/turf/simulated/floor/tiled,/area/map_template/storefront)
+"t" = (/obj/effect/floor_decal/spline/plain/black{icon_state = "spline_plain"; dir = 1},/turf/simulated/floor/tiled,/area/map_template/storefront)
+"u" = (/obj/effect/floor_decal/spline/plain/black{icon_state = "spline_plain"; dir = 5},/turf/simulated/floor/tiled,/area/map_template/storefront)
+"v" = (/obj/effect/wallframe_spawn/reinforced,/turf/simulated/floor/plating,/area/map_template/storefront)
+"w" = (/obj/machinery/light/small/red{icon_state = "bulb1"; dir = 8},/turf/simulated/floor/plating,/area/map_template/storefront)
+"x" = (/obj/structure/table/reinforced,/obj/effect/floor_decal/spline/plain/black{icon_state = "spline_plain"; dir = 8},/turf/simulated/floor/tiled,/area/map_template/storefront)
+"y" = (/turf/simulated/floor/tiled,/area/map_template/storefront)
+"z" = (/obj/structure/table/reinforced,/obj/effect/floor_decal/spline/plain/black{icon_state = "spline_plain"; dir = 4},/turf/simulated/floor/tiled,/area/map_template/storefront)
+"A" = (/obj/structure/closet/crate/uranium,/turf/simulated/floor/plating,/area/map_template/storefront)
+"B" = (/obj/structure/bed,/obj/item/weapon/bedsheet,/turf/simulated/floor/plating,/area/map_template/storefront)
+"C" = (/obj/structure/table/reinforced,/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/effect/floor_decal/spline/plain/black{icon_state = "spline_plain"; dir = 10},/turf/simulated/floor/tiled,/area/map_template/storefront)
+"D" = (/obj/structure/table/reinforced,/obj/effect/floor_decal/spline/plain/black,/turf/simulated/floor/tiled,/area/map_template/storefront)
+"E" = (/obj/effect/floor_decal/spline/plain/black,/turf/simulated/floor/tiled,/area/map_template/storefront)
+"F" = (/obj/structure/table/reinforced,/obj/machinery/light{dir = 4; icon_state = "tube1"},/obj/effect/floor_decal/spline/plain/black{icon_state = "spline_plain"; dir = 6},/turf/simulated/floor/tiled,/area/map_template/storefront)
+"G" = (/obj/machinery/atmos_protector,/obj/machinery/door/airlock/glass/civilian,/turf/simulated/floor/tiled/techfloor/grid,/area/map_template/storefront)
+"H" = (/obj/structure/railing/mapped{icon_state = "railing0-1"; dir = 8},/turf/simulated/floor/tiled/steel_grid,/area/map_template/storefront)
+"I" = (/turf/simulated/floor/tiled/steel_grid,/area/map_template/storefront)
+"J" = (/obj/machinery/atm{pixel_y = 30},/turf/simulated/floor/tiled/steel_grid,/area/map_template/storefront)
+"K" = (/obj/machinery/computer/arcade,/turf/simulated/floor/tiled/steel_grid,/area/map_template/storefront)
+"L" = (/obj/machinery/vending/snack,/turf/simulated/floor/tiled/steel_grid,/area/map_template/storefront)
+"M" = (/obj/machinery/vending/cola,/turf/simulated/floor/tiled/steel_grid,/area/map_template/storefront)
+"N" = (/obj/structure/railing/mapped{icon_state = "railing0-1"; dir = 4},/turf/simulated/floor/tiled/steel_grid,/area/map_template/storefront)
+"O" = (/obj/structure/railing/mapped,/obj/machinery/light{icon_state = "tube1"; dir = 8},/turf/simulated/floor/tiled/steel_grid,/area/map_template/storefront)
+"P" = (/obj/structure/railing/mapped,/turf/simulated/floor/tiled/steel_grid,/area/map_template/storefront)
+"Q" = (/obj/effect/floor_decal/spline/plain/black,/turf/simulated/floor/tiled/steel_grid,/area/map_template/storefront)
+"R" = (/obj/structure/railing/mapped,/obj/machinery/light{dir = 4; icon_state = "tube1"},/turf/simulated/floor/tiled/steel_grid,/area/map_template/storefront)
+
+(1,1,1) = {"
+aaaaabbbbbbb
+aaaaabcdefgb
+aaaaabhfhfhb
+aaaaabhfffhb
+aaabbbijiiib
+iiibkffffflb
+imnjfffffffb
+iopbjbqqqqqb
+innirsttttuv
+iwnixyyyyyzv
+iABiCDDEDDFi
+iiiivvvGvvvi
+HIJKLMIIIIIN
+iOPPPPQQQPRi
+aaaaaaaaaaaa
+aaaaaaaaaaaa
+aaaaaaaaaaaa
+"}

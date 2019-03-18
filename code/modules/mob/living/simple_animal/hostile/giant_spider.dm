@@ -30,7 +30,7 @@
 	cold_damage_per_tick = 20
 	faction = "spiders"
 	pass_flags = PASS_FLAG_TABLE
-	move_to_delay = 3
+	move_to_delay = 5
 	speed = 1
 	max_gas = list("phoron" = 1, "carbon_dioxide" = 5, "methyl_bromide" = 1)
 	bleed_colour = "#0d5a71"
@@ -58,7 +58,7 @@
 	melee_damage_upper = 15
 	poison_per_bite = 1
 	speed = 2
-	move_to_delay = 4
+	move_to_delay = 6
 	break_stuff_probability = 15
 	pry_time = 7 SECONDS
 
@@ -105,7 +105,7 @@
 	melee_damage_upper = 15
 	poison_per_bite = 10
 	speed = -1
-	move_to_delay = 2
+	move_to_delay = 3
 	break_stuff_probability = 30
 	hunt_chance = 25
 	can_escape = TRUE
@@ -129,7 +129,7 @@
 	melee_damage_upper = 12
 	poison_per_bite = 15
 	ranged = TRUE
-	move_to_delay = 2
+	move_to_delay = 3
 	projectiletype = /obj/item/projectile/venom
 	projectilesound = 'sound/effects/hypospray.ogg'
 	fire_desc = "spits venom"

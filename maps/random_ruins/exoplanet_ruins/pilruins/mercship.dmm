@@ -13,7 +13,7 @@
 "am" = (/obj/structure/table/steel_reinforced,/obj/machinery/recharger,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
 "an" = (/obj/structure/table/steel_reinforced,/obj/random/projectile,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
 "ao" = (/obj/item/stack/medical/splint,/obj/structure/pilruin/light{icon_state = "red"},/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
-"ap" = (/obj/structure/table/steel_reinforced,/obj/random/documents,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
+"ap" = (/obj/structure/table/steel_reinforced,/obj/item/documents/pilruin/spy,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
 "aq" = (/obj/structure/shuttle/engine/propulsion{icon_state = "propulsion"; dir = 8},/turf/simulated/floor/plating,/area/template_noop)
 "ar" = (/obj/structure/table/steel_reinforced,/obj/item/stack/medical/advanced/bruise_pack,/obj/item/stack/medical/advanced/bruise_pack,/obj/item/stack/medical/advanced/bruise_pack,/obj/item/stack/medical/advanced/bruise_pack,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
 "as" = (/mob/living/simple_animal/hostile/syndicate/melee/space,/turf/simulated/floor/reinforced,/area/template_noop)

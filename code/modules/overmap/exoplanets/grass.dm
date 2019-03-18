@@ -4,6 +4,7 @@
 	color = "#538224"
 	planetary_area = /area/exoplanet/grass
 	rock_colors = list(COLOR_ASTEROID_ROCK, COLOR_GRAY80, COLOR_BROWN)
+
 	possible_features = list(/datum/map_template/ruin/exoplanet/monolith,
 							 /datum/map_template/ruin/exoplanet/hydrobase,
 							 /datum/map_template/ruin/exoplanet/marooned,
@@ -27,7 +28,9 @@
 							 /datum/map_template/ruin/exoplanet/pilruins/broken/kinda,
 							 /datum/map_template/ruin/exoplanet/pilruins/tribalgun,
 							 /datum/map_template/ruin/exoplanet/pilruins/kovelai,
-							 /datum/map_template/ruin/exoplanet/pilruins/oubliette)
+							 /datum/map_template/ruin/exoplanet/pilruins/oubliette,
+							 /datum/map_template/ruin/exoplanet/pilruins/pmccamp)
+
 	exo_hab_chance = 99
 
 /obj/effect/overmap/sector/exoplanet/grass/generate_map()

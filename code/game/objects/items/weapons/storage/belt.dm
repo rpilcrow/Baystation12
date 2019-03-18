@@ -220,7 +220,8 @@
 		/obj/item/device/holowarrant,
 		/obj/item/weapon/magnetic_ammo,
 		/obj/item/device/binoculars,
-		/obj/item/clothing/gloves
+		/obj/item/clothing/gloves,
+		/obj/item/gunnery/signal
 		)
 
 /obj/item/weapon/storage/belt/security
@@ -252,7 +253,8 @@
 		/obj/item/device/holowarrant,
 		/obj/item/weapon/magnetic_ammo,
 		/obj/item/device/binoculars,
-		/obj/item/clothing/gloves
+		/obj/item/clothing/gloves,
+		/obj/item/gunnery/signal
 		)
 
 /obj/item/weapon/storage/belt/general
@@ -289,7 +291,8 @@
 		/obj/item/clothing/head/soft,
 		/obj/item/weapon/hand_labeler,
 		/obj/item/clothing/gloves,
-		/obj/item/weapon/crowbar/prybar
+		/obj/item/weapon/crowbar/prybar,
+		/obj/item/gunnery/signal
 		)
 
 /obj/item/weapon/storage/belt/janitor
@@ -345,7 +348,8 @@
 		/obj/item/clothing/head/soft,
 		/obj/item/weapon/hand_labeler,
 		/obj/item/clothing/gloves,
-		/obj/item/weapon/crowbar/prybar
+		/obj/item/weapon/crowbar/prybar,
+		/obj/item/gunnery/signal
 		)
 
 /obj/item/weapon/storage/belt/holster/forensic
@@ -400,7 +404,8 @@
 		/obj/item/weapon/pinpointer/radio,
 		/obj/item/device/taperecorder,
 		/obj/item/device/tape,
-		/obj/item/device/analyzer
+		/obj/item/device/analyzer,
+		/obj/item/gunnery/signal
 		)
 	can_holster = list(/obj/item/weapon/material/hatchet/machete)
 	sound_in = 'sound/effects/holster/sheathin.ogg'

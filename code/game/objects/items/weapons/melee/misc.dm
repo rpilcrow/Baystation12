@@ -39,6 +39,8 @@
 	item_state = "officersword"
 	slot_flags = SLOT_BELT
 	applies_material_colour = FALSE
+	sharp = 1
+	edge = 1
 
 /obj/item/weapon/material/sword/replica/officersword/army
 	name = "army NCO's sword"

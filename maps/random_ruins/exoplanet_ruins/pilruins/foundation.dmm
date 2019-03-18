@@ -154,8 +154,8 @@
 "cX" = (/obj/structure/bed/chair/comfy/beige{icon_state = "comfychair_preview"; dir = 8},/turf/simulated/floor/tiled/white,/area/map_template/kovelai/outer)
 "cY" = (/obj/machinery/door/airlock/external,/turf/simulated/floor/plating,/area/map_template/kovelai/outer)
 "cZ" = (/obj/machinery/door/airlock/external,/obj/machinery/atmos_protector,/turf/simulated/floor/plating,/area/map_template/kovelai/outer)
-"da" = (/obj/effect/catwalk_plated,/turf/template_noop,/area/map_template/kovelai/outer)
-"db" = (/obj/effect/landmark/corpse/scientist,/turf/simulated/floor/plating,/area/map_template/kovelai/outer)
+"da" = (/obj/effect/landmark/corpse/scientist,/turf/simulated/floor/tiled/white,/area/map_template/kovelai/outer)
+"db" = (/obj/effect/catwalk_plated,/turf/simulated/floor/plating,/area/map_template/kovelai/outer)
 "dc" = (/obj/structure/table/standard,/obj/machinery/microwave,/obj/effect/floor_decal/corner/red/diagonal,/turf/simulated/floor/tiled,/area/map_template/kovelai/outer)
 "dd" = (/obj/effect/floor_decal/spline/plain/black{icon_state = "spline_plain"; dir = 8},/obj/machinery/light,/turf/simulated/floor/wood/walnut,/area/map_template/kovelai/outer)
 "de" = (/obj/structure/bed/chair/office/comfy/beige,/turf/simulated/floor/tiled/white,/area/map_template/kovelai/outer)
@@ -208,6 +208,7 @@
 "dZ" = (/obj/effect/floor_decal/corner/red/diagonal,/mob/living/simple_animal/hostile/psipariah/ranged,/turf/simulated/floor/tiled,/area/map_template/kovelai/outer)
 "ea" = (/obj/effect/floor_decal/corner/red/diagonal,/obj/random/pilruinpariah/guaranteed,/turf/simulated/floor/tiled,/area/map_template/kovelai/outer)
 "eb" = (/obj/random/pilruinpariah,/turf/simulated/floor/carpet/red,/area/map_template/kovelai/outer)
+"ec" = (/turf/template_noop,/area/map_template/kovelai/outer)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -243,13 +244,13 @@ aaaabkbWctcucublcccKblcccqblblblblbjblbkbkbkbkdLblcwblblbsbsbjbQbsbQbebfbjbjaa
 coaabkblblblblblblblblcccccccccccRcccScXdPcAcBdMblcEcFblbebebebebebebebfbfbjaa
 aaaablcGcHcIbscJblccccccccccdXdebWcccccXdQcMblbfblcNccblbfbfbfbfbfbfbfbfbfbjaa
 aaaabEcObHcPbsbscQcccccccxbldfbWbWccccdsblblblblblblblblblblblbjbjbjbjbjbjbjaa
-aaaabEcTbHcUcVbucWccccccccbmccccccccdvccbjbfbfbjbfbfdbbfbfbfblaaaaaaaaaaaaaaaa
-aaaabldcbHddbubsblccccccccbldCdDcccccccccYbfdgcZbfbfbfbfbfbfblaaaaaaaaaaaaaaaa
-aaaablblblblblblblblbldhblblblblblbEbEblblbEbEdObfbfbfbfbfbfdOaaaaaaaaaaaaaaaa
-aaaaaaaaaabldjdkdldNdNdmdndmdmblaaaaaaaaaaaaaaaaaaaadadaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaabldmdodpdmdmdmdqdrdmblaaaaaaaaaaaaaaaaaaaadadaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaabldtdmdmdmebdmdqdqdublaaaaaaaaaaaaaaaacWaadadaaacWaaaaaaaaaaaaaaaaaa
-aaaaaaaaaabldqdwdmdmdmdmdmdmdmblaaaaaaaaaadxaaaaaadxdadaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaabldydqdqblblbEbEbEblblaaaaaaaaaaaaaadxaaaadadaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaablblblblblaaaaaaaaaaaaaaaaaadxaaaaaaaaaaaabfbfaaaaaaaaaaaaaaaaaaaaaa
+aaaabEcTbHcUcVbucWccccccccbmccccccccdvccbjbfbfbjccccdaccccccblaaaaaaaaaaaaaaaa
+aaaabldcbHddbubsblccccccccbldCdDcccccccccYbfdgcZccccccccccccblaaaaaaaaaaaaaaaa
+aaaablblblblblblblblbldhblblblblblbEbEblblbEbEdOccccccccccccdOaaaaaaaaaaaaaaaa
+aaaaaaaaaabldjdkdldNdNdmdndmdmblaaaaaaaaaaaaaaaaaaaadbdbaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaabldmdodpdmdmdmdqdrdmblaaaaaaaaaaaaaaaaaaaadbdbaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaabldtdmdmdmebdmdqdqdublaaaaaaaaaaaaaaaacWaadbdbaacWaaaaaaaaaaaaaaaaaa
+aaaaaaaaaabldqdwdmdmdmdmdmdmdmblaaaaaaaaaadxaaaaaadxdbdbaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaabldydqdqblblbEbEbEblblaaaaaaaaaaaaaadxaaaadbdbaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaablblblblblaaaaaaaaaaaaaaaaaadxaaaaaaaaaaaaececaaaaaaaaaaaaaaaaaaaaaa
 "}

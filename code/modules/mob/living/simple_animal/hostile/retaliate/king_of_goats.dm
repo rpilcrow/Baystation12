@@ -79,7 +79,7 @@
 	maxHealth = 200
 	melee_damage_lower = 15
 	melee_damage_upper = 20
-	move_to_delay = 3
+	move_to_delay = 4
 
 /mob/living/simple_animal/hostile/retaliate/goat/king/Retaliate()
 	..()

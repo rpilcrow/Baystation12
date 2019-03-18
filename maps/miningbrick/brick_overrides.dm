@@ -35,3 +35,9 @@
 
 /obj/machinery/door/airlock/hatch/autoname/engineering
 	stripe_color = COLOR_AMBER
+
+/obj/machinery/door/airlock/hatch/autoname/science
+	stripe_color = COLOR_PALE_PURPLE_GRAY
+
+/obj/machinery/door/airlock/hatch/autoname/security
+	stripe_color = COLOR_RED

@@ -635,7 +635,7 @@
 	density = 1
 
 	icon = 'icons/obj/suitstorage.dmi'
-	icon_state = "close"
+	icon_state = "cycler"
 
 	req_access = list(access_captain, access_bridge)
 

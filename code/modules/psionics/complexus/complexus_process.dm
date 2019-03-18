@@ -5,6 +5,19 @@
 	var/last_rating = rating
 	var/highest_faculty
 	var/combined_rank = 0
+
+	for(var/faculty in ranks)
+		var/check_rank = get_rank(faculty)
+		if(check_rank == 1)
+			LAZYADD(latencies, faculty)
+		else
+			if(check_rank <= 0)
+				ranks -= faculty
+			LAZYREMOVE(latencies, faculty)
+		combined_rank = max(combined_rank,check_rank)
+		if(!highest_faculty || get_rank(highest_faculty) < check_rank)
+			highest_faculty = faculty
+	/*
 	for(var/faculty in ranks)
 		var/check_rank = get_rank(faculty)
 		if(check_rank == 1)
@@ -15,15 +28,15 @@
 			LAZYREMOVE(latencies, faculty)
 		combined_rank += check_rank
 		if(!highest_faculty || get_rank(highest_faculty) < check_rank)
-			highest_faculty = faculty
+			highest_faculty = faculty*/
 
 	UNSETEMPTY(latencies)
 
-	if(force || (ranks.len && last_rating != ceil(combined_rank/ranks.len)))
+	if(force || (ranks.len && last_rating != min(5,combined_rank)))//ceil(combined_rank/ranks.len)))
 		rebuild_power_cache = TRUE
 		if(combined_rank > 0)
 			sound_to(owner, 'sound/effects/psi/power_unlock.ogg')
-			rating = ceil(combined_rank/ranks.len)
+			rating = min(5,combined_rank)//ceil(combined_rank/ranks.len)
 			cost_modifier = 1
 			if(rating > 1) cost_modifier -= min(1, max(0.1, (rating-1) / 10))
 			if(!ui)
@@ -91,7 +104,7 @@
 	if(!owner.nervous_system_failure() && owner.stat == CONSCIOUS && stamina && !suppressed && get_rank(PSI_REDACTION) >= PSI_RANK_OPERANT)
 		attempt_regeneration()
 
-	var/next_aura_size = max(0.1,((stamina/max_stamina)*min(3,rating))/5)
+	var/next_aura_size = max(0.1,((stamina/max_stamina)*min(5,rating))/5)
 	var/next_aura_alpha = round(((suppressed ? max(0,rating - 2) : rating)/5)*255)
 
 	if(next_aura_alpha != last_aura_alpha || next_aura_size != last_aura_size || aura_color != last_aura_color)

@@ -6,6 +6,7 @@
 	rock_colors = list(COLOR_DARK_GRAY)
 	possible_themes = list()
 	exo_hab_chance = 10
+
 	possible_features = list(/datum/map_template/ruin/exoplanet/monolith,
 							/datum/map_template/ruin/exoplanet/hydrobase,
 							/datum/map_template/ruin/exoplanet/crashed_pod,

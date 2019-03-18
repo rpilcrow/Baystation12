@@ -989,6 +989,22 @@ var/list/floor_decals = list()
 /obj/effect/floor_decal/sign/p
 	icon_state = "white_p"
 
+/obj/effect/floor_decal/sign/flone
+	name = "floor sign"
+	icon_state = "floor_1"
+
+/obj/effect/floor_decal/sign/fltwo
+	name = "floor sign"
+	icon_state = "floor_2"
+
+/obj/effect/floor_decal/sign/dfone
+	name = "floor sign"
+	icon_state = "dark_floor_1"
+
+/obj/effect/floor_decal/sign/dftwo
+	name = "floor sign"
+	icon_state = "dark_floor_2"
+
 /obj/effect/floor_decal/solarpanel
 	icon_state = "solarpanel"
 

@@ -3,8 +3,8 @@
 /obj/machinery/atmos_protector
 	name = "Atmos Protector"
 	desc = "A floor-mounted projector that uses shielding technology to prevent airflow within a small area."
-	icon = 'icons/obj/items.dmi'
-	icon_state = "glass_wire"
+	icon = 'icons/obj/pilcrow.dmi'
+	icon_state = "atmos1"
 //	icon = 'icons/obj/machinery/shielding.dmi'
 //	icon_state = "shield_normal"
 	density = 0
