@@ -176,14 +176,22 @@
 	..()
 	set_light(0.75, 1, 4)
 
+/obj/random/pilruin
+	name = "don't use this"
+	desc = "wtf don't use this."
+	icon = 'icons/effects/effects_pilcrow.dmi'
+	icon_state = "pilcrow"
 
-/obj/random/pilruinmecha
+/obj/random/pilruin/mecha/spawn_choices()
+	world.log << "LISTEN UP FUCKO, YOU'VE PUT DOWN A /obj/random/pilruin SOMEHOW, AT [x], [y], [z]. WE'RE JUST GOING TO GUESS AT WHAT YOU WANTED INSTEAD. YEE HAW."
+	return typesof(/obj/random/pilruin)
+
+/obj/random/pilruin/mecha
 	name = "random mecha"
 	desc = "Spawns a random mecha."
-	icon = 'icons/mecha/mecha.dmi'
-	icon_state = "durand"
+	icon_state = "mecha"
 
-/obj/random/pilruinmecha/spawn_choices()
+/obj/random/pilruin/mecha/spawn_choices()
 	return list(/obj/mecha/combat/durand = 10,
 				/obj/mecha/combat/gygax = 10,
 				/obj/mecha/medical/odysseus/loaded = 10,
@@ -195,13 +203,12 @@
 				/obj/mecha/combat/marauder = 2,
 				/obj/mecha/combat/phazon = 1)
 
-/obj/random/pilruinhorrible
+/obj/random/pilruin/horrible
 	name = "horrible creature"
 	desc = "Spawns something nasty."
-	icon = 'icons/mob/pilcrow.dmi'
 	icon_state = "randomcreature"
 
-/obj/random/pilruinhorrible/spawn_choices()
+/obj/random/pilruin/horrible/spawn_choices()
 	return list(/mob/living/simple_animal/hostile/creature = 15,
 				/mob/living/simple_animal/hostile/giant_spider = 5,
 				/mob/living/simple_animal/hostile/giant_spider/guard = 5,
@@ -213,13 +220,12 @@
 				/mob/living/simple_animal/crab/stowaway = 1,
 				/mob/living/simple_animal/cat = 1)
 
-/obj/random/pilruinspider
+/obj/random/pilruin/spider
 	name = "random spider"
 	desc = "creepy crawlie!"
-	icon = 'icons/mob/pilcrow.dmi'
 	icon_state = "randomspider"
 
-/obj/random/pilruinspider/spawn_choices()
+/obj/random/pilruin/spider/spawn_choices()
 	return list(/mob/living/simple_animal/hostile/giant_spider = 15,
 				/mob/living/simple_animal/hostile/giant_spider/guard = 10,
 				/mob/living/simple_animal/hostile/giant_spider/hunter = 10,
@@ -227,60 +233,123 @@
 				/mob/living/simple_animal/hostile/giant_spider/spitter = 10)
 
 
-/obj/random/pilruinsurgery
+/obj/random/pilruin/surgery
 	name = "random advanced medical tech"
 	desc = "doctors hate him!"
-	icon = 'icons/obj/surgery.dmi'
-	icon_state = "scalpel_manager_on"
+	icon_state = "surgery"
 
-/obj/random/pilruinsurgery/spawn_choices()
+/obj/random/pilruin/surgery/spawn_choices()
 	return list(/obj/item/weapon/scalpel/manager = 2,
 				/obj/item/weapon/scalpel/laser1 = 1,
 				/obj/item/weapon/scalpel/laser2 = 4,
 				/obj/item/weapon/scalpel/laser3 = 2)
 
-/obj/random/pilruinpariah
+/obj/random/pilruin/pariah
 	name = "random pariah"
 	desc = "your head asplode"
-	icon = 'icons/mob/pilcrow.dmi'
 	icon_state = "randompariah2"
 
-/obj/random/pilruinpariah/spawn_choices()
+/obj/random/pilruin/pariah/spawn_choices()
 	return list(/mob/living/simple_animal/hostile/psipariah = 4,
 				/mob/living/simple_animal/hostile/psipariah/ranged = 2,
 				/obj/effect/gibspawner/human = 2,
 				/obj/effect/decal/cleanable/blood = 2)
 
-/obj/random/pilruinpariah/guaranteed
+/obj/random/pilruin/pariah/guaranteed
 	icon_state = "randompariah"
 
-/obj/random/pilruinpariah/spawn_choices()
+/obj/random/pilruin/pariah/spawn_choices()
 	return list(/mob/living/simple_animal/hostile/psipariah = 2,
 				/mob/living/simple_animal/hostile/psipariah/ranged = 1)
 
-/obj/random/pilruinpmc
+/obj/random/pilruin/pmc
 	name = "random soldier"
 	desc = "tango down"
-	icon = 'icons/mob/pilcrow.dmi'
 	icon_state = "randompmc"
 
-/obj/random/pilruinpmc/spawn_choices()
+/obj/random/pilruin/pmc/spawn_choices()
 	return list(/mob/living/simple_animal/hostile/pmc/ranged/laser = 2,
 				/mob/living/simple_animal/hostile/pmc/ranged/ballistic = 1,
 				/mob/living/simple_animal/hostile/pmc = 2)
 
-/obj/random/pilruinpmcranged
+/obj/random/pilruin/pmcranged
 	name = "random ranged soldier"
 	desc = "lasers vs ballistics"
-	icon = 'icons/mob/pilcrow.dmi'
 	icon_state = "randompmc2"
 
-/obj/random/pilruinpmcranged/spawn_choices()
+/obj/random/pilruin/pmcranged/spawn_choices()
 	return list(/mob/living/simple_animal/hostile/pmc/ranged/laser = 1,
 				/mob/living/simple_animal/hostile/pmc/ranged/ballistic = 1)
 
+/obj/random/pilruin/melee
+	name = "random melee weapon"
+	desc = "drive me closer, so that i can hit them with my sword"
+	icon_state = "melee"
+/obj/random/pilruin/melee/spawn_choices()
+	return list(/obj/item/weapon/material/sword/longsword = 2,
+				/obj/item/weapon/material/sword/longsword/silver = 2,
+				/obj/item/weapon/material/sword/longsword/titanium = 2,
+				/obj/item/weapon/material/sword/replica/officersword/pilcustom = 6,
+				/obj/item/weapon/cane/concealed/sword = 6,
+				/obj/item/weapon/material/hatchet/machete = 6,
+				/obj/item/weapon/melee/baton/loaded = 4,
+				/obj/item/weapon/melee/baton = 2,
+				/obj/item/weapon/melee/classic_baton = 2,
+				/obj/item/weapon/melee/telebaton = 4,
+				/obj/item/weapon/material/butterfly = 4,
+				/obj/item/weapon/material/butterfly/switchblade = 2,
+				/obj/item/weapon/material/scythe = 6,
+				/obj/item/weapon/material/hatchet = 6,
+				/obj/item/weapon/material/harpoon = 5,
+				/obj/item/weapon/material/harpoon/bomb = 1,
+				/obj/item/weapon/material/knife = 2,
+				/obj/item/weapon/material/knife/butch = 3,
+				/obj/item/weapon/material/knife/hook = 1,
+				/obj/item/weapon/material/twohanded/baseballbat = 1,
+				/obj/item/weapon/material/twohanded/baseballbat/metal = 1,
+				/obj/item/weapon/material/twohanded/baseballbat/platinum = 1,
+				/obj/item/weapon/material/twohanded/baseballbat/uranium = 1,
+				/obj/item/weapon/material/twohanded/baseballbat/gold = 1,
+				/obj/item/weapon/material/twohanded/baseballbat/diamond = 1,
+				/obj/item/weapon/material/twohanded/fireaxe = 6,
+				/obj/item/weapon/material/twohanded/spear = 6,
+				/obj/item/weapon/pickaxe/jackhammer = 3,
+				/obj/item/weapon/pickaxe/diamond = 2,
+				/obj/item/weapon/shovel = 1,
+				/obj/item/toy/cultsword = 1,
+				/obj/item/toy/balloon = 1,
+				/obj/item/weapon/nullrod = 1,
+				/obj/item/weapon/material/sword/blazing = 1,
+				/obj/item/weapon/material/sword/katana = 1,
+				/obj/item/weapon/circular_saw = 1,
+				/obj/item/weapon/surgicaldrill = 1,
+				/obj/item/weapon/melee/energy/sword = 1)
 
+/obj/random/pilruin/weapon
+	name = "random weapon"
+	desc = "time for armanents"
+	icon_state = "weapon"
+/obj/random/pilruin/weapon/spawn_choices()
+	return list(/obj/random/pilruin/melee,
+				/obj/random/projectile,
+				/obj/random/energy)
 
+/obj/random/pilruin/gun
+	name = "random gun"
+	desc = "shall not be infringed"
+	icon_state = "randomguns"
+/obj/random/pilruin/gun/spawn_choices()
+	return list(/obj/random/projectile,
+				/obj/random/energy)
+
+/obj/random/pilruin/wildloot
+	name = "wild loot"
+	desc = "it could be anything"
+	icon_state = "wild"
+/obj/random/pilruin/wildloot/spawn_choices()
+	return list(/obj/random/pilruin/weapon = 1,
+				/obj/random/maintenance/clean = 1,
+				/obj/random/loot = 4)
 
 //ITEMS///////////////////////////////
 

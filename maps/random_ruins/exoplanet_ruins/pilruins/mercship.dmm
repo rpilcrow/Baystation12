@@ -11,7 +11,7 @@
 "ak" = (/obj/effect/scorcher,/turf/template_noop,/area/template_noop)
 "al" = (/obj/structure/table/steel_reinforced,/obj/item/stack/medical/advanced/ointment,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
 "am" = (/obj/structure/table/steel_reinforced,/obj/machinery/recharger,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
-"an" = (/obj/structure/table/steel_reinforced,/obj/random/projectile,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
+"an" = (/obj/structure/table/steel_reinforced,/obj/random/pilruin/weapon,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
 "ao" = (/obj/item/stack/medical/splint,/obj/structure/pilruin/light{icon_state = "red"},/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
 "ap" = (/obj/structure/table/steel_reinforced,/obj/item/documents/pilruin/spy,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
 "aq" = (/obj/structure/shuttle/engine/propulsion{icon_state = "propulsion"; dir = 8},/turf/simulated/floor/plating,/area/template_noop)
@@ -41,7 +41,7 @@
 "aO" = (/obj/item/stack/material/rods,/obj/effect/scorcher,/turf/template_noop,/area/template_noop)
 "aP" = (/obj/structure/closet/crate/freezer/rations,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
 "aQ" = (/obj/item/stack/material/uranium/ten,/turf/simulated/floor/plating,/area/template_noop)
-"aR" = (/obj/structure/closet/crate/freezer,/obj/random/contraband,/turf/simulated/floor/plating,/area/template_noop)
+"aR" = (/obj/structure/closet/crate,/obj/random/pilruin/weapon,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
 "aS" = (/obj/machinery/door/blast/shutters,/turf/simulated/floor/reinforced,/area/template_noop)
 "aT" = (/obj/structure/closet/crate,/obj/random/contraband,/obj/random/contraband,/obj/random/loot,/turf/simulated/floor/plating,/area/template_noop)
 "aU" = (/obj/effect/floor_decal/steeldecal/steel_decals_central6,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
@@ -57,6 +57,8 @@
 "be" = (/obj/structure/closet/crate,/obj/random/contraband,/obj/random/loot,/turf/simulated/floor/reinforced,/area/template_noop)
 "bf" = (/obj/effect/paint/red,/turf/simulated/wall/r_wall,/area/template_noop)
 "bg" = (/obj/effect/paint/red,/turf/simulated/wall,/area/template_noop)
+"bh" = (/obj/structure/closet/crate/freezer,/obj/random/contraband,/obj/random/pilruin/weapon,/turf/simulated/floor/plating,/area/template_noop)
+"bi" = (/obj/structure/closet/crate,/obj/random/contraband,/obj/random/loot,/obj/random/pilruin/weapon,/turf/simulated/floor/reinforced,/area/template_noop)
 
 (1,1,1) = {"
 aaaaaaaaaaabacacacabaaaaaaaaaaaaaaaa
@@ -67,13 +69,13 @@ aaaaaabfbfanaiaiaiapbfbfakakaaaaaaaa
 aaaaaaaqabarasaiatanabauakakakaaakaa
 aaababababaoaiaiaiavababababakakakaa
 aabfahahaxaxaxayaxaxaxazahaAakakakaa
-aabfaBaCaxawaiaiaiaDaxaEaFaGakakakaa
+aabfaBaCaxaRaiaiaiaDaxaEaFaGakakakaa
 aaabaHahaIaJasaiatavaKaLaMakakakakaa
 aaabaNahaxaDaiaiaiawaxaLakaOakakakaa
 aaabahahaxawaiaiaiaPaxahaQakakakakaa
-aaabaRaxaxaxaSaSaSaxaxaxaTabakakakaa
+aaabbhaxaxaxaSaSaSaxaxaxaTabakakakaa
 aaabaxaxaUaiaiaiaiaiaUaxaxabakakakaa
-aaabaVahawaiaiatbeaiawahaWabakakaaaa
+aaabaVahawaiaiatbiaiawahaWabakakaaaa
 aaabaVahawaiaiaiaiaiawahaWabakakaaaa
 aabfbgbgavaibeaiaiaiavbgbgbfakakaaaa
 aabfbgbfawaiaiaiaiaiawbfbgakakakaaaa

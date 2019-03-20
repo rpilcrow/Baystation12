@@ -65,7 +65,7 @@
 	//Null rod stuff
 	var/supernatural = 0
 	var/purge = 0
-	
+
 	var/bleed_ticks = 0
 	var/bleed_colour = COLOR_BLOOD_HUMAN
 	var/can_bleed = TRUE
@@ -103,7 +103,7 @@
 	handle_confused()
 	handle_supernatural()
 	handle_impaired_vision()
-	
+
 	if(can_bleed && bleed_ticks > 0)
 		handle_bleeding()
 
@@ -319,7 +319,8 @@
 	icon_state = icon_dead
 	update_icon()
 	density = 0
-	adjustBruteLoss(maxHealth) //Make sure dey dead.
+	//adjustBruteLoss(maxHealth) //Make sure dey dead. //fuck you
+	health = min(0,health)
 	walk_to(src,0)
 	return ..(gibbed,deathmessage,show_dead_message)
 
@@ -357,6 +358,11 @@
 /mob/living/simple_animal/adjustOxyLoss(damage)
 	..()
 	updatehealth()
+
+/mob/living/simple_animal/updatehealth()
+	..()
+	if(stat != DEAD && health <= 0)
+		death()
 
 /mob/living/simple_animal/proc/SA_attackable(target_mob)
 	if (isliving(target_mob))
@@ -424,13 +430,13 @@
 		bleed_ticks = max(bleed_ticks, amount)
 	else
 		bleed_ticks = max(bleed_ticks + amount, 0)
-		
+
 	bleed_ticks = round(bleed_ticks)
-	
+
 /mob/living/simple_animal/proc/handle_bleeding()
 	bleed_ticks--
 	adjustBruteLoss(1)
-	
+
 	var/obj/effect/decal/cleanable/blood/drip/drip = new(get_turf(src))
 	drip.basecolor = bleed_colour
 	drip.update_icon()

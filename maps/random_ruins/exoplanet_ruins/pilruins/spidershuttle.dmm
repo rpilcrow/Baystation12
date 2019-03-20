@@ -17,36 +17,36 @@
 "q" = (/obj/structure/closet/crate,/obj/random/ammo,/obj/random/ammo,/turf/simulated/floor/tiled/techfloor,/area/template_noop)
 "r" = (/obj/machinery/door/airlock,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
 "s" = (/obj/machinery/door/airlock,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
-"t" = (/obj/random/pilruinspider,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
+"t" = (/obj/random/pilruin/spider,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
 "u" = (/obj/machinery/computer{icon_state = "computer"; dir = 4},/turf/simulated/floor/tiled/techfloor,/area/template_noop)
-"v" = (/obj/structure/closet/crate,/obj/random/masks,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
-"w" = (/obj/structure/closet/crate,/obj/random/loot,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
-"x" = (/obj/structure/closet/crate,/obj/random/drinkbottle,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
+"v" = (/obj/structure/closet/crate,/obj/random/masks,/obj/random/glasses,/obj/random/glasses,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
+"w" = (/obj/structure/closet/crate,/obj/random/pilruin/wildloot,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
+"x" = (/obj/structure/closet/crate,/obj/random/drinkbottle,/obj/random/drinkbottle,/obj/random/drinkbottle,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
 "y" = (/obj/structure/table/steel_reinforced,/obj/random/firstaid,/turf/simulated/floor/tiled/techfloor,/area/template_noop)
-"z" = (/obj/structure/closet/crate,/obj/random/projectile,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
-"A" = (/obj/structure/closet/crate,/obj/random/loot,/obj/random/loot,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
+"z" = (/obj/structure/closet/crate,/obj/random/pilruin/wildloot,/obj/random/pilruin/wildloot,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
+"A" = (/obj/structure/closet/crate,/obj/random/medical,/obj/random/medical,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
 "B" = (/obj/structure/girder,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
 "C" = (/obj/random/obstruction,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
 "D" = (/obj/structure/rubble/house,/turf/simulated/floor/tiled/techfloor,/area/template_noop)
 "E" = (/obj/structure/table/steel_reinforced,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
 "F" = (/obj/structure/closet/crate/freezer/rations,/obj/random/medical,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
-"G" = (/obj/structure/closet/crate,/obj/random/medical,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
+"G" = (/obj/structure/closet/crate,/obj/random/gloves,/obj/random/shoes,/obj/random/glasses,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
 "H" = (/turf/simulated/floor/tiled/steel_ridged,/area/template_noop)
-"I" = (/obj/machinery/door/blast/shutters{icon_state = "shutter1"; dir = 8},/turf/simulated/floor/plating,/area/template_noop)
-"J" = (/obj/structure/closet/crate,/obj/random/gloves,/obj/random/shoes,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
-"K" = (/obj/structure/closet/crate/freezer/rations,/obj/random/drinkbottle,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
+"I" = (/obj/machinery/door/airlock,/obj/machinery/atmos_protector,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
+"J" = (/obj/structure/closet/crate/freezer/rations,/obj/random/drinkbottle,/obj/random/drinkbottle,/obj/random/drinkbottle,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
+"K" = (/obj/structure/closet/crate,/obj/random/junk,/obj/random/pilruin/wildloot,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
 "L" = (/obj/structure/closet/crate,/obj/random/gloves,/obj/random/glasses,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
-"M" = (/obj/structure/closet/crate,/obj/random/loot,/obj/random/junk,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
+"M" = (/obj/structure/closet/crate,/obj/random/masks,/obj/random/masks,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
 "N" = (/obj/machinery/door/airlock,/turf/simulated/floor/tiled,/area/template_noop)
-"O" = (/obj/structure/closet/crate,/obj/random/glasses,/obj/random/masks,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
+"O" = (/obj/structure/closet/crate/freezer,/obj/random/drinkbottle,/obj/random/drinkbottle,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
 "P" = (/turf/simulated/floor/tiled/techfloor,/area/template_noop)
 "Q" = (/obj/structure/closet/crate,/obj/random/ammo,/obj/random/ammo,/obj/random/ammo,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
-"R" = (/obj/structure/closet/crate/freezer,/obj/random/drinkbottle,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
-"S" = (/obj/structure/closet/crate/freezer,/obj/random/loot,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
+"R" = (/obj/structure/closet/crate/freezer,/obj/random/pilruin/wildloot,/obj/random/pilruin/wildloot,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
+"S" = (/obj/machinery/door/blast/shutters{icon_state = "shutter1"; dir = 8},/obj/machinery/atmos_protector,/turf/simulated/floor/plating,/area/template_noop)
 "T" = (/turf/template_noop,/area/space)
 "U" = (/obj/structure/pilruin/light{icon_state = "small"},/turf/simulated/wall/r_wall,/area/template_noop)
 "V" = (/obj/effect/gibspawner/human,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
-"W" = (/obj/random/pilruinspider,/obj/effect/gibspawner/generic,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
+"W" = (/obj/random/pilruin/spider,/obj/effect/gibspawner/generic,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
 "X" = (/obj/effect/gibspawner/generic,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
 
 (1,1,1) = {"
@@ -57,13 +57,13 @@ accghciijklmmmnolnnpmmcdddddd
 ccqnnrnnpnlmnpVnsnntnmcaddada
 cuoWncvntwlntnoplxpnnncdaddda
 cynpzcUscccUsccccUcscccadaaad
-cutnAcnomBCnnnBBmCnncnsddddda
-cuptnsnnBmBCntmBBnnnsncddaaad
+cutnzcnomBCnnnBBmCnncnIddddda
+cuptnsnnBmBCntmBBnpnIncddaaad
 cccUccUscccUsccccUcscccdadadd
-cDiilinnEAnnnliiFntnGHIddadad
-cDiolJotEwtpnlKnpoLnpHIddddaa
-cDMoNnnEknXomlmntpnOnHIddddad
-ccDPlQtnpnmmmlmmRnSnnHIdddada
+cDiilinnEwnnnliiFntnAHSddadad
+cDiolGotEwtpnlJnpoLnpHSddddaa
+cDKoNnnEknXomlmntpnMnHSddddad
+ccDPlQtnpnmmmlmmOnRnnHSdddada
 dcceebccccccccececeebcccddaad
 aaadebcfdddaaaacefddddddaadad
 aaaaabccaaaaaaaaaaaaaaaaadaaa

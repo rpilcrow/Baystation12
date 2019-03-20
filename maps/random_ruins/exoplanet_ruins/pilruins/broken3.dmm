@@ -6,16 +6,15 @@
 "f" = (/obj/machinery/floodlight,/turf/simulated/floor/plating,/area/template_noop)
 "g" = (/obj/structure/closet/crate/freezer/rations,/turf/simulated/floor/plating,/area/template_noop)
 "h" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/plating,/area/template_noop)
-"i" = (/obj/structure/table/rack,/turf/simulated/floor/plating,/area/template_noop)
+"i" = (/obj/structure/table/rack,/obj/random/pilruin/wildloot,/turf/simulated/floor/plating,/area/template_noop)
 "j" = (/obj/structure/closet/crate,/obj/random/loot,/turf/simulated/floor/plating,/area/template_noop)
 "k" = (/obj/random/trash,/turf/simulated/floor/plating,/area/template_noop)
 "l" = (/obj/random/junk,/turf/simulated/floor/tiled,/area/template_noop)
 "m" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/blood/drip,/turf/simulated/floor/plating,/area/template_noop)
 "n" = (/obj/machinery/door/airlock,/turf/simulated/floor/plating,/area/template_noop)
 "o" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/blood,/turf/simulated/floor/plating,/area/template_noop)
-"p" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/blood/drip,/obj/random/pilruinhorrible,/turf/simulated/floor/plating,/area/template_noop)
+"p" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/blood/drip,/obj/random/pilruin/horrible,/turf/simulated/floor/plating,/area/template_noop)
 "q" = (/obj/structure/mattress/dirty,/obj/effect/decal/cleanable/dirt,/obj/effect/gibspawner/generic,/turf/simulated/floor/plating,/area/template_noop)
-"r" = (/obj/structure/table/rack,/obj/random/loot,/turf/simulated/floor/plating,/area/template_noop)
 "t" = (/obj/effect/decal/cleanable/dirt,/obj/random/junk,/turf/simulated/floor/plating,/area/template_noop)
 "u" = (/turf/simulated/floor/tiled,/area/template_noop)
 "v" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled,/area/template_noop)
@@ -29,7 +28,7 @@ abbaaaaaaaac
 blufaghiajee
 bvwmnophaeec
 auxvaehoaecc
-aayaarhqaekc
+aayaaihqaekc
 ahzvaabaaeea
 evhvekeedeea
 ceetmhhhheea

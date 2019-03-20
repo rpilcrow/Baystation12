@@ -997,7 +997,10 @@ something, make sure it's not in one of the other lists.*/
 				/obj/item/weapon/circular_saw = 7,
 				/obj/item/weapon/scalpel = 7,
 				/obj/item/weapon/melee/baton/loaded = 9,
-				/obj/item/device/radio/headset/syndicate = 6)
+				/obj/item/device/radio/headset/syndicate = 6,
+				/obj/item/device/personal_shield = 10,
+				/obj/item/device/taunter = 7,
+				/obj/item/device/shuffler = 5)
 
 /obj/random/voidhelmet
 	name = "Random Voidsuit Helmet"

@@ -119,9 +119,11 @@
 	if(Adjacent(user))
 		if(messenger_bag)
 			if(messenger_bag.contents.len)
-				to_chat(user, "It's wearing a little messenger bag with a Corvid Couriers logo on it. There's something stuffed inside.")
+				to_chat(user, "It's wearing a little messenger bag. There's something stuffed inside.")
+				//to_chat(user, "It's wearing a little messenger bag with a Corvid Couriers logo on it. There's something stuffed inside.")
 			else
-				to_chat(user, "It's wearing a little messenger bag with a Corvid Couriers logo on it. It seems to be empty.")
+				to_chat(user, "It's wearing a little messenger bag. It seems to be empty.")
+				//to_chat(user, "It's wearing a little messenger bag with a Corvid Couriers logo on it. It seems to be empty.")
 		if(access_card)
 			to_chat(user, "It has an access cuff with \the [access_card] inserted.")
 
@@ -154,12 +156,20 @@
 	desc = "He's mad as hell, and he's not going to take it anymore!"
 	speak_emote = list("swears","curses","caws","complains")
 	speak = list("Caw.", "Caw?", "Caw!", "CAW.","FUCK!","SHIT!","Why doesn't it WORK?","Why won't it compile?","What the fuck is this?","What's broken now?","But why?","Who made this?","But how?","FUCK tabbing!")
-	speak_chance = 25 //1/8th of the time
+	speak_chance = 10 //1/20th of the time
 	stop_automated_movement = 0
 
 /mob/living/simple_animal/crow/pilcrow/New()
 	..()
-	messenger_bag = null //sorry
+//	if(prob(33))
+//		messenger_bag = null //sorry
+//	else
+	if(messenger_bag)
+		messenger_bag.name = "Pilcrow's Satchel"
+		messenger_bag.desc = "It's a little messenger bag designed for a crow!"
+		new /obj/item/weapon/pen/fancy (messenger_bag)
+		for(var/i = 1 to 6)
+			new /obj/item/weapon/pen (messenger_bag)
 	access_card = new/obj/item/weapon/card/id/captains_spare(src)
 	access_card.name = "Pilcrow's ID"
 	access_card.desc = "The golden ticket! It's a little beat up, and has been pecked at."

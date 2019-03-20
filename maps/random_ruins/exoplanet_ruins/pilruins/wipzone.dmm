@@ -35,7 +35,7 @@
 "aI" = (/obj/effect/decal/cleanable/generic,/turf/template_noop,/area/template_noop)
 "aJ" = (/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
 "aK" = (/turf/simulated/floor/tiled/techfloor,/area/template_noop)
-"aL" = (/obj/random/pilruinmecha,/turf/simulated/floor/tiled/techfloor,/area/template_noop)
+"aL" = (/obj/random/pilruin/mecha,/turf/simulated/floor/tiled/techfloor,/area/template_noop)
 "aM" = (/mob/living/simple_animal/hostile/retaliate/malf_drone,/turf/simulated/floor/tiled/techfloor,/area/template_noop)
 "aN" = (/obj/machinery/door/airlock,/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
 "aO" = (/obj/machinery/door/airlock,/obj/machinery/atmos_protector,/turf/simulated/floor/tiled/techfloor,/area/template_noop)
@@ -210,7 +210,7 @@
 "eM" = (/obj/structure/closet/crate,/obj/random/ammo,/obj/random/ammo,/obj/random/ammo,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
 "eN" = (/obj/structure/closet/crate/freezer,/obj/random/drinkbottle,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
 "eO" = (/obj/structure/closet/crate/freezer,/obj/random/loot,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
-"eP" = (/obj/random/pilruinspider,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
+"eP" = (/obj/random/pilruin/spider,/turf/simulated/floor/tiled/steel_grid,/area/template_noop)
 "eQ" = (/obj/structure/shuttle/engine/propulsion{icon_state = "propulsion"; dir = 4},/turf/simulated/floor/plating,/area/template_noop)
 
 (1,1,1) = {"

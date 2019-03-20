@@ -58,3 +58,27 @@
 	sord["baseball bat"] = /obj/item/weapon/material/twohanded/baseballbat
 	sord["swordcane"] = /obj/item/weapon/cane/concealed/sword
 	gear_tweaks += new/datum/gear_tweak/path(sord)
+
+/datum/gear/utility/bshield
+	display_name = "budget personal shield"
+	cost = 2
+	sort_category = "Utility"
+	path = /obj/item/device/personal_shield/budget
+/*
+/datum/gear/utility/pshield
+	display_name = "personal shield"
+	cost = 6
+	sort_category = "Utility"
+	path = /obj/item/device/personal_shield
+*/
+/datum/gear/utility/flashlight
+	display_name = "flashlight"
+	cost = 1
+	sort_category = "Utility"
+	path = /obj/item/device/flashlight
+
+/datum/gear/utility/maglight
+	display_name = "flashlight (maglight)"
+	cost = 2
+	sort_category = "Utility"
+	path = /obj/item/device/flashlight/maglight

@@ -770,6 +770,11 @@
 	desc = "A farwa plush doll. It's soft and comforting!"
 	icon_state = "farwaplushie"
 
+/obj/item/toy/plushie/crow //PIL_EDIT
+	name = "crow plush"
+	desc = "A cuddly corvid!"
+	icon_state = "crowplushie"
+
 //Toy cult sword
 /obj/item/toy/cultsword
 	name = "foam sword"

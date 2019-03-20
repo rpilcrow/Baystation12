@@ -10,16 +10,17 @@
 "j" = (/obj/effect/decal/cleanable/dirt,/obj/random/trash,/turf/simulated/floor/plating,/area/template_noop)
 "k" = (/obj/machinery/door/airlock,/turf/simulated/floor/plating,/area/template_noop)
 "l" = (/obj/effect/decal/cleanable/blood,/turf/simulated/floor/plating,/area/template_noop)
-"m" = (/obj/structure/table/rack,/obj/random/loot,/obj/random/loot,/turf/simulated/floor/plating,/area/template_noop)
+"m" = (/obj/structure/table/rack,/obj/random/pilruin/wildloot,/turf/simulated/floor/plating,/area/template_noop)
 "n" = (/obj/random/junk,/turf/simulated/floor/plating,/area/template_noop)
+"o" = (/obj/structure/table/rack,/obj/random/loot,/obj/random/pilruin/wildloot,/turf/simulated/floor/plating,/area/template_noop)
 
 (1,1,1) = {"
 aaddcaac
 aehfehdc
 ahggghdc
 bhjgaaaa
-hhhgahia
-dhnjklma
+hhhgahma
+dhnjkloa
 hhghahia
 chddaaaa
 "}

@@ -8,8 +8,8 @@
 "h" = (/turf/simulated/floor/plating,/area/template_noop)
 "i" = (/obj/effect/decal/cleanable/dirt,/obj/random/trash,/turf/simulated/floor/plating,/area/template_noop)
 "j" = (/obj/structure/girder,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/plating,/area/template_noop)
-"k" = (/obj/effect/decal/cleanable/dirt,/obj/random/hostile,/obj/random/projectile,/turf/simulated/floor/plating,/area/template_noop)
-"l" = (/obj/effect/decal/cleanable/dirt,/obj/random/junk,/obj/random/ammo,/turf/simulated/floor/plating,/area/template_noop)
+"k" = (/obj/effect/decal/cleanable/dirt,/obj/random/hostile,/obj/random/ammo,/turf/simulated/floor/plating,/area/template_noop)
+"l" = (/obj/effect/decal/cleanable/dirt,/obj/random/junk,/obj/random/pilruin/weapon,/obj/random/pilruin/weapon,/turf/simulated/floor/plating,/area/template_noop)
 "m" = (/obj/effect/decal/cleanable/dirt,/obj/random/trash,/obj/random/ammo,/turf/simulated/floor/plating,/area/template_noop)
 "n" = (/obj/random/hostile,/obj/random/ammo,/turf/simulated/floor/plating,/area/template_noop)
 

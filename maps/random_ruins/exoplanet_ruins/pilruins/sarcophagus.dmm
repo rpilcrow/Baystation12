@@ -4,7 +4,7 @@
 "d" = (/turf/simulated/floor/greengrid,/area/template_noop)
 "e" = (/obj/structure/sign/warning/caution{dir = 8; icon_state = "securearea"; pixel_x = 35},/turf/template_noop,/area/template_noop)
 "f" = (/turf/simulated/floor/tiled/techfloor/grid,/area/template_noop)
-"g" = (/obj/random/pilruinmecha,/turf/simulated/floor/tiled/techfloor,/area/template_noop)
+"g" = (/obj/random/pilruin/mecha,/turf/simulated/floor/tiled/techfloor,/area/template_noop)
 "h" = (/obj/structure/sign/warning/caution{dir = 4; icon_state = "securearea"; pixel_x = -35},/turf/template_noop,/area/template_noop)
 "i" = (/turf/simulated/floor/tiled/techfloor,/area/template_noop)
 "j" = (/turf/template_noop,/area/space)

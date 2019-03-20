@@ -112,7 +112,7 @@
 
 /mob/living/simple_animal/hostile/voxslug/limbexploder
 	name = "slug"
-	desc = "."
+	desc = "It's a bulbous-looking slug with a nasty set of teeth. It glows and flickers from within."
 	icon_state = "voxslug"
 	icon_living = "voxslug"
 	item_state = "voxslug"
@@ -128,13 +128,14 @@
 /mob/living/simple_animal/hostile/voxslug/limbexploder/New()
 	..()
 	latch_bp = pick(BP_L_ARM,BP_R_ARM,BP_L_LEG,BP_R_LEG)
+	color = list(0,1,0, 0,0,1, 1,0,0) //RGB > BRG
 
 /mob/living/simple_animal/hostile/voxslug/limbexploder/attach(mob/living/carbon/human/H)
 	. = ..()
 	if(!.)
 		latch_bp = pick(BP_L_ARM,BP_R_ARM,BP_L_LEG,BP_R_LEG)
 
-/*
+
 //todo:
 //get limb
 //check limb damage
@@ -142,13 +143,26 @@
 //on explode, drop us on the floor and throw us away
 //alternatively kill the limb exploder
 /mob/living/simple_animal/hostile/voxslug/limbexploder/implant_effect(var/mob/living/L)
-	if(istype(L))
+	if(istype(L,/mob/living/carbon/human))
+		var/mob/living/carbon/human/H = L
 		var/obj/item/organ/external/E = H.organs_by_name[latch_bp]
+		if(istype(E))
+			E.take_external_damage(rand(1,10))
+		if(istype(E) && E.brute_ratio > 0.39)
+			playsound(loc, 'sound/effects/squelch2.ogg', 50, 1)
+			to_chat(L,"<span class='warning'>\The [src] looks like it's about to explode!</span>")
+			if(prob(round(E.brute_ratio*100)-10))
+				L.visible_message("<span class='warning'>\The [src] explodes, blowing off [L]'s [E]!</span>")
+				E.droplimb(0, DROPLIMB_BLUNT, 0) //your arm asplode
+				explosion(L, -1, -1, 0, 1)
+				apply_damage(health*2) //lots of things happening here, but this will always kill the slug.
 
-		if(prob(1))
-			to_chat(L, "<span class='warning'>You feel strange as \the [src] pulses...</span>")
-		var/datum/reagents/R = L.reagents
-		R.add_reagent(/datum/reagent/toxin, 0.5)*/
+		//if(prob(1))
+		//	to_chat(L, "<span class='warning'>You feel strange as \the [src] pulses...</span>")
+		//var/datum/reagents/R = L.reagents
+		//R.add_reagent(/datum/reagent/toxin, 0.5)
+	else if(istype(L))
+		L.apply_damage(10)
 
 
 /mob/living/simple_animal/hostile/pmc

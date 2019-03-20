@@ -66,6 +66,8 @@
 /mob/living/simple_animal/hostile/proc/ValidTarget(var/atom/A)
 	if(A == src)
 		return FALSE
+	if(A.invisibility > see_invisible) //no more shooting at divews, no more shooting at things we shouldn't even see.
+		return FALSE
 
 	if(ismob(A))
 		var/mob/M = A
