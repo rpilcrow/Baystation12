@@ -154,17 +154,17 @@
 	melee_accuracy_bonus = 10
 
 /obj/item/weapon/material/sword/longsword/silver
-	name = "silver longsword"
+	desc = "A sturdy, classic weapon, this one made from silver; perfect for slaying mythical shapeshifters."
 	default_material = MATERIAL_SILVER
 
 /obj/item/weapon/material/sword/longsword/titanium
-	name = "titanium longsword"
+	desc = "A sturdy, classic weapon, this one made from titanium."
 	default_material = MATERIAL_TITANIUM
 
 
 
 /obj/item/weapon/cane/concealed/sword
-	desc = "A cane used by a true gentleman. There's a seam near the end."
+	desc = "A cane used by a true gentleman."
 	icon_state = "swordcane-sheath1"
 	concealed_type = /obj/item/weapon/material/sword/canesword
 	w_class = ITEM_SIZE_NORMAL
@@ -204,3 +204,65 @@
 /obj/item/weapon/material/hatchet/machete/pilcrow/Initialize()
 	. = ..()
 	icon_state = "machete_pil"
+
+
+/obj/item/weapon/material/flicksword
+	name = "flicksword"
+	desc = "A defensive tool when folded in, and a lethal weapon when flicked out. Does extra damage when striking just after flicking it out."
+	icon = 'icons/obj/pilcrow.dmi'
+	icon_state = "flicksword0"
+	item_state = "machete"
+	hitsound = 'sound/weapons/rapidslice.ogg'
+	sharp = 0
+	edge = 0
+	force_divisor = 0.2
+	thrown_force_divisor = 0.5
+	var/fstate = 0
+	var/nextflick = 0
+	base_parry_chance = 80
+
+/obj/item/weapon/material/flicksword/attack_self(mob/user)
+//	. = ..()
+//	if(.)
+	if(fstate)
+		playsound(user, 'sound/machines/click.ogg', 25, 1, -1)
+		to_chat(user,"\The [src] folds in.")
+		sharp = 0
+		edge = 0
+		base_parry_chance = 80
+	else
+		if(nextflick > world.time)
+			return
+		else
+			playsound(user, 'sound/weapons/handcuffs.ogg', 75, 1, -1)
+			to_chat(user,"You flick out \the [src].")
+			nextflick = world.time + 1 SECOND
+			sharp = 1
+			edge = 1
+			base_parry_chance = 25
+	fstate = !fstate
+	update_icon()
+
+/obj/item/weapon/material/flicksword/on_update_icon()
+	..()
+	icon_state = "flicksword[fstate]"
+
+/obj/item/weapon/material/flicksword/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
+
+	var/power = force
+	var/sndpower = 40
+	if(fstate)
+		power += 3
+		sndpower += 10
+	if(nextflick > world.time)
+		power *= 2
+		sndpower += 25
+		nextflick = world.time
+	if(MUTATION_HULK in user.mutations)
+		power *= 2
+
+	if(hitsound)
+		playsound(loc, hitsound, sndpower, 1, -1)
+
+	return target.hit_with_weapon(src, user, power, hit_zone)
+

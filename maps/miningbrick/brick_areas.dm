@@ -42,6 +42,10 @@
 	name = "\improper Dormitories"
 	icon_state = "crew_quarters"
 
+/area/ship/brick/upper/bathroom
+	name = "\improper Bathroom"
+	icon_state = "crew_quarters"
+
 /area/ship/brick/upper/kitchen
 	name = "\improper Mess Hall"
 	icon_state = "kitchen"
@@ -55,6 +59,13 @@
 /area/ship/brick/upper/engi/atmos
 	name = "\improper Atmospherics"
 	icon_state = "atmos"
+
+
+/area/ship/brick/upper/toolstorage
+	name = "\improper Tool Storage"
+	icon_state = "engineering_supply"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+//	req_access = list(access_engine)
 
 /area/ship/brick/upper/science
 	name = "\improper Research"
@@ -110,6 +121,10 @@
 	name = "\improper Unused Compartment B"
 	icon_state = "chem"
 
+/area/ship/brick/lower/eva
+	name = "\improper EVA"
+	icon_state = "eva"
+
 /area/ship/brick/thrusters
 	icon_state = "engine"
 	ambience = list('sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambieng1.ogg')
@@ -147,6 +162,8 @@
 /area/ship/brick/maintenance/lowerright
 	name = "\improper Lower Starboard Maintenance"
 	icon_state = "smaint"
+
+
 
 
 /area/ship/scrap/shuttle/outgoing

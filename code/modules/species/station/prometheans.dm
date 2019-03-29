@@ -5,7 +5,11 @@ var/datum/species/shapeshifter/promethean/prometheans
 
 	name =             SPECIES_PROMETHEAN
 	name_plural =      "Prometheans"
-	description =            "What has Science done?"
+	description =      "<i>What has science done?</i> The results of experiments with mutagenic xenobiological substances, \
+						Prometheans are your stereotypical 'slime people', with colourful translucent bodies that \
+						quickly regenerate from most physical trauma thanks to their malleability. Prometheans are also capable of withstanding \
+						radiation and electricity with very few issues, discharging it (often not so safely) later.<br> \
+						However, sources of heat such as lasers and fire can rapidly kill the cells of a Promethean and are to be avoided at all costs."
 	show_ssd =         "totally quiescent"
 	death_message =    "rapidly loses cohesion, splattering across the ground..."
 	knockout_message = "collapses inwards, forming a disordered puddle of goo."
@@ -34,7 +38,7 @@ var/datum/species/shapeshifter/promethean/prometheans
 	brute_mod =           0.5
 	burn_mod =            2
 	oxy_mod =             0
-	total_health =        240
+//	total_health =        240
 	siemens_coefficient = -1
 	rarity_value =        5
 	limbs_are_nonsolid =  TRUE
@@ -61,13 +65,45 @@ var/datum/species/shapeshifter/promethean/prometheans
 		/mob/living/carbon/human/proc/shapeshifter_select_shape,
 		/mob/living/carbon/human/proc/shapeshifter_select_colour,
 		/mob/living/carbon/human/proc/shapeshifter_select_hair,
+		/mob/living/carbon/human/proc/shapeshifter_select_hair_colour,
 		/mob/living/carbon/human/proc/shapeshifter_select_gender
 		)
+
+	base_auras = list(
+		/obj/aura/regenerating/human/prommie
+		)
+
+
+//			CULTURE_OTHER,
+//			CULTURE_HUMAN_SPACER,
+//			CULTURE_HUMAN_SPAFRO
+
+	available_cultural_info = list(
+		TAG_CULTURE = list(
+			CULTURE_PROM_VAT
+		),
+		TAG_HOMEWORLD = list(
+			HOME_SYSTEM_OTHER
+		),
+		TAG_FACTION = list(
+			FACTION_SOL_CENTRAL,
+			FACTION_INDIE_CONFED,
+			FACTION_NANOTRASEN,
+			FACTION_FREETRADE,
+			FACTION_OTHER
+		)
+	)
+
+	default_cultural_info = list(
+		TAG_CULTURE = CULTURE_PROM_VAT,
+		TAG_HOMEWORLD = HOME_SYSTEM_OTHER,
+		TAG_FACTION = FACTION_OTHER
+	)
 
 	valid_transform_species = list(SPECIES_HUMAN, SPECIES_UNATHI, SPECIES_SKRELL, SPECIES_DIONA, "Monkey")
 	monochromatic = 1
 
-	var/heal_rate = 5 // Temp. Regen per tick.
+//	var/heal_rate = 5 // Temp. Regen per tick.
 
 /datum/species/shapeshifter/promethean/New()
 	..()
@@ -89,14 +125,16 @@ var/datum/species/shapeshifter/promethean/prometheans
 		var/obj/effect/decal/cleanable/C = locate() in T
 		if(C)
 			if(H.nutrition < 300)
-				H.nutrition += rand(10,20)
+				H.nutrition += rand(2,5)
 			qdel(C)
+	return 1
 
 	// We need a handle_life() proc for this stuff.
 
 	// Regenerate limbs and heal damage if we have any. Copied from Bay xenos code.
 	// Theoretically the only internal organ a slime will have
 	// is the slime core. but we might as well be thorough.
+/*
 	for(var/obj/item/organ/I in H.internal_organs)
 		if(I.damage > 0)
 			I.damage = max(I.damage - heal_rate, 0)
@@ -107,10 +145,10 @@ var/datum/species/shapeshifter/promethean/prometheans
 	// Replace completely missing limbs.
 	for(var/limb_type in has_limbs)
 		var/obj/item/organ/external/E = H.organs_by_name[limb_type]
-		if(E && !E.is_usable())
-			E.removed()
-			qdel(E)
-			E = null
+//		if(E && !E.is_usable())
+//			E.removed()
+//			qdel(E)
+//			E = null
 		if(!E)
 			var/list/organ_data = has_limbs[limb_type]
 			var/limb_path = organ_data["path"]
@@ -127,6 +165,10 @@ var/datum/species/shapeshifter/promethean/prometheans
 		H.adjustOxyLoss(-heal_rate)
 		H.adjustToxLoss(-heal_rate)
 		return 1
+
+	return 1
+*/
+
 
 /datum/species/shapeshifter/promethean/get_blood_colour(var/mob/living/carbon/human/H)
 	return (H ? rgb(H.r_skin, H.g_skin, H.b_skin) : ..())
@@ -149,3 +191,16 @@ var/datum/species/shapeshifter/promethean/prometheans
 			return "<span class='warning'>[G.He] [G.is] glowing brightly with high levels of electrical activity.</span>"
 		if(35 to INFINITY)
 			return "<span class='danger'>[G.He] [G.is] radiating massive levels of electrical activity!</span>"
+
+/datum/species/shapeshifter/promethean/get_hair_styles(var/mob/living/carbon/human/H)
+	var/list/L = LAZYACCESS(hair_styles, type)
+	if(!L)
+		L = list()
+		LAZYSET(hair_styles, type, L)
+		for(var/hairstyle in GLOB.hair_styles_list)
+			var/datum/sprite_accessory/S = GLOB.hair_styles_list[hairstyle]
+			if(!(default_form in S.species_allowed))
+				continue
+			ADD_SORTED(L, hairstyle, /proc/cmp_text_asc)
+			L[hairstyle] = S
+	return L

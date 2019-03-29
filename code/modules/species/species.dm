@@ -106,7 +106,7 @@
 	var/reagent_tag                                             // Used for metabolizing reagents.
 	var/breath_pressure = 16                                    // Minimum partial pressure safe for breathing, kPa
 	var/breath_type = "oxygen"                                  // Non-oxygen gas breathed, if any.
-	var/poison_types = list("phoron" = TRUE, "chlorine" = TRUE) // Noticeably poisonous air - ie. updates the toxins indicator on the HUD.
+	var/list/poison_types = list("phoron" = TRUE, "chlorine" = TRUE) // Noticeably poisonous air - ie. updates the toxins indicator on the HUD.
 	var/exhale_type = "carbon_dioxide"                          // Exhaled gas type.
 	var/max_pressure_diff = 60                                  // Maximum pressure difference that is safe for lungs
 	var/cold_level_1 = 243                                      // Cold damage level 1 below this point. -30 Celsium degrees
@@ -749,9 +749,12 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 					dat += "</br><b>Vulnerable to [kind].</b>"
 				else if(damage_types[kind] < 1)
 					dat += "</br><b>Resistant to [kind].</b>"
-			dat += "</br><b>They breathe [gas_data.name[breath_type]].</b>"
-			dat += "</br><b>They exhale [gas_data.name[exhale_type]].</b>"
-			dat += "</br><b>[capitalize(english_list(poison_types))] [LAZYLEN(poison_types) == 1 ? "is" : "are"] poisonous to them.</b>"
+			if(breath_type)
+				dat += "</br><b>They breathe [gas_data.name[breath_type]].</b>"
+			if(exhale_type)
+				dat += "</br><b>They exhale [gas_data.name[exhale_type]].</b>"
+			if(poison_types && poison_types.len)
+				dat += "</br><b>[capitalize(english_list(poison_types))] [LAZYLEN(poison_types) == 1 ? "is" : "are"] poisonous to them.</b>"
 			dat += "</small>"
 		dat += "</td>"
 	dat += "</tr>"

@@ -199,7 +199,8 @@ GLOBAL_LIST_EMPTY(skills)
 						"Trained"			= "You have had extensive weapons training, or have used weapons in combat. Your aim is better now. You are familiar with most types of weapons and can use them in a pinch. You have an understanding of tactics, and can be trusted to stay calm under fire. You may have military or police experience and you probably carry a weapon on the job.",
 						"Experienced"		= "You've used firearms and other ranged weapons in high-stress situations, and your skills have become automatic. Your aim is good.",
 						"Master"		= "You are an exceptional shot with a variety of weapons, from simple to exotic. You use a weapon as naturally as though it were a part of your own body. You may be a sniper or special forces operator of some kind.<br>- You get extra accuracy for sniper rifles.<br>- You automatically eject shells from bolt-action firearms.")
-
+/*
+//PIL_EDIT
 /decl/hierarchy/skill/security/weapons/get_cost(var/level)
 	switch(level)
 		if(SKILL_BASIC)
@@ -210,7 +211,7 @@ GLOBAL_LIST_EMPTY(skills)
 			return 4*difficulty
 		else
 			return 0
-
+*/
 /decl/hierarchy/skill/security/forensics
 	ID = "forensics"
 	name = "Forensics"
@@ -221,7 +222,8 @@ GLOBAL_LIST_EMPTY(skills)
 						"Experienced"		= "You're a pathologist, or detective. You've seen your share of bizarre cases, and spent a lot of time putting pieces of forensic puzzle together, so you're faster now.<br>- You can notice additional details upon examining, such as fibers, partial prints, and gunshot residue.",
 						"Master"		= "You're a big name in forensic science. You might be an investigator who cracked a famous case, or you published papers on new methods of forensics. Either way, if there's a forensic trail, you will find it, period.<br>- You can notice traces of wiped off blood.")
 
-
+/*
+//PIL_EDIT
 /decl/hierarchy/skill/security/forensics/get_cost(var/level)
 	switch(level)
 		if(SKILL_BASIC, SKILL_ADEPT, SKILL_EXPERT)
@@ -230,7 +232,7 @@ GLOBAL_LIST_EMPTY(skills)
 			return 3 * difficulty
 		else
 			return 0
-
+*/
 // Category: Engineering
 
 /decl/hierarchy/skill/engineering/construction

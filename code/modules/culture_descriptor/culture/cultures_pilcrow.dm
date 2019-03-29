@@ -59,7 +59,7 @@
 	rounded up and used as a 'helmsman' for one of the empire's ships, a living battery who would psionically propel the starship through \
 	the cosmos. Fortunately for you, with the empire's collapse, that is no longer quite such a danger."
 	bloodcaste = COLOR_BLOOD_GOLD
-	economic_power = 0.3
+	economic_power = 0.5
 	psichance = 88
 	psipower = 3
 	psitypes = list(PSI_ENERGISTICS,PSI_PSYCHOKINESIS)
@@ -112,7 +112,7 @@
 	ceruleanbloods were amongst those given the larger houses and better positions. Unfortuantely, while you had social standing and clout, you were unlikely \
 	to have psionic power, or any unusual abilities at all."
 	bloodcaste = COLOR_BLOOD_CERULEAN
-	economic_power = 1.3
+	economic_power = 1.1
 	psichance = 3
 	psipower = 2
 	psitypes = list(PSI_COERCION)
@@ -123,7 +123,7 @@
 	had the potential to command the most social power, if you could stand the constant intrigue and betrayal. You likely lost a lot after the collapse of the empire \
 	and unlike the lowbloods you don't have even an ounce of psionic power to show for it."
 	bloodcaste = COLOR_BLOOD_INDIGO
-	economic_power = 1.4
+	economic_power = 1.2
 	psichance = 1
 	psipower = 1
 	psitypes = list(PSI_COERCION)
@@ -222,7 +222,7 @@
 
 /decl/cultural_info/culture/wook
 	name = CULTURE_WOOKIEE
-	description = "You are a wookiee!."
+	description = "You are a wookiee!"
 	economic_power = 0.33
 	hidden_from_codex = FALSE
 	language = LANGUAGE_WOOKIEE
@@ -232,3 +232,14 @@
 
 //	language = LANGUAGE_GALCOM
 //	default_language = LANGUAGE_GALCOM
+
+
+
+
+/decl/cultural_info/culture/human/vatgrown/prommie
+	name = CULTURE_PROM_VAT
+	description = "You are a promethean; your existence centers around the unique slime core in your chest, created either in a vat or through extensive modification to an existing \
+	slime core, and chances are good you weren't even intended to exist."
+//	language = LANGUAGE_GALCOM
+	secondary_langs = list()
+	economic_power = 0.33

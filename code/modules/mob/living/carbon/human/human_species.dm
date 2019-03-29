@@ -70,3 +70,6 @@
 
 /mob/living/carbon/human/adherent/New(var/new_loc)
 	..(new_loc, SPECIES_ADHERENT)
+
+/mob/living/carbon/human/promethean/New(var/new_loc)
+	..(new_loc, SPECIES_PROMETHEAN)

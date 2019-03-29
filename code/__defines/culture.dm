@@ -182,5 +182,14 @@
 #define CULTURE_TROLL_VIOLET   "Violetblood"
 #define CULTURE_TROLL_FUCHSIA  "Royalblood"
 
+#define FACTION_TROLL_EMPIRE	"Remnant"
+#define FACTION_TROLL_REBEL		"Rebel"
+#define FACTION_TROLL_CIV		"Neutral"
+
+#define HOME_SYSTEM_ALTERNIA	"Alternia"
+
 //wook
 #define CULTURE_WOOKIEE			"Wookiee"
+
+//other
+#define CULTURE_PROM_VAT		"Vat-Grown Promethean"

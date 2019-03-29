@@ -164,3 +164,11 @@ var/datum/robolimb/basic_robolimb
 	applies_to_part = list(BP_HEAD)
 	unavailable_at_fab = 1
 	restricted_to = list(SPECIES_IPC)
+
+/datum/robolimb/pilcrow/braincase
+	company = "cortexCases Braincase"
+	icon = 'icons/mob/human_races/cyberlimbs/pilcrow/braincase.dmi'
+	applies_to_part = list(BP_HEAD)
+	unavailable_at_fab = 1
+	has_eyes = FALSE
+	restricted_to = list(SPECIES_IPC,SPECIES_HUMAN)

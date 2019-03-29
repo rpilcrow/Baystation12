@@ -35,3 +35,26 @@
 
 /obj/machinery/door/airlock/hatch/autoname/engineering
 	stripe_color = COLOR_AMBER
+
+
+//make nabbers work again
+
+/datum/species/nabber
+	available_cultural_info = list(
+		TAG_CULTURE = list(
+			CULTURE_NABBER_A
+		),
+		TAG_HOMEWORLD = list(
+			HOME_SYSTEM_SERPENTIDS
+		),
+		TAG_FACTION = list(
+			FACTION_XYNERGY
+		),
+		TAG_RELIGION =  list(
+			RELIGION_OTHER
+		)
+	)
+
+/decl/cultural_info/culture/nabber/a
+	name = CULTURE_NABBER_A
+	valid_jobs = list(/datum/job/assistant, /datum/job/doctor, /datum/job/engineer, /datum/job/scientist, /datum/job/officer)

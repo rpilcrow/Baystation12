@@ -19,6 +19,7 @@
 	name = "Hangar"
 	docking_controller = "bearcat_dock_port"
 	base_turf = /turf/simulated/floor/plating
+	base_area = /area/ship/brick/lower/hangar
 
 /obj/effect/shuttle_landmark/docking_arm_port/shuttle
 	landmark_tag = "nav_bearcat_port_dock_shuttle"

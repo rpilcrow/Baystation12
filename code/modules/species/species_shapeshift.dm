@@ -27,7 +27,7 @@ var/list/wrapped_species_by_ref = list()
 	return "[..()]-[wrapped_species_by_ref["\ref[H]"]]"
 
 /datum/species/shapeshifter/get_bodytype(var/mob/living/carbon/human/H)
-	if(!H) return ..()
+	if(!H) return default_form
 	var/datum/species/S = all_species[wrapped_species_by_ref["\ref[H]"]]
 	return S.get_bodytype(H)
 
@@ -101,9 +101,9 @@ var/list/wrapped_species_by_ref = list()
 		var/new_hair = input("Select a hairstyle.", "Shapeshifter Hair") as null|anything in species.get_hair_styles(src)
 		change_hair(new_hair ? new_hair : "Bald")
 		visible_message("<span class='notice'>\The [src]'s form contorts subtly.</span>")
-	if(species.get_facial_hair_styles(gender))
-		var/new_hair = input("Select a facial hair style.", "Shapeshifter Hair") as null|anything in species.get_facial_hair_styles(gender)
-		change_facial_hair(new_hair ? new_hair : "Shaved")
+//	if(species.get_facial_hair_styles(gender))
+//		var/new_hair = input("Select a facial hair style.", "Shapeshifter Hair") as null|anything in species.get_facial_hair_styles(gender)
+//		change_facial_hair(new_hair ? new_hair : "Shaved")
 
 /mob/living/carbon/human/proc/shapeshifter_select_gender()
 
@@ -150,18 +150,42 @@ var/list/wrapped_species_by_ref = list()
 
 	last_special = world.time + 50
 
-	var/new_skin = input("Please select a new body color.", "Shapeshifter Colour") as color
+	var/new_skin = input("Please select a new body colour.", "Shapeshifter Colour") as color
 	if(!new_skin)
 		return
-	shapeshifter_set_colour(new_skin)
+	shapeshifter_set_colour(new_skin,0)
 
-/mob/living/carbon/human/proc/shapeshifter_set_colour(var/new_skin)
+/mob/living/carbon/human/proc/shapeshifter_select_hair_colour()
 
-	r_skin =   hex2num(copytext(new_skin, 2, 4))
-	g_skin =   hex2num(copytext(new_skin, 4, 6))
-	b_skin =   hex2num(copytext(new_skin, 6, 8))
+	set name = "Select Hair Colour"
+	set category = "Abilities"
+
+	if(stat || world.time < last_special)
+		return
+
+	last_special = world.time + 50
+
+	var/new_skin = input("Please select a new hair colour.", "Shapeshifter Colour") as color
+	if(!new_skin)
+		return
+	shapeshifter_set_colour(new_skin,1)
+
+/mob/living/carbon/human/proc/shapeshifter_set_colour(var/new_skin,var/sel = 0)
 
 	var/datum/species/shapeshifter/S = species
+
+	if(sel && !S.monochromatic)
+		r_hair =   hex2num(copytext(new_skin, 2, 4))
+		g_hair =   hex2num(copytext(new_skin, 4, 6))
+		b_hair =   hex2num(copytext(new_skin, 6, 8))
+		r_facial = r_hair
+		g_facial = g_hair
+		b_facial = b_hair
+	else
+		r_skin =   hex2num(copytext(new_skin, 2, 4))
+		g_skin =   hex2num(copytext(new_skin, 4, 6))
+		b_skin =   hex2num(copytext(new_skin, 6, 8))
+
 	if(S.monochromatic)
 		r_hair =   r_skin
 		g_hair =   g_skin

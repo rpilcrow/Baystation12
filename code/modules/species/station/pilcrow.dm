@@ -56,21 +56,20 @@
 			CULTURE_TROLL_OLIVE
 		),
 		TAG_HOMEWORLD = list(
+			HOME_SYSTEM_ALTERNIA,
 			HOME_SYSTEM_OTHER
 		),
 		TAG_FACTION = list(
-			FACTION_SOL_CENTRAL,
-			FACTION_INDIE_CONFED,
-			FACTION_NANOTRASEN,
-			FACTION_FREETRADE,
-			FACTION_OTHER
+			FACTION_TROLL_EMPIRE,
+			FACTION_TROLL_REBEL,
+			FACTION_TROLL_CIV
 		)
 	)
 
 	default_cultural_info = list(
 		TAG_CULTURE = CULTURE_TROLL_RUST,
-		TAG_HOMEWORLD = HOME_SYSTEM_OTHER,
-		TAG_FACTION = FACTION_OTHER
+		TAG_HOMEWORLD = HOME_SYSTEM_ALTERNIA,
+		TAG_FACTION = FACTION_TROLL_REBEL
 	)
 
 	has_organ = list(
@@ -100,21 +99,20 @@
 			CULTURE_TROLL_JADE
 		),
 		TAG_HOMEWORLD = list(
+			HOME_SYSTEM_ALTERNIA,
 			HOME_SYSTEM_OTHER
 		),
 		TAG_FACTION = list(
-			FACTION_SOL_CENTRAL,
-			FACTION_INDIE_CONFED,
-			FACTION_NANOTRASEN,
-			FACTION_FREETRADE,
-			FACTION_OTHER
+			FACTION_TROLL_EMPIRE,
+			FACTION_TROLL_REBEL,
+			FACTION_TROLL_CIV
 		)
 	)
 
 	default_cultural_info = list(
 		TAG_CULTURE = CULTURE_TROLL_JADE,
-		TAG_HOMEWORLD = HOME_SYSTEM_OTHER,
-		TAG_FACTION = FACTION_OTHER
+		TAG_HOMEWORLD = HOME_SYSTEM_ALTERNIA,
+		TAG_FACTION = FACTION_TROLL_CIV
 	)
 
 	oxy_mod =   1.0
@@ -140,21 +138,20 @@
 			CULTURE_TROLL_INDIGO
 		),
 		TAG_HOMEWORLD = list(
+			HOME_SYSTEM_ALTERNIA,
 			HOME_SYSTEM_OTHER
 		),
 		TAG_FACTION = list(
-			FACTION_SOL_CENTRAL,
-			FACTION_INDIE_CONFED,
-			FACTION_NANOTRASEN,
-			FACTION_FREETRADE,
-			FACTION_OTHER
+			FACTION_TROLL_EMPIRE,
+			FACTION_TROLL_REBEL,
+			FACTION_TROLL_CIV
 		)
 	)
 
 	default_cultural_info = list(
 		TAG_CULTURE = CULTURE_TROLL_TEAL,
-		TAG_HOMEWORLD = HOME_SYSTEM_OTHER,
-		TAG_FACTION = FACTION_OTHER
+		TAG_HOMEWORLD = HOME_SYSTEM_ALTERNIA,
+		TAG_FACTION = FACTION_TROLL_EMPIRE
 	)
 
 	oxy_mod =   1.0
@@ -165,6 +162,7 @@
 	darksight_range = 5
 	blood_volume = 800 //fuckers bleed for a while
 	rarity_value = 6
+	strength = STR_HIGH
 
 /////////////////////////////////////////
 //SEA////////////////////////////////////
@@ -183,6 +181,7 @@
 	blood_volume = 900
 	rarity_value = 8
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
+	strength = STR_VHIGH
 
 	available_cultural_info = list(
 		TAG_CULTURE = list(
@@ -190,21 +189,20 @@
 			CULTURE_TROLL_FUCHSIA
 		),
 		TAG_HOMEWORLD = list(
+			HOME_SYSTEM_ALTERNIA,
 			HOME_SYSTEM_OTHER
 		),
 		TAG_FACTION = list(
-			FACTION_SOL_CENTRAL,
-			FACTION_INDIE_CONFED,
-			FACTION_NANOTRASEN,
-			FACTION_FREETRADE,
-			FACTION_OTHER
+			FACTION_TROLL_EMPIRE,
+			FACTION_TROLL_REBEL,
+			FACTION_TROLL_CIV
 		)
 	)
 
 	default_cultural_info = list(
 		TAG_CULTURE = CULTURE_TROLL_VIOLET,
-		TAG_HOMEWORLD = HOME_SYSTEM_OTHER,
-		TAG_FACTION = FACTION_OTHER
+		TAG_HOMEWORLD = HOME_SYSTEM_ALTERNIA,
+		TAG_FACTION = FACTION_TROLL_EMPIRE
 	)
 
 	has_organ = list(
@@ -473,3 +471,128 @@
 
 //		"storage1" =     list("loc" = ui_storage1,  "name" = "Left Pocket",  "slot" = slot_l_store,   "state" = "pocket"),
 //		"storage2" =     list("loc" = ui_storage2,  "name" = "Right Pocket", "slot" = slot_r_store,   "state" = "pocket"),
+
+
+
+
+/datum/species/darkling
+	name = SPECIES_DARK
+	description = "<b>WIP:</b> Noctites are a race of shadowy beings with glowing white eyes and the ability to discharge electricity. <br>\
+	They have excellent nightvision, resistance to damage from bright lights such flashes, and they can use their electrical charge to either \
+	illuminate their eyes, or to release a burst of electricity in a short range around them, stunning nearby people.<br>\
+	Since there are few ways to distinguish between Noctites, they often wear colourful, distinctive clothes to separate themselves from eachother, and some will \
+	even go as far as to decorate themselves in colourful inks and paints.<br><br>\
+	<b>NOTE:</b> Your shock ability has three charges."
+	icobase =     'icons/mob/human_races/species/dark/body.dmi'
+	preview_icon= 'icons/mob/human_races/species/dark/preview.dmi'
+	deform = 	  'icons/mob/human_races/species/dark/deformed.dmi'
+	organs_icon = 'icons/mob/human_races/species/dark/organs.dmi'
+
+	//strength = STR_LOW
+
+	brute_mod =      1.1
+	burn_mod =       0.9
+	oxy_mod =        1
+	toxins_mod =     1
+	radiation_mod =  1
+	flash_mod =      0
+	metabolism_mod = 1
+	stun_mod =       1
+	paralysis_mod =  1
+	weaken_mod =     1
+	siemens_coefficient = 0.25
+	darksight_range = 4
+	darksight_tint = DARKTINT_GOOD
+	rarity_value = 5
+	health_hud_intensity = 10
+
+	slowdown = -0.25
+
+	cold_level_1 = 200
+	cold_level_2 = 160
+	cold_level_3 = 100
+	cold_discomfort_level = 235
+	heat_discomfort_strings = list(
+		"You feel uncomfortably warm.",
+		"Your skin prickles in the heat."
+		)
+	cold_discomfort_strings = list(
+		"You feel chilly.",
+		"You shiver suddenly.",
+		"The cold seeps beneath your skin."
+		)
+
+//	blood_volume = 600
+
+	base_color = COLOR_BLACK
+	blood_color = COLOR_BLACK
+	flesh_color = "#202020"
+	taste_sensitivity = TASTE_DULL
+
+	descriptors = list(
+		/datum/mob_descriptor/height = -1,
+		/datum/mob_descriptor/build = -1,
+		)
+
+	appearance_flags = HAS_LIPS | HAS_UNDERWEAR
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_NO_FBP_CHARGEN
+
+	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite/sharp)
+	assisted_langs = list(LANGUAGE_NABBER)
+	min_age = 17
+	max_age = 100
+	hidden_from_codex = TRUE
+	bandages_icon = 'icons/mob/bandage.dmi'
+
+	gluttonous = GLUT_TINY
+
+	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
+
+	available_cultural_info = list(
+		TAG_CULTURE = list(
+			CULTURE_OTHER,
+			CULTURE_HUMAN_SPACER,
+			CULTURE_HUMAN_SPAFRO
+		),
+		TAG_HOMEWORLD = list(
+			HOME_SYSTEM_OTHER
+		),
+		TAG_FACTION = list(
+			FACTION_OTHER
+		)
+	)
+
+	default_cultural_info = list(
+		TAG_CULTURE = CULTURE_OTHER,
+		TAG_HOMEWORLD = HOME_SYSTEM_OTHER,
+		TAG_FACTION = FACTION_OTHER
+	)
+
+
+	has_limbs = list(
+		BP_CHEST =  list("path" = /obj/item/organ/external/chest/unbreakable/darkling),
+		BP_GROIN =  list("path" = /obj/item/organ/external/groin/unbreakable),
+		BP_HEAD =   list("path" = /obj/item/organ/external/head/unbreakable/darkling),
+		BP_L_ARM =  list("path" = /obj/item/organ/external/arm/unbreakable),
+		BP_R_ARM =  list("path" = /obj/item/organ/external/arm/right/unbreakable),
+		BP_L_LEG =  list("path" = /obj/item/organ/external/leg/unbreakable),
+		BP_R_LEG =  list("path" = /obj/item/organ/external/leg/right/unbreakable),
+		BP_L_HAND = list("path" = /obj/item/organ/external/hand/unbreakable),
+		BP_R_HAND = list("path" = /obj/item/organ/external/hand/right/unbreakable),
+		BP_L_FOOT = list("path" = /obj/item/organ/external/foot/unbreakable),
+		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right/unbreakable)
+		)
+
+	has_organ = list(
+		BP_HEART =    /obj/item/organ/internal/heart,
+		BP_STOMACH =  /obj/item/organ/internal/stomach,
+		BP_LUNGS =    /obj/item/organ/internal/lungs,
+		BP_LIVER =    /obj/item/organ/internal/liver,
+		//BP_KIDNEYS =  /obj/item/organ/internal/kidneys,
+		BP_ZAPPER =   /obj/item/organ/internal/shocker,
+		BP_BRAIN =    /obj/item/organ/internal/brain,
+		BP_EYES =     /obj/item/organ/internal/eyes/darkling
+		)
+
+/datum/species/darkling/get_bodytype(var/mob/living/carbon/human/H)
+	return SPECIES_HUMAN

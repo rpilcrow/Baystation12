@@ -77,3 +77,10 @@
 	name = "Tiger Stripes (Head, Major)"
 	icon_state = "tigerface"
 	body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/horntest //PIL-EDIT
+	name = "Horns"
+	icon = 'icons/mob/human_races/species/pilcrow_markings.dmi'
+	icon_state = "horns"
+	body_parts = list(BP_HEAD)
+	over_hair = 1

@@ -18,6 +18,7 @@
 	var/grow_threshold = 0
 	var/ignore_tag//organ tag to ignore
 	var/last_nutrition_warning = 0
+	var/list/skip_organs = list(BP_HEAD)
 
 
 /obj/aura/regenerating/human/proc/external_regeneration_effect(var/obj/item/organ/external/O, var/mob/living/carbon/human/H)
@@ -71,7 +72,7 @@
 	if(prob(grow_chance))
 		for(var/limb_type in H.species.has_limbs)
 			var/obj/item/organ/external/E = H.organs_by_name[limb_type]
-			if(E && E.organ_tag != BP_HEAD && !E.vital && !E.is_usable())	//Skips heads and vital bits...
+			if(E && !(E.organ_tag in skip_organs) && !E.vital && !E.is_usable())	//Skips heads and vital bits...
 				if (H.nutrition > grow_threshold)
 					E.removed()			//...because no one wants their head to explode to make way for a new one.
 					qdel(E)
@@ -136,3 +137,43 @@
 	brute_mult = 1.5
 	organ_mult = 3
 	tox_mult = 2
+
+/obj/aura/regenerating/human/prommie
+	brute_mult = 5
+	fire_mult = 4
+	tox_mult = 5
+	nutrition_damage_mult = 10
+	organ_mult = 2
+	regen_message = "<span class='warning'>You feel a slithering sensation as your ORGAN regenerates.</span>"
+	grow_chance = 25
+	grow_threshold = 100
+	external_nutrition_mult = 40
+	skip_organs = list()
+
+/obj/aura/regenerating/human/prommie/life_tick()
+
+	var/mob/living/carbon/human/H = user
+
+	if(!istype(H))
+		CRASH("Someone gave [user.type] a [src.type] aura. This is invalid.")
+		return 0
+	if(!H.innate_heal || H.InStasis() || H.stat == DEAD)
+		return 0
+
+	if(H.nutrition < 100)
+		if(last_nutrition_warning + 20 SECONDS < world.time)
+			to_chat(H,"<span class='danger'>You're too hungry, you're struggling to sustain yourself!</span>")
+			last_nutrition_warning = world.time
+		for(var/obj/item/organ/I in H.internal_organs)
+			if(I.damage < I.max_damage)
+				I.take_general_damage(rand(1,10))
+		H.take_overall_damage(rand(1,20), 0)
+		if(prob(25))
+			H.nutrition = max(H.nutrition-5,0)
+		return 0
+	else
+		. = ..()
+
+/obj/aura/regenerating/human/prommie/external_regeneration_effect(var/obj/item/organ/external/O, var/mob/living/carbon/human/H)
+	H.visible_message("<span class='danger'>A length of biomass shoots from [H]'s [O.amputation_point], forming a new [O.name]!</span>")
+	H.nutrition -= external_nutrition_mult

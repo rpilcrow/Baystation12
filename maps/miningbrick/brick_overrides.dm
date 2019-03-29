@@ -41,3 +41,20 @@
 
 /obj/machinery/door/airlock/hatch/autoname/security
 	stripe_color = COLOR_RED
+
+/obj/machinery/door/airlock/hatch/autoname/medical
+	stripe_color = COLOR_WHITE
+
+/obj/machinery/door/airlock/hatch/autoname/cargo
+	stripe_color = COLOR_BROWN
+
+
+/obj/machinery/door/airlock/glass/autoname
+
+/obj/machinery/door/airlock/glass/autoname/Initialize()
+	. = ..()
+	var/area/A = get_area(src)
+	SetName("hatch ([A.name])")
+
+/obj/machinery/door/airlock/glass/autoname/general
+	stripe_color = COLOR_CIVIE_GREEN

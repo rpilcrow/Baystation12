@@ -1,7 +1,7 @@
 /datum/map/bearcat
 	allowed_jobs = list(/datum/job/captain, /datum/job/chief_engineer, /datum/job/doctor, /datum/job/hop, /datum/job/assistant, /datum/job/engineer, /datum/job/officer, /datum/job/scientist, /datum/job/psi) ///PIL_EDIT: removed datum/job/cyborg,
 	species_to_job_whitelist = list(
-		/datum/species/vox = list(/datum/job/assistant, /datum/job/doctor, /datum/job/engineer, /datum/job/scientist)
+		/datum/species/vox = list(/datum/job/assistant, /datum/job/doctor, /datum/job/engineer, /datum/job/scientist,/datum/job/officer,/datum/job/psi)
 	)
 
 /datum/job/captain
@@ -252,7 +252,7 @@
 	l_hand = /obj/item/weapon/material/clipboard
 
 /decl/hierarchy/outfit/job/bearcat/security
-	name = OUTFIT_JOB_NAME("Guard")
+	name = BEARCAT_OUTFIT_JOB_NAME("Guard")
 	uniform = /obj/item/clothing/under/rank/security/navyblue
 	l_pocket = /obj/item/device/flash
 	r_pocket = /obj/item/weapon/handcuffs
@@ -264,6 +264,6 @@
 	backpack_contents = list(/obj/item/weapon/handcuffs = 1)
 
 /decl/hierarchy/outfit/job/bearcat/psionic
-	name = OUTFIT_JOB_NAME("Psion")
+	name = BEARCAT_OUTFIT_JOB_NAME("Psion")
 	uniform = /obj/item/clothing/under/wetsuit
-	head = /obj/item/clothing/head/helmet/space/psi_amp/lesser
+	//head = /obj/item/clothing/head/helmet/space/psi_amp/lesser

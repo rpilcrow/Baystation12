@@ -4,9 +4,9 @@
 /datum/evacuation_controller/lifepods
 	name = "escape pod controller"
 
-	evac_prep_delay    = 7 MINUTES
-	evac_launch_delay  = 0
-	evac_transit_delay = 2 MINUTES
+	evac_prep_delay    = 5 MINUTES
+	evac_launch_delay  = 0.1 MINUTES
+	evac_transit_delay = 1 MINUTES
 
 	evacuation_options = list(
 		EVAC_OPT_ABANDON_SHIP = new /datum/evacuation_option/abandon_ship(),
@@ -14,7 +14,9 @@
 	)
 
 /datum/evacuation_controller/lifepods/launch_evacuation()
+	state = EVAC_IN_TRANSIT
 	priority_announcement.Announce(replacetext(replacetext(GLOB.using_map.emergency_shuttle_leaving_dock, "%dock_name%", "[GLOB.using_map.dock_name]"),  "%ETA%", "[round(get_eta()/60,1)] minute\s"))
+	return 1
 
 /datum/evacuation_controller/lifepods/available_evac_options()
 	if (is_on_cooldown())

@@ -216,7 +216,7 @@
 				"insult_good"       = "Hah! I like the cut of your jib!",
 				"insult_bad"        = "I'm sure you can!")
 	want_multiplier = 2
-	typical_duration = 15
+	typical_duration = 10
 
 	possible_wanted_items = list(/obj/item = TRADER_ALL,
 								/mob/living = TRADER_ALL,
