@@ -98,6 +98,9 @@ var/list/limb_icon_cache = list()
 	//Body markings, does not include head, duplicated (sadly) above.
 	for(var/M in markings)
 		var/datum/sprite_accessory/marking/mark_style = markings[M]["datum"]
+		if(mark_style.over_hair)
+			//world.log << "skipping [mark_style.name] for base overlays"
+			continue
 		var/icon/mark_s = new/icon("icon" = mark_style.icon, "icon_state" = "[mark_style.icon_state]-[organ_tag]")
 		mark_s.Blend(markings[M]["color"], ICON_ADD)
 		overlays |= mark_s //So when it's not on your body, it has icons
@@ -188,7 +191,7 @@ var/list/robot_hud_colours = list("#ffffff","#cccccc","#aaaaaa","#888888","#6666
 	return applying
 
 /obj/item/organ/external/proc/bandage_level()
-	if(damage_state_text() == "00") 
+	if(damage_state_text() == "00")
 		return 0
 	if(!is_bandaged())
 		return 0

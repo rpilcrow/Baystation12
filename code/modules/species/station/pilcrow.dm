@@ -183,6 +183,8 @@
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
 	strength = STR_VHIGH
 
+//	icobase =     'icons/mob/human_races/species/troll/seadweller.dmi'
+
 	available_cultural_info = list(
 		TAG_CULTURE = list(
 			CULTURE_TROLL_VIOLET,

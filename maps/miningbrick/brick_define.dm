@@ -24,7 +24,8 @@
 	default_spawn = "Cryogenic Storage"
 	use_overmap = 1
 	num_exoplanets = 1
-	welcome_sound = 'sound/effects/cowboysting.ogg'
+//	away_site_budget = 3
+	welcome_sound = 'sound/AI/animes.ogg' //sound/voice/bsecureday.ogg
 
 	emergency_shuttle_leaving_dock = "Attention all hands: the escape pods have been launched, maintaining burn for %ETA%."
 

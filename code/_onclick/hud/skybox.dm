@@ -16,11 +16,11 @@
 	owner = M
 	loc = null
 	color = SSskybox.BGcolor
-	image = image('icons/turf/skybox.dmi', src, "background_[SSskybox.BGstate]")
+	image = image(SSskybox.BGpath, src, "background_[SSskybox.BGstate]")
 	overlays += image
 
 	if(SSskybox.use_stars)
-		stars = image('icons/turf/skybox.dmi', src, SSskybox.star_state)
+		stars = image(SSskybox.BGpath, src, SSskybox.star_state)
 		stars.appearance_flags = RESET_COLOR
 		overlays += stars
 	DoRotate()

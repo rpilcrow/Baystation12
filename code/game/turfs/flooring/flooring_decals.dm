@@ -1005,6 +1005,14 @@ var/list/floor_decals = list()
 	name = "floor sign"
 	icon_state = "dark_floor_2"
 
+/obj/effect/floor_decal/sign/dfthree
+	name = "floor sign"
+	icon_state = "dark_floor_3"
+
+/obj/effect/floor_decal/sign/dffour
+	name = "floor sign"
+	icon_state = "dark_floor_4"
+
 /obj/effect/floor_decal/solarpanel
 	icon_state = "solarpanel"
 

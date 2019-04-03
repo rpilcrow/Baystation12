@@ -137,6 +137,10 @@
 
 		overlays |= get_hair_icon()
 
+		overlays |= get_extra_icon()
+
+
+
 	return mob_icon
 
 /obj/item/organ/external/head/proc/get_hair_icon()
@@ -160,6 +164,21 @@
 			if(hair_style.do_colouration && islist(h_col) && h_col.len >= 3)
 				hair_s.Blend(rgb(h_col[1], h_col[2], h_col[3]), hair_style.blend)
 			res.overlays |= hair_s
+	return res
+
+/obj/item/organ/external/head/proc/get_extra_icon()
+	var/image/res = image(species.icon_template,"")
+
+	for(var/M in markings) //PIL_EDIT: [muffled screaming]
+		var/datum/sprite_accessory/marking/mark_style = markings[M]["datum"]
+		if(!mark_style.over_hair)
+			continue
+		//world.log << "adding [mark_style.name]"
+		var/icon/mark_s = new/icon("icon" = mark_style.icon, "icon_state" = "[mark_style.icon_state]-[organ_tag]")
+		mark_s.Blend(markings[M]["color"], ICON_ADD)
+		res.overlays += mark_s
+		icon_cache_key += "[M][markings[M]["color"]]"
+
 	return res
 
 /obj/item/organ/external/head/no_eyes

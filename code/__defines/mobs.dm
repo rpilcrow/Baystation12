@@ -333,3 +333,12 @@
 #define MOB_CLIMB_TIME_MEDIUM 50
 
 #define MOB_FACTION_NEUTRAL "neutral"
+
+//PIL_EDIT
+//middleclick actions
+#define MIDDLE_SWAP 	0 //standard middleclick behaviour
+#define MIDDLE_JUMP		1
+/*
+#define MIDDLE_KICK		2 //currently unused, but a look at what could be
+#define MIDDLE_PARRY	3 //ditto
+*/

@@ -311,6 +311,12 @@
 			if(usr.client)
 				usr.client.drop_item()
 
+		if("toggle jump")
+			if(usr.middlemode == MIDDLE_JUMP)
+				usr.update_middlemode(MIDDLE_SWAP)
+			else
+				usr.update_middlemode(MIDDLE_JUMP)
+
 		if("module")
 			if(isrobot(usr))
 				var/mob/living/silicon/robot/R = usr

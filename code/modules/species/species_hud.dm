@@ -12,6 +12,7 @@
 	var/has_resist = 1    // Set to draw resist button.
 	var/has_internals = 1 // Set to draw the internals toggle button.
 	var/list/equip_slots = list() // Checked by mob_can_equip().
+	var/has_jump = 1		//PIL_EDIT: jumping toggle
 
 	// Contains information on the position and tag for all inventory slots
 	// to be drawn for the mob. This is fairly delicate, try to avoid messing with it

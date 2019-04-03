@@ -129,16 +129,17 @@ Please contact me on #coderbus IRC. ~Carn x
 #define HO_SUIT_STORE_LAYER 15
 #define HO_BACK_LAYER       16
 #define HO_HAIR_LAYER       17 //TODO: make part of head layer?
-#define HO_GOGGLES_LAYER    18
-#define HO_EARS_LAYER       19
-#define HO_FACEMASK_LAYER   20
-#define HO_HEAD_LAYER       21
-#define HO_COLLAR_LAYER     22
-#define HO_HANDCUFF_LAYER   23
-#define HO_L_HAND_LAYER     24
-#define HO_R_HAND_LAYER     25
-#define HO_FIRE_LAYER       26 //If you're on fire
-#define TOTAL_LAYERS        26
+#define HO_EXTRA_LAYER		18
+#define HO_GOGGLES_LAYER    19
+#define HO_EARS_LAYER       20
+#define HO_FACEMASK_LAYER   21
+#define HO_HEAD_LAYER       22
+#define HO_COLLAR_LAYER     23
+#define HO_HANDCUFF_LAYER   24
+#define HO_L_HAND_LAYER     25
+#define HO_R_HAND_LAYER     26
+#define HO_FIRE_LAYER       27 //If you're on fire
+#define TOTAL_LAYERS        27
 //////////////////////////////////
 
 /mob/living/carbon/human
@@ -410,6 +411,7 @@ var/global/list/damage_icon_parts = list()
 /mob/living/carbon/human/proc/update_hair(var/update_icons=1)
 	//Reset our hair
 	overlays_standing[HO_HAIR_LAYER]	= null
+	overlays_standing[HO_EXTRA_LAYER] = null
 
 	var/obj/item/organ/external/head/head_organ = get_organ(BP_HEAD)
 	if(!head_organ || head_organ.is_stump() )
@@ -424,6 +426,8 @@ var/global/list/damage_icon_parts = list()
 		return
 
 	overlays_standing[HO_HAIR_LAYER]	= head_organ.get_hair_icon()
+
+	overlays_standing[HO_EXTRA_LAYER] = head_organ.get_extra_icon()
 
 	if(update_icons)
 		queue_icon_update()
@@ -848,6 +852,7 @@ var/global/list/damage_icon_parts = list()
 #undef HO_SUIT_STORE_LAYER
 #undef HO_BACK_LAYER
 #undef HO_HAIR_LAYER
+#undef HO_EXTRA_LAYER
 #undef HO_GOGGLES_LAYER
 #undef HO_FACEMASK_LAYER
 #undef HO_HEAD_LAYER

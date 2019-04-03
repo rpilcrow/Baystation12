@@ -128,7 +128,7 @@
 	alarm_area = get_area(src)
 	area_uid = alarm_area.uid
 	if (name == "alarm")
-		SetName("[alarm_area.name] Air Alarm")
+		SetName("[alarm_area.name] Air Alarm #[rand(100,999)]")
 
 	if(!wires)
 		wires = new(src)

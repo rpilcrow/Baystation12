@@ -1,0 +1,78 @@
+"aa" = (/turf/template_noop,/area/template_noop)
+"ab" = (/turf/simulated/wall/wood,/area/template_noop)
+"ac" = (/turf/simulated/floor/carpet/green,/area/template_noop)
+"ad" = (/obj/structure/bed,/obj/item/weapon/bedsheet,/obj/effect/decal/cleanable/cobweb2,/turf/simulated/floor/carpet/green,/area/template_noop)
+"ae" = (/obj/structure/window/reinforced/full,/turf/simulated/floor/wood/walnut,/area/template_noop)
+"af" = (/obj/effect/floor_decal/spline/plain/black,/turf/simulated/floor/carpet/green,/area/template_noop)
+"ag" = (/obj/effect/floor_decal/spline/plain/black,/obj/random/pilruin/consistent,/turf/simulated/floor/carpet/green,/area/template_noop)
+"ah" = (/obj/effect/floor_decal/spline/plain/black,/obj/structure/table/woodentable,/obj/item/device/flashlight/lamp/green,/turf/simulated/floor/carpet/green,/area/template_noop)
+"ai" = (/turf/simulated/floor/wood/walnut,/area/template_noop)
+"aj" = (/obj/structure/bookcase,/turf/simulated/floor/wood/walnut,/area/template_noop)
+"ak" = (/obj/structure/bed/chair/armchair/green,/turf/simulated/floor/wood/walnut,/area/template_noop)
+"al" = (/obj/structure/table/woodentable,/turf/simulated/floor/wood/walnut,/area/template_noop)
+"an" = (/obj/structure/closet/cabinet,/obj/random/pilruin/wildloot,/turf/simulated/floor/wood/walnut,/area/template_noop)
+"ao" = (/obj/structure/bookcase/manuals/medical,/turf/simulated/floor/wood/walnut,/area/template_noop)
+"ap" = (/obj/effect/decal/cleanable/blood/splatter,/turf/simulated/floor/wood/walnut,/area/template_noop)
+"aq" = (/obj/structure/bed/chair/armchair/green{icon_state = "armchair_preview"; dir = 8},/turf/simulated/floor/wood/walnut,/area/template_noop)
+"ar" = (/obj/machinery/door/unpowered/simple/wood,/turf/simulated/floor/wood/walnut,/area/template_noop)
+"as" = (/obj/effect/decal/cleanable/blood/drip,/turf/simulated/floor/wood/walnut,/area/template_noop)
+"at" = (/obj/random/pilruin/consistent,/turf/simulated/floor/wood/walnut,/area/template_noop)
+"au" = (/obj/structure/window/reinforced/full,/turf/simulated/floor/wood,/area/template_noop)
+"av" = (/obj/machinery/door/unpowered/simple/wood,/obj/effect/decal/cleanable/blood/drip,/turf/simulated/floor/wood/walnut,/area/template_noop)
+"aw" = (/obj/structure/bed/chair/wood{icon_state = "wooden_chair_preview"; dir = 4},/turf/simulated/floor/wood/walnut,/area/template_noop)
+"ax" = (/obj/structure/bed/chair/wood{icon_state = "wooden_chair_preview"; dir = 8},/turf/simulated/floor/wood/walnut,/area/template_noop)
+"ay" = (/turf/simulated/floor/wood,/area/template_noop)
+"az" = (/obj/structure/dogbed,/turf/simulated/floor/wood,/area/template_noop)
+"aA" = (/obj/effect/decal/cleanable/blood/splatter,/turf/simulated/floor/wood,/area/template_noop)
+"aB" = (/obj/structure/filingcabinet/chestdrawer,/obj/effect/decal/cleanable/cobweb,/turf/simulated/floor/wood/walnut,/area/template_noop)
+"aC" = (/obj/structure/table/woodentable,/obj/random/loot,/turf/simulated/floor/wood/walnut,/area/template_noop)
+"aD" = (/obj/effect/landmark/corpse/pil/farmer,/obj/effect/decal/cleanable/blood,/obj/random/pilruin/weapon,/turf/simulated/floor/wood,/area/template_noop)
+"aE" = (/obj/effect/floor_decal/spline/plain/black{icon_state = "spline_plain"; dir = 1},/turf/simulated/floor/carpet/green,/area/template_noop)
+"aF" = (/obj/effect/floor_decal/spline/plain/black{icon_state = "spline_plain"; dir = 1},/obj/effect/landmark/corpse/pil/civilian,/obj/effect/decal/cleanable/blood,/obj/random/pilruin/weapon,/turf/simulated/floor/carpet/green,/area/template_noop)
+"aG" = (/obj/effect/floor_decal/spline/plain/black{icon_state = "spline_plain"; dir = 1},/obj/structure/table/woodentable,/obj/item/device/flashlight/lamp/green,/turf/simulated/floor/carpet/green,/area/template_noop)
+"aH" = (/obj/effect/decal/cleanable/blood,/obj/random/pilruin/consistent,/turf/simulated/floor/wood,/area/template_noop)
+"aI" = (/obj/effect/decal/cleanable/blood/splatter,/turf/simulated/floor/carpet/green,/area/template_noop)
+"aJ" = (/obj/random/pilruin/consistent,/turf/simulated/floor/carpet/green,/area/template_noop)
+"aK" = (/obj/structure/bed,/obj/item/weapon/bedsheet,/turf/simulated/floor/carpet/green,/area/template_noop)
+"aL" = (/obj/structure/table/standard{name = "plastic table frame"},/obj/machinery/microwave,/obj/effect/floor_decal/spline/plain/black{icon_state = "spline_plain"; dir = 1},/turf/simulated/floor/lino,/area/template_noop)
+"aM" = (/obj/effect/floor_decal/spline/plain/black{icon_state = "spline_plain"; dir = 1},/turf/simulated/floor/lino,/area/template_noop)
+"aN" = (/obj/structure/hygiene/sink{dir = 4; icon_state = "sink"; pixel_x = 11; pixel_y = 0},/obj/effect/floor_decal/spline/plain/black{icon_state = "spline_plain"; dir = 1},/turf/simulated/floor/lino,/area/template_noop)
+"aO" = (/obj/structure/table/standard{name = "plastic table frame"},/turf/simulated/floor/lino,/area/template_noop)
+"aP" = (/obj/random/pilruin/consistent,/turf/simulated/floor/lino,/area/template_noop)
+"aQ" = (/turf/simulated/floor/lino,/area/template_noop)
+"aR" = (/obj/structure/table/standard{name = "plastic table frame"},/obj/item/weapon/material/knife/butch,/turf/simulated/floor/lino,/area/template_noop)
+"aS" = (/obj/structure/table/standard{name = "plastic table frame"},/obj/machinery/reagentgrinder,/turf/simulated/floor/lino,/area/template_noop)
+"aT" = (/obj/structure/closet/secure_closet/freezer/fridge,/turf/simulated/floor/lino,/area/template_noop)
+"aU" = (/obj/structure/window/reinforced/full,/turf/simulated/floor/lino,/area/template_noop)
+"aV" = (/obj/machinery/portable_atmospherics/hydroponics/soil,/obj/item/seeds/towermycelium,/turf/template_noop,/area/template_noop)
+"aW" = (/obj/machinery/portable_atmospherics/hydroponics/soil,/turf/template_noop,/area/template_noop)
+"aX" = (/obj/structure/hygiene/toilet{icon_state = "toilet00"; dir = 4},/obj/random/pilruin/melee,/turf/simulated/floor/wood/walnut,/area/template_noop)
+"aY" = (/obj/structure/table/woodentable,/obj/random/loot,/obj/random/tool,/turf/simulated/floor/wood/walnut,/area/template_noop)
+"aZ" = (/obj/structure/table/woodentable,/obj/random/tool,/obj/random/tool,/obj/random/tool,/obj/random/material,/obj/random/pilruin/melee,/turf/simulated/floor/wood/walnut,/area/template_noop)
+"ba" = (/obj/structure/table/woodentable,/obj/random/loot,/obj/random/pilruin/wildloot,/obj/random/material,/turf/simulated/floor/wood/walnut,/area/template_noop)
+"bb" = (/obj/structure/table/woodentable,/obj/random/toolbox,/obj/random/tool,/obj/random/material,/turf/simulated/floor/wood/walnut,/area/template_noop)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaabacacacadababaeaeababababaeaeababaaaaaaaaaaaaaaaa
+aaaaaaaaabafafagahabaiaiaiaiajajaiaiakalabaaaaaaaaaaaaaaaa
+aaaaaaaaabanaoaiaiabaialalaiaiaiapaiaiaqaeaaaaaaaaaaaaaaaa
+aaaaaaaaabababarababaialalaiaiasaiaiataqaeaaaaaaaaaaaaaaaa
+aaaaaaaaauaiaiaiaiaiaiasaiaiaiaiaiasaiapabaaaaaaaaaaaaaaaa
+aaaaaaaaauaiaiaiasaiaiaiaiasabaeaearaeaeabaaaaaaaaaaaaaaaa
+aaaaaaaaabababavababaiawalaxaeayazaAayayayaaaaaaaaaaaaaaaa
+aaaaaaaaabaBanaiapabaiawaCaxaeayayayaDayayaaaaaaaaaaaaaaaa
+aaaaaaaaabaEaEaFaGabaiaiaiaiaeayaHayayayabaaaaaaaaaaaaaaaa
+aaaaaaaaabaIaJacaKabaLaMaMaNabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaababababababaOaPaQaRabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaabaSaQaQaTabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaababaUaUababaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abababaaaaaaaaaaaaaaaVaaaaaWaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abaXaraaaaaaaaaaaaaaaWaaaaaWaaaaaaaaaaaaaaaaaaaaababababab
+abababaaaaaaaaaaaaaaaVaaaaaWaaaaaaaaaaaaaaaaaaaaabaYaZbaab
+aaaaaaaaaaaaaaaaaaaaaWaaaaaWaaaaaaaaaaaaaaaaaaaaaraiaiaiab
+aaaaaaaaaaaaaaaaaaaaaWaaaaaVaaaaaaaaaaaaaaaaaaaaabaiatbbab
+aaaaaaaaaaaaaaaaaaaaaWaaaaaWaaaaaaaaaaaaaaaaaaaaababababab
+"}

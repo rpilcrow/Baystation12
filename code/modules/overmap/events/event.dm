@@ -24,6 +24,11 @@
 		candidate_turfs -= event_turfs
 
 		for(var/event_turf in event_turfs)
+/*			world.log << event_turf
+			for(var/obj/O in event_turf)
+				world.log << O
+			if(locate(/obj/effect/overmap/sector/exoplanet in event_turf))
+				continue*/
 			events_by_turf[event_turf] = overmap_event
 			GLOB.entered_event.register(event_turf, src, /decl/overmap_event_handler/proc/on_turf_entered)
 			GLOB.exited_event.register(event_turf, src, /decl/overmap_event_handler/proc/on_turf_exited)
@@ -201,7 +206,7 @@
 	event_icon_states = list("ion1", "ion2", "ion3", "ion4")
 	difficulty = EVENT_LEVEL_MAJOR
 	weaknesses = BSA_EMP
-
+/* //PIL_EDIT: this isn't really that fun in the end. maybe once i tweak carp.
 /datum/overmap_event/carp
 	name = "carp shoal"
 	events = list(/datum/event/carp_migration)
@@ -218,4 +223,4 @@
 	count = 5
 	radius = 4
 	difficulty = EVENT_LEVEL_MAJOR
-	event_icon_states = list("carp3", "carp4")
+	event_icon_states = list("carp3", "carp4")*/

@@ -55,6 +55,10 @@
 	suffixes = list("pilruins/camppmc.dmm")
 	template_flags = TEMPLATE_FLAG_CLEAR_CONTENTS | TEMPLATE_FLAG_NO_RUINS | TEMPLATE_FLAG_NO_RADS
 
+/datum/map_template/ruin/exoplanet/pilruins/farmhouse
+	name = "farmhouse"
+	id = "pruins-frm"
+	suffixes = list("pilruins/farm.dmm")
 
 
 //BROKEN RUINS////////////////////////
@@ -350,6 +354,85 @@
 	return list(/obj/random/pilruin/weapon = 1,
 				/obj/random/maintenance/clean = 1,
 				/obj/random/loot = 4)
+
+/obj/random/pilruin/consistent
+	name = "consistent enemy"
+	desc = "spiders, pmcs, or pariahs? oh no"
+	icon_state = "consistent"
+	var/global/choice
+
+/obj/random/pilruin/consistent/spawn_choices()
+	if(!choice)
+		choice = rand(1,3)
+	switch(choice)
+		if(1)
+			return list(/obj/random/pilruin/pmc)
+		if(2)
+			return list(/obj/random/pilruin/pariah/guaranteed)
+		if(3)
+			return list(/obj/random/pilruin/spider)
+	return list(/obj/random/pilruin/horrible)
+
+
+
+
+
+/obj/effect/landmark/corpse/pil/farmer
+	name = "Farmer"
+	corpse_outfits = list(/decl/hierarchy/outfit/farmworker)
+	species = list(SPECIES_HUMAN, SPECIES_DIONA, SPECIES_IPC, SPECIES_UNATHI, SPECIES_SKRELL, SPECIES_TRITONIAN, SPECIES_SPACER, SPECIES_VATGROWN, SPECIES_GRAVWORLDER, SPECIES_DARK, SPECIES_TROLL)
+
+/decl/hierarchy/outfit/farmworker
+	name = "Worker"
+	shoes = /obj/item/clothing/shoes/workboots
+
+/decl/hierarchy/outfit/farmworker/pre_equip(mob/living/carbon/human/H)
+	..()
+	uniform = pick(list(/obj/item/clothing/under/overalls,
+			/obj/item/clothing/under/grayson,
+			/obj/item/clothing/under/frontier))
+
+/obj/effect/landmark/corpse/pil/civilian
+	name = "Civilian"
+	corpse_outfits = list(/decl/hierarchy/outfit/civilian)
+	species = list(SPECIES_HUMAN, SPECIES_DIONA, SPECIES_IPC, SPECIES_UNATHI, SPECIES_SKRELL, SPECIES_TRITONIAN, SPECIES_SPACER, SPECIES_VATGROWN, SPECIES_GRAVWORLDER, SPECIES_DARK, SPECIES_TROLL)
+
+/decl/hierarchy/outfit/civilian
+	name = "Civilian"
+	shoes = /obj/item/clothing/shoes/black
+
+/decl/hierarchy/outfit/civilian/pre_equip(mob/living/carbon/human/H)
+	..()
+	uniform = pick(list(/obj/item/clothing/under/overalls,
+			/obj/item/clothing/under/color/black,
+			/obj/item/clothing/under/casual_pants/track,
+			/obj/item/clothing/under/casual_pants/classicjeans,
+			/obj/item/clothing/under/sl_suit,
+			/obj/item/clothing/under/suit_jacket,
+			/obj/item/clothing/under/gentlesuit,
+			/obj/item/clothing/under/grayson,
+			/obj/item/clothing/under/dais,
+			/obj/item/clothing/under/mbill,
+			/obj/item/clothing/under/focal,
+			/obj/item/clothing/under/morpheus,
+			/obj/item/clothing/under/frontier))
+	suit = pick(list(/obj/item/clothing/suit/chaplain_hoodie,
+			/obj/item/clothing/suit/storage/det_trench,
+			/obj/item/clothing/suit/storage/toggle/bomber,
+			/obj/item/clothing/suit/storage/toggle/brown_jacket,
+			/obj/item/clothing/suit/storage/hooded/wintercoat,
+			/obj/item/clothing/suit/storage/toggle/labcoat/coat,
+			/obj/item/clothing/suit/apron,
+			/obj/item/clothing/suit/ianshirt,
+			/obj/item/clothing/suit/poncho/colored/red,
+			/obj/item/clothing/suit/poncho/colored/purple,
+			/obj/item/clothing/suit/poncho/colored/blue,
+			/obj/item/clothing/suit/poncho/colored/green,
+			null,
+			null,
+			null,
+			null,
+			null))
 
 //ITEMS///////////////////////////////
 

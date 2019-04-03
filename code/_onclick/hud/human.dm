@@ -238,6 +238,17 @@
 		mymob.nutrition_icon.screen_loc = ui_nutrition
 		hud_elements |= mymob.nutrition_icon
 
+	if(hud_data.has_jump)
+		mymob.middlejump = new /obj/screen()
+		mymob.middlejump.icon = ui_style
+		mymob.middlejump.icon_state = "jump0"
+		mymob.middlejump.SetName("toggle jump")
+		mymob.middlejump.screen_loc = ui_jumptoggle
+		mymob.middlejump.color = ui_color
+		mymob.middlejump.alpha = ui_alpha
+		hud_elements |= mymob.middlejump
+		src.hotkeybuttons += mymob.middlejump
+
 
 	mymob.pain = new /obj/screen/fullscreen/pain( null )
 	hud_elements |= mymob.pain

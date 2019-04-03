@@ -71,6 +71,14 @@
 		var/datum/map_template/ruin/exoplanet/ruin = new T
 		possible_features += ruin
 	..()
+	world.log << "outputting contents in [loc]"
+	for(var/atom/O in loc)
+		if(O == src)
+			continue
+		world.log << O.name
+		world.log << "deleting [O.name]"
+		qdel(O)
+	world.log << "finished outputting contents in [loc]"
 
 /obj/effect/overmap/sector/exoplanet/proc/build_level()
 	generate_atmosphere()

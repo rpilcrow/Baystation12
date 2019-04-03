@@ -266,3 +266,25 @@
 
 	return target.hit_with_weapon(src, user, power, hit_zone)
 
+
+
+/obj/item/throwballer
+	name = "throwing device"
+	desc = "speak shit get hit"
+	icon = 'icons/obj/pilcrow.dmi'
+	icon_state = "bait0"
+	force = 0
+	throwforce = 0
+	w_class = ITEM_SIZE_SMALL
+	item_state = "flare"
+	var/throwdir = EAST
+
+
+/obj/item/throwballer/attack_self(mob/user)
+	for(var/obj/item/I in view(user,7))
+		spawn()
+			I.throw_at(get_edge_target_turf(I,throwdir),7,5)
+	throwdir = turn(throwdir,180)
+
+
+

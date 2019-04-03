@@ -12,11 +12,10 @@
 	var/datum/dna/MobDNA
 
 	New(location, var/datum/dna/MobDNA, var/fleshcolor, var/bloodcolor)
-		..()
-
 		if(fleshcolor) src.fleshcolor = fleshcolor
 		if(bloodcolor) src.bloodcolor = bloodcolor
 		if(MobDNA)     src.MobDNA = MobDNA
+		..()
 
 	Initialize()
 		..()
@@ -32,7 +31,6 @@
 			var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
 			s.set_up(2, 1, get_turf(location)) // Not sure if it's safe to pass an arbitrary object to set_up, todo
 			s.start()
-
 		var/obj/effect/decal/cleanable/blood/gibs/gib = null
 		for(var/i = 1, i<= gibtypes.len, i++)
 			if(gibamounts[i])

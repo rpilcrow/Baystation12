@@ -142,7 +142,7 @@
 
 /decl/cultural_info/culture/troll/violet
 	name = CULTURE_TROLL_VIOLET
-	description = "You were royalty, one step away from the highest point on the hemospectrum, and then it all collapsed beneath you. As a seadweller you have the ability \
+	description = "You were royalty, one step away from the highest point on the hemospectrum.. and it all collapsed beneath you. As a seadweller you have the ability \
 	to breathe water and an exceptionally long lifespan, although psionics have remained entirely out of your grasp until very recently, with recent developments in psionic \
 	technology and understanding giving you some degree of promise. Regardless, in the empire you likely lived beneath the waves, managing a massive corporation populated by \
 	the lowbloods, commanding vast amounts of wealth and power. These days, all you have is your money, if that."
@@ -154,10 +154,10 @@
 
 /decl/cultural_info/culture/troll/fuchsia
 	name = CULTURE_TROLL_FUCHSIA
-	description = "At the very peak of the hemospectrum sat the fuchsiabloods, the potential emperors and empresses who could influence troll society as a whole through their \
-	edicts and commands - IF they rose to power. Throughout history, the fuchsiablooded caste has been more perilous than even the position of a mutantblood, as the most bloodthirsty \
-	empresses and emperors have secured their position firmly by executing any potential upstart they can find. Regardless, you managed to persevere, and the \
-	collapse of the empire has extended your potential lifespan - by many millenia."
+	description = "At the very peak of the hemospectrum sat those of fuchsia blood - potential emperors and empresses who could influence troll society as a whole through \
+	an edict or command... IF they rose to power. Throughout history, those of the royalblood caste have often been in more peril than even mutantbloods, as many \
+	long-standing empresses and emperors have secured their position firmly by simply executing any potential upstart that they could find. <br>\
+	Regardless, you managed to persevere, and the collapse of the empire has likely extended your potential lifespan by a matter of millennia."
 	bloodcaste = COLOR_BLOOD_FUCHSIA
 	economic_power = 2
 	psichance = 0
