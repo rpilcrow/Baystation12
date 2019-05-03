@@ -9,7 +9,12 @@
 	burn_delay = 1 SECONDS
 
 //	initial_generic_waypoints = list("nav_brick_port_dock", "nav_brick_starboard_dock", "nav_brick_nearby")
-//	initial_generic_waypoints = list("nav_brick_nearby")
+	initial_generic_waypoints = list("nav_airship_nearby1","nav_airship_nearby2","nav_airship_dock_starboard","nav_airship_dock_port","nav_airship_dock_cargo")
+//	initial_restricted_waypoints = list(
+//		"Airskiff" = list("nav_airship_dock_port"),
+//	)
+
+
 //	initial_restricted_waypoints = list(
 //		"FTV Quoth" = list("brick_dock_port"),
 //	)

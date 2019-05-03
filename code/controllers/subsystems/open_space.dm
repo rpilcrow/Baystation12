@@ -2,8 +2,8 @@
 // Controller handling icon updates of open space turfs
 //
 
-GLOBAL_DATUM_INIT(over_OS_darkness, /image, image('icons/turf/open_space.dmi', "black_open"))
-
+//GLOBAL_DATUM_INIT(over_OS_darkness, /image, image('icons/turf/open_space.dmi', "black_open")) //PIL_EDIT
+GLOBAL_DATUM_INIT(over_OS_darkness, /image, image('icons/turf/pilcrow_open_space.dmi', "black_open"))
 
 SUBSYSTEM_DEF(open_space)
 	name = "Open Space"

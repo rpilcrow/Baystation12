@@ -509,11 +509,10 @@
 	health_hud_intensity = 10
 
 	slowdown = -0.25
-
-	cold_level_1 = 200
-	cold_level_2 = 160
+	cold_level_1 = 233
+	cold_level_2 = 180
 	cold_level_3 = 100
-	cold_discomfort_level = 235
+	cold_discomfort_level = 260
 	heat_discomfort_strings = list(
 		"You feel uncomfortably warm.",
 		"Your skin prickles in the heat."
@@ -595,6 +594,8 @@
 		BP_BRAIN =    /obj/item/organ/internal/brain,
 		BP_EYES =     /obj/item/organ/internal/eyes/darkling
 		)
+
+	reagent_tag = IS_DARKLING
 
 /datum/species/darkling/get_bodytype(var/mob/living/carbon/human/H)
 	return SPECIES_HUMAN

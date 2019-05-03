@@ -107,6 +107,7 @@
 
 /datum/job/assistant
 	title = "Deck Hand"
+	hud_icon = "hudassistant"
 	supervisors = "literally everyone, you bottom feeder"
 	outfit_type = /decl/hierarchy/outfit/job/airship/hand
 	alt_titles = list(
@@ -158,7 +159,7 @@
 /datum/job/hos
 	title = "Lieutenant"
 	hud_icon = "hudheadofsecurity"
-	supervisors = "the Captain and their laws"
+	supervisors = "the Captain"
 	outfit_type = /decl/hierarchy/outfit/job/airship/security/head
 
 	min_skill = list(   SKILL_EVA         = SKILL_BASIC,
@@ -175,11 +176,11 @@
 
 
 /datum/job/officer
-	title = "Soldier"
+	title = "Mercenary"
 	hud_icon = "hudsecurity"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Security Chief and the Captain"
+	supervisors = "the Lieutenant and the Captain"
 	selection_color = "#601c1c"
 	outfit_type = /decl/hierarchy/outfit/job/airship/security
 	psi_latency_chance = 7
@@ -198,7 +199,7 @@
 	department = "Science"
 	department_flag = SCI
 	hud_icon = "hudvirologist"
-	supervisors = "the Captain and your morals"
+	supervisors = "the Captain"
 	psi_faculties = list(PSI_COERCION = PSI_RANK_OPERANT,PSI_PSYCHOKINESIS = PSI_RANK_OPERANT,PSI_REDACTION = PSI_RANK_OPERANT,PSI_ENERGISTICS = PSI_RANK_OPERANT)
 	total_positions = 1
 	spawn_positions = 1
@@ -240,6 +241,37 @@
 			set_psi_rank(to_get, rand(3,5),take_larger = TRUE)
 
 
+//other roles, tbd:
+//federal officer - 'alternative' to Mercenary, beholden to the law
+//federal commander - 'alternative' to the lieutenant
+
+//worker's representative - in charge of rallying the workers and protecting their rights
+/*
+
+/datum/job/officer/federal
+	title = "Federal Guard"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the Federal Commander"
+	selection_color = "#601c1c"
+	psi_latency_chance = 2
+
+/datum/job/hos/federal
+	title = "Federal Commander"
+	hud_icon = "hudheadofsecurity"
+	supervisors = "federal law and at your discretion the Captain"
+	outfit_type = /decl/hierarchy/outfit/job/airship/security/head
+	psi_latency_chance = 1
+
+/datum/job/lawyer
+	title = "Worker's Rep"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the People and their rights"
+	economic_power = 3
+	outfit_type = /decl/hierarchy/outfit/job/airship/hand
+
+*/
 
 
 // OUTFITS
@@ -259,6 +291,7 @@
 	pda_type = /obj/item/modular_computer/pda/captain
 	r_pocket = /obj/item/device/radio
 	id_type = /obj/item/weapon/card/id/gold
+	suit = /obj/item/clothing/suit/cloak/royal
 
 
 /decl/hierarchy/outfit/job/airship/captain/post_equip(var/mob/living/carbon/human/H)
@@ -331,12 +364,8 @@
 /decl/hierarchy/outfit/job/airship/security
 	name = AIRSHIP_OUTFIT_JOB_NAME("Guard")
 	uniform = /obj/item/clothing/under/rank/security/navyblue
-	l_pocket = /obj/item/device/flash
-	r_pocket = /obj/item/weapon/handcuffs
-	head = /obj/item/clothing/head/helmet
-	suit = /obj/item/clothing/suit/armor/pcarrier/medium
-	belt = /obj/item/weapon/gun/energy/taser
 	id_type = /obj/item/weapon/card/id/security
+	belt = /obj/item/weapon/gun/energy/taser
 	pda_type = /obj/item/modular_computer/pda/security
 	backpack_contents = list(/obj/item/weapon/handcuffs = 1)
 

@@ -148,7 +148,9 @@ var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Toilet Clog",					/datum/event/toilet_clog,			50, 	list(ASSIGNMENT_JANITOR = 20)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Drone Malfunction",				/datum/event/rogue_maint_drones/,	10,		list(ASSIGNMENT_ENGINEER = 30)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Psi Wail",						/datum/event/psi/wail,				20),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Psi Balm",						/datum/event/psi/balm,				30)
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Psi Balm",						/datum/event/psi/balm,				30),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Bluespace Distortion",			/datum/event/bluespace_distortion,	50),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Energized Cloud",				/datum/event/energized_cloud,		50)
 	)
 
 /datum/event_container/moderate
@@ -189,7 +191,8 @@ var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT
 		new /datum/event_meta/no_overmap(EVENT_LEVEL_MAJOR, "Meteor Wave",			/datum/event/meteor_wave,			0,	list(ASSIGNMENT_ENGINEER = 10),	1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Space Vines",						/datum/event/spacevine, 			0,	list(ASSIGNMENT_ENGINEER = 15), 1),
 		new /datum/event_meta/no_overmap(EVENT_LEVEL_MAJOR, "Electrical Storm",		/datum/event/electrical_storm, 		0,	list(ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_JANITOR = 5)),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Drone Revolution",				/datum/event/rogue_maint_drones/,	0,	list(ASSIGNMENT_ENGINEER = 10,ASSIGNMENT_MEDICAL = 10,ASSIGNMENT_SECURITY = 10))
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Drone Revolution",				/datum/event/rogue_maint_drones/,	0,	list(ASSIGNMENT_ENGINEER = 10,ASSIGNMENT_MEDICAL = 10,ASSIGNMENT_SECURITY = 10)),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Bluespace Distortion",			/datum/event/bluespace_distortion,	1000)
 	)
 
 

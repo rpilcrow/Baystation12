@@ -11,6 +11,7 @@
 	var/set_temperature = T0C + 20	//K
 	var/active = 0
 	var/heating_power = 40 KILOWATTS
+	var/mole_efficiency = 0.25
 	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE | ATOM_FLAG_CLIMBABLE
 	clicksound = "switch"
 
@@ -162,7 +163,7 @@
 			if(env && abs(env.temperature - set_temperature) <= 0.1)
 				active = 0
 			else
-				var/transfer_moles = 0.25 * env.total_moles
+				var/transfer_moles = mole_efficiency * env.total_moles
 				var/datum/gas_mixture/removed = env.remove(transfer_moles)
 
 				if(removed)

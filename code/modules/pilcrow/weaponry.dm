@@ -85,7 +85,7 @@
 	icon_state = "auto"
 	caliber = CALIBER_PISTOL
 	ammo_type = /obj/item/ammo_casing/pistol
-	desc = "While not a necessarily new concept, the Saito Arms 'Riveter Mk44' takes automatic revolvers to the next level by allowing for an instantaneous dump of its entire 7-round cylinder."
+	desc = "While not a necessarily new concept, the Saito Arms 'Riveter Mk44' takes automatic revolvers to the next level by allowing for an instantaneous magdump of its entire 7-round cylinder. Unfortunately it lacks an extractor, requiring manual removal of each casing."
 	firemodes = list(
 		list(mode_name="semi", burst=1, fire_delay=6, one_hand_penalty=0, burst_accuracy=null, dispersion=null),
 		list(mode_name="three-shot burst", burst=3, fire_delay=null, one_hand_penalty=0, burst_accuracy=list(1,0,-1), dispersion=list(0.0, 0.6, 1.0)),
@@ -95,13 +95,24 @@
 	accuracy = 1
 	bulk = 1
 
+/obj/item/ammo_magazine/speedloader/autorevolver
+	name = "10mm speedloader"
+	desc = "A seven-round speed loader for the Riveter Mk44."
+	icon = 'icons/obj/pilcrow.dmi'
+	icon_state = "slmk44"
+	caliber = CALIBER_PISTOL
+	ammo_type = /obj/item/ammo_casing/pistol
+	matter = list(MATERIAL_STEEL = 1260)
+	max_ammo = 7
+	multiple_sprites = 1
+
 /obj/item/weapon/gun/projectile/revolver/mega
-	name = "Wristbreaker 15"
+	name = "antimateriel revolver"
 	icon = 'icons/obj/guns/pilcrow.dmi'
 	icon_state = "thic"
 	caliber = CALIBER_ANTIMATERIAL
 	ammo_type = /obj/item/ammo_casing/shell //obj/item/ammo_casing/pistol
-	desc = "The Saito Arms 'WB-15' is a .15mmR antimateriel revolver, designed to deliver maximum force to a single target. Brace with both hands, or else."
+	desc = "The Saito Arms Wristbreaker 59 is a .15mmR antimateriel revolver, designed to deliver maximum force to a single target no matter the obstacles in your way. Brace with both hands - you'll need the grip."
 	one_hand_penalty = 6
 	accuracy = 2
 	bulk = 3
@@ -141,8 +152,8 @@
 	name = "longsword"
 	desc = "A sturdy, classic weapon."
 	icon_state = "longsword"
-	item_state = "machete"
-	slot_flags = SLOT_BELT
+	item_state = "longsword"
+	slot_flags = SLOT_BELT|SLOT_BACK
 	w_class = ITEM_SIZE_LARGE
 	force_divisor = 0.3 // 18 when wielded with hardnes 60 (steel)
 	thrown_force_divisor = 0.5 // 10 when thrown with weight 20 (steel)
@@ -181,7 +192,7 @@
 /obj/item/weapon/material/sword/canesword
 	name = "swordcane"
 	icon_state = "swordcane-blade"
-	item_state = "machete"
+	item_state = "longsword"
 	desc = "A slender, sharp blade withdrawn from its concealed sheath."
 	force_divisor = 0.3 // 18 when wielded with hardnes 60 (steel)
 	thrown_force_divisor = 0.75 // 15 when thrown with weight 20 (steel)
@@ -196,7 +207,7 @@
 /obj/item/weapon/material/hatchet/machete/pilcrow
 	name = "billhook"
 	desc = "A long, sturdy billed blade designed to rip and tear. The words '<i>live like a windrammer as you fuck</i>' are inscribed on the handle."
-	item_state = "machete"
+	item_state = "machete_pil"
 //	force_divisor = 0.2
 	thrown_force_divisor = 0.50
 	attack_verb = list("slashed", "cut")
@@ -265,6 +276,53 @@
 		playsound(loc, hitsound, sndpower, 1, -1)
 
 	return target.hit_with_weapon(src, user, power, hit_zone)
+
+
+
+/obj/item/blurryizer
+	name = "blurryizer"
+	desc = "blurs itself"
+	icon = 'icons/obj/pilcrow.dmi'
+	icon_state = "bait0"
+	force = 0
+	throwforce = 0
+	w_class = ITEM_SIZE_SMALL
+	item_state = "flare"
+	var/on = 0
+	var/ov_alph = 75
+
+/obj/item/blurryizer/attack_self(mob/user)
+	on = !on
+	update_icon()
+
+/obj/item/blurryizer/on_update_icon()
+	overlays.Cut()
+	if(on)
+		var/icon/I = new(icon,icon_state)
+		I.Scale(34,34)
+		var/image/nim = image(I)
+		nim.pixel_x = -1
+		nim.pixel_y = -1
+		nim.alpha = ov_alph
+		overlays += nim
+/*		for(var/num = 1 to 4)
+			var/image/nim = image(src)
+			nim.alpha = ov_alph
+			switch(num)
+				if(1)
+					nim.pixel_x = 1
+					nim.pixel_y = 1
+				if(2)
+					nim.pixel_x = 1
+					nim.pixel_y = -1
+				if(3)
+					nim.pixel_x = -1
+					nim.pixel_y = 1
+				if(4)
+					nim.pixel_x = -1
+					nim.pixel_y = -1
+			overlays += nim*/
+
 
 
 

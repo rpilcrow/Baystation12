@@ -84,3 +84,9 @@
 	cost = 2
 	sort_category = "Utility"
 	path = /obj/item/device/flashlight/maglight
+
+/datum/gear/suit/cloak
+	display_name = "dyable cloak"
+	path = /obj/item/clothing/suit/storage/hooded/cloak
+	cost = 1
+	flags = GEAR_HAS_COLOR_SELECTION

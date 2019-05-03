@@ -48,7 +48,12 @@
 	var/charge = 3
 	var/maxcharge = 3
 	var/next_charge = 0
+	var/datum/effect/effect/system/spark_spread/sprk = new /datum/effect/effect/system/spark_spread
 	action_button_name = "Trigger Shock"
+
+/obj/item/organ/internal/shocker/Destroy()
+	QDEL_NULL(sprk)
+	..()
 
 /obj/item/organ/internal/shocker/refresh_action_button()
 	. = ..()
@@ -84,6 +89,7 @@
 		*/
 		//we're using charge now, anyhow
 
+
 		if(charge)
 			charge--
 			next_charge = world.time+25 SECONDS
@@ -93,6 +99,8 @@
 
 		playsound(user, 'sound/effects/sparks4.ogg', 100, 1)
 		new /obj/effect/temporary(get_step(user,0), 0.7 SECONDS,'icons/effects/effects.dmi',"electricity_constant")
+		sprk.set_up(3, 0, get_step(user,0))
+		sprk.start()
 
 		user.visible_message("<span class='danger'>[user] releases an electrical burst!</span>","<span class='warning'>You release an electrical burst! ([charge]/[maxcharge] charges left)</span>","You hear the crackle of electricity.")
 
@@ -107,6 +115,8 @@
 			else
 				O.stun_effect_act(2)
 			new /obj/effect/temporary(get_step(O,0), 0.75 SECONDS,'icons/effects/effects.dmi',"sparks")
+			sprk.set_up(1, 0, get_step(O,0))
+			sprk.start()
 
 /*				var/mob/living/carbon/human/V = O
 				if(!V.eyecheck() <= 0)
@@ -134,8 +144,9 @@
 
 /obj/item/organ/internal/shocker/take_internal_damage()
 	. = ..()
-	if(is_bruised() && charge && owner)
-		to_chat(owner,"<span class='warning'>You feel something spark inside you.</span>")
+	if(is_bruised() && charge)
 		charge--
-		if(!charge)
-			to_chat(owner,"<span class='warning'>Your zapper is out of charge!</span>")
+		if(owner)
+			to_chat(owner,"<span class='warning'>You feel something spark inside you.</span>")
+			if(!charge)
+				to_chat(owner,"<span class='warning'>You are out of charge!</span>")

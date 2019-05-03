@@ -11,8 +11,8 @@
 	boss_short    = "Merchant Admiral"
 	company_name  = "Legit Cargo Ltd."
 	company_short = "LC"
-	overmap_event_areas = 11
-	planet_size = list(129,129)
+	system_name = "Uncharted Skies"
+	usable_email_tlds = list("homeland.net","freemail.net")
 
 	default_law_type = /datum/ai_laws/corporate
 
@@ -23,7 +23,10 @@
 	allowed_spawns = list("Cryogenic Storage")
 	default_spawn = "Cryogenic Storage"
 	use_overmap = 1
-	num_exoplanets = 1
+	overmap_size = 35
+	overmap_event_areas = 34
+	planet_size = list(129,129)
+	num_exoplanets = 0
 //	away_site_budget = 3
 	welcome_sound = 'sound/AI/animes.ogg' //sound/voice/bsecureday.ogg
 
@@ -37,6 +40,8 @@
 	starting_money = 5000
 	department_money = 0
 	salary_modifier = 0.2
+
+	base_floor_type = /turf/simulated/open
 
 /datum/map/airship/map_info(victim)
 	to_chat(victim, "You're aboard the <b>[station_name],</b> you're on a fuckin' airship, dude!.")

@@ -193,3 +193,9 @@
 
 //other
 #define CULTURE_PROM_VAT		"Vat-Grown Promethean"
+
+//airship
+#define FACTION_CONSORTIUM		"Atlas Consortium"
+#define FACTION_FEDERAL			"Graustadt Federals"
+#define FACTION_WORKERS			"Worker's Collective"
+#define FACTION_SUBVERSIVE		"Upheaval"

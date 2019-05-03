@@ -2,18 +2,12 @@ world
 	turf = /turf/space/air
 
 /datum/controller/subsystem/skybox //hoo boy
-//	name = "Space skybox"
-//	init_order = SS_INIT_SKYBOX
-//	flags = SS_NO_FIRE
-//	var/BGrot
 	BGcolor = COLOR_WHITE
-	BGpath = 'icons/turf/skybox_air.dmi' //Path to our background. Lets us use anything we damn well please. Skyboxes need to be 736x736
+	BGpath = 'icons/turf/skybox_air.dmi'
 	BGstate = "sky"
-	use_stars = FALSE
-	//star_path = 'icons/turf/skybox.dmi'
-	//star_state = "stars"
-//	list/skyboxes = list() //Keep track of all existing skyboxes.
-
+	use_stars = TRUE
+	star_path = 'icons/turf/skybox.dmi'
+	star_state = "stars"
 
 /area/has_gravity()
 	return 1
@@ -27,6 +21,7 @@ has_gravity(atom/AT, turf/T)
 /area/space
 	name = "\improper Sky"
 	has_gravity = 1
+	base_turf = /turf/space/air
 
 
 
@@ -40,18 +35,19 @@ has_gravity(atom/AT, turf/T)
 
 /turf/space/air
 //	plane = SPACE_PLANE
-	icon = 'icons/turf/space.dmi'
+//	icon = 'icons/turf/space.dmi'
 
 	name = "sky"
 	desc = "Clouds stretch for miles upon miles; a white blanket beneath which rages an endless storm. Don't fall."
 	icon_state = "map"
 //	dynamic_lighting = 0
-//	temperature = T20C
 //	thermal_conductivity = OPEN_HEAT_TRANSFER_COEFFICIENT
 //	var/static/list/dust_cache
 //	initial_gas = list("gas = " (MOLES_CELLSTANDARD*1))
-//	initial_gas = list("hydrogen" = MOLES_CELLSTANDARD*0.25, "oxygen" = MOLES_CELLSTANDARD*0.4, "nitrogen" = MOLES_CELLSTANDARD*0.35)
-	initial_gas = list("oxygen" = MOLES_O2STANDARD, "nitrogen" = MOLES_N2STANDARD) //TODO: slightly hazardous atmosphere?
+//	initial_gas = list("carbon_monoxide" = MOLES_CELLSTANDARD*0.05,"carbon_dioxide" = MOLES_CELLSTANDARD*0.20, "oxygen" = MOLES_CELLSTANDARD*0.4, "nitrogen" = MOLES_CELLSTANDARD*0.35)
+//	initial_gas = list("oxygen" = MOLES_O2STANDARD, "nitrogen" = MOLES_N2STANDARD) //TODO: slightly hazardous atmosphere?
+	initial_gas = list("oxygen" = MOLES_O2STANDARD*0.75, "nitrogen" = MOLES_N2STANDARD*0.75)
+	temperature = T0C	//T20C
 
 	/*
 	potential atmospheres:
@@ -64,6 +60,13 @@ has_gravity(atom/AT, turf/T)
 	//low oxygen (1-10%): allows for 'farming' oxy from the atmos, but outside is still bad for breathing
 
 	*/
+
+/turf/simulated/floor/shuttle_ceiling/sky
+	initial_gas = list("oxygen" = MOLES_O2STANDARD, "nitrogen" = MOLES_N2STANDARD)
+	temperature = T0C-40//T20C
+	icon_state = "ridged"
+	color = COLOR_HULL
+
 
 /turf/space/air/CanZPass(atom/A, direction)
 	if(locate(/obj/structure/catwalk, src))
@@ -118,17 +121,36 @@ has_gravity(atom/AT, turf/T)
 /turf/space/air/examine(mob/user, distance, infix, suffix)
 	if(..(user, 2))
 		var/depth = 1
-		for(var/T = GetBelow(src); isopenspace(T); T = GetBelow(T))
+		for(var/T = GetBelow(src); istype(T,/turf/space); T = GetBelow(T))
 			depth += 1
 		to_chat(user, "It is about [depth] level\s deep.")
 
 
+/turf/space/air/Initialize(mapload)
+	. = ..()
+	if(!mapload)
+		if(z in GLOB.using_map.station_levels)
+			if(locate(/obj) in contents)
+				world << "found stuff in me at [x], [y], [z]"
+				return .
+			var/turf/T = GetAbove(src)
+			if(istype(T,/turf/simulated/open))
+				if(locate(/obj) in T.contents)
+					world << "found stuff in above at [x], [y], [T.z]"
+					return .
+				T.ChangeTurf(/turf/space/air)
+		for(var/atom/movable/lighting_overlay/LO in contents)
+			overlays -= LO
+			LO.loc = null
+			qdel(LO)
+
 
 /turf/space/air/update_starlight()
-	return
+	. = ..()
+//	if(lighting_overlay)
+//		lighting_clear_overlay()
 
-/turf/simulated/Initialize() //open up spaces above all floor/walls, so we can shine light down OR just have an open-air airship. also works automatically when building.
-	..()
+/turf/simulated/proc/update_starlight()
 	if(z in GLOB.using_map.station_levels)
 		var/turf/T = GetAbove(src)
 		if(T)
@@ -137,6 +159,23 @@ has_gravity(atom/AT, turf/T)
 		else
 			if(config.starlight)
 				set_light(min(0.1*config.starlight, 1), 1, 3, l_color = SSskybox.BGcolor)
+
+/turf/simulated/Initialize() //open up spaces above all floor/walls, so we can shine light down OR just have an open-air airship. also works automatically when building.
+	..()
+	update_starlight()
+
+/obj/structure/catwalk/Initialize()
+	. = ..()
+	if(z in GLOB.using_map.station_levels)
+		var/turf/T = GetAbove(src)
+		if(istype(T,/turf/space))
+			T.ChangeTurf(/turf/simulated/open)
+
+/turf/simulated/floor/levelupdate()
+	. = ..()
+	if(!HasAbove(z))
+		update_starlight()
+
 
 /*
 /turf/simulated/open
@@ -184,6 +223,13 @@ has_gravity(atom/AT, turf/T)
 	name = "dust cloud"
 	events = list(/datum/event/dust)
 	count = 7
+
+
+/obj/effect/paint/airshiphull
+	color = COLOR_DARK_GUNMETAL
+
+/obj/effect/paint/shuttlehull
+	color = COLOR_HULL
 
 
 
@@ -247,6 +293,17 @@ has_gravity(atom/AT, turf/T)
 /obj/machinery/door/airlock/glass/autoname/general
 	stripe_color = COLOR_CIVIE_GREEN
 
+
+/obj/machinery/space_heater
+	mole_efficiency = 1
+
+/obj/machinery/button/windowtint
+	icon = 'icons/obj/pilcrow.dmi'
+
+/obj/machinery/power/bluespacecollector
+	exhaust_temp = 12//K //T0C
+	exhaust_type = "aether"
+
 //make nabbers work again
 
 /datum/species/nabber
@@ -268,3 +325,131 @@ has_gravity(atom/AT, turf/T)
 /decl/cultural_info/culture/nabber/a
 	name = CULTURE_NABBER_A
 	valid_jobs = list(/datum/job/assistant, /datum/job/doctor, /datum/job/engineer, /datum/job/scientist, /datum/job/officer)
+
+
+
+
+
+
+//ITEMS
+
+
+
+
+/obj/item/clothing/suit/storage/hooded/wintercoat
+	allowed = list (/obj/item/weapon/pen,
+					/obj/item/weapon/paper,
+					/obj/item/device/flashlight,
+					/obj/item/weapon/storage/fancy/cigarettes,
+					/obj/item/weapon/storage/box/matches,
+					/obj/item/weapon/reagent_containers/food/drinks/flask,
+					/obj/item/weapon/tank)
+
+
+//CLOSET STUFF
+
+/obj/structure/closet/secure_closet/captains/WillContain()
+	return list(
+		new/datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/captain, /obj/item/weapon/storage/backpack/satchel/cap)),
+		new/datum/atom_creator/simple(/obj/item/weapon/storage/backpack/dufflebag/captain, 50),
+		/obj/item/clothing/suit/captunic,
+		/obj/item/clothing/suit/captunic/capjacket,
+		/obj/item/clothing/head/caphat/cap,
+		/obj/item/clothing/under/rank/captain,
+		/obj/item/clothing/shoes/brown,
+		/obj/item/device/radio/headset/heads/captain,
+		/obj/item/clothing/gloves/captain,
+		/obj/item/weapon/melee/telebaton,
+		/obj/item/clothing/under/dress/dress_cap,
+		/obj/item/clothing/head/caphat/formal,
+		/obj/item/clothing/under/captainformal,
+		/obj/item/clothing/suit/cloak/royal,
+		/obj/item/clothing/suit/storage/hooded/wintercoat/captain,
+	)
+
+/obj/structure/closet/secure_closet/security
+	name = "security locker"
+	req_access = list(access_brig)
+	closet_appearance = /decl/closet_appearance/secure_closet/security
+
+/obj/structure/closet/secure_closet/security/WillContain()
+	return list(
+		new/datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel/sec)),
+		new/datum/atom_creator/simple(/obj/item/weapon/storage/backpack/dufflebag/sec, 50),
+		/obj/item/device/radio/headset/headset_sec,
+		/obj/item/weapon/storage/belt/holster/security,
+		/obj/item/device/flash,
+		/obj/item/weapon/reagent_containers/spray/pepper,
+		/obj/item/weapon/grenade/chem_grenade/teargas,
+		/obj/item/device/holowarrant,
+		/obj/item/weapon/melee/baton/loaded,
+		/obj/item/ammo_magazine/pistol/rubber,
+		/obj/item/ammo_magazine/shotholder/beanbag,
+		/obj/item/device/flash,
+		/obj/item/weapon/handcuffs = 2,
+		/obj/item/clothing/head/helmet,
+		/obj/item/clothing/suit/armor/pcarrier/medium,
+		/obj/item/clothing/suit/storage/hooded/wintercoat/security,
+	)
+
+
+/obj/structure/closet/wardrobe/wintercoats
+	name = "coat closet"
+	closet_appearance = /decl/closet_appearance/wardrobe/white
+
+/obj/structure/closet/wardrobe/wintercoats/WillContain()
+	return list(
+	/obj/item/clothing/mask/gas/half = 4,
+	/obj/item/weapon/tank/air = 4,
+	/obj/item/clothing/suit/storage/hooded/wintercoat = 2,
+	/obj/item/clothing/suit/storage/hooded/wintercoat/cargo = 2,
+	)
+
+
+/obj/structure/closet/wardrobe/wintercoats/mining
+	name = "coat closet"
+	closet_appearance = /decl/closet_appearance/wardrobe/yellow
+
+/obj/structure/closet/wardrobe/wintercoats/mining/WillContain()
+	return list(
+	/obj/item/clothing/mask/gas/half = 2,
+	/obj/item/weapon/tank/air = 2,
+	/obj/item/clothing/suit/storage/hooded/wintercoat/miner = 2,
+	)
+
+
+/obj/structure/closet/wardrobe/wintercoats/science
+	name = "coat closet"
+	closet_appearance = /decl/closet_appearance/wardrobe/white
+
+/obj/structure/closet/wardrobe/wintercoats/science/WillContain()
+	return list(
+	/obj/item/clothing/mask/gas/half = 1,
+	/obj/item/weapon/tank/air = 1,
+	/obj/item/clothing/suit/storage/hooded/wintercoat/science = 1,
+	)
+
+
+/obj/structure/closet/wardrobe/wintercoats/medical
+	name = "coat closet"
+	closet_appearance = /decl/closet_appearance/wardrobe/white
+
+/obj/structure/closet/wardrobe/wintercoats/medical/WillContain()
+	return list(
+	/obj/item/clothing/mask/gas/half = 1,
+	/obj/item/weapon/tank/air = 1,
+	/obj/item/clothing/suit/storage/hooded/wintercoat/medical = 1,
+	)
+
+
+/obj/structure/closet/wardrobe/wintercoats/engineering
+	name = "coat closet"
+	closet_appearance = /decl/closet_appearance/wardrobe/yellow
+
+/obj/structure/closet/wardrobe/wintercoats/engineering/WillContain()
+	return list(
+	/obj/item/clothing/mask/gas/half = 4,
+	/obj/item/weapon/tank/air = 4,
+	/obj/item/clothing/suit/storage/hooded/wintercoat/engineering = 2,
+	/obj/item/clothing/suit/storage/hooded/wintercoat/engineering/atmos = 2,
+	)

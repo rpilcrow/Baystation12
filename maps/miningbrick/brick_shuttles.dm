@@ -7,6 +7,7 @@
 	shuttle_area = /area/ship/scrap/shuttle/outgoing
 	dock_target = "bearcat_shuttle"
 	current_location = "nav_bearcat_port_dock_shuttle"
+	ceiling_type = /turf/simulated/floor/shuttle_ceiling
 
 /obj/effect/shuttle_landmark/docking_arm_starboard
 	name = "Bearcat Starboard-side Docking Arm"
