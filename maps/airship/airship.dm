@@ -31,4 +31,3 @@
 	#warn A map has already been included, ignoring Airship
 
 #endif
-

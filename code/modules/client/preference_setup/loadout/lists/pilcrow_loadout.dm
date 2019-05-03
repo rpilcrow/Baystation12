@@ -54,11 +54,12 @@
 	sord["machete"] = /obj/item/weapon/material/hatchet/machete
 	sord["officer's sword"] = /obj/item/weapon/material/sword/replica/officersword/pilcustom
 	sord["telescopic baton"] = /obj/item/weapon/melee/telebaton
-	sord["butterfly knife"] = /obj/item/weapon/material/butterfly
+	sord["butterfly knife"] = /obj/item/weapon/material/knife/folding/combat/balisong
 	sord["kitchen knife"] = /obj/item/weapon/material/knife
-	sord["butterknife"] = /obj/item/weapon/material/kitchen/utensil/knife
+	sord["butterknife"] = /obj/item/weapon/material/knife/table
 	sord["baseball bat"] = /obj/item/weapon/material/twohanded/baseballbat
-	sord["swordcane"] = /obj/item/weapon/cane/concealed/sword
+	sord["longsword"] = /obj/item/weapon/material/sword/longsword
+//	sord["swordcane"] = /obj/item/weapon/cane/concealed/sword //PIL_MERGE_NOTE: invalid type
 	gear_tweaks += new/datum/gear_tweak/path(sord)
 
 /datum/gear/utility/bshield

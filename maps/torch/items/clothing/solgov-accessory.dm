@@ -2,6 +2,7 @@
 	name = "master solgov accessory"
 	icon = 'maps/torch/icons/obj/obj_accessories_solgov.dmi'
 	accessory_icons = list(slot_w_uniform_str = 'maps/torch/icons/mob/onmob_accessories_solgov.dmi', slot_wear_suit_str = 'maps/torch/icons/mob/onmob_accessories_solgov.dmi')
+	w_class = ITEM_SIZE_TINY
 
 /*****
 medals
@@ -89,6 +90,12 @@ medals
 	desc = "A radiation-shielded shoulder patch, carrying the symbol of the Sol Central Government Expeditionary Corps Field Operations, or SCGECFO for short, the hands-on workers of every Expeditionary Corps mission."
 	icon_state = "ecpatch2"
 
+/obj/item/clothing/accessory/solgov/cultex_patch
+	name = "\improper Cultural Exchange patch"
+	desc = "A radiation-shielded shoulder patch, denoting service in the the Sol Central Government Expeditionary Corps Cultural Exchange program."
+	icon_state = "ecpatch3"
+	slot = ACCESSORY_SLOT_INSIGNIA
+
 /obj/item/clothing/accessory/solgov/fleet_patch
 	name = "\improper First Fleet patch"
 	desc = "A fancy shoulder patch carrying insignia of First Fleet, the Sol Guard, stationed in Sol."
@@ -127,6 +134,7 @@ ribbons
 	slot = ACCESSORY_SLOT_MEDAL
 	icon = 'maps/torch/icons/obj/obj_accessories_solgov.dmi'
 	accessory_icons = list(slot_w_uniform_str = 'maps/torch/icons/mob/onmob_accessories_solgov.dmi', slot_wear_suit_str = 'maps/torch/icons/mob/onmob_accessories_solgov.dmi')
+	w_class = ITEM_SIZE_TINY
 
 /obj/item/clothing/accessory/ribbon/solgov/marksman
 	name = "marksmanship ribbon"

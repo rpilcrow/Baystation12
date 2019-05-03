@@ -1,6 +1,6 @@
 /obj/item/weapon/cane
 	name = "cane"
-	desc = "A cane used by a true gentleman.. or a clown."
+	desc = "A cane used by a true gentlemen. Or a clown."
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "cane"
 	item_state = "stick"
@@ -14,21 +14,17 @@
 
 /obj/item/weapon/cane/concealed
 	var/concealed_blade
-	var/concealed_type = /obj/item/weapon/material/butterfly/switchblade
 
 /obj/item/weapon/cane/concealed/New()
 	..()
-	if(ispath(concealed_type))
-		var/obj/item/temp_blade = new concealed_type(src)
-		concealed_blade = temp_blade
-		temp_blade.attack_self()
+	var/obj/item/weapon/material/knife/folding/combat/switchblade/temp_blade = new(src)
+	concealed_blade = temp_blade
 
-/*
 /obj/item/weapon/cane/concealed/attack_self(var/mob/user)
 	if(concealed_blade)
 		user.visible_message("<span class='warning'>[user] has unsheathed \a [concealed_blade] from [src]!</span>", "You unsheathe \the [concealed_blade] from [src].")
 		// Calling drop/put in hands to properly call item drop/pickup procs
-		playsound(user.loc, 'sound/effects/holster/sheathout.ogg', 50, 1)
+		playsound(user.loc, 'sound/weapons/flipblade.ogg', 50, 1)
 		user.drop_from_inventory(src)
 		user.put_in_hands(concealed_blade)
 		user.put_in_hands(src)
@@ -38,24 +34,10 @@
 		user.update_inv_r_hand()
 	else
 		..()
-*/
-/obj/item/weapon/cane/concealed/attack_hand(var/mob/user)
-	if(user.get_inactive_hand() == src && concealed_blade)
-		user.visible_message("<span class='warning'>[user] has unsheathed \a [concealed_blade] from [src]!</span>", "You unsheathe \the [concealed_blade] from [src].")
-		// Calling drop/put in hands to properly call item drop/pickup procs
-		playsound(user.loc, 'sound/effects/holster/sheathout.ogg', 50, 1)
-		user.put_in_hands(concealed_blade)
-		concealed_blade = null
-		update_icon()
-		user.update_inv_l_hand()
-		user.update_inv_r_hand()
-	else
-		return ..()
 
-/obj/item/weapon/cane/concealed/attackby(var/obj/item/W, var/mob/user)
-	if(!src.concealed_blade && istype(W,concealed_type) && user.unEquip(W, src))
+/obj/item/weapon/cane/concealed/attackby(var/obj/item/weapon/material/knife/folding/W, var/mob/user)
+	if(!src.concealed_blade && istype(W) && user.unEquip(W, src))
 		user.visible_message("<span class='warning'>[user] has sheathed \a [W] into [src]!</span>", "You sheathe \the [W] into [src].")
-		playsound(user.loc, 'sound/effects/holster/sheathin.ogg', 50, 1)
 		src.concealed_blade = W
 		update_icon()
 		user.update_inv_l_hand()
@@ -70,5 +52,5 @@
 		item_state = initial(item_state)
 	else
 		SetName("cane shaft")
-		icon_state = "nullrod"
+		icon_state = "cane_noknife"
 		item_state = "foldcane"

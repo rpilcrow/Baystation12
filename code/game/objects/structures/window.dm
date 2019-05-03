@@ -249,7 +249,7 @@
 		else
 			playsound(src.loc, 'sound/items/Ratchet.ogg', 75, 1)
 			visible_message("<span class='notice'>[user] dismantles \the [src].</span>")
-			var/obj/item/stack/material/S = material.place_sheet(loc, is_fulltile() ? 4 : 2)
+			var/obj/item/stack/material/S = material.place_sheet(loc, is_fulltile() ? 4 : 1)
 			if(S && reinf_material)
 				S.reinf_material = reinf_material
 				S.update_strings()
@@ -291,17 +291,16 @@
 		to_chat(G.assailant, "<span class='danger'>You need a better grip to do that!</span>")
 		return TRUE
 	var/def_zone = ran_zone(BP_HEAD, 20)
-	var/blocked = G.affecting.run_armor_check(def_zone, "melee")
 	if(G.damage_stage() < 2)
 		G.affecting.visible_message("<span class='danger'>[G.assailant] bashes [G.affecting] against \the [src]!</span>")
 		if (prob(50))
 			G.affecting.Weaken(1)
-		G.affecting.apply_damage(10, BRUTE, def_zone, blocked, used_weapon = src)
+		G.affecting.apply_damage(10, BRUTE, def_zone, used_weapon = src)
 		hit(25)
 	else
 		G.affecting.visible_message("<span class='danger'>[G.assailant] crushes [G.affecting] against \the [src]!</span>")
 		G.affecting.Weaken(5)
-		G.affecting.apply_damage(20, BRUTE, def_zone, blocked, used_weapon = src)
+		G.affecting.apply_damage(20, BRUTE, def_zone, used_weapon = src)
 		hit(50)
 	return TRUE
 
@@ -359,9 +358,8 @@
 		return
 	anchored = new_anchored
 	update_verbs()
-	update_nearby_icons()
 	update_connections(1)
-	update_icon()
+	update_nearby_icons()
 
 //This proc is used to update the icons of nearby windows. It should not be confused with update_nearby_tiles(), which is an atmos proc!
 /obj/structure/window/proc/update_nearby_icons()
@@ -572,6 +570,10 @@
 	return
 
 /proc/place_window(mob/user, loc, dir_to_set, obj/item/stack/material/ST)
+	var/required_amount = (dir_to_set & (dir_to_set - 1)) ? 4 : 1
+	if (ST.amount < required_amount)
+		to_chat(user, "<span class='notice'>You do not have enough sheets.</span>")
+		return
 	for(var/obj/structure/window/WINDOW in loc)
 		if(WINDOW.dir == dir_to_set)
 			to_chat(user, "<span class='notice'>There is already a window facing this way there.</span>")
@@ -589,7 +591,11 @@
 				to_chat(user, "<span class='notice'>There is already a window there.</span>")
 				return
 
-		if (ST.use(1))
+		if (ST.use(required_amount))
 			var/obj/structure/window/WD = new(loc, dir_to_set, FALSE, ST.material.name, ST.reinf_material && ST.reinf_material.name)
-			to_chat(user, "<span class='notice'>You place the [WD] on [src].</span>")
-			WD.update_icon()
+			to_chat(user, "<span class='notice'>You place [WD].</span>")
+			WD.construction_state = 0
+			WD.set_anchored(FALSE)
+		else
+			to_chat(user, "<span class='notice'>You do not have enough sheets.</span>")
+			return

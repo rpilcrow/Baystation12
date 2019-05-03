@@ -146,7 +146,7 @@
 	world << decidedrange
 	world << 25+drain_setting/4
 	for(var/mob/living/M in range(target,decidedrange))
-		M.apply_effect(25+drain_setting/4, IRRADIATE, M.getarmor(null, "rad"))
+//		M.apply_effect(25+drain_setting/4, IRRADIATE, M.getarmor(null, "rad")) //PIL_MERGE_NOTE: getarmor is no longer a valid proc
 		M.take_overall_damage(0, 10+drain_setting/20)
 	return 1
 

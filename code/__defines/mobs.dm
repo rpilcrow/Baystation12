@@ -163,7 +163,10 @@
 #define INCAPACITATION_STUNNED 8
 #define INCAPACITATION_FORCELYING 16 //needs a better name - represents being knocked down BUT still conscious.
 #define INCAPACITATION_KNOCKOUT 32
+#define INCAPACITATION_WEAKENED 64
 
+#define INCAPACITATION_UNRESISTING (INCAPACITATION_KNOCKOUT|INCAPACITATION_STUNNED)
+#define INCAPACITATION_DISRUPTED (INCAPACITATION_UNRESISTING|INCAPACITATION_WEAKENED)
 #define INCAPACITATION_KNOCKDOWN (INCAPACITATION_KNOCKOUT|INCAPACITATION_FORCELYING)
 #define INCAPACITATION_DISABLED (INCAPACITATION_KNOCKDOWN|INCAPACITATION_STUNNED)
 #define INCAPACITATION_DEFAULT (INCAPACITATION_RESTRAINED|INCAPACITATION_BUCKLED_FULLY|INCAPACITATION_DISABLED)
@@ -196,11 +199,13 @@
 #define BP_ACETONE  "acetone reactor"
 #define BP_ZAPPER	"shocker"
 
+// Vox bits.
+#define BP_HINDTONGUE "hindtongue"
+
 // Robo Organs.
 #define BP_POSIBRAIN	"posibrain"
 #define BP_VOICE		"vocal synthesiser"
 #define BP_STACK		"stack"
-#define BP_OPTICS		"optics"
 #define BP_FLOAT		"floatation disc"
 #define BP_JETS			"maneuvering jets"
 #define BP_COOLING_FINS "cooling fins"
@@ -219,7 +224,6 @@
 //Augment flags
 #define AUGMENTATION_MECHANIC 1
 #define AUGMENTATION_ORGANIC  2
-
 
 // Limbs.
 #define BP_L_FOOT "l_foot"
@@ -283,6 +287,7 @@
 #define SPECIES_HUMAN       "Human"
 #define SPECIES_DIONA       "Diona"
 #define SPECIES_VOX         "Vox"
+#define SPECIES_VOX_ARMALIS "Vox Armalis"
 #define SPECIES_IPC         "Machine"
 #define SPECIES_UNATHI      "Unathi"
 #define SPECIES_SKRELL      "Skrell"
@@ -333,6 +338,11 @@
 #define MOB_CLIMB_TIME_MEDIUM 50
 
 #define MOB_FACTION_NEUTRAL "neutral"
+
+#define ROBOT_MODULE_TYPE_GROUNDED "grounded"
+#define ROBOT_MODULE_TYPE_FLYING   "flying"
+
+#define RADIO_INTERRUPT_DEFAULT 30
 
 //PIL_EDIT
 //middleclick actions

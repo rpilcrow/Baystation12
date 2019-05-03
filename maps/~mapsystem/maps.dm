@@ -196,9 +196,7 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	)
 
 	// List of /datum/department types to instantiate at roundstart.
-	var/list/departments = list(
-		/datum/department/medbay
-	)
+	var/list/departments
 
 /datum/map/New()
 	if(!map_levels)
@@ -209,18 +207,23 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 			var/datum/job/job = jtype
 			if(initial(job.available_by_default))
 				allowed_jobs += jtype
-	if(!planet_size)
+	if(!LAZYLEN(planet_size))
 		planet_size = list(world.maxx, world.maxy)
 
-/datum/map/proc/setup_map()
+/datum/map/proc/get_lobby_track(var/exclude)
 	var/lobby_track_type
 	if(lobby_tracks.len)
-		lobby_track_type = pick(lobby_tracks)
+		lobby_track_type = pick(lobby_tracks - exclude)
 	else
-		lobby_track_type = pick(subtypesof(/music_track))
+		lobby_track_type = pick(subtypesof(/music_track) - exclude)
+	return decls_repository.get_decl(lobby_track_type)
 
-	lobby_track = decls_repository.get_decl(lobby_track_type)
+/datum/map/proc/setup_map()
+	lobby_track = get_lobby_track()
 	world.update_status()
+
+/datum/map/proc/setup_job_lists()
+	return
 
 /datum/map/proc/send_welcome()
 	return
@@ -312,9 +315,11 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 		station_account = create_account("[station_name()] Primary Account", starting_money)
 
 	for(var/job in allowed_jobs)
-		var/datum/job/J = decls_repository.get_decl(job)
-		if(J.department)
-			station_departments |= J.department
+		var/datum/job/J = job
+		var/dept = initial(J.department)
+		if(dept)
+			station_departments |= dept
+
 	for(var/department in station_departments)
 		department_accounts[department] = create_account("[department] Account", department_money)
 

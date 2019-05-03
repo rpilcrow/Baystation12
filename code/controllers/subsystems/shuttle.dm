@@ -52,9 +52,12 @@ SUBSYSTEM_DEF(shuttle)
 	initialize_sectors()
 
 /datum/controller/subsystem/shuttle/proc/initialize_shuttles()
+	var/list/shuttles_made = list()
 	for(var/shuttle_type in shuttles_to_initialize)
-		initialize_shuttle(shuttle_type)
-	hook_up_motherships(shuttles_to_initialize)
+		var/shuttle = initialize_shuttle(shuttle_type)
+		if(shuttle)
+			shuttles_made += shuttle
+	hook_up_motherships(shuttles_made)
 	shuttles_to_initialize = null
 
 /datum/controller/subsystem/shuttle/proc/initialize_sectors()
@@ -74,9 +77,8 @@ SUBSYSTEM_DEF(shuttle)
 			try_add_landmark_tag(shuttle_landmark_tag, O)
 			landmarks_still_needed -= shuttle_landmark_tag
 		else if(istype(shuttle_landmark, /obj/effect/shuttle_landmark/automatic)) //These find their sector automatically
-			var/obj/effect/shuttle_landmark/automatic/automatic = shuttle_landmark
-			O = map_sectors["[automatic.z]"]
-			O ? O.add_landmark(automatic, automatic.shuttle_restricted) : (landmarks_awaiting_sector += shuttle_landmark)
+			O = map_sectors["[shuttle_landmark.z]"]
+			O ? O.add_landmark(shuttle_landmark, shuttle_landmark.shuttle_restricted) : (landmarks_awaiting_sector += shuttle_landmark)
 
 /datum/controller/subsystem/shuttle/proc/get_landmark(var/shuttle_landmark_tag)
 	return registered_shuttle_landmarks[shuttle_landmark_tag]
@@ -120,6 +122,7 @@ SUBSYSTEM_DEF(shuttle)
 	if(initial(shuttle.category) != shuttle_type)
 		shuttle = new shuttle()
 		shuttle_areas |= shuttle.shuttle_area
+		return shuttle
 
 /datum/controller/subsystem/shuttle/proc/hook_up_motherships(shuttles_list)
 	for(var/datum/shuttle/S in shuttles_list)

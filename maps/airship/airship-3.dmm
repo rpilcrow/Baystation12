@@ -233,7 +233,7 @@
 "eA" = (/obj/structure/table/standard,/obj/machinery/recharger,/turf/simulated/floor/tiled,/area/ship/airship/shuttle/skiff)
 "eB" = (/obj/structure/bed/chair/comfy/brown{icon_state = "comfychair_preview"; dir = 1},/turf/simulated/floor/tiled,/area/ship/airship/shuttle/skiff)
 "eC" = (/obj/structure/table/standard,/obj/machinery/cell_charger,/turf/simulated/floor/tiled,/area/ship/airship/shuttle/skiff)
-"eD" = (/obj/structure/table/standard,/obj/item/device/analyzer,/obj/machinery/light,/obj/item/device/radio/intercom{dir = 4; pixel_x = -22},/turf/simulated/floor/tiled,/area/ship/airship/shuttle/skiff)
+"eD" = (/obj/structure/table/standard,/obj/item/device/scanner/gas,/obj/machinery/light,/obj/item/device/radio/intercom{dir = 4; pixel_x = -22},/turf/simulated/floor/tiled,/area/ship/airship/shuttle/skiff)
 "eE" = (/obj/structure/table/standard,/obj/item/weapon/deck/tarot,/obj/machinery/light,/obj/machinery/alarm{dir = 8; icon_state = "alarm0"; pixel_x = 24},/turf/simulated/floor/tiled,/area/ship/airship/shuttle/skiff)
 "eQ" = (/obj/machinery/floodlight,/turf/simulated/floor/plating,/area/ship/airship/shuttle/skiff)
 "fa" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/machinery/door/airlock/external/glass,/obj/machinery/atmos_protector,/turf/simulated/floor/plating,/area/ship/airship/shuttle/skiff)

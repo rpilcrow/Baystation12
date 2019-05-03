@@ -238,6 +238,10 @@ has_gravity(atom/AT, turf/T)
 
 /turf/simulated/wall //landlubbers go home
 	name = "bulkhead"
+	color = COLOR_GRAY
+
+/turf/simulated/wall/r_wall/hull
+	color = COLOR_DARK_GUNMETAL
 
 /turf/simulated/floor
 	name = "bare deck"
@@ -248,8 +252,7 @@ has_gravity(atom/AT, turf/T)
 /decl/flooring/tiling
 	name = "deck"
 
-/turf/simulated/wall/r_wall/hull
-	color = COLOR_DARK_BROWN
+
 
 /obj/machinery/door/airlock/hatch/autoname
 

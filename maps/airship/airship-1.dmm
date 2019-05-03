@@ -349,7 +349,7 @@
 "hW" = (/obj/effect/wallframe_spawn/reinforced,/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/ship/airship/cargo)
 "hX" = (/obj/machinery/sleeper{icon_state = "sleeper_0"; dir = 8},/turf/simulated/floor/tiled/white,/area/ship/airship/medbay)
 "hY" = (/obj/effect/wallframe_spawn/reinforced,/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/ship/airship/science)
-"hZ" = (/obj/structure/table/standard,/obj/item/weapon/storage/firstaid/adv,/obj/random/medical,/obj/item/stack/medical/advanced/bruise_pack,/obj/item/weapon/reagent_containers/syringe/antiviral,/obj/item/device/healthanalyzer,/turf/simulated/floor/tiled/white,/area/ship/airship/medbay)
+"hZ" = (/obj/structure/table/standard,/obj/item/weapon/storage/firstaid/adv,/obj/random/medical,/obj/item/stack/medical/advanced/bruise_pack,/obj/item/weapon/reagent_containers/syringe/antiviral,/obj/item/device/scanner/health,/turf/simulated/floor/tiled/white,/area/ship/airship/medbay)
 "ia" = (/obj/structure/hygiene/sink{dir = 4; icon_state = "sink"; pixel_x = 13; pixel_y = 0},/obj/item/roller,/obj/item/roller,/obj/item/device/radio/intercom{dir = 8; pixel_x = 22},/turf/simulated/floor/tiled/white,/area/ship/airship/medbay)
 "ic" = (/obj/structure/closet/walllocker/emerglocker/west,/turf/simulated/floor/tiled/white,/area/ship/airship/medbay)
 "id" = (/obj/structure/table/standard,/obj/item/device/radio/intercom{dir = 8; pixel_x = 22},/obj/machinery/light_switch{pixel_y = -25},/turf/simulated/floor/tiled/white,/area/ship/airship/medbay)

@@ -280,7 +280,7 @@
 								  /obj/item/weapon/gun/projectile/shotgun/pump = TRADER_ALL,
 								  /obj/item/weapon/material/sword/replica/officersword/pilcustom = TRADER_THIS_TYPE,
 								  /obj/item/weapon/material/sword/longsword = TRADER_ALL,
-								  /obj/item/weapon/cane/concealed/sword = TRADER_THIS_TYPE,
+//								  /obj/item/weapon/cane/concealed/sword = TRADER_THIS_TYPE, //PIL_MERGE_NOTE: invalid type
 								  /obj/item/weapon/material/hatchet/machete = TRADER_ALL,
 								  /obj/item/weapon/gun/energy/pilcrow = TRADER_THIS_TYPE,
 								  /obj/item/device/personal_shield = TRADER_THIS_TYPE,

@@ -29,7 +29,7 @@
 	icon_state = "pulse1_bl"
 	damage = 30
 	damage_type = BURN
-	check_armour = "energy"
+//	check_armour = "energy"  //PIL_MERGE_NOTE: check_armour no longer valid
 	distance_falloff = 3
 	fire_sound = 'sound/weapons/taser2.ogg'
 	muzzle_type = /obj/effect/projectile/pulse/muzzle
@@ -173,7 +173,7 @@
 	default_material = MATERIAL_TITANIUM
 
 
-
+/*  //PIL_MERGE_NOTE: caneswords need to be redone, if i'll even bother.
 /obj/item/weapon/cane/concealed/sword
 	desc = "A cane used by a true gentleman."
 	icon_state = "swordcane-sheath1"
@@ -203,12 +203,12 @@
 	base_parry_chance = 50
 	melee_accuracy_bonus = 10
 	applies_material_colour = 0
+*/
 
 /obj/item/weapon/material/hatchet/machete/pilcrow
 	name = "billhook"
 	desc = "A long, sturdy billed blade designed to rip and tear. The words '<i>live like a windrammer as you fuck</i>' are inscribed on the handle."
 	item_state = "machete_pil"
-//	force_divisor = 0.2
 	thrown_force_divisor = 0.50
 	attack_verb = list("slashed", "cut")
 

@@ -1,6 +1,6 @@
 /obj/machinery/autolathe
 	name = "autolathe"
-	desc = "It produces items using metal and glass."
+	desc = "It produces items using metal, glass, plastic, and aluminium. It has a built in shredder that can recycle most items, although any materials it cannot use will be wasted."
 	icon_state = "autolathe"
 	density = 1
 	anchored = 1
@@ -226,7 +226,7 @@
 		show_category = choice
 		. = TOPIC_REFRESH
 
-	else if(href_list["make"] && machine_recipes)
+	else if(!busy && href_list["make"] && machine_recipes)
 		. = TOPIC_REFRESH
 		var/index = text2num(href_list["make"])
 		var/multiplier = text2num(href_list["multiplier"])
@@ -247,6 +247,7 @@
 		for(var/material in making.resources)
 			if(!isnull(stored_material[material]))
 				if(stored_material[material] < round(making.resources[material] * mat_efficiency) * multiplier)
+					busy = 0
 					return TOPIC_REFRESH
 
 		//Consume materials.

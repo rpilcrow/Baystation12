@@ -115,7 +115,7 @@
 
 	var/leap_range = 5
 	var/last_leapt
-	var/leap_cooldown = 5 MINUTES
+	var/leap_cooldown = 3 MINUTES
 
 //spitters - fast, comparatively weak, very venomous; projectile attacks but will resort to melee once out of ammo
 /mob/living/simple_animal/hostile/giant_spider/spitter
@@ -149,7 +149,7 @@
 /mob/living/simple_animal/hostile/giant_spider/proc/spider_randomify() //random math nonsense to get their damage, health and venomness values
 	melee_damage_lower = rand(0.8 * initial(melee_damage_lower), initial(melee_damage_lower))
 	melee_damage_upper = rand(initial(melee_damage_upper), (1.2 * initial(melee_damage_upper)))
-	maxHealth = rand(initial(maxHealth), (1.3 * initial(maxHealth)))
+	maxHealth = rand(initial(maxHealth), (1.4 * initial(maxHealth)))
 	health = maxHealth
 	eye_colour = pick(allowed_eye_colours)
 	if(eye_colour)

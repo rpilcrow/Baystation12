@@ -358,11 +358,12 @@
 		'html/images/sollogo.png',
 		'html/images/terralogo.png',
 		'html/images/talisman.png',
-		'html/images/torchltd.png',
+		'html/images/exologo.png',
 		'html/images/xynlogo.png',
 		'html/images/daislogo.png',
 		'html/images/eclogo.png',
-		'html/images/fleetlogo.png'
+		'html/images/fleetlogo.png',
+		'html/images/ocielogo.png'
 		)
 
 	var/decl/asset_cache/asset_cache = decls_repository.get_decl(/decl/asset_cache)

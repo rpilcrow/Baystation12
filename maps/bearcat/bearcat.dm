@@ -11,10 +11,10 @@
 	#include "bearcat_overmap.dm"
 	#include "bearcat_overrides.dm"
 	#include "bearcat_loadouts.dm"
-//	#include "bearcat-1.dmm"
-//	#include "bearcat-2.dmm"
-	#include "bearcat-X-1.dmm"
-	#include "bearcat-X-2.dmm"
+	#include "bearcat-1.dmm"
+	#include "bearcat-2.dmm"
+//	#include "bearcat-X-1.dmm"
+//	#include "bearcat-X-2.dmm"
 
 	#define using_map_DATUM /datum/map/bearcat
 

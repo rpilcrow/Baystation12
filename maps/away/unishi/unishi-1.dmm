@@ -34,7 +34,7 @@
 	name = "north bump";
 	pixel_x = 0;
 	pixel_y = 24;
-	req_access = list(201)
+	req_access = newlist()
 	},
 /obj/structure/closet/crate/uranium,
 /obj/structure/cable{
@@ -294,7 +294,7 @@
 	name = "north bump";
 	pixel_x = 0;
 	pixel_y = 24;
-	req_access = list(201)
+	req_access = newlist()
 	},
 /obj/structure/cable/yellow{
 	d2 = 2;
@@ -836,6 +836,12 @@
 /area/space)
 "cj" = (
 /obj/effect/shuttle_landmark/nav_unishi/nav3,
+/turf/space,
+/area/space)
+"lB" = (
+/obj/effect/landmark{
+	name = "carpspawn"
+	},
 /turf/space,
 /area/space)
 
@@ -4444,7 +4450,7 @@ aa
 aa
 aa
 aa
-aa
+lB
 aa
 aa
 aa
@@ -7697,7 +7703,7 @@ aa
 aa
 aa
 aa
-aa
+lB
 aa
 aa
 aa

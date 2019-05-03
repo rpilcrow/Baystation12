@@ -14,7 +14,6 @@
 #define MATERIAL_IRON                    "iron"
 #define MATERIAL_PLATINUM                "platinum"
 #define MATERIAL_BRONZE                  "bronze"
-#define MATERIAL_REINFORCED_GLASS        "rglass"
 #define MATERIAL_PHORON_GLASS            "phglass"
 #define MATERIAL_REINFORCED_PHORON_GLASS "rphglass"
 #define MATERIAL_MARBLE                  "marble"
@@ -23,12 +22,13 @@
 #define MATERIAL_REINFORCED_CULT         "cult2"
 #define MATERIAL_VOX                     "voxalloy"
 #define MATERIAL_TITANIUM                "titanium"
+#define MATERIAL_RUTILE					 "rutile"
 #define MATERIAL_OSMIUM_CARBIDE_PLASTEEL "osmium-carbide plasteel"
 #define MATERIAL_OSMIUM                  "osmium"
 #define MATERIAL_HYDROGEN                "hydrogen"
 #define MATERIAL_WASTE                   "waste"
 #define MATERIAL_ELEVATORIUM             "elevatorium"
-#define MATERIAL_ALIUMIUM                "aliumium"
+#define MATERIAL_ALIENALLOY              "aliumium"
 #define MATERIAL_SAND                    "sand"
 #define MATERIAL_GRAPHENE                "graphene"
 #define MATERIAL_DEUTERIUM               "deuterium"
@@ -57,6 +57,7 @@
 #define MATERIAL_MAPLE                   "maple"
 #define MATERIAL_EBONY                   "ebony"
 #define MATERIAL_WALNUT                  "walnut"
+#define MATERIAL_BAMBOO                  "bamboo"
 
 #define DEFAULT_WALL_MATERIAL      MATERIAL_STEEL
 #define DEFAULT_FURNITURE_MATERIAL MATERIAL_ALUMINIUM

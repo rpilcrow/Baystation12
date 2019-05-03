@@ -9,7 +9,7 @@
 	color = "#cf3600"
 	metabolism = REM * 0.25 // 0.05 by default. They last a while and slowly kill you.
 	heating_products = list(/datum/reagent/toxin/denatured)
-	heating_point = 100 CELCIUS
+	heating_point = 100 CELSIUS
 	heating_message = "goes clear."
 
 	var/target_organ
@@ -289,11 +289,12 @@
 	color = "#8e18a9"
 	power = 10
 	meltdose = 4
+	max_damage = 60
 
 /datum/reagent/acid/stomach
 	name = "stomach acid"
 	taste_description = "coppery foulness"
-	power = 1
+	power = 2
 	color = "#d8ff00"
 
 /datum/reagent/lexorin
@@ -350,7 +351,7 @@
 				randmutg(M)
 			domutcheck(M, null)
 			M.UpdateAppearance()
-	M.apply_effect(10 * removed, IRRADIATE, blocked = 0)
+	M.apply_damage(10 * removed, IRRADIATE, armor_pen = 100)
 
 /datum/reagent/slimejelly
 	name = "Slime Jelly"
@@ -394,10 +395,12 @@
 	else if(M.chem_doses[type] < 5 * threshold)
 		if(prob(50))
 			M.Weaken(2)
+			M.add_chemical_effect(CE_SEDATE, 1)
 		M.drowsyness = max(M.drowsyness, 20)
 	else
 		M.sleeping = max(M.sleeping, 20)
 		M.drowsyness = max(M.drowsyness, 60)
+		M.add_chemical_effect(CE_SEDATE, 1)
 	M.add_chemical_effect(CE_PULSE, -1)
 
 /datum/reagent/chloralhydrate
@@ -423,8 +426,10 @@
 	else if(M.chem_doses[type] < 2 * threshold)
 		M.Weaken(30)
 		M.eye_blurry = max(M.eye_blurry, 10)
+		M.add_chemical_effect(CE_SEDATE, 1)
 	else
 		M.sleeping = max(M.sleeping, 30)
+		M.add_chemical_effect(CE_SEDATE, 1)
 
 	if(M.chem_doses[type] > 1 * threshold)
 		M.adjustToxLoss(removed)
@@ -489,7 +494,7 @@
 	color = "#000055"
 	metabolism = REM * 0.5
 	overdose = REAGENTS_OVERDOSE
-	heating_point = 61 CELCIUS
+	heating_point = 61 CELSIUS
 	heating_products = list(/datum/reagent/potassium, /datum/reagent/acetone, /datum/reagent/sugar)
 
 
@@ -750,7 +755,7 @@
 	reagent_state = LIQUID
 	color = "#535e66"
 	hidden_from_codex = TRUE
-	heating_point = 100 CELCIUS
+	heating_point = 100 CELSIUS
 
 /datum/reagent/toxin/hair_remover
 	name = "Hair Remover"
@@ -843,5 +848,5 @@
 	color = "#140b30"
 	strength = 4
 	heating_products = list(/datum/reagent/acetone, /datum/reagent/carbon, /datum/reagent/ethanol)
-	heating_point = 145 CELCIUS
+	heating_point = 145 CELSIUS
 	heating_message = "separates."

@@ -12,8 +12,12 @@
 	return check_access_list(M.GetAccess())
 
 /atom/movable/proc/GetAccess()
+	. = list()
 	var/obj/item/weapon/card/id/id = GetIdCard()
-	return id ? id.GetAccess() : list()
+	if(id)
+		. += id.GetAccess()
+	if(maint_all_access)
+		. |= access_maint_tunnels
 
 /atom/movable/proc/GetIdCard()
 	return null
@@ -181,17 +185,7 @@
 
 /proc/get_access_by_id(id)
 	var/list/AS = priv_all_access_datums_id || get_all_access_datums_by_id()
-	return AS[num2text(id)]
-
-/proc/get_all_jobs()
-	var/list/all_jobs = list()
-	var/list/all_datums = typesof(/datum/job)
-	all_datums -= exclude_jobs
-	var/datum/job/jobdatum
-	for(var/jobtype in all_datums)
-		jobdatum = new jobtype
-		all_jobs.Add(jobdatum.title)
-	return all_jobs
+	return AS[id]
 
 /proc/get_all_centcom_jobs()
 	return list("VIP Guest",

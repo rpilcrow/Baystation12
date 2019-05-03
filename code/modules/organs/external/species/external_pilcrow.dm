@@ -29,5 +29,5 @@
 */
 
 /obj/item/organ/external/head/unbreakable/darkling
-	eye_icon_location = 'icons/mob/human_races/species/dark/eyes.dmi'
+//	eye_icon_location = 'icons/mob/human_races/species/dark/eyes.dmi'  //PIL_MERGE_NOTE: eye_icon_location no longer valid
 	glowing_eyes = TRUE

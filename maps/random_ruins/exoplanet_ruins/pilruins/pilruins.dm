@@ -14,51 +14,60 @@
 	name = "witch house"
 	id = "pruins-wih"
 	suffixes = list("pilruins/witchhouse.dmm")
+	ruin_tags = RUIN_HUMAN|RUIN_HABITAT
 
 /datum/map_template/ruin/exoplanet/pilruins/cannibal
 	name = "canibal building"
 	id = "pruins-cab"
 	suffixes = list("pilruins/cannibal.dmm")
+	ruin_tags = RUIN_HUMAN|RUIN_HABITAT
 
 /datum/map_template/ruin/exoplanet/pilruins/aquarium
 	name = "aquarium outpost 1"
 	id = "pruins-ao1"
 	suffixes = list("pilruins/aquarium.dmm")
 	template_flags = TEMPLATE_FLAG_CLEAR_CONTENTS | TEMPLATE_FLAG_NO_RUINS | TEMPLATE_FLAG_NO_RADS
+	ruin_tags = RUIN_HUMAN|RUIN_WATER
 
 /datum/map_template/ruin/exoplanet/pilruins/aquarium/deadly
 	name = "aquarium outpost 2"
 	id = "pruins-ao2"
 	suffixes = list("pilruins/daquarium.dmm")
+	ruin_tags = RUIN_HUMAN|RUIN_WATER
 
 /datum/map_template/ruin/exoplanet/pilruins/kovelai
 	name = "kovelai building"
 	id = "pruins-kov"
 	suffixes = list("pilruins/foundation.dmm")
 	cost = 2
+	ruin_tags = RUIN_HUMAN
 
 /datum/map_template/ruin/exoplanet/pilruins/storefront
 	name = "storefront"
 	id = "pruins-sfr"
 	suffixes = list("pilruins/storefront.dmm")
 	template_flags = TEMPLATE_FLAG_CLEAR_CONTENTS | TEMPLATE_FLAG_NO_RUINS | TEMPLATE_FLAG_NO_RADS
+//	ruin_tags = RUIN_HUMAN
 
 /datum/map_template/ruin/exoplanet/pilruins/gasstation
 	name = "gas station"
 	id = "pruins-gst"
 	suffixes = list("pilruins/gasstation.dmm")
 	template_flags = TEMPLATE_FLAG_CLEAR_CONTENTS | TEMPLATE_FLAG_NO_RUINS | TEMPLATE_FLAG_NO_RADS
+//	ruin_tags = RUIN_HUMAN
 
 /datum/map_template/ruin/exoplanet/pilruins/pmccamp
 	name = "pmc camp"
 	id = "pruins-pmc"
 	suffixes = list("pilruins/camppmc.dmm")
 	template_flags = TEMPLATE_FLAG_CLEAR_CONTENTS | TEMPLATE_FLAG_NO_RUINS | TEMPLATE_FLAG_NO_RADS
+	ruin_tags = RUIN_HUMAN|RUIN_HABITAT
 
 /datum/map_template/ruin/exoplanet/pilruins/farmhouse
 	name = "farmhouse"
 	id = "pruins-frm"
 	suffixes = list("pilruins/farm.dmm")
+	ruin_tags = RUIN_HUMAN|RUIN_HABITAT
 
 
 //BROKEN RUINS////////////////////////
@@ -69,6 +78,7 @@
 	suffixes = list("pilruins/broken1.dmm")
 	cost = 0.5
 	template_flags = TEMPLATE_FLAG_CLEAR_CONTENTS | TEMPLATE_FLAG_NO_RUINS// | TEMPLATE_FLAG_ALLOW_DUPLICATES
+	ruin_tags = RUIN_HABITAT
 
 /datum/map_template/ruin/exoplanet/pilruins/broken/semi
 	name = "broken building 2"
@@ -94,12 +104,14 @@
 	id = "pruins=wrm"
 	suffixes = list("pilruins/mercship.dmm")
 	cost = 1.5
+	ruin_tags = RUIN_HUMAN|RUIN_WRECK
 
 /datum/map_template/ruin/exoplanet/pilruins/spidershuttle
 	name = "spider shuttle"
 	id = "pruins-sps"
 	suffixes = list("pilruins/spidershuttle.dmm")
 	cost = 1.5
+	ruin_tags = RUIN_HUMAN|RUIN_WRECK
 
 
 
@@ -111,26 +123,29 @@
 	suffixes = list("pilruins/tribalegun.dmm")
 	cost = 0.5
 	template_flags = TEMPLATE_FLAG_CLEAR_CONTENTS | TEMPLATE_FLAG_NO_RUINS// | TEMPLATE_FLAG_ALLOW_DUPLICATES
+	ruin_tags = RUIN_ALIEN
 
 /datum/map_template/ruin/exoplanet/pilruins/sarcophagus
 	name = "mecha sarcophagus"
 	id = "pruins-mes"
 	suffixes = list("pilruins/sarcophagus.dmm")
 	cost = 1
+	ruin_tags = RUIN_ALIEN
 
 /datum/map_template/ruin/exoplanet/pilruins/oubliette
 	name = "oubliette"
 	id = "pruins-oub"
 	suffixes = list("pilruins/oubliette.dmm")
 	cost = 0.5
-
+	ruin_tags = RUIN_ALIEN
+/*
 /datum/map_template/ruin/exoplanet/pilruins/testing
 	name = "catwalk testing"
 	id = "pruins-cat"
 	suffixes = list("pilruins/cattest.dmm")
 	cost = 1
 	template_flags = TEMPLATE_FLAG_CLEAR_CONTENTS | TEMPLATE_FLAG_NO_RUINS | TEMPLATE_FLAG_ALLOW_DUPLICATES
-
+*/
 
 
 //AREAS///////////////////////////////
@@ -294,20 +309,20 @@
 				/obj/item/weapon/material/sword/longsword/silver = 2,
 				/obj/item/weapon/material/sword/longsword/titanium = 2,
 				/obj/item/weapon/material/sword/replica/officersword/pilcustom = 6,
-				/obj/item/weapon/cane/concealed/sword = 6,
+//				/obj/item/weapon/cane/concealed/sword = 6, //PIL_MERGE_NOTE: invalid type
 				/obj/item/weapon/material/hatchet/machete = 6,
 				/obj/item/weapon/melee/baton/loaded = 4,
 				/obj/item/weapon/melee/baton = 2,
 				/obj/item/weapon/melee/classic_baton = 2,
 				/obj/item/weapon/melee/telebaton = 4,
-				/obj/item/weapon/material/butterfly = 4,
-				/obj/item/weapon/material/butterfly/switchblade = 2,
+				/obj/item/weapon/material/knife/folding/combat/balisong = 4,
+				/obj/item/weapon/material/knife/folding/combat/switchblade = 2,
 				/obj/item/weapon/material/scythe = 6,
 				/obj/item/weapon/material/hatchet = 6,
 				/obj/item/weapon/material/harpoon = 5,
 				/obj/item/weapon/material/harpoon/bomb = 1,
 				/obj/item/weapon/material/knife = 2,
-				/obj/item/weapon/material/knife/butch = 3,
+				/obj/item/weapon/material/knife/kitchen/cleaver = 3,
 				/obj/item/weapon/material/knife/hook = 1,
 				/obj/item/weapon/material/twohanded/baseballbat = 1,
 				/obj/item/weapon/material/twohanded/baseballbat/metal = 1,

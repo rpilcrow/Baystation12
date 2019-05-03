@@ -3,6 +3,8 @@
 	eye_colour = list(255,255,255)
 	innate_flash_protection = FLASH_PROTECTION_MODERATE
 	var/flashlight = 0
+	eye_icon = 'icons/mob/human_races/species/dark/eyes.dmi'//'icons/mob/human_races/species/default_eyes.dmi'
+	apply_eye_colour = FALSE
 	action_button_name = "Eye Glow"
 
 /obj/item/organ/internal/eyes/darkling/refresh_action_button()

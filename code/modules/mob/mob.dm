@@ -185,7 +185,7 @@
 	if ((drowsyness > 0) && !MOVING_DELIBERATELY(src))
 		. += 6
 	if(lying) //Crawling, it's slower
-		. += 8 + (weakened * 2)
+		. += (8 + ((weakened * 3) + (confused * 2)))
 	. += move_intent.move_delay
 	. += encumbrance() * (0.5 + 1.5 * (SKILL_MAX - get_skill_value(SKILL_HAULING))/(SKILL_MAX - SKILL_MIN)) //Varies between 0.5 and 2, depending on skill
 
@@ -254,6 +254,9 @@
 		if(buckling == FULLY_BUCKLED && (incapacitation_flags & INCAPACITATION_BUCKLED_FULLY))
 			return 1
 
+	if((incapacitation_flags & INCAPACITATION_WEAKENED) && weakened)
+		return 1
+
 	return 0
 
 #undef UNBUCKLED
@@ -292,6 +295,17 @@
 		return 1
 
 	face_atom(A)
+
+	if(!isghost(src))
+		if(A.loc != src || A == l_hand || A == r_hand)
+			for(var/mob/M in viewers(4, src))
+				if(M == src)
+					continue
+				if(M.client && M.client.get_preference_value(/datum/client_preference/examine_messages) == GLOB.PREF_SHOW)
+					if(M.is_blind() || is_invisible_to(M))
+						continue
+					to_chat(M, "<span class='subtle'><b>\The [src]</b> looks at \the [A].</span>")
+
 	A.examine(src)
 
 /mob/verb/pointed(atom/A as mob|obj|turf in view())
@@ -696,7 +710,7 @@
 		reset_plane_and_layer()
 
 /mob/proc/facedir(var/ndir)
-	if(!canface() || moving)
+	if(!canface() || moving || (buckled && !buckled.buckle_movable))
 		return 0
 	set_dir(ndir)
 	if(buckled && buckled.buckle_movable)
@@ -846,7 +860,7 @@
 
 /mob/living/carbon/human/remove_implant(var/obj/item/implant, var/surgical_removal = FALSE, var/obj/item/organ/external/affected)
 	if(!affected) //Grab the organ holding the implant.
-		for(var/obj/item/organ/external/organ in organs) 
+		for(var/obj/item/organ/external/organ in organs)
 			for(var/obj/item/O in organ.implants)
 				if(O == implant)
 					affected = organ
@@ -854,7 +868,7 @@
 	if(affected)
 		affected.implants -= implant
 		for(var/datum/wound/wound in affected.wounds)
-			wound.embedded_objects -= implant
+			LAZYREMOVE(wound.embedded_objects, implant)
 		if(!surgical_removal)
 			shock_stage+=20
 			affected.take_external_damage((implant.w_class * 3), 0, DAM_EDGE, "Embedded object extraction")
@@ -1096,3 +1110,6 @@
 				to_chat(src, "<span class='danger'>You are pushed down by the flood!</span>")
 		return TRUE
 	return FALSE
+
+/mob/proc/get_footstep(var/footstep_type)
+	return
